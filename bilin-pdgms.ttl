@@ -1,5 +1,5 @@
 #TTL FROM INPUT FILE:
-#../aama-data/data/bilin/bilin-pdgms.edn
+#../aama-data/data/bilin//bilin-pdgms.edn
 
 @prefix rdf:	 <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:	 <http://www.w3.org/2000/01/rdf-schema#> .
@@ -43,9 +43,6 @@ bil:person rdfs:label "person" .
 bil:person rdfs:range bil:Person .
 bil:Person rdfs:subClassOf bil:MuExponent .
 bil:person rdfs:subPropertyOf bil:muProperty .
-bil:Common aamas:lang aama:Bilin .
-bil:Common rdf:type bil:Person .
-bil:Common rdfs:label "Common" .
 bil:Person1 aamas:lang aama:Bilin .
 bil:Person1 rdf:type bil:Person .
 bil:Person1 rdfs:label "Person1" .
@@ -71,18 +68,18 @@ bil:Frequentative rdfs:label "Frequentative" .
 bil:M aamas:lang aama:Bilin .
 bil:M rdf:type bil:Derivedstem .
 bil:M rdfs:label "M" .
-bil:M-Freq aamas:lang aama:Bilin .
-bil:M-Freq rdf:type bil:Derivedstem .
-bil:M-Freq rdfs:label "M-Freq" .
+bil:MFreq aamas:lang aama:Bilin .
+bil:MFreq rdf:type bil:Derivedstem .
+bil:MFreq rdfs:label "MFreq" .
 bil:Reciprocal aamas:lang aama:Bilin .
 bil:Reciprocal rdf:type bil:Derivedstem .
 bil:Reciprocal rdfs:label "Reciprocal" .
 bil:S aamas:lang aama:Bilin .
 bil:S rdf:type bil:Derivedstem .
 bil:S rdfs:label "S" .
-bil:S-Recip aamas:lang aama:Bilin .
-bil:S-Recip rdf:type bil:Derivedstem .
-bil:S-Recip rdfs:label "S-Recip" .
+bil:SRecip aamas:lang aama:Bilin .
+bil:SRecip rdf:type bil:Derivedstem .
+bil:SRecip rdfs:label "SRecip" .
 bil:S2 aamas:lang aama:Bilin .
 bil:S2 rdf:type bil:Derivedstem .
 bil:S2 rdfs:label "S2" .
@@ -135,12 +132,9 @@ bil:Main rdfs:label "Main" .
 bil:RelObliq aamas:lang aama:Bilin .
 bil:RelObliq rdf:type bil:Clausetype .
 bil:RelObliq rdfs:label "RelObliq" .
-bil:RelSubj aamas:lang aama:Bilin .
-bil:RelSubj rdf:type bil:Clausetype .
-bil:RelSubj rdfs:label "RelSubj" .
-bil:_NULL aamas:lang aama:Bilin .
-bil:_NULL rdf:type bil:Clausetype .
-bil:_NULL rdfs:label "_NULL" .
+bil:RelSub aamas:lang aama:Bilin .
+bil:RelSub rdf:type bil:Clausetype .
+bil:RelSub rdfs:label "RelSub" .
 
 #SCHEMATA: number
 bil:number aamas:lang aama:Bilin .
@@ -179,12 +173,6 @@ bil:HeadSingularFem rdfs:label "HeadSingularFem" .
 bil:HeadSingularMasc aamas:lang aama:Bilin .
 bil:HeadSingularMasc rdf:type bil:Numbergenderhead .
 bil:HeadSingularMasc rdfs:label "HeadSingularMasc" .
-bil:U aamas:lang aama:Bilin .
-bil:U rdf:type bil:Numbergenderhead .
-bil:U rdfs:label "U" .
-bil:_NULL aamas:lang aama:Bilin .
-bil:_NULL rdf:type bil:Numbergenderhead .
-bil:_NULL rdfs:label "_NULL" .
 
 #SCHEMATA: nonFiniteForm
 bil:nonFiniteForm aamas:lang aama:Bilin .
@@ -318,12 +306,6 @@ bil:PngB rdfs:label "PngB" .
 bil:PngC aamas:lang aama:Bilin .
 bil:PngC rdf:type bil:Pngset .
 bil:PngC rdfs:label "PngC" .
-bil:U aamas:lang aama:Bilin .
-bil:U rdf:type bil:Pngset .
-bil:U rdfs:label "U" .
-bil:_NULL aamas:lang aama:Bilin .
-bil:_NULL rdf:type bil:Pngset .
-bil:_NULL rdfs:label "_NULL" .
 
 #SCHEMATA: morphClass
 bil:morphClass aamas:lang aama:Bilin .
@@ -359,9 +341,6 @@ bil:Affirmative rdfs:label "Affirmative" .
 bil:Negative aamas:lang aama:Bilin .
 bil:Negative rdf:type bil:Polarity .
 bil:Negative rdfs:label "Negative" .
-bil:U aamas:lang aama:Bilin .
-bil:U rdf:type bil:Polarity .
-bil:U rdfs:label "U" .
 
 #SCHEMATA: tam
 bil:tam aamas:lang aama:Bilin .
@@ -372,9 +351,6 @@ bil:tam rdfs:label "tam" .
 bil:tam rdfs:range bil:Tam .
 bil:Tam rdfs:subClassOf bil:MuExponent .
 bil:tam rdfs:subPropertyOf bil:muProperty .
-bil:Common aamas:lang aama:Bilin .
-bil:Common rdf:type bil:Tam .
-bil:Common rdfs:label "Common" .
 bil:Future aamas:lang aama:Bilin .
 bil:Future rdf:type bil:Tam .
 bil:Future rdfs:label "Future" .
@@ -399,9 +375,6 @@ bil:RelativeOblique rdfs:label "RelativeOblique" .
 bil:RelativeSubject aamas:lang aama:Bilin .
 bil:RelativeSubject rdf:type bil:Tam .
 bil:RelativeSubject rdfs:label "RelativeSubject" .
-bil:U aamas:lang aama:Bilin .
-bil:U rdf:type bil:Tam .
-bil:U rdfs:label "U" .
 
 #SCHEMATA: copType
 bil:copType aamas:lang aama:Bilin .
@@ -453,6 +426,36 @@ bil:Comparative rdfs:label "Comparative" .
 
 #PCLASSES:
 
+bil:person aamas:pclass aamas:pngClass .
+aamas:pngClass rdfs:label "pngClass" .
+bil:number aamas:pclass aamas:pngClass .
+aamas:pngClass rdfs:label "pngClass" .
+bil:gender aamas:pclass aamas:pngClass .
+aamas:pngClass rdfs:label "pngClass" .
+bil:pngSet aamas:pclass aamas:pngClass .
+aamas:pngClass rdfs:label "pngClass" .
+bil:aspect aamas:pclass aamas:synsemClass .
+aamas:synsemClass rdfs:label "synsemClass" .
+bil:case aamas:pclass aamas:synsemClass .
+aamas:synsemClass rdfs:label "synsemClass" .
+bil:clauseType aamas:pclass aamas:synsemClass .
+aamas:synsemClass rdfs:label "synsemClass" .
+bil:copType aamas:pclass aamas:synsemClass .
+aamas:synsemClass rdfs:label "synsemClass" .
+bil:nonFiniteForm aamas:pclass aamas:synsemClass .
+aamas:synsemClass rdfs:label "synsemClass" .
+bil:derivedStem aamas:pclass aamas:synsemClass .
+aamas:synsemClass rdfs:label "synsemClass" .
+bil:polarity aamas:pclass aamas:synsemClass .
+aamas:synsemClass rdfs:label "synsemClass" .
+bil:pos aamas:pclass aamas:synsemClass .
+aamas:synsemClass rdfs:label "synsemClass" .
+bil:proClass aamas:pclass aamas:synsemClass .
+aamas:synsemClass rdfs:label "synsemClass" .
+bil:tam aamas:pclass aamas:synsemClass .
+aamas:synsemClass rdfs:label "synsemClass" .
+bil:conjClass aamas:pclass aamas:inflClass .
+aamas:inflClass rdfs:label "inflClass" .
 
 #MORPHEMES:
 
@@ -531,6 +534,29 @@ aama:Bilin-was a aamas:Lexeme ;
 	aamas:lemma "[y]" ;
 	.
 
+#TERMCLUSTER:  bilin-VConj1AdvConsecNegPerfPngA-gab
+
+bil:bilin-VConj1AdvConsecNegPerfPngA-gab a aamas:Termcluster ;
+	rdfs:label "bilin-VConj1AdvConsecNegPerfPngA-gab" ;
+	rdfs:comment "Appleyard2007b pp. 497-501" 
+	.
+
+aama:IDb6bcb065-94f7-4fec-82e8-327d905a463e a aamas:Term ;
+	aamas:lang aama:Bilin ;
+	aamas:memberOf bil:bilin-VConj1AdvConsecNegPerfPngA-gab ;
+	bil:aspect bil:Perfective ;
+	bil:person bil:Person3 ;
+	bil:clauseType bil:AdvConsec ;
+	bil:number bil:Singular ;
+	bil:pos bil:Verb ;
+	aamas:lexeme aama:Bilin-gab ;
+	bil:conjClass bil:Conjugation1 ;
+	bil:pngSet bil:PngA ;
+	bil:polarity bil:Negative ;
+	bil:gender bil:Masc ;
+	bil:token "gäbgi" ;
+	.
+
 #TERMCLUSTER:  bilin-VConj2MainAffImperfPresPngB-kab
 
 bil:bilin-VConj2MainAffImperfPresPngB-kab a aamas:Termcluster ;
@@ -538,7 +564,7 @@ bil:bilin-VConj2MainAffImperfPresPngB-kab a aamas:Termcluster ;
 	rdfs:comment "Appleyard2007b pp. 497-499" 
 	.
 
-aama:ID54c35d9e-60fe-43ee-936a-6c67c509bd04 a aamas:Term ;
+aama:ID5ba80194-6ea8-4d11-807a-45dad7790a39 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj2MainAffImperfPresPngB-kab ;
 	bil:aspect bil:Imperfective ;
@@ -555,7 +581,7 @@ aama:ID54c35d9e-60fe-43ee-936a-6c67c509bd04 a aamas:Term ;
 	bil:gender bil:Fem ;
 	.
 
-aama:ID0dc42b37-e97e-47e5-a793-b4ce5a3de58f a aamas:Term ;
+aama:ID3ef91aa5-b6f1-4e5c-aa1b-3d2453c56718 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj2MainAffImperfPresPngB-kab ;
 	bil:aspect bil:Imperfective ;
@@ -572,7 +598,7 @@ aama:ID0dc42b37-e97e-47e5-a793-b4ce5a3de58f a aamas:Term ;
 	bil:gender bil:Common ;
 	.
 
-aama:ID70182c35-cedf-40b6-82cd-ee769b9b14a3 a aamas:Term ;
+aama:ID38d4d407-12d0-41fd-8f30-9e130475078d a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj2MainAffImperfPresPngB-kab ;
 	bil:aspect bil:Imperfective ;
@@ -589,7 +615,7 @@ aama:ID70182c35-cedf-40b6-82cd-ee769b9b14a3 a aamas:Term ;
 	bil:gender bil:Common ;
 	.
 
-aama:ID629023d7-8a19-4645-902a-f73de3efc878 a aamas:Term ;
+aama:IDeb246bab-8083-4cfd-9330-e0c51db64795 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj2MainAffImperfPresPngB-kab ;
 	bil:aspect bil:Imperfective ;
@@ -606,7 +632,7 @@ aama:ID629023d7-8a19-4645-902a-f73de3efc878 a aamas:Term ;
 	bil:gender bil:Common ;
 	.
 
-aama:IDba4ca982-648b-48bb-8380-d5e22ff78465 a aamas:Term ;
+aama:ID29c0da9b-1c42-4e38-8102-0eef56d84843 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj2MainAffImperfPresPngB-kab ;
 	bil:aspect bil:Imperfective ;
@@ -623,7 +649,7 @@ aama:IDba4ca982-648b-48bb-8380-d5e22ff78465 a aamas:Term ;
 	bil:gender bil:Common ;
 	.
 
-aama:ID77f63ad2-13a2-4f8f-9e3f-b03384dba3a1 a aamas:Term ;
+aama:ID80d81b12-ab8c-4f69-a9df-163a8cbf786e a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj2MainAffImperfPresPngB-kab ;
 	bil:aspect bil:Imperfective ;
@@ -640,7 +666,7 @@ aama:ID77f63ad2-13a2-4f8f-9e3f-b03384dba3a1 a aamas:Term ;
 	bil:gender bil:Common ;
 	.
 
-aama:ID3bced7e3-5227-4e17-aa41-614d20dbcd14 a aamas:Term ;
+aama:ID035ac455-f5b3-46bc-9ba3-46bc4db90e5f a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj2MainAffImperfPresPngB-kab ;
 	bil:aspect bil:Imperfective ;
@@ -664,464 +690,288 @@ bil:bilin-VConj1MainNegImperfPngA2-gab a aamas:Termcluster ;
 	rdfs:comment "Appleyard2007b pp. 497-501" 
 	.
 
-aama:ID61d59ccb-ae6d-4ec2-9338-4a2894f724e3 a aamas:Term ;
+aama:IDf0e935ae-c90a-405c-bb1e-0de8267d6107 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj1MainNegImperfPngA2-gab ;
 	bil:aspect bil:Imperfective ;
 	bil:clauseType bil:Main ;
-	bil:numberGenderHead bil:U ;
-	bil:pos bil:Verb ;
-	aamas:lexeme aama:Bilin-gab ;
 	bil:conjClass bil:Conjugation1 ;
+	aamas:lexeme aama:Bilin-gab ;
 	bil:pngSet bil:PngA2 ;
 	bil:polarity bil:Negative ;
-	bil:tam bil:U ;
+	bil:pos bil:Verb ;
 	bil:token "gäbäli" ;
 	bil:person bil:Person1 ;
 	bil:number bil:Singular ;
 	bil:gender bil:Common ;
 	.
 
-aama:ID19e60e97-1aba-4195-b473-56591040273b a aamas:Term ;
+aama:ID23661ca7-70e9-47b9-8c59-f48f373859ec a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj1MainNegImperfPngA2-gab ;
 	bil:aspect bil:Imperfective ;
 	bil:clauseType bil:Main ;
-	bil:numberGenderHead bil:U ;
-	bil:pos bil:Verb ;
-	aamas:lexeme aama:Bilin-gab ;
 	bil:conjClass bil:Conjugation1 ;
+	aamas:lexeme aama:Bilin-gab ;
 	bil:pngSet bil:PngA2 ;
 	bil:polarity bil:Negative ;
-	bil:tam bil:U ;
+	bil:pos bil:Verb ;
 	bil:token "gäbäla" ;
 	bil:person bil:Person3 ;
 	bil:number bil:Singular ;
 	bil:gender bil:Masc ;
 	.
 
-aama:ID329f5308-9075-479c-9ea1-d4f811307ae4 a aamas:Term ;
+aama:ID05ee777e-0821-488f-9199-0c17b50f0d02 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj1MainNegImperfPngA2-gab ;
 	bil:aspect bil:Imperfective ;
 	bil:clauseType bil:Main ;
-	bil:numberGenderHead bil:U ;
-	bil:pos bil:Verb ;
-	aamas:lexeme aama:Bilin-gab ;
 	bil:conjClass bil:Conjugation1 ;
+	aamas:lexeme aama:Bilin-gab ;
 	bil:pngSet bil:PngA2 ;
 	bil:polarity bil:Negative ;
-	bil:tam bil:U ;
+	bil:pos bil:Verb ;
 	bil:token "gäbänni" ;
 	bil:person bil:Person3 ;
 	bil:number bil:Plural ;
 	bil:gender bil:Common ;
 	.
 
-aama:ID6658bc54-d722-46aa-b69d-3ac92cb395c4 a aamas:Term ;
+aama:ID390bb6bf-bf74-499d-8d59-899e725c07a3 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj1MainNegImperfPngA2-gab ;
 	bil:aspect bil:Imperfective ;
 	bil:clauseType bil:Main ;
-	bil:numberGenderHead bil:U ;
-	bil:pos bil:Verb ;
-	aamas:lexeme aama:Bilin-gab ;
 	bil:conjClass bil:Conjugation1 ;
+	aamas:lexeme aama:Bilin-gab ;
 	bil:pngSet bil:PngA2 ;
 	bil:polarity bil:Negative ;
-	bil:tam bil:U ;
+	bil:pos bil:Verb ;
 	bil:token "gäbnäli" ;
 	bil:person bil:Person1 ;
 	bil:number bil:Plural ;
 	bil:gender bil:Common ;
 	.
 
-aama:IDb1041279-51a9-4fdc-8db1-aaec5d28e717 a aamas:Term ;
+aama:ID5a7000f3-ce14-46a2-a59f-5aaf504121ae a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj1MainNegImperfPngA2-gab ;
 	bil:aspect bil:Imperfective ;
 	bil:clauseType bil:Main ;
-	bil:numberGenderHead bil:U ;
-	bil:pos bil:Verb ;
-	aamas:lexeme aama:Bilin-gab ;
 	bil:conjClass bil:Conjugation1 ;
+	aamas:lexeme aama:Bilin-gab ;
 	bil:pngSet bil:PngA2 ;
 	bil:polarity bil:Negative ;
-	bil:tam bil:U ;
+	bil:pos bil:Verb ;
 	bil:token "gäbdänni" ;
 	bil:person bil:Person2 ;
 	bil:number bil:Plural ;
 	bil:gender bil:Common ;
 	.
 
-aama:ID66799607-ed49-4d7b-b32a-36044b9200e7 a aamas:Term ;
+aama:IDf3c8c72d-0cdc-4188-a293-5a6fd6413e85 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj1MainNegImperfPngA2-gab ;
 	bil:aspect bil:Imperfective ;
 	bil:clauseType bil:Main ;
-	bil:numberGenderHead bil:U ;
-	bil:pos bil:Verb ;
-	aamas:lexeme aama:Bilin-gab ;
 	bil:conjClass bil:Conjugation1 ;
+	aamas:lexeme aama:Bilin-gab ;
 	bil:pngSet bil:PngA2 ;
 	bil:polarity bil:Negative ;
-	bil:tam bil:U ;
+	bil:pos bil:Verb ;
 	bil:token "gäbäla" ;
 	bil:person bil:Person2 ;
 	bil:number bil:Singular ;
 	bil:gender bil:Common ;
 	.
 
-aama:ID435a4d18-73c7-4f95-a147-7f0d60b8444f a aamas:Term ;
+aama:IDbcb85530-d981-4efb-813e-1904c0bfe0a4 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj1MainNegImperfPngA2-gab ;
 	bil:aspect bil:Imperfective ;
 	bil:clauseType bil:Main ;
-	bil:numberGenderHead bil:U ;
-	bil:pos bil:Verb ;
-	aamas:lexeme aama:Bilin-gab ;
 	bil:conjClass bil:Conjugation1 ;
+	aamas:lexeme aama:Bilin-gab ;
 	bil:pngSet bil:PngA2 ;
 	bil:polarity bil:Negative ;
-	bil:tam bil:U ;
+	bil:pos bil:Verb ;
 	bil:token "gäbäla" ;
 	bil:person bil:Person3 ;
 	bil:number bil:Singular ;
 	bil:gender bil:Fem ;
 	.
 
-#TERMCLUSTER:  bilin-VConj1AdvCauseAffPerfPngA-gab
+#TERMCLUSTER:  bilin-VConj1AdvAt2AffImperfPngA-gab
 
-bil:bilin-VConj1AdvCauseAffPerfPngA-gab a aamas:Termcluster ;
-	rdfs:label "bilin-VConj1AdvCauseAffPerfPngA-gab" ;
+bil:bilin-VConj1AdvAt2AffImperfPngA-gab a aamas:Termcluster ;
+	rdfs:label "bilin-VConj1AdvAt2AffImperfPngA-gab" ;
 	rdfs:comment "Appleyard2007b pp. 497-501" 
 	.
 
-aama:IDdcbca4e3-5ade-470c-9560-f1235876f5b0 a aamas:Term ;
+aama:IDc6be8c41-afd8-411f-a085-590de5d5ebe9 a aamas:Term ;
 	aamas:lang aama:Bilin ;
-	aamas:memberOf bil:bilin-VConj1AdvCauseAffPerfPngA-gab ;
-	bil:aspect bil:Perfective ;
+	aamas:memberOf bil:bilin-VConj1AdvAt2AffImperfPngA-gab ;
+	bil:aspect bil:Imperfective ;
 	bil:person bil:Person3 ;
-	bil:clauseType bil:AdvCause ;
+	bil:clauseType bil:AdvAt2 ;
 	bil:number bil:Singular ;
-	bil:numberGenderHead bil:U ;
 	bil:pos bil:Verb ;
 	aamas:lexeme aama:Bilin-gab ;
 	bil:conjClass bil:Conjugation1 ;
 	bil:pngSet bil:PngA ;
 	bil:polarity bil:Affirmative ;
-	bil:tam bil:U ;
 	bil:gender bil:Masc ;
-	bil:token "gäbnädin" ;
+	bil:token "gäbek" ;
 	.
 
-#TERMCLUSTER:  bilin-VConj1MainAffImperfPresPngB-gab
+#TERMCLUSTER:  bilin-VConj1MainAffPerfFutPngC-gab
 
-bil:bilin-VConj1MainAffImperfPresPngB-gab a aamas:Termcluster ;
-	rdfs:label "bilin-VConj1MainAffImperfPresPngB-gab" ;
+bil:bilin-VConj1MainAffPerfFutPngC-gab a aamas:Termcluster ;
+	rdfs:label "bilin-VConj1MainAffPerfFutPngC-gab" ;
 	rdfs:comment "Appleyard2007b pp. 497-501" 
 	.
 
-aama:ID24ef6964-198a-41a3-961d-d20b507e9389 a aamas:Term ;
+aama:IDe62a9d51-f965-410e-b39b-8efc8be6955b a aamas:Term ;
 	aamas:lang aama:Bilin ;
-	aamas:memberOf bil:bilin-VConj1MainAffImperfPresPngB-gab ;
-	bil:aspect bil:Imperfective ;
+	aamas:memberOf bil:bilin-VConj1MainAffPerfFutPngC-gab ;
+	bil:aspect bil:Perfective ;
 	bil:clauseType bil:Main ;
-	bil:numberGenderHead bil:U ;
-	bil:pos bil:Verb ;
-	aamas:lexeme aama:Bilin-gab ;
 	bil:conjClass bil:Conjugation1 ;
-	bil:pngSet bil:PngB ;
+	aamas:lexeme aama:Bilin-gab ;
+	bil:pngSet bil:PngC ;
 	bil:polarity bil:Affirmative ;
-	bil:tam bil:Present ;
-	bil:token "gäbäkwən" ;
-	bil:person bil:Person1 ;
+	bil:pos bil:Verb ;
+	bil:tam bil:Future ;
+	bil:token "gäbta" ;
+	bil:person bil:Person2 ;
 	bil:number bil:Singular ;
 	bil:gender bil:Common ;
 	.
 
-aama:ID17387c9d-468c-44bc-b2f8-433cd5231800 a aamas:Term ;
+aama:ID1a34a7d2-f712-4abb-9806-cab9020a9f2c a aamas:Term ;
 	aamas:lang aama:Bilin ;
-	aamas:memberOf bil:bilin-VConj1MainAffImperfPresPngB-gab ;
-	bil:aspect bil:Imperfective ;
+	aamas:memberOf bil:bilin-VConj1MainAffPerfFutPngC-gab ;
+	bil:aspect bil:Perfective ;
 	bil:clauseType bil:Main ;
-	bil:numberGenderHead bil:U ;
-	bil:pos bil:Verb ;
-	aamas:lexeme aama:Bilin-gab ;
 	bil:conjClass bil:Conjugation1 ;
-	bil:pngSet bil:PngB ;
+	aamas:lexeme aama:Bilin-gab ;
+	bil:pngSet bil:PngC ;
 	bil:polarity bil:Affirmative ;
-	bil:tam bil:Present ;
-	bil:token "gäbdänäkw" ;
+	bil:pos bil:Verb ;
+	bil:tam bil:Future ;
+	bil:token "gäbna" ;
+	bil:person bil:Person1 ;
+	bil:number bil:Plural ;
+	bil:gender bil:Common ;
+	.
+
+aama:IDbd1b8f47-35bd-453c-a791-dd5e95c3a105 a aamas:Term ;
+	aamas:lang aama:Bilin ;
+	aamas:memberOf bil:bilin-VConj1MainAffPerfFutPngC-gab ;
+	bil:aspect bil:Perfective ;
+	bil:clauseType bil:Main ;
+	bil:conjClass bil:Conjugation1 ;
+	aamas:lexeme aama:Bilin-gab ;
+	bil:pngSet bil:PngC ;
+	bil:polarity bil:Affirmative ;
+	bil:pos bil:Verb ;
+	bil:tam bil:Future ;
+	bil:token "gäbra" ;
+	bil:person bil:Person3 ;
+	bil:number bil:Singular ;
+	bil:gender bil:Masc ;
+	.
+
+aama:ID02ac95f0-88ae-4d89-b8ca-2859274fd396 a aamas:Term ;
+	aamas:lang aama:Bilin ;
+	aamas:memberOf bil:bilin-VConj1MainAffPerfFutPngC-gab ;
+	bil:aspect bil:Perfective ;
+	bil:clauseType bil:Main ;
+	bil:conjClass bil:Conjugation1 ;
+	aamas:lexeme aama:Bilin-gab ;
+	bil:pngSet bil:PngC ;
+	bil:polarity bil:Affirmative ;
+	bil:pos bil:Verb ;
+	bil:tam bil:Future ;
+	bil:token "gäbdəna" ;
+	bil:person bil:Person3 ;
+	bil:number bil:Plural ;
+	bil:gender bil:Common ;
+	.
+
+aama:IDa1977847-dfab-4d53-b0d8-78b1ed1b1acc a aamas:Term ;
+	aamas:lang aama:Bilin ;
+	aamas:memberOf bil:bilin-VConj1MainAffPerfFutPngC-gab ;
+	bil:aspect bil:Perfective ;
+	bil:clauseType bil:Main ;
+	bil:conjClass bil:Conjugation1 ;
+	aamas:lexeme aama:Bilin-gab ;
+	bil:pngSet bil:PngC ;
+	bil:polarity bil:Affirmative ;
+	bil:pos bil:Verb ;
+	bil:tam bil:Future ;
+	bil:token "gäbtəna" ;
 	bil:person bil:Person2 ;
 	bil:number bil:Plural ;
 	bil:gender bil:Common ;
 	.
 
-aama:IDae60e17e-06e7-4134-a79e-f287354e6968 a aamas:Term ;
+aama:ID89a4a72c-2ee8-400a-a1c9-59cebc6b1699 a aamas:Term ;
 	aamas:lang aama:Bilin ;
-	aamas:memberOf bil:bilin-VConj1MainAffImperfPresPngB-gab ;
-	bil:aspect bil:Imperfective ;
+	aamas:memberOf bil:bilin-VConj1MainAffPerfFutPngC-gab ;
+	bil:aspect bil:Perfective ;
 	bil:clauseType bil:Main ;
-	bil:numberGenderHead bil:U ;
-	bil:pos bil:Verb ;
-	aamas:lexeme aama:Bilin-gab ;
 	bil:conjClass bil:Conjugation1 ;
-	bil:pngSet bil:PngB ;
+	aamas:lexeme aama:Bilin-gab ;
+	bil:pngSet bil:PngC ;
 	bil:polarity bil:Affirmative ;
-	bil:tam bil:Present ;
-	bil:token "gäbäti" ;
+	bil:pos bil:Verb ;
+	bil:tam bil:Future ;
+	bil:token "gäbtäri" ;
 	bil:person bil:Person3 ;
 	bil:number bil:Singular ;
 	bil:gender bil:Fem ;
 	.
 
-aama:ID06fda655-b5fc-4811-b78c-ed30df3ab443 a aamas:Term ;
+aama:IDc44685ee-7b91-44ef-9353-25e672bf1620 a aamas:Term ;
 	aamas:lang aama:Bilin ;
-	aamas:memberOf bil:bilin-VConj1MainAffImperfPresPngB-gab ;
-	bil:aspect bil:Imperfective ;
+	aamas:memberOf bil:bilin-VConj1MainAffPerfFutPngC-gab ;
+	bil:aspect bil:Perfective ;
 	bil:clauseType bil:Main ;
-	bil:numberGenderHead bil:U ;
-	bil:pos bil:Verb ;
-	aamas:lexeme aama:Bilin-gab ;
 	bil:conjClass bil:Conjugation1 ;
-	bil:pngSet bil:PngB ;
-	bil:polarity bil:Affirmative ;
-	bil:tam bil:Present ;
-	bil:token "gäbänäkw" ;
-	bil:person bil:Person3 ;
-	bil:number bil:Plural ;
-	bil:gender bil:Common ;
-	.
-
-aama:ID9dab530a-1b7f-4fae-9409-0318c23c192d a aamas:Term ;
-	aamas:lang aama:Bilin ;
-	aamas:memberOf bil:bilin-VConj1MainAffImperfPresPngB-gab ;
-	bil:aspect bil:Imperfective ;
-	bil:clauseType bil:Main ;
-	bil:numberGenderHead bil:U ;
-	bil:pos bil:Verb ;
 	aamas:lexeme aama:Bilin-gab ;
-	bil:conjClass bil:Conjugation1 ;
-	bil:pngSet bil:PngB ;
+	bil:pngSet bil:PngC ;
 	bil:polarity bil:Affirmative ;
-	bil:tam bil:Present ;
-	bil:token "gäbnäkwən" ;
+	bil:pos bil:Verb ;
+	bil:tam bil:Future ;
+	bil:token "gäbri" ;
 	bil:person bil:Person1 ;
-	bil:number bil:Plural ;
-	bil:gender bil:Common ;
-	.
-
-aama:IDe66f752d-1b07-4f65-b354-ae4d6baf1d13 a aamas:Term ;
-	aamas:lang aama:Bilin ;
-	aamas:memberOf bil:bilin-VConj1MainAffImperfPresPngB-gab ;
-	bil:aspect bil:Imperfective ;
-	bil:clauseType bil:Main ;
-	bil:numberGenderHead bil:U ;
-	bil:pos bil:Verb ;
-	aamas:lexeme aama:Bilin-gab ;
-	bil:conjClass bil:Conjugation1 ;
-	bil:pngSet bil:PngB ;
-	bil:polarity bil:Affirmative ;
-	bil:tam bil:Present ;
-	bil:token "gäbäkw" ;
-	bil:person bil:Person3 ;
-	bil:number bil:Singular ;
-	bil:gender bil:Masc ;
-	.
-
-aama:ID2bf60d92-c216-4c5a-825d-ce047afb5fd1 a aamas:Term ;
-	aamas:lang aama:Bilin ;
-	aamas:memberOf bil:bilin-VConj1MainAffImperfPresPngB-gab ;
-	bil:aspect bil:Imperfective ;
-	bil:clauseType bil:Main ;
-	bil:numberGenderHead bil:U ;
-	bil:pos bil:Verb ;
-	aamas:lexeme aama:Bilin-gab ;
-	bil:conjClass bil:Conjugation1 ;
-	bil:pngSet bil:PngB ;
-	bil:polarity bil:Affirmative ;
-	bil:tam bil:Present ;
-	bil:token "gäbräkw" ;
-	bil:person bil:Person2 ;
 	bil:number bil:Singular ;
 	bil:gender bil:Common ;
 	.
 
-#TERMCLUSTER:  bilin-VConj1MainNegPerfImprtv-gab
+#TERMCLUSTER:  bilin-VConj1AdvWhenAffImperfPngA-gab
 
-bil:bilin-VConj1MainNegPerfImprtv-gab a aamas:Termcluster ;
-	rdfs:label "bilin-VConj1MainNegPerfImprtv-gab" ;
+bil:bilin-VConj1AdvWhenAffImperfPngA-gab a aamas:Termcluster ;
+	rdfs:label "bilin-VConj1AdvWhenAffImperfPngA-gab" ;
 	rdfs:comment "Appleyard2007b pp. 497-501" 
 	.
 
-aama:ID3b60fec2-f977-42c1-9c86-84d9bcdb910b a aamas:Term ;
+aama:ID3559c049-50b4-482e-8b17-114e0a566cb9 a aamas:Term ;
 	aamas:lang aama:Bilin ;
-	aamas:memberOf bil:bilin-VConj1MainNegPerfImprtv-gab ;
-	bil:aspect bil:Perfective ;
-	bil:person bil:Person2 ;
-	bil:clauseType bil:Main ;
-	bil:numberGenderHead bil:_NULL ;
-	bil:pos bil:Verb ;
-	aamas:lexeme aama:Bilin-gab ;
-	bil:conjClass bil:Conjugation1 ;
-	bil:pngSet bil:U ;
-	bil:polarity bil:Negative ;
-	bil:tam bil:Imperative ;
-	bil:gender bil:Common ;
-	bil:token "gäbga" ;
-	bil:number bil:Plural ;
-	.
-
-aama:IDfa59b87f-1201-463a-a5ac-455cb808c669 a aamas:Term ;
-	aamas:lang aama:Bilin ;
-	aamas:memberOf bil:bilin-VConj1MainNegPerfImprtv-gab ;
-	bil:aspect bil:Perfective ;
-	bil:person bil:Person2 ;
-	bil:clauseType bil:Main ;
-	bil:numberGenderHead bil:_NULL ;
-	bil:pos bil:Verb ;
-	aamas:lexeme aama:Bilin-gab ;
-	bil:conjClass bil:Conjugation1 ;
-	bil:pngSet bil:U ;
-	bil:polarity bil:Negative ;
-	bil:tam bil:Imperative ;
-	bil:gender bil:Common ;
-	bil:token "gäbəg" ;
-	bil:number bil:Singular ;
-	.
-
-#TERMCLUSTER:  bilin-VConj1RelObliqAffImperfPngAHeadSgm-gab
-
-bil:bilin-VConj1RelObliqAffImperfPngAHeadSgm-gab a aamas:Termcluster ;
-	rdfs:label "bilin-VConj1RelObliqAffImperfPngAHeadSgm-gab" ;
-	rdfs:comment "Appleyard2007b pp. 497-501" 
-	.
-
-aama:ID5acc010b-5d6d-453e-bfd4-1940c0178719 a aamas:Term ;
-	aamas:lang aama:Bilin ;
-	aamas:memberOf bil:bilin-VConj1RelObliqAffImperfPngAHeadSgm-gab ;
+	aamas:memberOf bil:bilin-VConj1AdvWhenAffImperfPngA-gab ;
 	bil:aspect bil:Imperfective ;
-	bil:clauseType bil:RelObliq ;
-	bil:numberGenderHead bil:HeadSingularMasc ;
-	bil:pos bil:Verb ;
-	aamas:lexeme aama:Bilin-gab ;
-	bil:conjClass bil:Conjugation1 ;
-	bil:pngSet bil:PngA ;
-	bil:polarity bil:Affirmative ;
-	bil:tam bil:U ;
-	bil:token "gäbräxw" ;
-	bil:person bil:Person2 ;
-	bil:number bil:Singular ;
-	bil:gender bil:Common ;
-	.
-
-aama:ID6d2e177f-532e-4f42-99d0-b4c8fe654c84 a aamas:Term ;
-	aamas:lang aama:Bilin ;
-	aamas:memberOf bil:bilin-VConj1RelObliqAffImperfPngAHeadSgm-gab ;
-	bil:aspect bil:Imperfective ;
-	bil:clauseType bil:RelObliq ;
-	bil:numberGenderHead bil:HeadSingularMasc ;
-	bil:pos bil:Verb ;
-	aamas:lexeme aama:Bilin-gab ;
-	bil:conjClass bil:Conjugation1 ;
-	bil:pngSet bil:PngA ;
-	bil:polarity bil:Affirmative ;
-	bil:tam bil:U ;
-	bil:token "gäbänäxw" ;
 	bil:person bil:Person3 ;
-	bil:number bil:Plural ;
-	bil:gender bil:Common ;
-	.
-
-aama:IDd86265ac-809a-411c-a298-8ad209222d2f a aamas:Term ;
-	aamas:lang aama:Bilin ;
-	aamas:memberOf bil:bilin-VConj1RelObliqAffImperfPngAHeadSgm-gab ;
-	bil:aspect bil:Imperfective ;
-	bil:clauseType bil:RelObliq ;
-	bil:numberGenderHead bil:HeadSingularMasc ;
-	bil:pos bil:Verb ;
-	aamas:lexeme aama:Bilin-gab ;
-	bil:conjClass bil:Conjugation1 ;
-	bil:pngSet bil:PngA ;
-	bil:polarity bil:Affirmative ;
-	bil:tam bil:U ;
-	bil:token "gäbräxw" ;
-	bil:person bil:Person3 ;
+	bil:clauseType bil:AdvWhen ;
 	bil:number bil:Singular ;
-	bil:gender bil:Fem ;
-	.
-
-aama:ID06543fc2-ee18-44af-a982-9c9e3833f435 a aamas:Term ;
-	aamas:lang aama:Bilin ;
-	aamas:memberOf bil:bilin-VConj1RelObliqAffImperfPngAHeadSgm-gab ;
-	bil:aspect bil:Imperfective ;
-	bil:clauseType bil:RelObliq ;
-	bil:numberGenderHead bil:HeadSingularMasc ;
 	bil:pos bil:Verb ;
 	aamas:lexeme aama:Bilin-gab ;
 	bil:conjClass bil:Conjugation1 ;
 	bil:pngSet bil:PngA ;
 	bil:polarity bil:Affirmative ;
-	bil:tam bil:U ;
-	bil:token "gäbdänäxw" ;
-	bil:person bil:Person2 ;
-	bil:number bil:Plural ;
-	bil:gender bil:Common ;
-	.
-
-aama:ID810a2a93-5bd1-40ce-9d8b-c0de46e7a792 a aamas:Term ;
-	aamas:lang aama:Bilin ;
-	aamas:memberOf bil:bilin-VConj1RelObliqAffImperfPngAHeadSgm-gab ;
-	bil:aspect bil:Imperfective ;
-	bil:clauseType bil:RelObliq ;
-	bil:numberGenderHead bil:HeadSingularMasc ;
-	bil:pos bil:Verb ;
-	aamas:lexeme aama:Bilin-gab ;
-	bil:conjClass bil:Conjugation1 ;
-	bil:pngSet bil:PngA ;
-	bil:polarity bil:Affirmative ;
-	bil:tam bil:U ;
-	bil:token "gäbäxw" ;
-	bil:person bil:Person1 ;
-	bil:number bil:Singular ;
-	bil:gender bil:Common ;
-	.
-
-aama:ID37450ae8-bf63-43c7-afc4-732b9eeb84a9 a aamas:Term ;
-	aamas:lang aama:Bilin ;
-	aamas:memberOf bil:bilin-VConj1RelObliqAffImperfPngAHeadSgm-gab ;
-	bil:aspect bil:Imperfective ;
-	bil:clauseType bil:RelObliq ;
-	bil:numberGenderHead bil:HeadSingularMasc ;
-	bil:pos bil:Verb ;
-	aamas:lexeme aama:Bilin-gab ;
-	bil:conjClass bil:Conjugation1 ;
-	bil:pngSet bil:PngA ;
-	bil:polarity bil:Affirmative ;
-	bil:tam bil:U ;
-	bil:token "gäbäxw" ;
-	bil:person bil:Person3 ;
-	bil:number bil:Singular ;
 	bil:gender bil:Masc ;
-	.
-
-aama:ID1476a785-9722-42d5-bdf1-192761ca9025 a aamas:Term ;
-	aamas:lang aama:Bilin ;
-	aamas:memberOf bil:bilin-VConj1RelObliqAffImperfPngAHeadSgm-gab ;
-	bil:aspect bil:Imperfective ;
-	bil:clauseType bil:RelObliq ;
-	bil:numberGenderHead bil:HeadSingularMasc ;
-	bil:pos bil:Verb ;
-	aamas:lexeme aama:Bilin-gab ;
-	bil:conjClass bil:Conjugation1 ;
-	bil:pngSet bil:PngA ;
-	bil:polarity bil:Affirmative ;
-	bil:tam bil:U ;
-	bil:token "gäbnäxw" ;
-	bil:person bil:Person1 ;
-	bil:number bil:Plural ;
-	bil:gender bil:Common ;
+	bil:token "gäbaka" ;
 	.
 
 #TERMCLUSTER:  kemant-VBilin-KemantRel
@@ -1131,7 +981,7 @@ bil:kemant-VBilin-KemantRel a aamas:Termcluster ;
 	rdfs:comment "Appleyard1975 pp. 338-339" 
 	.
 
-aama:IDedae4c25-733d-4495-9178-30ac82f0edfb a aamas:Term ;
+aama:IDf2fb9e8e-38aa-4806-b4ad-10fbeb714dfe a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:kemant-VBilin-KemantRel ;
 	bil:pdgmType bil:Comparative ;
@@ -1147,7 +997,7 @@ aama:IDedae4c25-733d-4495-9178-30ac82f0edfb a aamas:Term ;
 	bil:aspect bil:Perfective ;
 	.
 
-aama:IDb2c55fa7-d907-4854-acce-1202b5197397 a aamas:Term ;
+aama:ID54041652-d81d-4d87-a995-d77e430a1b0f a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:kemant-VBilin-KemantRel ;
 	bil:pdgmType bil:Comparative ;
@@ -1163,7 +1013,7 @@ aama:IDb2c55fa7-d907-4854-acce-1202b5197397 a aamas:Term ;
 	bil:aspect bil:Perfective ;
 	.
 
-aama:ID2657bbd5-e1b3-4d02-8712-162367c35004 a aamas:Term ;
+aama:ID0476a032-8d6d-4708-a38c-b5a97de0c337 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:kemant-VBilin-KemantRel ;
 	bil:pdgmType bil:Comparative ;
@@ -1179,7 +1029,7 @@ aama:ID2657bbd5-e1b3-4d02-8712-162367c35004 a aamas:Term ;
 	bil:aspect bil:Perfective ;
 	.
 
-aama:IDd2604a19-2800-4eca-9e32-6bc95ae82020 a aamas:Term ;
+aama:IDf59da5bb-92a8-47a9-b917-dd70688872be a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:kemant-VBilin-KemantRel ;
 	bil:pdgmType bil:Comparative ;
@@ -1195,7 +1045,7 @@ aama:IDd2604a19-2800-4eca-9e32-6bc95ae82020 a aamas:Term ;
 	bil:aspect bil:Imperfective ;
 	.
 
-aama:ID7df5826c-b32e-4398-ba4c-1d431d2eaffe a aamas:Term ;
+aama:IDd26bf4f0-7ed0-4e1f-8b67-02e67bcd2324 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:kemant-VBilin-KemantRel ;
 	bil:pdgmType bil:Comparative ;
@@ -1211,7 +1061,7 @@ aama:ID7df5826c-b32e-4398-ba4c-1d431d2eaffe a aamas:Term ;
 	bil:aspect bil:Imperfective ;
 	.
 
-aama:IDad22fe48-f731-48c1-9154-b5bcdde972a7 a aamas:Term ;
+aama:ID5acffa5a-aa51-4730-b1f8-6af666d495ad a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:kemant-VBilin-KemantRel ;
 	bil:pdgmType bil:Comparative ;
@@ -1227,7 +1077,7 @@ aama:IDad22fe48-f731-48c1-9154-b5bcdde972a7 a aamas:Term ;
 	bil:aspect bil:Imperfective ;
 	.
 
-aama:IDddcfba99-53e0-467a-aca1-11035be5b479 a aamas:Term ;
+aama:IDe4442feb-27a9-48dc-833f-c559837c83f2 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:kemant-VBilin-KemantRel ;
 	bil:pdgmType bil:Comparative ;
@@ -1243,7 +1093,7 @@ aama:IDddcfba99-53e0-467a-aca1-11035be5b479 a aamas:Term ;
 	bil:aspect bil:Perfective ;
 	.
 
-aama:IDf3c685e3-ba1f-4759-ac8d-73a5462f0e1b a aamas:Term ;
+aama:ID94e79d33-9cb2-439b-b100-b3b93286f963 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:kemant-VBilin-KemantRel ;
 	bil:pdgmType bil:Comparative ;
@@ -1259,7 +1109,7 @@ aama:IDf3c685e3-ba1f-4759-ac8d-73a5462f0e1b a aamas:Term ;
 	bil:aspect bil:Perfective ;
 	.
 
-aama:ID20b664d9-711f-4fbb-a1a3-0794eccf969d a aamas:Term ;
+aama:IDa4435654-84ea-4831-8443-cc3d194de061 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:kemant-VBilin-KemantRel ;
 	bil:pdgmType bil:Comparative ;
@@ -1275,7 +1125,7 @@ aama:ID20b664d9-711f-4fbb-a1a3-0794eccf969d a aamas:Term ;
 	bil:aspect bil:Perfective ;
 	.
 
-aama:ID2ea0dd9d-df98-4353-abd9-79d80cb77ef7 a aamas:Term ;
+aama:ID9ada509d-e22c-4b95-b64f-d65ddbdc7ce2 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:kemant-VBilin-KemantRel ;
 	bil:pdgmType bil:Comparative ;
@@ -1291,7 +1141,7 @@ aama:ID2ea0dd9d-df98-4353-abd9-79d80cb77ef7 a aamas:Term ;
 	bil:aspect bil:Imperfective ;
 	.
 
-aama:IDf1485bcd-4fb2-4324-b9bd-b5374b5b22dd a aamas:Term ;
+aama:ID64adf7e2-aafd-42d0-bd00-52563b1b162d a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:kemant-VBilin-KemantRel ;
 	bil:pdgmType bil:Comparative ;
@@ -1307,7 +1157,7 @@ aama:IDf1485bcd-4fb2-4324-b9bd-b5374b5b22dd a aamas:Term ;
 	bil:aspect bil:Perfective ;
 	.
 
-aama:ID702d2fe0-6f6f-45dd-99c6-e183a188d275 a aamas:Term ;
+aama:ID0004d7b8-ea34-4411-84d0-c082b1d0fed7 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:kemant-VBilin-KemantRel ;
 	bil:pdgmType bil:Comparative ;
@@ -1323,7 +1173,7 @@ aama:ID702d2fe0-6f6f-45dd-99c6-e183a188d275 a aamas:Term ;
 	bil:aspect bil:Imperfective ;
 	.
 
-aama:IDe9cc9a9e-8711-4f31-a5a4-87242c96c26b a aamas:Term ;
+aama:ID2ec653c2-9cf1-4c87-bcb4-f79595cad2a2 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:kemant-VBilin-KemantRel ;
 	bil:pdgmType bil:Comparative ;
@@ -1339,7 +1189,7 @@ aama:IDe9cc9a9e-8711-4f31-a5a4-87242c96c26b a aamas:Term ;
 	bil:aspect bil:Perfective ;
 	.
 
-aama:ID417e9b66-1c13-44e6-847f-9b17fe97bd09 a aamas:Term ;
+aama:IDc15d6747-d6c8-490a-9e1d-f36039c4763e a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:kemant-VBilin-KemantRel ;
 	bil:pdgmType bil:Comparative ;
@@ -1355,7 +1205,7 @@ aama:ID417e9b66-1c13-44e6-847f-9b17fe97bd09 a aamas:Term ;
 	bil:aspect bil:Imperfective ;
 	.
 
-aama:IDa6619e27-239e-40bd-8ef0-a23ac515a506 a aamas:Term ;
+aama:IDd65454e9-7177-4382-bb61-65a3128e2018 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:kemant-VBilin-KemantRel ;
 	bil:pdgmType bil:Comparative ;
@@ -1371,7 +1221,7 @@ aama:IDa6619e27-239e-40bd-8ef0-a23ac515a506 a aamas:Term ;
 	bil:aspect bil:Perfective ;
 	.
 
-aama:ID0200313e-2f65-4dd1-8ca6-91496a0ca774 a aamas:Term ;
+aama:ID0cc0458e-e931-44f3-a3fe-30ca11e39aa0 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:kemant-VBilin-KemantRel ;
 	bil:pdgmType bil:Comparative ;
@@ -1387,7 +1237,7 @@ aama:ID0200313e-2f65-4dd1-8ca6-91496a0ca774 a aamas:Term ;
 	bil:aspect bil:Imperfective ;
 	.
 
-aama:IDf3c35ca4-e4d4-4c77-89bc-faef5bb955b2 a aamas:Term ;
+aama:ID58a453c1-8be2-425b-92b7-d3810e60a6a3 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:kemant-VBilin-KemantRel ;
 	bil:pdgmType bil:Comparative ;
@@ -1403,7 +1253,7 @@ aama:IDf3c35ca4-e4d4-4c77-89bc-faef5bb955b2 a aamas:Term ;
 	bil:aspect bil:Imperfective ;
 	.
 
-aama:IDad64d7f5-7114-4cc9-8bc6-20d554d07d06 a aamas:Term ;
+aama:ID3595a303-533d-4e4e-bcc5-d4a736e78ff6 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:kemant-VBilin-KemantRel ;
 	bil:pdgmType bil:Comparative ;
@@ -1419,176 +1269,302 @@ aama:IDad64d7f5-7114-4cc9-8bc6-20d554d07d06 a aamas:Term ;
 	bil:aspect bil:Imperfective ;
 	.
 
-#TERMCLUSTER:  bilin-VConj1AdvConsecNegPerfPngA-gab
+#TERMCLUSTER:  bilin-VConj1AdvComplAffPerfPngA-gab
 
-bil:bilin-VConj1AdvConsecNegPerfPngA-gab a aamas:Termcluster ;
-	rdfs:label "bilin-VConj1AdvConsecNegPerfPngA-gab" ;
+bil:bilin-VConj1AdvComplAffPerfPngA-gab a aamas:Termcluster ;
+	rdfs:label "bilin-VConj1AdvComplAffPerfPngA-gab" ;
 	rdfs:comment "Appleyard2007b pp. 497-501" 
 	.
 
-aama:ID653b2813-72ac-4d65-aad4-465594201571 a aamas:Term ;
+aama:ID9a8d5a96-8b78-4925-a1b7-0423bd6659d4 a aamas:Term ;
 	aamas:lang aama:Bilin ;
-	aamas:memberOf bil:bilin-VConj1AdvConsecNegPerfPngA-gab ;
+	aamas:memberOf bil:bilin-VConj1AdvComplAffPerfPngA-gab ;
 	bil:aspect bil:Perfective ;
 	bil:person bil:Person3 ;
-	bil:clauseType bil:AdvConsec ;
+	bil:clauseType bil:AdvCompl ;
 	bil:number bil:Singular ;
-	bil:numberGenderHead bil:U ;
-	bil:pos bil:Verb ;
-	aamas:lexeme aama:Bilin-gab ;
-	bil:conjClass bil:Conjugation1 ;
-	bil:pngSet bil:PngA ;
-	bil:polarity bil:Negative ;
-	bil:tam bil:U ;
-	bil:gender bil:Masc ;
-	bil:token "gäbgi" ;
-	.
-
-#TERMCLUSTER:  bilin-VConj1MainNegImperfJussPngA-gab
-
-bil:bilin-VConj1MainNegImperfJussPngA-gab a aamas:Termcluster ;
-	rdfs:label "bilin-VConj1MainNegImperfJussPngA-gab" ;
-	rdfs:comment "Appleyard2007b pp. 497-501" 
-	.
-
-aama:ID4f33f26f-d2d3-4b78-925b-0901471ebf92 a aamas:Term ;
-	aamas:lang aama:Bilin ;
-	aamas:memberOf bil:bilin-VConj1MainNegImperfJussPngA-gab ;
-	bil:aspect bil:Imperfective ;
-	bil:clauseType bil:Main ;
-	bil:numberGenderHead bil:U ;
-	bil:pos bil:Verb ;
-	aamas:lexeme aama:Bilin-gab ;
-	bil:conjClass bil:Conjugation1 ;
-	bil:pngSet bil:PngA ;
-	bil:polarity bil:Negative ;
-	bil:tam bil:Jussive ;
-	bil:token "gäbgin" ;
-	bil:person bil:Person1 ;
-	bil:number bil:Singular ;
-	bil:gender bil:Common ;
-	.
-
-aama:ID964d469f-b34c-41d7-9f16-ca1ae704773e a aamas:Term ;
-	aamas:lang aama:Bilin ;
-	aamas:memberOf bil:bilin-VConj1MainNegImperfJussPngA-gab ;
-	bil:aspect bil:Imperfective ;
-	bil:clauseType bil:Main ;
-	bil:numberGenderHead bil:U ;
-	bil:pos bil:Verb ;
-	aamas:lexeme aama:Bilin-gab ;
-	bil:conjClass bil:Conjugation1 ;
-	bil:pngSet bil:PngA ;
-	bil:polarity bil:Negative ;
-	bil:tam bil:Jussive ;
-	bil:token "gäbgərin" ;
-	bil:person bil:Person3 ;
-	bil:number bil:Singular ;
-	bil:gender bil:Fem ;
-	.
-
-aama:ID4b4b43b4-f67e-4081-91c7-e4d5db66dafd a aamas:Term ;
-	aamas:lang aama:Bilin ;
-	aamas:memberOf bil:bilin-VConj1MainNegImperfJussPngA-gab ;
-	bil:aspect bil:Imperfective ;
-	bil:clauseType bil:Main ;
-	bil:numberGenderHead bil:U ;
-	bil:pos bil:Verb ;
-	aamas:lexeme aama:Bilin-gab ;
-	bil:conjClass bil:Conjugation1 ;
-	bil:pngSet bil:PngA ;
-	bil:polarity bil:Negative ;
-	bil:tam bil:Jussive ;
-	bil:token "gäbgənin" ;
-	bil:person bil:Person1 ;
-	bil:number bil:Plural ;
-	bil:gender bil:Common ;
-	.
-
-aama:ID7bf63e53-ed7f-467e-8985-1c7666c106b8 a aamas:Term ;
-	aamas:lang aama:Bilin ;
-	aamas:memberOf bil:bilin-VConj1MainNegImperfJussPngA-gab ;
-	bil:aspect bil:Imperfective ;
-	bil:clauseType bil:Main ;
-	bil:numberGenderHead bil:U ;
-	bil:pos bil:Verb ;
-	aamas:lexeme aama:Bilin-gab ;
-	bil:conjClass bil:Conjugation1 ;
-	bil:pngSet bil:PngA ;
-	bil:polarity bil:Negative ;
-	bil:tam bil:Jussive ;
-	bil:token "gäbgin" ;
-	bil:person bil:Person3 ;
-	bil:number bil:Singular ;
-	bil:gender bil:Masc ;
-	.
-
-aama:IDa63e81f5-cec4-455a-b33a-dedd7de5408b a aamas:Term ;
-	aamas:lang aama:Bilin ;
-	aamas:memberOf bil:bilin-VConj1MainNegImperfJussPngA-gab ;
-	bil:aspect bil:Imperfective ;
-	bil:clauseType bil:Main ;
-	bil:numberGenderHead bil:U ;
-	bil:pos bil:Verb ;
-	aamas:lexeme aama:Bilin-gab ;
-	bil:conjClass bil:Conjugation1 ;
-	bil:pngSet bil:PngA ;
-	bil:polarity bil:Negative ;
-	bil:tam bil:Jussive ;
-	bil:token "gäbgənin" ;
-	bil:person bil:Person3 ;
-	bil:number bil:Plural ;
-	bil:gender bil:Common ;
-	.
-
-#TERMCLUSTER:  bilin-VConj1AdvAt1AffImperfPngA-gab
-
-bil:bilin-VConj1AdvAt1AffImperfPngA-gab a aamas:Termcluster ;
-	rdfs:label "bilin-VConj1AdvAt1AffImperfPngA-gab" ;
-	rdfs:comment "Appleyard2007b pp. 497-501" 
-	.
-
-aama:IDe65c1ba5-4836-4bb4-aa8e-ff367e3b7d1d a aamas:Term ;
-	aamas:lang aama:Bilin ;
-	aamas:memberOf bil:bilin-VConj1AdvAt1AffImperfPngA-gab ;
-	bil:aspect bil:Imperfective ;
-	bil:person bil:Person3 ;
-	bil:clauseType bil:AdvAt1 ;
-	bil:number bil:Singular ;
-	bil:numberGenderHead bil:U ;
 	bil:pos bil:Verb ;
 	aamas:lexeme aama:Bilin-gab ;
 	bil:conjClass bil:Conjugation1 ;
 	bil:pngSet bil:PngA ;
 	bil:polarity bil:Affirmative ;
-	bil:tam bil:U ;
 	bil:gender bil:Masc ;
-	bil:token "gäbäsäna" ;
+	bil:token "gäbät" ;
 	.
 
-#TERMCLUSTER:  bilin-VConj1AdvCondNegImperfPngA-gab
+#TERMCLUSTER:  bilin-VConj1AdvConsecAffPerfPngA-gab
 
-bil:bilin-VConj1AdvCondNegImperfPngA-gab a aamas:Termcluster ;
-	rdfs:label "bilin-VConj1AdvCondNegImperfPngA-gab" ;
+bil:bilin-VConj1AdvConsecAffPerfPngA-gab a aamas:Termcluster ;
+	rdfs:label "bilin-VConj1AdvConsecAffPerfPngA-gab" ;
 	rdfs:comment "Appleyard2007b pp. 497-501" 
 	.
 
-aama:ID476d61d1-52a0-40dd-a7a3-c8f24a8826af a aamas:Term ;
+aama:IDf6623c0c-0ec9-4f5d-bcde-1dac46a44860 a aamas:Term ;
 	aamas:lang aama:Bilin ;
-	aamas:memberOf bil:bilin-VConj1AdvCondNegImperfPngA-gab ;
-	bil:aspect bil:Imperfective ;
+	aamas:memberOf bil:bilin-VConj1AdvConsecAffPerfPngA-gab ;
+	bil:aspect bil:Perfective ;
 	bil:person bil:Person3 ;
-	bil:clauseType bil:AdvCond ;
+	bil:clauseType bil:AdvConsec ;
 	bil:number bil:Singular ;
-	bil:numberGenderHead bil:U ;
 	bil:pos bil:Verb ;
 	aamas:lexeme aama:Bilin-gab ;
 	bil:conjClass bil:Conjugation1 ;
 	bil:pngSet bil:PngA ;
-	bil:polarity bil:Negative ;
-	bil:tam bil:U ;
+	bil:polarity bil:Affirmative ;
 	bil:gender bil:Masc ;
-	bil:token "gäbägän" ;
+	bil:token "gäbo" ;
+	.
+
+#TERMCLUSTER:  bilin-VConj1RelObliqAffImperfPngAHeadPl-gab
+
+bil:bilin-VConj1RelObliqAffImperfPngAHeadPl-gab a aamas:Termcluster ;
+	rdfs:label "bilin-VConj1RelObliqAffImperfPngAHeadPl-gab" ;
+	rdfs:comment "Appleyard2007b pp. 497-501" 
+	.
+
+aama:ID2301c5f9-0bbf-49b1-9225-848adc97c7af a aamas:Term ;
+	aamas:lang aama:Bilin ;
+	aamas:memberOf bil:bilin-VConj1RelObliqAffImperfPngAHeadPl-gab ;
+	bil:aspect bil:Imperfective ;
+	bil:clauseType bil:RelObliq ;
+	bil:conjClass bil:Conjugation1 ;
+	aamas:lexeme aama:Bilin-gab ;
+	bil:numberGenderHead bil:HeadPlural ;
+	bil:pngSet bil:PngA ;
+	bil:polarity bil:Affirmative ;
+	bil:pos bil:Verb ;
+	bil:token "gäbräw" ;
+	bil:person bil:Person3 ;
+	bil:number bil:Singular ;
+	bil:gender bil:Fem ;
+	.
+
+aama:IDb396abb5-7c26-49f6-82e9-d98db0c07915 a aamas:Term ;
+	aamas:lang aama:Bilin ;
+	aamas:memberOf bil:bilin-VConj1RelObliqAffImperfPngAHeadPl-gab ;
+	bil:aspect bil:Imperfective ;
+	bil:clauseType bil:RelObliq ;
+	bil:conjClass bil:Conjugation1 ;
+	aamas:lexeme aama:Bilin-gab ;
+	bil:numberGenderHead bil:HeadPlural ;
+	bil:pngSet bil:PngA ;
+	bil:polarity bil:Affirmative ;
+	bil:pos bil:Verb ;
+	bil:token "gäbdänäw" ;
+	bil:person bil:Person2 ;
+	bil:number bil:Plural ;
+	bil:gender bil:Common ;
+	.
+
+aama:ID6feb95e9-cad8-4229-9267-08d57c032817 a aamas:Term ;
+	aamas:lang aama:Bilin ;
+	aamas:memberOf bil:bilin-VConj1RelObliqAffImperfPngAHeadPl-gab ;
+	bil:aspect bil:Imperfective ;
+	bil:clauseType bil:RelObliq ;
+	bil:conjClass bil:Conjugation1 ;
+	aamas:lexeme aama:Bilin-gab ;
+	bil:numberGenderHead bil:HeadPlural ;
+	bil:pngSet bil:PngA ;
+	bil:polarity bil:Affirmative ;
+	bil:pos bil:Verb ;
+	bil:token "gäbnäw" ;
+	bil:person bil:Person1 ;
+	bil:number bil:Plural ;
+	bil:gender bil:Common ;
+	.
+
+aama:IDcf9cfa78-7aef-4c1f-b7ca-18643c889034 a aamas:Term ;
+	aamas:lang aama:Bilin ;
+	aamas:memberOf bil:bilin-VConj1RelObliqAffImperfPngAHeadPl-gab ;
+	bil:aspect bil:Imperfective ;
+	bil:clauseType bil:RelObliq ;
+	bil:conjClass bil:Conjugation1 ;
+	aamas:lexeme aama:Bilin-gab ;
+	bil:numberGenderHead bil:HeadPlural ;
+	bil:pngSet bil:PngA ;
+	bil:polarity bil:Affirmative ;
+	bil:pos bil:Verb ;
+	bil:token "gäbäw" ;
+	bil:person bil:Person3 ;
+	bil:number bil:Singular ;
+	bil:gender bil:Masc ;
+	.
+
+aama:IDd79f03a0-4c82-4def-b8b8-df27e6e6fab3 a aamas:Term ;
+	aamas:lang aama:Bilin ;
+	aamas:memberOf bil:bilin-VConj1RelObliqAffImperfPngAHeadPl-gab ;
+	bil:aspect bil:Imperfective ;
+	bil:clauseType bil:RelObliq ;
+	bil:conjClass bil:Conjugation1 ;
+	aamas:lexeme aama:Bilin-gab ;
+	bil:numberGenderHead bil:HeadPlural ;
+	bil:pngSet bil:PngA ;
+	bil:polarity bil:Affirmative ;
+	bil:pos bil:Verb ;
+	bil:token "gäbänäw" ;
+	bil:person bil:Person3 ;
+	bil:number bil:Plural ;
+	bil:gender bil:Common ;
+	.
+
+aama:ID39b1087c-51e2-4eed-8b1d-de6b8104f0bd a aamas:Term ;
+	aamas:lang aama:Bilin ;
+	aamas:memberOf bil:bilin-VConj1RelObliqAffImperfPngAHeadPl-gab ;
+	bil:aspect bil:Imperfective ;
+	bil:clauseType bil:RelObliq ;
+	bil:conjClass bil:Conjugation1 ;
+	aamas:lexeme aama:Bilin-gab ;
+	bil:numberGenderHead bil:HeadPlural ;
+	bil:pngSet bil:PngA ;
+	bil:polarity bil:Affirmative ;
+	bil:pos bil:Verb ;
+	bil:token "gäbräw" ;
+	bil:person bil:Person2 ;
+	bil:number bil:Singular ;
+	bil:gender bil:Common ;
+	.
+
+aama:ID52903806-dbf7-4fbb-9abf-a0ed789b47c4 a aamas:Term ;
+	aamas:lang aama:Bilin ;
+	aamas:memberOf bil:bilin-VConj1RelObliqAffImperfPngAHeadPl-gab ;
+	bil:aspect bil:Imperfective ;
+	bil:clauseType bil:RelObliq ;
+	bil:conjClass bil:Conjugation1 ;
+	aamas:lexeme aama:Bilin-gab ;
+	bil:numberGenderHead bil:HeadPlural ;
+	bil:pngSet bil:PngA ;
+	bil:polarity bil:Affirmative ;
+	bil:pos bil:Verb ;
+	bil:token "gäbäw" ;
+	bil:person bil:Person1 ;
+	bil:number bil:Singular ;
+	bil:gender bil:Common ;
+	.
+
+#TERMCLUSTER:  bilin-VConj1MainAffPerfPastPngB-gab
+
+bil:bilin-VConj1MainAffPerfPastPngB-gab a aamas:Termcluster ;
+	rdfs:label "bilin-VConj1MainAffPerfPastPngB-gab" ;
+	rdfs:comment "Appleyard2007b pp. 497-501" 
+	.
+
+aama:ID474242b4-c1c3-4215-98f3-4b5682c70743 a aamas:Term ;
+	aamas:lang aama:Bilin ;
+	aamas:memberOf bil:bilin-VConj1MainAffPerfPastPngB-gab ;
+	bil:aspect bil:Perfective ;
+	bil:clauseType bil:Main ;
+	bil:conjClass bil:Conjugation1 ;
+	aamas:lexeme aama:Bilin-gab ;
+	bil:pngSet bil:PngB ;
+	bil:polarity bil:Affirmative ;
+	bil:pos bil:Verb ;
+	bil:tam bil:Past ;
+	bil:token "gäbrəxw" ;
+	bil:person bil:Person2 ;
+	bil:number bil:Singular ;
+	bil:gender bil:Common ;
+	.
+
+aama:IDb8b92a24-f6c2-46e2-ad19-00321ddc73c3 a aamas:Term ;
+	aamas:lang aama:Bilin ;
+	aamas:memberOf bil:bilin-VConj1MainAffPerfPastPngB-gab ;
+	bil:aspect bil:Perfective ;
+	bil:clauseType bil:Main ;
+	bil:conjClass bil:Conjugation1 ;
+	aamas:lexeme aama:Bilin-gab ;
+	bil:pngSet bil:PngB ;
+	bil:polarity bil:Affirmative ;
+	bil:pos bil:Verb ;
+	bil:tam bil:Past ;
+	bil:token "gäbnəxw" ;
+	bil:person bil:Person3 ;
+	bil:number bil:Plural ;
+	bil:gender bil:Common ;
+	.
+
+aama:ID0e1a84c2-af95-425c-84c2-016b642a5a1f a aamas:Term ;
+	aamas:lang aama:Bilin ;
+	aamas:memberOf bil:bilin-VConj1MainAffPerfPastPngB-gab ;
+	bil:aspect bil:Perfective ;
+	bil:clauseType bil:Main ;
+	bil:conjClass bil:Conjugation1 ;
+	aamas:lexeme aama:Bilin-gab ;
+	bil:pngSet bil:PngB ;
+	bil:polarity bil:Affirmative ;
+	bil:pos bil:Verb ;
+	bil:tam bil:Past ;
+	bil:token "gäbdənəxw" ;
+	bil:person bil:Person2 ;
+	bil:number bil:Plural ;
+	bil:gender bil:Common ;
+	.
+
+aama:ID779621f4-5451-4239-a928-3b14f3a6cdb7 a aamas:Term ;
+	aamas:lang aama:Bilin ;
+	aamas:memberOf bil:bilin-VConj1MainAffPerfPastPngB-gab ;
+	bil:aspect bil:Perfective ;
+	bil:clauseType bil:Main ;
+	bil:conjClass bil:Conjugation1 ;
+	aamas:lexeme aama:Bilin-gab ;
+	bil:pngSet bil:PngB ;
+	bil:polarity bil:Affirmative ;
+	bil:pos bil:Verb ;
+	bil:tam bil:Past ;
+	bil:token "gäbti" ;
+	bil:person bil:Person3 ;
+	bil:number bil:Singular ;
+	bil:gender bil:Fem ;
+	.
+
+aama:IDf32508cb-05f2-4099-9bb4-1f14c44dc77b a aamas:Term ;
+	aamas:lang aama:Bilin ;
+	aamas:memberOf bil:bilin-VConj1MainAffPerfPastPngB-gab ;
+	bil:aspect bil:Perfective ;
+	bil:clauseType bil:Main ;
+	bil:conjClass bil:Conjugation1 ;
+	aamas:lexeme aama:Bilin-gab ;
+	bil:pngSet bil:PngB ;
+	bil:polarity bil:Affirmative ;
+	bil:pos bil:Verb ;
+	bil:tam bil:Past ;
+	bil:token "gäbnəxwən" ;
+	bil:person bil:Person1 ;
+	bil:number bil:Plural ;
+	bil:gender bil:Common ;
+	.
+
+aama:ID4ddaaa74-aa98-4b64-abb1-137c406e9d53 a aamas:Term ;
+	aamas:lang aama:Bilin ;
+	aamas:memberOf bil:bilin-VConj1MainAffPerfPastPngB-gab ;
+	bil:aspect bil:Perfective ;
+	bil:clauseType bil:Main ;
+	bil:conjClass bil:Conjugation1 ;
+	aamas:lexeme aama:Bilin-gab ;
+	bil:pngSet bil:PngB ;
+	bil:polarity bil:Affirmative ;
+	bil:pos bil:Verb ;
+	bil:tam bil:Past ;
+	bil:token "gäbəxwən" ;
+	bil:person bil:Person1 ;
+	bil:number bil:Singular ;
+	bil:gender bil:Common ;
+	.
+
+aama:ID26649e47-613c-401b-beb0-43f5a2e44d8a a aamas:Term ;
+	aamas:lang aama:Bilin ;
+	aamas:memberOf bil:bilin-VConj1MainAffPerfPastPngB-gab ;
+	bil:aspect bil:Perfective ;
+	bil:clauseType bil:Main ;
+	bil:conjClass bil:Conjugation1 ;
+	aamas:lexeme aama:Bilin-gab ;
+	bil:pngSet bil:PngB ;
+	bil:polarity bil:Affirmative ;
+	bil:pos bil:Verb ;
+	bil:tam bil:Past ;
+	bil:token "gäbəxw" ;
+	bil:person bil:Person3 ;
+	bil:number bil:Singular ;
+	bil:gender bil:Masc ;
 	.
 
 #TERMCLUSTER:  bilin-VConj2MainAffPerfPastPngB-kab
@@ -1598,7 +1574,7 @@ bil:bilin-VConj2MainAffPerfPastPngB-kab a aamas:Termcluster ;
 	rdfs:comment "Appleyard2007b pp. 497-499" 
 	.
 
-aama:ID6faefe6b-204f-448d-807d-f859b8619ca3 a aamas:Term ;
+aama:ID1e8adcf9-603e-4e1e-9594-583554b0acdc a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj2MainAffPerfPastPngB-kab ;
 	bil:aspect bil:Perfective ;
@@ -1615,7 +1591,7 @@ aama:ID6faefe6b-204f-448d-807d-f859b8619ca3 a aamas:Term ;
 	bil:gender bil:Common ;
 	.
 
-aama:ID8e92f07d-67ec-44fa-9c1e-9c3f3b2193f2 a aamas:Term ;
+aama:ID50da271a-a96f-4d0d-a0f1-f00d2d591a28 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj2MainAffPerfPastPngB-kab ;
 	bil:aspect bil:Perfective ;
@@ -1632,7 +1608,7 @@ aama:ID8e92f07d-67ec-44fa-9c1e-9c3f3b2193f2 a aamas:Term ;
 	bil:gender bil:Common ;
 	.
 
-aama:ID6ec6dbaf-44ae-4b13-ade0-c0eed683ac7c a aamas:Term ;
+aama:ID66c21c01-7717-4ca1-95d1-127cecbddb35 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj2MainAffPerfPastPngB-kab ;
 	bil:aspect bil:Perfective ;
@@ -1649,7 +1625,7 @@ aama:ID6ec6dbaf-44ae-4b13-ade0-c0eed683ac7c a aamas:Term ;
 	bil:gender bil:Common ;
 	.
 
-aama:ID86322c59-f34d-4a5d-b8f1-8541536e5cf0 a aamas:Term ;
+aama:IDdee79e54-acbd-4e36-81b8-a7acae1799ca a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj2MainAffPerfPastPngB-kab ;
 	bil:aspect bil:Perfective ;
@@ -1666,7 +1642,7 @@ aama:ID86322c59-f34d-4a5d-b8f1-8541536e5cf0 a aamas:Term ;
 	bil:gender bil:Common ;
 	.
 
-aama:ID8044853b-66b8-4d35-a26b-259dc1c2feab a aamas:Term ;
+aama:ID69b8c31f-a62b-470d-9efa-0a816beb8a51 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj2MainAffPerfPastPngB-kab ;
 	bil:aspect bil:Perfective ;
@@ -1683,7 +1659,7 @@ aama:ID8044853b-66b8-4d35-a26b-259dc1c2feab a aamas:Term ;
 	bil:gender bil:Common ;
 	.
 
-aama:ID4f02f3d0-bb54-42f6-8ad9-573bde5f53ed a aamas:Term ;
+aama:ID8b56fff6-a8c4-463a-860a-d7c4c14612b1 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj2MainAffPerfPastPngB-kab ;
 	bil:aspect bil:Perfective ;
@@ -1700,7 +1676,7 @@ aama:ID4f02f3d0-bb54-42f6-8ad9-573bde5f53ed a aamas:Term ;
 	bil:gender bil:Fem ;
 	.
 
-aama:ID1b2874f1-8092-4bd5-8bc8-e54a28604119 a aamas:Term ;
+aama:ID01687f93-f3ec-4778-af2d-977135d1bea8 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj2MainAffPerfPastPngB-kab ;
 	bil:aspect bil:Perfective ;
@@ -1717,6 +1693,29 @@ aama:ID1b2874f1-8092-4bd5-8bc8-e54a28604119 a aamas:Term ;
 	bil:gender bil:Masc ;
 	.
 
+#TERMCLUSTER:  bilin-VConj1AdvCondNegImperfPngA-gab
+
+bil:bilin-VConj1AdvCondNegImperfPngA-gab a aamas:Termcluster ;
+	rdfs:label "bilin-VConj1AdvCondNegImperfPngA-gab" ;
+	rdfs:comment "Appleyard2007b pp. 497-501" 
+	.
+
+aama:ID530bf6ed-0e06-4ba2-ab3f-e1bc17bc9d2b a aamas:Term ;
+	aamas:lang aama:Bilin ;
+	aamas:memberOf bil:bilin-VConj1AdvCondNegImperfPngA-gab ;
+	bil:aspect bil:Imperfective ;
+	bil:person bil:Person3 ;
+	bil:clauseType bil:AdvCond ;
+	bil:number bil:Singular ;
+	bil:pos bil:Verb ;
+	aamas:lexeme aama:Bilin-gab ;
+	bil:conjClass bil:Conjugation1 ;
+	bil:pngSet bil:PngA ;
+	bil:polarity bil:Negative ;
+	bil:gender bil:Masc ;
+	bil:token "gäbägän" ;
+	.
+
 #TERMCLUSTER:  bilin-VConj1Agent-gab
 
 bil:bilin-VConj1Agent-gab a aamas:Termcluster ;
@@ -1724,7 +1723,7 @@ bil:bilin-VConj1Agent-gab a aamas:Termcluster ;
 	rdfs:comment "Appleyard2007b pp. 497-501" 
 	.
 
-aama:ID819f9435-b347-4bbe-b059-4cca3a0d8372 a aamas:Term ;
+aama:ID194f6c2f-53ce-403c-bc81-d096cc5d145c a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj1Agent-gab ;
 	bil:conjClass bil:Conjugation1 ;
@@ -1737,160 +1736,151 @@ aama:ID819f9435-b347-4bbe-b059-4cca3a0d8372 a aamas:Term ;
 	bil:token "gäbänta (pl. gäbänti)" ;
 	.
 
-#TERMCLUSTER:  bilin-VConj1AdvFutCondNegPerfPngC-gab
+#TERMCLUSTER:  bilin-VConj1AdvWhileAffImperfPngA-gab
 
-bil:bilin-VConj1AdvFutCondNegPerfPngC-gab a aamas:Termcluster ;
-	rdfs:label "bilin-VConj1AdvFutCondNegPerfPngC-gab" ;
+bil:bilin-VConj1AdvWhileAffImperfPngA-gab a aamas:Termcluster ;
+	rdfs:label "bilin-VConj1AdvWhileAffImperfPngA-gab" ;
 	rdfs:comment "Appleyard2007b pp. 497-501" 
 	.
 
-aama:ID9a47b96f-41b1-40e2-b646-04ba13b2e8cb a aamas:Term ;
+aama:ID0d502e77-47ce-4851-a110-cefb6be193b1 a aamas:Term ;
 	aamas:lang aama:Bilin ;
-	aamas:memberOf bil:bilin-VConj1AdvFutCondNegPerfPngC-gab ;
-	bil:aspect bil:Perfective ;
+	aamas:memberOf bil:bilin-VConj1AdvWhileAffImperfPngA-gab ;
+	bil:aspect bil:Imperfective ;
 	bil:person bil:Person3 ;
-	bil:clauseType bil:AdvFutCond ;
+	bil:clauseType bil:AdvWhile ;
 	bil:number bil:Singular ;
-	bil:numberGenderHead bil:U ;
 	bil:pos bil:Verb ;
 	aamas:lexeme aama:Bilin-gab ;
 	bil:conjClass bil:Conjugation1 ;
-	bil:pngSet bil:PngC ;
-	bil:polarity bil:Negative ;
-	bil:tam bil:U ;
+	bil:pngSet bil:PngA ;
+	bil:polarity bil:Affirmative ;
 	bil:gender bil:Masc ;
-	bil:token "gäbgid" ;
+	bil:token "gäbu" ;
 	.
 
-#TERMCLUSTER:  bilin-VConj1MainAffPerfFutPngC-gab
+#TERMCLUSTER:  bilin-VConj1MainAffImperfPresPngB-gab
 
-bil:bilin-VConj1MainAffPerfFutPngC-gab a aamas:Termcluster ;
-	rdfs:label "bilin-VConj1MainAffPerfFutPngC-gab" ;
+bil:bilin-VConj1MainAffImperfPresPngB-gab a aamas:Termcluster ;
+	rdfs:label "bilin-VConj1MainAffImperfPresPngB-gab" ;
 	rdfs:comment "Appleyard2007b pp. 497-501" 
 	.
 
-aama:ID41ca7ed8-c9c1-4669-a911-b616da453313 a aamas:Term ;
+aama:ID3f07c2a1-caa3-4f27-b737-c1f266b7cd2b a aamas:Term ;
 	aamas:lang aama:Bilin ;
-	aamas:memberOf bil:bilin-VConj1MainAffPerfFutPngC-gab ;
-	bil:aspect bil:Perfective ;
+	aamas:memberOf bil:bilin-VConj1MainAffImperfPresPngB-gab ;
+	bil:aspect bil:Imperfective ;
 	bil:clauseType bil:Main ;
-	bil:numberGenderHead bil:U ;
-	bil:pos bil:Verb ;
-	aamas:lexeme aama:Bilin-gab ;
 	bil:conjClass bil:Conjugation1 ;
-	bil:pngSet bil:PngC ;
-	bil:polarity bil:Affirmative ;
-	bil:tam bil:Future ;
-	bil:token "gäbta" ;
-	bil:person bil:Person2 ;
-	bil:number bil:Singular ;
-	bil:gender bil:Common ;
-	.
-
-aama:ID50c86391-b578-43d1-832f-ab1173e5789d a aamas:Term ;
-	aamas:lang aama:Bilin ;
-	aamas:memberOf bil:bilin-VConj1MainAffPerfFutPngC-gab ;
-	bil:aspect bil:Perfective ;
-	bil:clauseType bil:Main ;
-	bil:numberGenderHead bil:U ;
-	bil:pos bil:Verb ;
 	aamas:lexeme aama:Bilin-gab ;
-	bil:conjClass bil:Conjugation1 ;
-	bil:pngSet bil:PngC ;
+	bil:pngSet bil:PngB ;
 	bil:polarity bil:Affirmative ;
-	bil:tam bil:Future ;
-	bil:token "gäbna" ;
+	bil:pos bil:Verb ;
+	bil:tam bil:Present ;
+	bil:token "gäbäkwən" ;
 	bil:person bil:Person1 ;
-	bil:number bil:Plural ;
-	bil:gender bil:Common ;
-	.
-
-aama:ID3be3512e-22ce-4ffd-a97b-159e1f7af4a0 a aamas:Term ;
-	aamas:lang aama:Bilin ;
-	aamas:memberOf bil:bilin-VConj1MainAffPerfFutPngC-gab ;
-	bil:aspect bil:Perfective ;
-	bil:clauseType bil:Main ;
-	bil:numberGenderHead bil:U ;
-	bil:pos bil:Verb ;
-	aamas:lexeme aama:Bilin-gab ;
-	bil:conjClass bil:Conjugation1 ;
-	bil:pngSet bil:PngC ;
-	bil:polarity bil:Affirmative ;
-	bil:tam bil:Future ;
-	bil:token "gäbra" ;
-	bil:person bil:Person3 ;
 	bil:number bil:Singular ;
-	bil:gender bil:Masc ;
-	.
-
-aama:IDb0b4d6a6-788e-4145-96d7-b7c3b644f0ef a aamas:Term ;
-	aamas:lang aama:Bilin ;
-	aamas:memberOf bil:bilin-VConj1MainAffPerfFutPngC-gab ;
-	bil:aspect bil:Perfective ;
-	bil:clauseType bil:Main ;
-	bil:numberGenderHead bil:U ;
-	bil:pos bil:Verb ;
-	aamas:lexeme aama:Bilin-gab ;
-	bil:conjClass bil:Conjugation1 ;
-	bil:pngSet bil:PngC ;
-	bil:polarity bil:Affirmative ;
-	bil:tam bil:Future ;
-	bil:token "gäbdəna" ;
-	bil:person bil:Person3 ;
-	bil:number bil:Plural ;
 	bil:gender bil:Common ;
 	.
 
-aama:IDc5c1a095-3bb6-4432-ac9c-c72b2241cb3f a aamas:Term ;
+aama:ID118169b2-365c-4a98-8fdf-052b99379047 a aamas:Term ;
 	aamas:lang aama:Bilin ;
-	aamas:memberOf bil:bilin-VConj1MainAffPerfFutPngC-gab ;
-	bil:aspect bil:Perfective ;
+	aamas:memberOf bil:bilin-VConj1MainAffImperfPresPngB-gab ;
+	bil:aspect bil:Imperfective ;
 	bil:clauseType bil:Main ;
-	bil:numberGenderHead bil:U ;
-	bil:pos bil:Verb ;
-	aamas:lexeme aama:Bilin-gab ;
 	bil:conjClass bil:Conjugation1 ;
-	bil:pngSet bil:PngC ;
+	aamas:lexeme aama:Bilin-gab ;
+	bil:pngSet bil:PngB ;
 	bil:polarity bil:Affirmative ;
-	bil:tam bil:Future ;
-	bil:token "gäbtəna" ;
+	bil:pos bil:Verb ;
+	bil:tam bil:Present ;
+	bil:token "gäbdänäkw" ;
 	bil:person bil:Person2 ;
 	bil:number bil:Plural ;
 	bil:gender bil:Common ;
 	.
 
-aama:ID5ffbb405-906b-48bd-ac71-d2b8daf0521a a aamas:Term ;
+aama:ID39a9f840-0907-4c6f-a758-bce7533fe164 a aamas:Term ;
 	aamas:lang aama:Bilin ;
-	aamas:memberOf bil:bilin-VConj1MainAffPerfFutPngC-gab ;
-	bil:aspect bil:Perfective ;
+	aamas:memberOf bil:bilin-VConj1MainAffImperfPresPngB-gab ;
+	bil:aspect bil:Imperfective ;
 	bil:clauseType bil:Main ;
-	bil:numberGenderHead bil:U ;
-	bil:pos bil:Verb ;
-	aamas:lexeme aama:Bilin-gab ;
 	bil:conjClass bil:Conjugation1 ;
-	bil:pngSet bil:PngC ;
+	aamas:lexeme aama:Bilin-gab ;
+	bil:pngSet bil:PngB ;
 	bil:polarity bil:Affirmative ;
-	bil:tam bil:Future ;
-	bil:token "gäbtäri" ;
+	bil:pos bil:Verb ;
+	bil:tam bil:Present ;
+	bil:token "gäbäti" ;
 	bil:person bil:Person3 ;
 	bil:number bil:Singular ;
 	bil:gender bil:Fem ;
 	.
 
-aama:ID23271386-188b-42ec-9fc9-41cb407954b4 a aamas:Term ;
+aama:ID4df40ef2-bf5e-4f26-8777-b95ab218ecd9 a aamas:Term ;
 	aamas:lang aama:Bilin ;
-	aamas:memberOf bil:bilin-VConj1MainAffPerfFutPngC-gab ;
-	bil:aspect bil:Perfective ;
+	aamas:memberOf bil:bilin-VConj1MainAffImperfPresPngB-gab ;
+	bil:aspect bil:Imperfective ;
 	bil:clauseType bil:Main ;
-	bil:numberGenderHead bil:U ;
-	bil:pos bil:Verb ;
-	aamas:lexeme aama:Bilin-gab ;
 	bil:conjClass bil:Conjugation1 ;
-	bil:pngSet bil:PngC ;
+	aamas:lexeme aama:Bilin-gab ;
+	bil:pngSet bil:PngB ;
 	bil:polarity bil:Affirmative ;
-	bil:tam bil:Future ;
-	bil:token "gäbri" ;
+	bil:pos bil:Verb ;
+	bil:tam bil:Present ;
+	bil:token "gäbänäkw" ;
+	bil:person bil:Person3 ;
+	bil:number bil:Plural ;
+	bil:gender bil:Common ;
+	.
+
+aama:ID1e7c3aac-6410-4dc4-abc4-e9f29ed61ce4 a aamas:Term ;
+	aamas:lang aama:Bilin ;
+	aamas:memberOf bil:bilin-VConj1MainAffImperfPresPngB-gab ;
+	bil:aspect bil:Imperfective ;
+	bil:clauseType bil:Main ;
+	bil:conjClass bil:Conjugation1 ;
+	aamas:lexeme aama:Bilin-gab ;
+	bil:pngSet bil:PngB ;
+	bil:polarity bil:Affirmative ;
+	bil:pos bil:Verb ;
+	bil:tam bil:Present ;
+	bil:token "gäbnäkwən" ;
 	bil:person bil:Person1 ;
+	bil:number bil:Plural ;
+	bil:gender bil:Common ;
+	.
+
+aama:ID1fed3d09-f5ff-42b7-b4c2-c23252f495a6 a aamas:Term ;
+	aamas:lang aama:Bilin ;
+	aamas:memberOf bil:bilin-VConj1MainAffImperfPresPngB-gab ;
+	bil:aspect bil:Imperfective ;
+	bil:clauseType bil:Main ;
+	bil:conjClass bil:Conjugation1 ;
+	aamas:lexeme aama:Bilin-gab ;
+	bil:pngSet bil:PngB ;
+	bil:polarity bil:Affirmative ;
+	bil:pos bil:Verb ;
+	bil:tam bil:Present ;
+	bil:token "gäbäkw" ;
+	bil:person bil:Person3 ;
+	bil:number bil:Singular ;
+	bil:gender bil:Masc ;
+	.
+
+aama:ID650ffb01-6fbf-4bf8-8fd4-643a8599795a a aamas:Term ;
+	aamas:lang aama:Bilin ;
+	aamas:memberOf bil:bilin-VConj1MainAffImperfPresPngB-gab ;
+	bil:aspect bil:Imperfective ;
+	bil:clauseType bil:Main ;
+	bil:conjClass bil:Conjugation1 ;
+	aamas:lexeme aama:Bilin-gab ;
+	bil:pngSet bil:PngB ;
+	bil:polarity bil:Affirmative ;
+	bil:pos bil:Verb ;
+	bil:tam bil:Present ;
+	bil:token "gäbräkw" ;
+	bil:person bil:Person2 ;
 	bil:number bil:Singular ;
 	bil:gender bil:Common ;
 	.
@@ -1902,281 +1892,43 @@ bil:bilin-VConj1AdvPurpNegPerfPngC-gab a aamas:Termcluster ;
 	rdfs:comment "Appleyard2007b pp. 497-501" 
 	.
 
-aama:ID671868b2-e898-41ff-b2e2-ba14ed9d9c50 a aamas:Term ;
+aama:IDd5555cb3-3496-4c77-b08c-4ae5762e1110 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj1AdvPurpNegPerfPngC-gab ;
 	bil:aspect bil:Perfective ;
 	bil:person bil:Person3 ;
 	bil:clauseType bil:AdvPurp ;
 	bil:number bil:Singular ;
-	bil:numberGenderHead bil:U ;
 	bil:pos bil:Verb ;
 	aamas:lexeme aama:Bilin-gab ;
 	bil:conjClass bil:Conjugation1 ;
 	bil:pngSet bil:PngC ;
 	bil:polarity bil:Negative ;
-	bil:tam bil:U ;
 	bil:gender bil:Masc ;
 	bil:token "gäbgin" ;
 	.
 
-#TERMCLUSTER:  bilin-VConj2RelSubjAffImperfPngA-kab
+#TERMCLUSTER:  bilin-VConj1AdvComplNegPerfPngA-gab
 
-bil:bilin-VConj2RelSubjAffImperfPngA-kab a aamas:Termcluster ;
-	rdfs:label "bilin-VConj2RelSubjAffImperfPngA-kab" ;
-	rdfs:comment "Appleyard2007b pp. 497-499" 
-	.
-
-aama:ID54694032-5a33-4d8c-85cd-e037e22bd6e8 a aamas:Term ;
-	aamas:lang aama:Bilin ;
-	aamas:memberOf bil:bilin-VConj2RelSubjAffImperfPngA-kab ;
-	bil:aspect bil:Imperfective ;
-	bil:clauseType bil:RelSubj ;
-	bil:conjClass bil:Conjugation2 ;
-	aamas:lexeme aama:Bilin-kab ;
-	bil:pngSet bil:PngA ;
-	bil:polarity bil:Affirmative ;
-	bil:pos bil:Verb ;
-	bil:tam bil:U ;
-	bil:token "kabäxw" ;
-	bil:person bil:Person3 ;
-	bil:number bil:Singular ;
-	bil:gender bil:Masc ;
-	.
-
-aama:ID6df599d8-5da0-4e39-a8a1-37c707a2ed97 a aamas:Term ;
-	aamas:lang aama:Bilin ;
-	aamas:memberOf bil:bilin-VConj2RelSubjAffImperfPngA-kab ;
-	bil:aspect bil:Imperfective ;
-	bil:clauseType bil:RelSubj ;
-	bil:conjClass bil:Conjugation2 ;
-	aamas:lexeme aama:Bilin-kab ;
-	bil:pngSet bil:PngA ;
-	bil:polarity bil:Affirmative ;
-	bil:pos bil:Verb ;
-	bil:tam bil:U ;
-	bil:token "kabnäxər" ;
-	bil:person bil:Person1 ;
-	bil:number bil:Plural ;
-	bil:gender bil:Common ;
-	.
-
-aama:ID8db96f50-16b1-4ad3-a5db-ddaced78a498 a aamas:Term ;
-	aamas:lang aama:Bilin ;
-	aamas:memberOf bil:bilin-VConj2RelSubjAffImperfPngA-kab ;
-	bil:aspect bil:Imperfective ;
-	bil:clauseType bil:RelSubj ;
-	bil:conjClass bil:Conjugation2 ;
-	aamas:lexeme aama:Bilin-kab ;
-	bil:pngSet bil:PngA ;
-	bil:polarity bil:Affirmative ;
-	bil:pos bil:Verb ;
-	bil:tam bil:U ;
-	bil:token "kabäxər" ;
-	bil:person bil:Person1 ;
-	bil:number bil:Singular ;
-	bil:gender bil:Common ;
-	.
-
-aama:IDc96b20f3-465d-4b39-bcf9-7feeff6715ff a aamas:Term ;
-	aamas:lang aama:Bilin ;
-	aamas:memberOf bil:bilin-VConj2RelSubjAffImperfPngA-kab ;
-	bil:aspect bil:Imperfective ;
-	bil:clauseType bil:RelSubj ;
-	bil:conjClass bil:Conjugation2 ;
-	aamas:lexeme aama:Bilin-kab ;
-	bil:pngSet bil:PngA ;
-	bil:polarity bil:Affirmative ;
-	bil:pos bil:Verb ;
-	bil:tam bil:U ;
-	bil:token "kabäw" ;
-	bil:person bil:Person3 ;
-	bil:number bil:Plural ;
-	bil:gender bil:Common ;
-	.
-
-aama:ID71da17dc-65d7-41a8-a6da-85d4f904a97c a aamas:Term ;
-	aamas:lang aama:Bilin ;
-	aamas:memberOf bil:bilin-VConj2RelSubjAffImperfPngA-kab ;
-	bil:aspect bil:Imperfective ;
-	bil:clauseType bil:RelSubj ;
-	bil:conjClass bil:Conjugation2 ;
-	aamas:lexeme aama:Bilin-kab ;
-	bil:pngSet bil:PngA ;
-	bil:polarity bil:Affirmative ;
-	bil:pos bil:Verb ;
-	bil:tam bil:U ;
-	bil:token "kabräxər" ;
-	bil:person bil:Person2 ;
-	bil:number bil:Singular ;
-	bil:gender bil:Common ;
-	.
-
-aama:ID5a7e736b-0ffa-4a1d-beef-58b868ac2a48 a aamas:Term ;
-	aamas:lang aama:Bilin ;
-	aamas:memberOf bil:bilin-VConj2RelSubjAffImperfPngA-kab ;
-	bil:aspect bil:Imperfective ;
-	bil:clauseType bil:RelSubj ;
-	bil:conjClass bil:Conjugation2 ;
-	aamas:lexeme aama:Bilin-kab ;
-	bil:pngSet bil:PngA ;
-	bil:polarity bil:Affirmative ;
-	bil:pos bil:Verb ;
-	bil:tam bil:U ;
-	bil:token "kabräri" ;
-	bil:person bil:Person3 ;
-	bil:number bil:Singular ;
-	bil:gender bil:Fem ;
-	.
-
-aama:IDeb8bc17d-5e14-400f-a232-5b4f16966fe0 a aamas:Term ;
-	aamas:lang aama:Bilin ;
-	aamas:memberOf bil:bilin-VConj2RelSubjAffImperfPngA-kab ;
-	bil:aspect bil:Imperfective ;
-	bil:clauseType bil:RelSubj ;
-	bil:conjClass bil:Conjugation2 ;
-	aamas:lexeme aama:Bilin-kab ;
-	bil:pngSet bil:PngA ;
-	bil:polarity bil:Affirmative ;
-	bil:pos bil:Verb ;
-	bil:tam bil:U ;
-	bil:token "kabdənäxər" ;
-	bil:person bil:Person2 ;
-	bil:number bil:Plural ;
-	bil:gender bil:Common ;
-	.
-
-#TERMCLUSTER:  bilin-VConj1MainAffPerfPastPngB-gab
-
-bil:bilin-VConj1MainAffPerfPastPngB-gab a aamas:Termcluster ;
-	rdfs:label "bilin-VConj1MainAffPerfPastPngB-gab" ;
+bil:bilin-VConj1AdvComplNegPerfPngA-gab a aamas:Termcluster ;
+	rdfs:label "bilin-VConj1AdvComplNegPerfPngA-gab" ;
 	rdfs:comment "Appleyard2007b pp. 497-501" 
 	.
 
-aama:IDc3311618-b9e7-4b4d-ade5-866f0da21695 a aamas:Term ;
+aama:ID48c21688-b101-4a97-a267-a59987561690 a aamas:Term ;
 	aamas:lang aama:Bilin ;
-	aamas:memberOf bil:bilin-VConj1MainAffPerfPastPngB-gab ;
+	aamas:memberOf bil:bilin-VConj1AdvComplNegPerfPngA-gab ;
 	bil:aspect bil:Perfective ;
-	bil:clauseType bil:Main ;
-	bil:numberGenderHead bil:U ;
-	bil:pos bil:Verb ;
-	aamas:lexeme aama:Bilin-gab ;
-	bil:conjClass bil:Conjugation1 ;
-	bil:pngSet bil:PngB ;
-	bil:polarity bil:Affirmative ;
-	bil:tam bil:Past ;
-	bil:token "gäbrəxw" ;
-	bil:person bil:Person2 ;
-	bil:number bil:Singular ;
-	bil:gender bil:Common ;
-	.
-
-aama:IDeab042ff-4591-43f5-bad4-4ea5fb25739f a aamas:Term ;
-	aamas:lang aama:Bilin ;
-	aamas:memberOf bil:bilin-VConj1MainAffPerfPastPngB-gab ;
-	bil:aspect bil:Perfective ;
-	bil:clauseType bil:Main ;
-	bil:numberGenderHead bil:U ;
-	bil:pos bil:Verb ;
-	aamas:lexeme aama:Bilin-gab ;
-	bil:conjClass bil:Conjugation1 ;
-	bil:pngSet bil:PngB ;
-	bil:polarity bil:Affirmative ;
-	bil:tam bil:Past ;
-	bil:token "gäbnəxw" ;
 	bil:person bil:Person3 ;
-	bil:number bil:Plural ;
-	bil:gender bil:Common ;
-	.
-
-aama:ID66d0bb40-01fb-4793-b21c-f9bd9693cd9d a aamas:Term ;
-	aamas:lang aama:Bilin ;
-	aamas:memberOf bil:bilin-VConj1MainAffPerfPastPngB-gab ;
-	bil:aspect bil:Perfective ;
-	bil:clauseType bil:Main ;
-	bil:numberGenderHead bil:U ;
-	bil:pos bil:Verb ;
-	aamas:lexeme aama:Bilin-gab ;
-	bil:conjClass bil:Conjugation1 ;
-	bil:pngSet bil:PngB ;
-	bil:polarity bil:Affirmative ;
-	bil:tam bil:Past ;
-	bil:token "gäbdənəxw" ;
-	bil:person bil:Person2 ;
-	bil:number bil:Plural ;
-	bil:gender bil:Common ;
-	.
-
-aama:IDaefd098b-521a-4d32-99bc-ba5f9ffd57aa a aamas:Term ;
-	aamas:lang aama:Bilin ;
-	aamas:memberOf bil:bilin-VConj1MainAffPerfPastPngB-gab ;
-	bil:aspect bil:Perfective ;
-	bil:clauseType bil:Main ;
-	bil:numberGenderHead bil:U ;
-	bil:pos bil:Verb ;
-	aamas:lexeme aama:Bilin-gab ;
-	bil:conjClass bil:Conjugation1 ;
-	bil:pngSet bil:PngB ;
-	bil:polarity bil:Affirmative ;
-	bil:tam bil:Past ;
-	bil:token "gäbti" ;
-	bil:person bil:Person3 ;
+	bil:clauseType bil:AdvCompl ;
 	bil:number bil:Singular ;
-	bil:gender bil:Fem ;
-	.
-
-aama:ID112b2349-3d2f-4983-a070-a9fd51672842 a aamas:Term ;
-	aamas:lang aama:Bilin ;
-	aamas:memberOf bil:bilin-VConj1MainAffPerfPastPngB-gab ;
-	bil:aspect bil:Perfective ;
-	bil:clauseType bil:Main ;
-	bil:numberGenderHead bil:U ;
 	bil:pos bil:Verb ;
 	aamas:lexeme aama:Bilin-gab ;
 	bil:conjClass bil:Conjugation1 ;
-	bil:pngSet bil:PngB ;
-	bil:polarity bil:Affirmative ;
-	bil:tam bil:Past ;
-	bil:token "gäbnəxwən" ;
-	bil:person bil:Person1 ;
-	bil:number bil:Plural ;
-	bil:gender bil:Common ;
-	.
-
-aama:IDed623a20-884b-492a-8fbf-bf4bd8eded28 a aamas:Term ;
-	aamas:lang aama:Bilin ;
-	aamas:memberOf bil:bilin-VConj1MainAffPerfPastPngB-gab ;
-	bil:aspect bil:Perfective ;
-	bil:clauseType bil:Main ;
-	bil:numberGenderHead bil:U ;
-	bil:pos bil:Verb ;
-	aamas:lexeme aama:Bilin-gab ;
-	bil:conjClass bil:Conjugation1 ;
-	bil:pngSet bil:PngB ;
-	bil:polarity bil:Affirmative ;
-	bil:tam bil:Past ;
-	bil:token "gäbəxwən" ;
-	bil:person bil:Person1 ;
-	bil:number bil:Singular ;
-	bil:gender bil:Common ;
-	.
-
-aama:IDb022bc03-5786-4f5e-8a51-bd75446eb7f7 a aamas:Term ;
-	aamas:lang aama:Bilin ;
-	aamas:memberOf bil:bilin-VConj1MainAffPerfPastPngB-gab ;
-	bil:aspect bil:Perfective ;
-	bil:clauseType bil:Main ;
-	bil:numberGenderHead bil:U ;
-	bil:pos bil:Verb ;
-	aamas:lexeme aama:Bilin-gab ;
-	bil:conjClass bil:Conjugation1 ;
-	bil:pngSet bil:PngB ;
-	bil:polarity bil:Affirmative ;
-	bil:tam bil:Past ;
-	bil:token "gäbəxw" ;
-	bil:person bil:Person3 ;
-	bil:number bil:Singular ;
+	bil:pngSet bil:PngA ;
+	bil:polarity bil:Negative ;
 	bil:gender bil:Masc ;
+	bil:token "gäbgät" ;
 	.
 
 #TERMCLUSTER:  bilin-VConj1RelObliqAffImperfPngAHeadSgf-gab
@@ -2186,155 +1938,146 @@ bil:bilin-VConj1RelObliqAffImperfPngAHeadSgf-gab a aamas:Termcluster ;
 	rdfs:comment "Appleyard2007b pp. 497-501" 
 	.
 
-aama:ID80955727-b90c-4d5a-bf88-9501b219add4 a aamas:Term ;
+aama:ID545316e0-05db-454c-963c-2ec00581860e a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj1RelObliqAffImperfPngAHeadSgf-gab ;
 	bil:aspect bil:Imperfective ;
 	bil:clauseType bil:RelObliq ;
-	bil:numberGenderHead bil:HeadSingularFem ;
-	bil:pos bil:Verb ;
-	aamas:lexeme aama:Bilin-gab ;
 	bil:conjClass bil:Conjugation1 ;
+	aamas:lexeme aama:Bilin-gab ;
+	bil:numberGenderHead bil:HeadSingularFem ;
 	bil:pngSet bil:PngA ;
 	bil:polarity bil:Affirmative ;
-	bil:tam bil:U ;
+	bil:pos bil:Verb ;
 	bil:token "gäbräri" ;
 	bil:person bil:Person2 ;
 	bil:number bil:Singular ;
 	bil:gender bil:Common ;
 	.
 
-aama:IDe7932837-75f8-4c3c-8625-efe73780e8fb a aamas:Term ;
+aama:IDfb2bf02c-27ec-4b25-9f68-1c1bbaa97e88 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj1RelObliqAffImperfPngAHeadSgf-gab ;
 	bil:aspect bil:Imperfective ;
 	bil:clauseType bil:RelObliq ;
-	bil:numberGenderHead bil:HeadSingularFem ;
-	bil:pos bil:Verb ;
-	aamas:lexeme aama:Bilin-gab ;
 	bil:conjClass bil:Conjugation1 ;
+	aamas:lexeme aama:Bilin-gab ;
+	bil:numberGenderHead bil:HeadSingularFem ;
 	bil:pngSet bil:PngA ;
 	bil:polarity bil:Affirmative ;
-	bil:tam bil:U ;
+	bil:pos bil:Verb ;
 	bil:token "gäbäri" ;
 	bil:person bil:Person3 ;
 	bil:number bil:Singular ;
 	bil:gender bil:Masc ;
 	.
 
-aama:ID185aa4c1-2a21-4e53-8586-cb3851bc7de8 a aamas:Term ;
+aama:IDa12248e6-16e6-4d3a-a10c-bf5cfaa6cd65 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj1RelObliqAffImperfPngAHeadSgf-gab ;
 	bil:aspect bil:Imperfective ;
 	bil:clauseType bil:RelObliq ;
-	bil:numberGenderHead bil:HeadSingularFem ;
-	bil:pos bil:Verb ;
-	aamas:lexeme aama:Bilin-gab ;
 	bil:conjClass bil:Conjugation1 ;
+	aamas:lexeme aama:Bilin-gab ;
+	bil:numberGenderHead bil:HeadSingularFem ;
 	bil:pngSet bil:PngA ;
 	bil:polarity bil:Affirmative ;
-	bil:tam bil:U ;
+	bil:pos bil:Verb ;
 	bil:token "gäbäri" ;
 	bil:person bil:Person1 ;
 	bil:number bil:Singular ;
 	bil:gender bil:Common ;
 	.
 
-aama:IDe11bfa17-e2cc-4588-a2b9-f5f4ad55ad21 a aamas:Term ;
+aama:ID6158f225-3601-4f55-a09f-6d2cdb5e7845 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj1RelObliqAffImperfPngAHeadSgf-gab ;
 	bil:aspect bil:Imperfective ;
 	bil:clauseType bil:RelObliq ;
-	bil:numberGenderHead bil:HeadSingularFem ;
-	bil:pos bil:Verb ;
-	aamas:lexeme aama:Bilin-gab ;
 	bil:conjClass bil:Conjugation1 ;
+	aamas:lexeme aama:Bilin-gab ;
+	bil:numberGenderHead bil:HeadSingularFem ;
 	bil:pngSet bil:PngA ;
 	bil:polarity bil:Affirmative ;
-	bil:tam bil:U ;
+	bil:pos bil:Verb ;
 	bil:token "gäbänäri" ;
 	bil:person bil:Person3 ;
 	bil:number bil:Plural ;
 	bil:gender bil:Common ;
 	.
 
-aama:ID5e8f915d-955d-4613-b7c3-c7f2da5c2695 a aamas:Term ;
+aama:IDabc04b96-4d1f-412f-a715-a93baedcf662 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj1RelObliqAffImperfPngAHeadSgf-gab ;
 	bil:aspect bil:Imperfective ;
 	bil:clauseType bil:RelObliq ;
-	bil:numberGenderHead bil:HeadSingularFem ;
-	bil:pos bil:Verb ;
-	aamas:lexeme aama:Bilin-gab ;
 	bil:conjClass bil:Conjugation1 ;
+	aamas:lexeme aama:Bilin-gab ;
+	bil:numberGenderHead bil:HeadSingularFem ;
 	bil:pngSet bil:PngA ;
 	bil:polarity bil:Affirmative ;
-	bil:tam bil:U ;
+	bil:pos bil:Verb ;
 	bil:token "gäbräri" ;
 	bil:person bil:Person3 ;
 	bil:number bil:Singular ;
 	bil:gender bil:Fem ;
 	.
 
-aama:ID62645195-2b1d-4b6c-9346-0b3ab309e7d0 a aamas:Term ;
+aama:ID8a112627-b06e-46b7-b1ef-2fd910e2214a a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj1RelObliqAffImperfPngAHeadSgf-gab ;
 	bil:aspect bil:Imperfective ;
 	bil:clauseType bil:RelObliq ;
-	bil:numberGenderHead bil:HeadSingularFem ;
-	bil:pos bil:Verb ;
-	aamas:lexeme aama:Bilin-gab ;
 	bil:conjClass bil:Conjugation1 ;
+	aamas:lexeme aama:Bilin-gab ;
+	bil:numberGenderHead bil:HeadSingularFem ;
 	bil:pngSet bil:PngA ;
 	bil:polarity bil:Affirmative ;
-	bil:tam bil:U ;
+	bil:pos bil:Verb ;
 	bil:token "gäbdänäri" ;
 	bil:person bil:Person2 ;
 	bil:number bil:Plural ;
 	bil:gender bil:Common ;
 	.
 
-aama:ID952c9387-4219-43f2-b1d8-67fc9fd83c47 a aamas:Term ;
+aama:IDb39f54ea-d875-48e1-88ba-6e2f96ce8877 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj1RelObliqAffImperfPngAHeadSgf-gab ;
 	bil:aspect bil:Imperfective ;
 	bil:clauseType bil:RelObliq ;
-	bil:numberGenderHead bil:HeadSingularFem ;
-	bil:pos bil:Verb ;
-	aamas:lexeme aama:Bilin-gab ;
 	bil:conjClass bil:Conjugation1 ;
+	aamas:lexeme aama:Bilin-gab ;
+	bil:numberGenderHead bil:HeadSingularFem ;
 	bil:pngSet bil:PngA ;
 	bil:polarity bil:Affirmative ;
-	bil:tam bil:U ;
+	bil:pos bil:Verb ;
 	bil:token "gäbnäri" ;
 	bil:person bil:Person1 ;
 	bil:number bil:Plural ;
 	bil:gender bil:Common ;
 	.
 
-#TERMCLUSTER:  bilin-VConj1AdvCauseNegPerfPngA-gab
+#TERMCLUSTER:  bilin-VConj1AdvPurpAffPerfPngC-gab
 
-bil:bilin-VConj1AdvCauseNegPerfPngA-gab a aamas:Termcluster ;
-	rdfs:label "bilin-VConj1AdvCauseNegPerfPngA-gab" ;
+bil:bilin-VConj1AdvPurpAffPerfPngC-gab a aamas:Termcluster ;
+	rdfs:label "bilin-VConj1AdvPurpAffPerfPngC-gab" ;
 	rdfs:comment "Appleyard2007b pp. 497-501" 
 	.
 
-aama:IDcb1fbf1f-5af2-4db1-a580-35a9ef551354 a aamas:Term ;
+aama:IDdc55fb85-83ab-41a4-8426-afde4402ada6 a aamas:Term ;
 	aamas:lang aama:Bilin ;
-	aamas:memberOf bil:bilin-VConj1AdvCauseNegPerfPngA-gab ;
+	aamas:memberOf bil:bilin-VConj1AdvPurpAffPerfPngC-gab ;
 	bil:aspect bil:Perfective ;
 	bil:person bil:Person3 ;
-	bil:clauseType bil:AdvCause ;
+	bil:clauseType bil:AdvPurp ;
 	bil:number bil:Singular ;
-	bil:numberGenderHead bil:U ;
 	bil:pos bil:Verb ;
 	aamas:lexeme aama:Bilin-gab ;
 	bil:conjClass bil:Conjugation1 ;
-	bil:pngSet bil:PngA ;
-	bil:polarity bil:Negative ;
-	bil:tam bil:U ;
+	bil:pngSet bil:PngC ;
+	bil:polarity bil:Affirmative ;
 	bil:gender bil:Masc ;
-	bil:token "gäbgənädin" ;
+	bil:token "gäbro" ;
 	.
 
 #TERMCLUSTER:  bilin-VConj1AdvCondNegPerfPngA-gab
@@ -2344,179 +2087,280 @@ bil:bilin-VConj1AdvCondNegPerfPngA-gab a aamas:Termcluster ;
 	rdfs:comment "Appleyard2007b pp. 497-501" 
 	.
 
-aama:IDa8e98b86-1bb7-454d-9674-60abb2c44edd a aamas:Term ;
+aama:IDda298836-63b9-4fc8-8524-3313f7142980 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj1AdvCondNegPerfPngA-gab ;
 	bil:aspect bil:Perfective ;
 	bil:person bil:Person3 ;
 	bil:clauseType bil:AdvCond ;
 	bil:number bil:Singular ;
-	bil:numberGenderHead bil:U ;
 	bil:pos bil:Verb ;
 	aamas:lexeme aama:Bilin-gab ;
 	bil:conjClass bil:Conjugation1 ;
 	bil:pngSet bil:PngA ;
 	bil:polarity bil:Negative ;
-	bil:tam bil:U ;
 	bil:gender bil:Masc ;
 	bil:token "gäbgənädik" ;
 	.
 
-#TERMCLUSTER:  bilin-VConj1AdvWhileAffImperfPngA-gab
+#TERMCLUSTER:  bilin-VConj1AdvAt1AffImperfPngA-gab
 
-bil:bilin-VConj1AdvWhileAffImperfPngA-gab a aamas:Termcluster ;
-	rdfs:label "bilin-VConj1AdvWhileAffImperfPngA-gab" ;
+bil:bilin-VConj1AdvAt1AffImperfPngA-gab a aamas:Termcluster ;
+	rdfs:label "bilin-VConj1AdvAt1AffImperfPngA-gab" ;
 	rdfs:comment "Appleyard2007b pp. 497-501" 
 	.
 
-aama:IDa74426a5-8ba9-4b86-98d7-58df88989ed2 a aamas:Term ;
+aama:ID1c64c672-8115-4571-844a-64b4c970dfdc a aamas:Term ;
 	aamas:lang aama:Bilin ;
-	aamas:memberOf bil:bilin-VConj1AdvWhileAffImperfPngA-gab ;
+	aamas:memberOf bil:bilin-VConj1AdvAt1AffImperfPngA-gab ;
 	bil:aspect bil:Imperfective ;
 	bil:person bil:Person3 ;
-	bil:clauseType bil:AdvWhile ;
+	bil:clauseType bil:AdvAt1 ;
 	bil:number bil:Singular ;
-	bil:numberGenderHead bil:U ;
 	bil:pos bil:Verb ;
 	aamas:lexeme aama:Bilin-gab ;
 	bil:conjClass bil:Conjugation1 ;
 	bil:pngSet bil:PngA ;
 	bil:polarity bil:Affirmative ;
-	bil:tam bil:U ;
 	bil:gender bil:Masc ;
-	bil:token "gäbu" ;
+	bil:token "gäbäsäna" ;
 	.
 
-#TERMCLUSTER:  bilin-VConj1RelSubjAffImperfPngA-gab
+#TERMCLUSTER:  bilin-VConj1RelSubjAffPerfPngA-gab
 
-bil:bilin-VConj1RelSubjAffImperfPngA-gab a aamas:Termcluster ;
-	rdfs:label "bilin-VConj1RelSubjAffImperfPngA-gab" ;
+bil:bilin-VConj1RelSubjAffPerfPngA-gab a aamas:Termcluster ;
+	rdfs:label "bilin-VConj1RelSubjAffPerfPngA-gab" ;
 	rdfs:comment "Appleyard2007b pp. 497-501" 
 	.
 
-aama:ID8c857ab6-5027-441e-85ce-d8db786866a1 a aamas:Term ;
+aama:IDbc20923b-e32e-49f0-9a00-e2d5d36cdc57 a aamas:Term ;
 	aamas:lang aama:Bilin ;
-	aamas:memberOf bil:bilin-VConj1RelSubjAffImperfPngA-gab ;
-	bil:aspect bil:Imperfective ;
+	aamas:memberOf bil:bilin-VConj1RelSubjAffPerfPngA-gab ;
+	bil:aspect bil:Perfective ;
 	bil:clauseType bil:RelSubj ;
-	bil:numberGenderHead bil:U ;
-	bil:pos bil:Verb ;
-	aamas:lexeme aama:Bilin-gab ;
 	bil:conjClass bil:Conjugation1 ;
+	aamas:lexeme aama:Bilin-gab ;
 	bil:pngSet bil:PngA ;
 	bil:polarity bil:Affirmative ;
-	bil:tam bil:U ;
-	bil:token "gäbäw" ;
-	bil:person bil:Person3 ;
-	bil:number bil:Plural ;
-	bil:gender bil:Common ;
-	.
-
-aama:IDa9ce8046-1404-47b2-a233-276a8c4148ac a aamas:Term ;
-	aamas:lang aama:Bilin ;
-	aamas:memberOf bil:bilin-VConj1RelSubjAffImperfPngA-gab ;
-	bil:aspect bil:Imperfective ;
-	bil:clauseType bil:RelSubj ;
-	bil:numberGenderHead bil:U ;
 	bil:pos bil:Verb ;
-	aamas:lexeme aama:Bilin-gab ;
-	bil:conjClass bil:Conjugation1 ;
-	bil:pngSet bil:PngA ;
-	bil:polarity bil:Affirmative ;
-	bil:tam bil:U ;
-	bil:token "gäbäxw" ;
-	bil:person bil:Person3 ;
-	bil:number bil:Singular ;
-	bil:gender bil:Masc ;
-	.
-
-aama:ID7e34ba47-2461-4437-869c-8cec853a6459 a aamas:Term ;
-	aamas:lang aama:Bilin ;
-	aamas:memberOf bil:bilin-VConj1RelSubjAffImperfPngA-gab ;
-	bil:aspect bil:Imperfective ;
-	bil:clauseType bil:RelSubj ;
-	bil:numberGenderHead bil:U ;
-	bil:pos bil:Verb ;
-	aamas:lexeme aama:Bilin-gab ;
-	bil:conjClass bil:Conjugation1 ;
-	bil:pngSet bil:PngA ;
-	bil:polarity bil:Affirmative ;
-	bil:tam bil:U ;
-	bil:token "gäbräri" ;
-	bil:person bil:Person3 ;
-	bil:number bil:Singular ;
-	bil:gender bil:Fem ;
-	.
-
-aama:IDd17650cf-6652-4456-8fb6-9e2c3a47673f a aamas:Term ;
-	aamas:lang aama:Bilin ;
-	aamas:memberOf bil:bilin-VConj1RelSubjAffImperfPngA-gab ;
-	bil:aspect bil:Imperfective ;
-	bil:clauseType bil:RelSubj ;
-	bil:numberGenderHead bil:U ;
-	bil:pos bil:Verb ;
-	aamas:lexeme aama:Bilin-gab ;
-	bil:conjClass bil:Conjugation1 ;
-	bil:pngSet bil:PngA ;
-	bil:polarity bil:Affirmative ;
-	bil:tam bil:U ;
-	bil:token "gäbnäxər" ;
-	bil:person bil:Person1 ;
-	bil:number bil:Plural ;
-	bil:gender bil:Common ;
-	.
-
-aama:IDa33b8a1a-1e5a-444a-b205-b775ab53500c a aamas:Term ;
-	aamas:lang aama:Bilin ;
-	aamas:memberOf bil:bilin-VConj1RelSubjAffImperfPngA-gab ;
-	bil:aspect bil:Imperfective ;
-	bil:clauseType bil:RelSubj ;
-	bil:numberGenderHead bil:U ;
-	bil:pos bil:Verb ;
-	aamas:lexeme aama:Bilin-gab ;
-	bil:conjClass bil:Conjugation1 ;
-	bil:pngSet bil:PngA ;
-	bil:polarity bil:Affirmative ;
-	bil:tam bil:U ;
-	bil:token "gäbdänäxər" ;
-	bil:person bil:Person2 ;
-	bil:number bil:Plural ;
-	bil:gender bil:Common ;
-	.
-
-aama:ID8b5cfcfd-59a1-4c5a-8a7a-630afbe0e434 a aamas:Term ;
-	aamas:lang aama:Bilin ;
-	aamas:memberOf bil:bilin-VConj1RelSubjAffImperfPngA-gab ;
-	bil:aspect bil:Imperfective ;
-	bil:clauseType bil:RelSubj ;
-	bil:numberGenderHead bil:U ;
-	bil:pos bil:Verb ;
-	aamas:lexeme aama:Bilin-gab ;
-	bil:conjClass bil:Conjugation1 ;
-	bil:pngSet bil:PngA ;
-	bil:polarity bil:Affirmative ;
-	bil:tam bil:U ;
 	bil:token "gäbäxər" ;
 	bil:person bil:Person1 ;
 	bil:number bil:Singular ;
 	bil:gender bil:Common ;
 	.
 
-aama:IDce2c3eee-d50a-4f65-ba09-0691be725ca2 a aamas:Term ;
+aama:ID940f1516-2683-4ed4-9798-feec1ab6ca90 a aamas:Term ;
 	aamas:lang aama:Bilin ;
-	aamas:memberOf bil:bilin-VConj1RelSubjAffImperfPngA-gab ;
-	bil:aspect bil:Imperfective ;
+	aamas:memberOf bil:bilin-VConj1RelSubjAffPerfPngA-gab ;
+	bil:aspect bil:Perfective ;
 	bil:clauseType bil:RelSubj ;
-	bil:numberGenderHead bil:U ;
-	bil:pos bil:Verb ;
-	aamas:lexeme aama:Bilin-gab ;
 	bil:conjClass bil:Conjugation1 ;
+	aamas:lexeme aama:Bilin-gab ;
 	bil:pngSet bil:PngA ;
 	bil:polarity bil:Affirmative ;
-	bil:tam bil:U ;
+	bil:pos bil:Verb ;
+	bil:token "gäbäw" ;
+	bil:person bil:Person3 ;
+	bil:number bil:Plural ;
+	bil:gender bil:Common ;
+	.
+
+aama:ID1b9e328f-cac4-48ac-ae9e-92d4e5cc436b a aamas:Term ;
+	aamas:lang aama:Bilin ;
+	aamas:memberOf bil:bilin-VConj1RelSubjAffPerfPngA-gab ;
+	bil:aspect bil:Perfective ;
+	bil:clauseType bil:RelSubj ;
+	bil:conjClass bil:Conjugation1 ;
+	aamas:lexeme aama:Bilin-gab ;
+	bil:pngSet bil:PngA ;
+	bil:polarity bil:Affirmative ;
+	bil:pos bil:Verb ;
+	bil:token "gäbnäxər" ;
+	bil:person bil:Person1 ;
+	bil:number bil:Plural ;
+	bil:gender bil:Common ;
+	.
+
+aama:ID998e418b-099b-449b-8980-5d820211096a a aamas:Term ;
+	aamas:lang aama:Bilin ;
+	aamas:memberOf bil:bilin-VConj1RelSubjAffPerfPngA-gab ;
+	bil:aspect bil:Perfective ;
+	bil:clauseType bil:RelSubj ;
+	bil:conjClass bil:Conjugation1 ;
+	aamas:lexeme aama:Bilin-gab ;
+	bil:pngSet bil:PngA ;
+	bil:polarity bil:Affirmative ;
+	bil:pos bil:Verb ;
+	bil:token "gäbräri" ;
+	bil:person bil:Person3 ;
+	bil:number bil:Singular ;
+	bil:gender bil:Fem ;
+	.
+
+aama:ID04121503-6e76-4d47-94b8-2bab5d27165a a aamas:Term ;
+	aamas:lang aama:Bilin ;
+	aamas:memberOf bil:bilin-VConj1RelSubjAffPerfPngA-gab ;
+	bil:aspect bil:Perfective ;
+	bil:clauseType bil:RelSubj ;
+	bil:conjClass bil:Conjugation1 ;
+	aamas:lexeme aama:Bilin-gab ;
+	bil:pngSet bil:PngA ;
+	bil:polarity bil:Affirmative ;
+	bil:pos bil:Verb ;
+	bil:token "gäbdənäxər" ;
+	bil:person bil:Person2 ;
+	bil:number bil:Plural ;
+	bil:gender bil:Common ;
+	.
+
+aama:ID2b2241e8-3b37-43c4-9c24-3151894332ba a aamas:Term ;
+	aamas:lang aama:Bilin ;
+	aamas:memberOf bil:bilin-VConj1RelSubjAffPerfPngA-gab ;
+	bil:aspect bil:Perfective ;
+	bil:clauseType bil:RelSubj ;
+	bil:conjClass bil:Conjugation1 ;
+	aamas:lexeme aama:Bilin-gab ;
+	bil:pngSet bil:PngA ;
+	bil:polarity bil:Affirmative ;
+	bil:pos bil:Verb ;
+	bil:token "gäbäxw" ;
+	bil:person bil:Person3 ;
+	bil:number bil:Singular ;
+	bil:gender bil:Masc ;
+	.
+
+aama:ID8a197b5c-c187-478b-aabf-4b7a706758ba a aamas:Term ;
+	aamas:lang aama:Bilin ;
+	aamas:memberOf bil:bilin-VConj1RelSubjAffPerfPngA-gab ;
+	bil:aspect bil:Perfective ;
+	bil:clauseType bil:RelSubj ;
+	bil:conjClass bil:Conjugation1 ;
+	aamas:lexeme aama:Bilin-gab ;
+	bil:pngSet bil:PngA ;
+	bil:polarity bil:Affirmative ;
+	bil:pos bil:Verb ;
 	bil:token "gäbräxər" ;
 	bil:person bil:Person2 ;
 	bil:number bil:Singular ;
+	bil:gender bil:Common ;
+	.
+
+#TERMCLUSTER:  bilin-VConj2RelSubjAffImperfPngA-kab
+
+bil:bilin-VConj2RelSubjAffImperfPngA-kab a aamas:Termcluster ;
+	rdfs:label "bilin-VConj2RelSubjAffImperfPngA-kab" ;
+	rdfs:comment "Appleyard2007b pp. 497-499" 
+	.
+
+aama:IDdd672e87-b6f5-433f-a95e-72efc9241b9c a aamas:Term ;
+	aamas:lang aama:Bilin ;
+	aamas:memberOf bil:bilin-VConj2RelSubjAffImperfPngA-kab ;
+	bil:aspect bil:Imperfective ;
+	bil:clauseType bil:RelSubj ;
+	bil:conjClass bil:Conjugation2 ;
+	aamas:lexeme aama:Bilin-kab ;
+	bil:pngSet bil:PngA ;
+	bil:polarity bil:Affirmative ;
+	bil:pos bil:Verb ;
+	bil:token "kabäxw" ;
+	bil:person bil:Person3 ;
+	bil:number bil:Singular ;
+	bil:gender bil:Masc ;
+	.
+
+aama:ID90bc3c70-c6a6-44cc-b0bc-6a6e7e3df9b7 a aamas:Term ;
+	aamas:lang aama:Bilin ;
+	aamas:memberOf bil:bilin-VConj2RelSubjAffImperfPngA-kab ;
+	bil:aspect bil:Imperfective ;
+	bil:clauseType bil:RelSubj ;
+	bil:conjClass bil:Conjugation2 ;
+	aamas:lexeme aama:Bilin-kab ;
+	bil:pngSet bil:PngA ;
+	bil:polarity bil:Affirmative ;
+	bil:pos bil:Verb ;
+	bil:token "kabnäxər" ;
+	bil:person bil:Person1 ;
+	bil:number bil:Plural ;
+	bil:gender bil:Common ;
+	.
+
+aama:IDaa5d8d43-a429-4c06-ae00-02f4d0e232a1 a aamas:Term ;
+	aamas:lang aama:Bilin ;
+	aamas:memberOf bil:bilin-VConj2RelSubjAffImperfPngA-kab ;
+	bil:aspect bil:Imperfective ;
+	bil:clauseType bil:RelSubj ;
+	bil:conjClass bil:Conjugation2 ;
+	aamas:lexeme aama:Bilin-kab ;
+	bil:pngSet bil:PngA ;
+	bil:polarity bil:Affirmative ;
+	bil:pos bil:Verb ;
+	bil:token "kabäxər" ;
+	bil:person bil:Person1 ;
+	bil:number bil:Singular ;
+	bil:gender bil:Common ;
+	.
+
+aama:ID71374db8-319b-4573-b0de-b14d587e7f92 a aamas:Term ;
+	aamas:lang aama:Bilin ;
+	aamas:memberOf bil:bilin-VConj2RelSubjAffImperfPngA-kab ;
+	bil:aspect bil:Imperfective ;
+	bil:clauseType bil:RelSubj ;
+	bil:conjClass bil:Conjugation2 ;
+	aamas:lexeme aama:Bilin-kab ;
+	bil:pngSet bil:PngA ;
+	bil:polarity bil:Affirmative ;
+	bil:pos bil:Verb ;
+	bil:token "kabäw" ;
+	bil:person bil:Person3 ;
+	bil:number bil:Plural ;
+	bil:gender bil:Common ;
+	.
+
+aama:IDb243593b-6874-4d0d-a334-7f19e6f32768 a aamas:Term ;
+	aamas:lang aama:Bilin ;
+	aamas:memberOf bil:bilin-VConj2RelSubjAffImperfPngA-kab ;
+	bil:aspect bil:Imperfective ;
+	bil:clauseType bil:RelSubj ;
+	bil:conjClass bil:Conjugation2 ;
+	aamas:lexeme aama:Bilin-kab ;
+	bil:pngSet bil:PngA ;
+	bil:polarity bil:Affirmative ;
+	bil:pos bil:Verb ;
+	bil:token "kabräxər" ;
+	bil:person bil:Person2 ;
+	bil:number bil:Singular ;
+	bil:gender bil:Common ;
+	.
+
+aama:ID69dd6ba4-73f2-4c4c-b412-d46ae30db32e a aamas:Term ;
+	aamas:lang aama:Bilin ;
+	aamas:memberOf bil:bilin-VConj2RelSubjAffImperfPngA-kab ;
+	bil:aspect bil:Imperfective ;
+	bil:clauseType bil:RelSubj ;
+	bil:conjClass bil:Conjugation2 ;
+	aamas:lexeme aama:Bilin-kab ;
+	bil:pngSet bil:PngA ;
+	bil:polarity bil:Affirmative ;
+	bil:pos bil:Verb ;
+	bil:token "kabräri" ;
+	bil:person bil:Person3 ;
+	bil:number bil:Singular ;
+	bil:gender bil:Fem ;
+	.
+
+aama:IDc1bd5ed8-3960-4dd9-9dec-2c5583c21309 a aamas:Term ;
+	aamas:lang aama:Bilin ;
+	aamas:memberOf bil:bilin-VConj2RelSubjAffImperfPngA-kab ;
+	bil:aspect bil:Imperfective ;
+	bil:clauseType bil:RelSubj ;
+	bil:conjClass bil:Conjugation2 ;
+	aamas:lexeme aama:Bilin-kab ;
+	bil:pngSet bil:PngA ;
+	bil:polarity bil:Affirmative ;
+	bil:pos bil:Verb ;
+	bil:token "kabdənäxər" ;
+	bil:person bil:Person2 ;
+	bil:number bil:Plural ;
 	bil:gender bil:Common ;
 	.
 
@@ -2527,20 +2371,18 @@ bil:bilin-VConj1AdvCondAffImperfPngA-gab a aamas:Termcluster ;
 	rdfs:comment "Appleyard2007b pp. 497-501" 
 	.
 
-aama:ID6179e681-7911-461b-ac9c-79bd0fe61bd0 a aamas:Term ;
+aama:ID8d01a219-9f8f-4bd5-a8db-4ec4a4e0edc6 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj1AdvCondAffImperfPngA-gab ;
 	bil:aspect bil:Imperfective ;
 	bil:person bil:Person3 ;
 	bil:clauseType bil:AdvCond ;
 	bil:number bil:Singular ;
-	bil:numberGenderHead bil:U ;
 	bil:pos bil:Verb ;
 	aamas:lexeme aama:Bilin-gab ;
 	bil:conjClass bil:Conjugation1 ;
 	bil:pngSet bil:PngA ;
 	bil:polarity bil:Affirmative ;
-	bil:tam bil:U ;
 	bil:gender bil:Masc ;
 	bil:token "gäbän" ;
 	.
@@ -2552,7 +2394,7 @@ bil:bilin-VConj1Infinitive-gab a aamas:Termcluster ;
 	rdfs:comment "Appleyard2007b pp. 497-501" 
 	.
 
-aama:IDb32e96cb-f5e6-48d3-91a4-6c1b76dbe528 a aamas:Term ;
+aama:IDeb524167-793b-41cc-bb15-2a363ea2a4bd a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj1Infinitive-gab ;
 	bil:conjClass bil:Conjugation1 ;
@@ -2563,259 +2405,242 @@ aama:IDb32e96cb-f5e6-48d3-91a4-6c1b76dbe528 a aamas:Term ;
 	bil:token "gäbna" ;
 	.
 
-#TERMCLUSTER:  bilin-VConj1MainAffImperfJussPngA-gab
+#TERMCLUSTER:  bilin-VConj1MainNegPerfPngA2-gab
 
-bil:bilin-VConj1MainAffImperfJussPngA-gab a aamas:Termcluster ;
-	rdfs:label "bilin-VConj1MainAffImperfJussPngA-gab" ;
+bil:bilin-VConj1MainNegPerfPngA2-gab a aamas:Termcluster ;
+	rdfs:label "bilin-VConj1MainNegPerfPngA2-gab" ;
 	rdfs:comment "Appleyard2007b pp. 497-501" 
 	.
 
-aama:IDc99fb02f-b67c-4f4d-a7fc-0e21d6c6d4e1 a aamas:Term ;
+aama:IDac4987b3-83ba-4fe7-88a7-20f381d31330 a aamas:Term ;
 	aamas:lang aama:Bilin ;
-	aamas:memberOf bil:bilin-VConj1MainAffImperfJussPngA-gab ;
-	bil:aspect bil:Imperfective ;
-	bil:clauseType bil:Main ;
-	bil:numberGenderHead bil:U ;
-	bil:pos bil:Verb ;
-	aamas:lexeme aama:Bilin-gab ;
-	bil:conjClass bil:Conjugation1 ;
-	bil:pngSet bil:PngA ;
-	bil:polarity bil:Affirmative ;
-	bil:tam bil:Jussive ;
-	bil:token "gäbən" ;
-	bil:person bil:Person1 ;
-	bil:number bil:Singular ;
-	bil:gender bil:Common ;
-	.
-
-aama:ID4acd97d6-25bb-49a8-94d9-76d6161d6181 a aamas:Term ;
-	aamas:lang aama:Bilin ;
-	aamas:memberOf bil:bilin-VConj1MainAffImperfJussPngA-gab ;
-	bil:aspect bil:Imperfective ;
-	bil:clauseType bil:Main ;
-	bil:numberGenderHead bil:U ;
-	bil:pos bil:Verb ;
-	aamas:lexeme aama:Bilin-gab ;
-	bil:conjClass bil:Conjugation1 ;
-	bil:pngSet bil:PngA ;
-	bil:polarity bil:Affirmative ;
-	bil:tam bil:Jussive ;
-	bil:token "gäbnən" ;
-	bil:person bil:Person1 ;
-	bil:number bil:Plural ;
-	bil:gender bil:Common ;
-	.
-
-aama:IDef94f475-66a1-4d57-bbd7-d862295f93be a aamas:Term ;
-	aamas:lang aama:Bilin ;
-	aamas:memberOf bil:bilin-VConj1MainAffImperfJussPngA-gab ;
-	bil:aspect bil:Imperfective ;
-	bil:clauseType bil:Main ;
-	bil:numberGenderHead bil:U ;
-	bil:pos bil:Verb ;
-	aamas:lexeme aama:Bilin-gab ;
-	bil:conjClass bil:Conjugation1 ;
-	bil:pngSet bil:PngA ;
-	bil:polarity bil:Affirmative ;
-	bil:tam bil:Jussive ;
-	bil:token "gäbinin" ;
-	bil:person bil:Person3 ;
-	bil:number bil:Plural ;
-	bil:gender bil:Common ;
-	.
-
-aama:ID905402fc-4d96-48f2-ab90-c67912947e1d a aamas:Term ;
-	aamas:lang aama:Bilin ;
-	aamas:memberOf bil:bilin-VConj1MainAffImperfJussPngA-gab ;
-	bil:aspect bil:Imperfective ;
-	bil:clauseType bil:Main ;
-	bil:numberGenderHead bil:U ;
-	bil:pos bil:Verb ;
-	aamas:lexeme aama:Bilin-gab ;
-	bil:conjClass bil:Conjugation1 ;
-	bil:pngSet bil:PngA ;
-	bil:polarity bil:Affirmative ;
-	bil:tam bil:Jussive ;
-	bil:token "gäbən" ;
-	bil:person bil:Person3 ;
-	bil:number bil:Singular ;
-	bil:gender bil:Masc ;
-	.
-
-aama:ID2c893b9c-b935-4675-9ce8-76898ae3b772 a aamas:Term ;
-	aamas:lang aama:Bilin ;
-	aamas:memberOf bil:bilin-VConj1MainAffImperfJussPngA-gab ;
-	bil:aspect bil:Imperfective ;
-	bil:clauseType bil:Main ;
-	bil:numberGenderHead bil:U ;
-	bil:pos bil:Verb ;
-	aamas:lexeme aama:Bilin-gab ;
-	bil:conjClass bil:Conjugation1 ;
-	bil:pngSet bil:PngA ;
-	bil:polarity bil:Affirmative ;
-	bil:tam bil:Jussive ;
-	bil:token "gäbrən" ;
-	bil:person bil:Person3 ;
-	bil:number bil:Singular ;
-	bil:gender bil:Fem ;
-	.
-
-#TERMCLUSTER:  bilin-VConj1RelObliqAffImperfPngAHeadPl-gab
-
-bil:bilin-VConj1RelObliqAffImperfPngAHeadPl-gab a aamas:Termcluster ;
-	rdfs:label "bilin-VConj1RelObliqAffImperfPngAHeadPl-gab" ;
-	rdfs:comment "Appleyard2007b pp. 497-501" 
-	.
-
-aama:ID3e22b5f1-cd93-45cb-9405-fad6d4fab813 a aamas:Term ;
-	aamas:lang aama:Bilin ;
-	aamas:memberOf bil:bilin-VConj1RelObliqAffImperfPngAHeadPl-gab ;
-	bil:aspect bil:Imperfective ;
-	bil:clauseType bil:RelObliq ;
-	bil:numberGenderHead bil:HeadPlural ;
-	bil:pos bil:Verb ;
-	aamas:lexeme aama:Bilin-gab ;
-	bil:conjClass bil:Conjugation1 ;
-	bil:pngSet bil:PngA ;
-	bil:polarity bil:Affirmative ;
-	bil:tam bil:U ;
-	bil:token "gäbräw" ;
-	bil:person bil:Person3 ;
-	bil:number bil:Singular ;
-	bil:gender bil:Fem ;
-	.
-
-aama:ID1641b1dc-c8f1-4c07-bd3e-0843cbb260f1 a aamas:Term ;
-	aamas:lang aama:Bilin ;
-	aamas:memberOf bil:bilin-VConj1RelObliqAffImperfPngAHeadPl-gab ;
-	bil:aspect bil:Imperfective ;
-	bil:clauseType bil:RelObliq ;
-	bil:numberGenderHead bil:HeadPlural ;
-	bil:pos bil:Verb ;
-	aamas:lexeme aama:Bilin-gab ;
-	bil:conjClass bil:Conjugation1 ;
-	bil:pngSet bil:PngA ;
-	bil:polarity bil:Affirmative ;
-	bil:tam bil:U ;
-	bil:token "gäbdänäw" ;
-	bil:person bil:Person2 ;
-	bil:number bil:Plural ;
-	bil:gender bil:Common ;
-	.
-
-aama:IDafe2d4fe-b4ec-4ab0-995c-d9762d9a3feb a aamas:Term ;
-	aamas:lang aama:Bilin ;
-	aamas:memberOf bil:bilin-VConj1RelObliqAffImperfPngAHeadPl-gab ;
-	bil:aspect bil:Imperfective ;
-	bil:clauseType bil:RelObliq ;
-	bil:numberGenderHead bil:HeadPlural ;
-	bil:pos bil:Verb ;
-	aamas:lexeme aama:Bilin-gab ;
-	bil:conjClass bil:Conjugation1 ;
-	bil:pngSet bil:PngA ;
-	bil:polarity bil:Affirmative ;
-	bil:tam bil:U ;
-	bil:token "gäbnäw" ;
-	bil:person bil:Person1 ;
-	bil:number bil:Plural ;
-	bil:gender bil:Common ;
-	.
-
-aama:IDee267187-de23-4d00-9dec-d1500dd521c8 a aamas:Term ;
-	aamas:lang aama:Bilin ;
-	aamas:memberOf bil:bilin-VConj1RelObliqAffImperfPngAHeadPl-gab ;
-	bil:aspect bil:Imperfective ;
-	bil:clauseType bil:RelObliq ;
-	bil:numberGenderHead bil:HeadPlural ;
-	bil:pos bil:Verb ;
-	aamas:lexeme aama:Bilin-gab ;
-	bil:conjClass bil:Conjugation1 ;
-	bil:pngSet bil:PngA ;
-	bil:polarity bil:Affirmative ;
-	bil:tam bil:U ;
-	bil:token "gäbäw" ;
-	bil:person bil:Person3 ;
-	bil:number bil:Singular ;
-	bil:gender bil:Masc ;
-	.
-
-aama:ID6cec5ec3-9b0a-4765-91e1-2f09b876d79c a aamas:Term ;
-	aamas:lang aama:Bilin ;
-	aamas:memberOf bil:bilin-VConj1RelObliqAffImperfPngAHeadPl-gab ;
-	bil:aspect bil:Imperfective ;
-	bil:clauseType bil:RelObliq ;
-	bil:numberGenderHead bil:HeadPlural ;
-	bil:pos bil:Verb ;
-	aamas:lexeme aama:Bilin-gab ;
-	bil:conjClass bil:Conjugation1 ;
-	bil:pngSet bil:PngA ;
-	bil:polarity bil:Affirmative ;
-	bil:tam bil:U ;
-	bil:token "gäbänäw" ;
-	bil:person bil:Person3 ;
-	bil:number bil:Plural ;
-	bil:gender bil:Common ;
-	.
-
-aama:ID522f74c9-8c60-46b5-9372-16bc48ccdad1 a aamas:Term ;
-	aamas:lang aama:Bilin ;
-	aamas:memberOf bil:bilin-VConj1RelObliqAffImperfPngAHeadPl-gab ;
-	bil:aspect bil:Imperfective ;
-	bil:clauseType bil:RelObliq ;
-	bil:numberGenderHead bil:HeadPlural ;
-	bil:pos bil:Verb ;
-	aamas:lexeme aama:Bilin-gab ;
-	bil:conjClass bil:Conjugation1 ;
-	bil:pngSet bil:PngA ;
-	bil:polarity bil:Affirmative ;
-	bil:tam bil:U ;
-	bil:token "gäbräw" ;
-	bil:person bil:Person2 ;
-	bil:number bil:Singular ;
-	bil:gender bil:Common ;
-	.
-
-aama:ID509df372-b503-4b3a-a64c-9368c3f24888 a aamas:Term ;
-	aamas:lang aama:Bilin ;
-	aamas:memberOf bil:bilin-VConj1RelObliqAffImperfPngAHeadPl-gab ;
-	bil:aspect bil:Imperfective ;
-	bil:clauseType bil:RelObliq ;
-	bil:numberGenderHead bil:HeadPlural ;
-	bil:pos bil:Verb ;
-	aamas:lexeme aama:Bilin-gab ;
-	bil:conjClass bil:Conjugation1 ;
-	bil:pngSet bil:PngA ;
-	bil:polarity bil:Affirmative ;
-	bil:tam bil:U ;
-	bil:token "gäbäw" ;
-	bil:person bil:Person1 ;
-	bil:number bil:Singular ;
-	bil:gender bil:Common ;
-	.
-
-#TERMCLUSTER:  bilin-VConj1AdvCondAffPerfPngA-gab
-
-bil:bilin-VConj1AdvCondAffPerfPngA-gab a aamas:Termcluster ;
-	rdfs:label "bilin-VConj1AdvCondAffPerfPngA-gab" ;
-	rdfs:comment "Appleyard2007b pp. 497-501" 
-	.
-
-aama:ID703ff803-5865-4e80-8c9f-02cd2404e6c2 a aamas:Term ;
-	aamas:lang aama:Bilin ;
-	aamas:memberOf bil:bilin-VConj1AdvCondAffPerfPngA-gab ;
+	aamas:memberOf bil:bilin-VConj1MainNegPerfPngA2-gab ;
 	bil:aspect bil:Perfective ;
-	bil:person bil:Person3 ;
-	bil:clauseType bil:AdvCond ;
-	bil:number bil:Singular ;
-	bil:numberGenderHead bil:U ;
-	bil:pos bil:Verb ;
-	aamas:lexeme aama:Bilin-gab ;
+	bil:clauseType bil:Main ;
 	bil:conjClass bil:Conjugation1 ;
-	bil:pngSet bil:PngA ;
-	bil:polarity bil:Affirmative ;
-	bil:tam bil:U ;
+	aamas:lexeme aama:Bilin-gab ;
+	bil:pngSet bil:PngA2 ;
+	bil:polarity bil:Negative ;
+	bil:pos bil:Verb ;
+	bil:token "gäbənni" ;
+	bil:person bil:Person3 ;
+	bil:number bil:Plural ;
+	bil:gender bil:Common ;
+	.
+
+aama:ID6e75b92d-2263-435c-93a0-8b07d81663f0 a aamas:Term ;
+	aamas:lang aama:Bilin ;
+	aamas:memberOf bil:bilin-VConj1MainNegPerfPngA2-gab ;
+	bil:aspect bil:Perfective ;
+	bil:clauseType bil:Main ;
+	bil:conjClass bil:Conjugation1 ;
+	aamas:lexeme aama:Bilin-gab ;
+	bil:pngSet bil:PngA2 ;
+	bil:polarity bil:Negative ;
+	bil:pos bil:Verb ;
+	bil:token "gäbəlla" ;
+	bil:person bil:Person2 ;
+	bil:number bil:Singular ;
+	bil:gender bil:Common ;
+	.
+
+aama:ID2e628fcf-be83-4b17-ac21-ac6f8668c8c7 a aamas:Term ;
+	aamas:lang aama:Bilin ;
+	aamas:memberOf bil:bilin-VConj1MainNegPerfPngA2-gab ;
+	bil:aspect bil:Perfective ;
+	bil:clauseType bil:Main ;
+	bil:conjClass bil:Conjugation1 ;
+	aamas:lexeme aama:Bilin-gab ;
+	bil:pngSet bil:PngA2 ;
+	bil:polarity bil:Negative ;
+	bil:pos bil:Verb ;
+	bil:token "gäbənni" ;
+	bil:person bil:Person1 ;
+	bil:number bil:Plural ;
+	bil:gender bil:Common ;
+	.
+
+aama:IDe9f92c2a-55e7-4625-a540-a30dfa7a5be9 a aamas:Term ;
+	aamas:lang aama:Bilin ;
+	aamas:memberOf bil:bilin-VConj1MainNegPerfPngA2-gab ;
+	bil:aspect bil:Perfective ;
+	bil:clauseType bil:Main ;
+	bil:conjClass bil:Conjugation1 ;
+	aamas:lexeme aama:Bilin-gab ;
+	bil:pngSet bil:PngA2 ;
+	bil:polarity bil:Negative ;
+	bil:pos bil:Verb ;
+	bil:token "gäbəlla" ;
+	bil:person bil:Person3 ;
+	bil:number bil:Singular ;
+	bil:gender bil:Fem ;
+	.
+
+aama:ID9d475248-2223-4230-a305-f351d575d411 a aamas:Term ;
+	aamas:lang aama:Bilin ;
+	aamas:memberOf bil:bilin-VConj1MainNegPerfPngA2-gab ;
+	bil:aspect bil:Perfective ;
+	bil:clauseType bil:Main ;
+	bil:conjClass bil:Conjugation1 ;
+	aamas:lexeme aama:Bilin-gab ;
+	bil:pngSet bil:PngA2 ;
+	bil:polarity bil:Negative ;
+	bil:pos bil:Verb ;
+	bil:token "gäbla" ;
+	bil:person bil:Person3 ;
+	bil:number bil:Singular ;
 	bil:gender bil:Masc ;
-	bil:token "gäbnädik" ;
+	.
+
+aama:ID60a48679-81a6-4b2b-80a3-6a8ce878dec9 a aamas:Term ;
+	aamas:lang aama:Bilin ;
+	aamas:memberOf bil:bilin-VConj1MainNegPerfPngA2-gab ;
+	bil:aspect bil:Perfective ;
+	bil:clauseType bil:Main ;
+	bil:conjClass bil:Conjugation1 ;
+	aamas:lexeme aama:Bilin-gab ;
+	bil:pngSet bil:PngA2 ;
+	bil:polarity bil:Negative ;
+	bil:pos bil:Verb ;
+	bil:token "gäbdənni" ;
+	bil:person bil:Person2 ;
+	bil:number bil:Plural ;
+	bil:gender bil:Common ;
+	.
+
+aama:IDa403028b-86b2-42f8-b93c-5e4806aaf76d a aamas:Term ;
+	aamas:lang aama:Bilin ;
+	aamas:memberOf bil:bilin-VConj1MainNegPerfPngA2-gab ;
+	bil:aspect bil:Perfective ;
+	bil:clauseType bil:Main ;
+	bil:conjClass bil:Conjugation1 ;
+	aamas:lexeme aama:Bilin-gab ;
+	bil:pngSet bil:PngA2 ;
+	bil:polarity bil:Negative ;
+	bil:pos bil:Verb ;
+	bil:token "gäbli" ;
+	bil:person bil:Person1 ;
+	bil:number bil:Singular ;
+	bil:gender bil:Common ;
+	.
+
+#TERMCLUSTER:  bilin-VConj2MainNegPerfPngA2-kab
+
+bil:bilin-VConj2MainNegPerfPngA2-kab a aamas:Termcluster ;
+	rdfs:label "bilin-VConj2MainNegPerfPngA2-kab" ;
+	rdfs:comment "Appleyard2007b pp. 497-499" 
+	.
+
+aama:IDbc66ac9d-208c-4f57-83cf-9ced4dbfc204 a aamas:Term ;
+	aamas:lang aama:Bilin ;
+	aamas:memberOf bil:bilin-VConj2MainNegPerfPngA2-kab ;
+	bil:aspect bil:Perfective ;
+	bil:clauseType bil:Main ;
+	bil:conjClass bil:Conjugation2 ;
+	aamas:lexeme aama:Bilin-kab ;
+	bil:pngSet bil:PngA2 ;
+	bil:polarity bil:Negative ;
+	bil:pos bil:Verb ;
+	bil:token "kabili" ;
+	bil:person bil:Person1 ;
+	bil:number bil:Singular ;
+	bil:gender bil:Common ;
+	.
+
+aama:ID9e39b255-ad50-45a0-b850-e78ed188202e a aamas:Term ;
+	aamas:lang aama:Bilin ;
+	aamas:memberOf bil:bilin-VConj2MainNegPerfPngA2-kab ;
+	bil:aspect bil:Perfective ;
+	bil:clauseType bil:Main ;
+	bil:conjClass bil:Conjugation2 ;
+	aamas:lexeme aama:Bilin-kab ;
+	bil:pngSet bil:PngA2 ;
+	bil:polarity bil:Negative ;
+	bil:pos bil:Verb ;
+	bil:token "kabinni" ;
+	bil:person bil:Person1 ;
+	bil:number bil:Plural ;
+	bil:gender bil:Common ;
+	.
+
+aama:IDbca463e3-0351-4da2-8415-575c62a9ede5 a aamas:Term ;
+	aamas:lang aama:Bilin ;
+	aamas:memberOf bil:bilin-VConj2MainNegPerfPngA2-kab ;
+	bil:aspect bil:Perfective ;
+	bil:clauseType bil:Main ;
+	bil:conjClass bil:Conjugation2 ;
+	aamas:lexeme aama:Bilin-kab ;
+	bil:pngSet bil:PngA2 ;
+	bil:polarity bil:Negative ;
+	bil:pos bil:Verb ;
+	bil:token "kabdinni" ;
+	bil:person bil:Person2 ;
+	bil:number bil:Plural ;
+	bil:gender bil:Common ;
+	.
+
+aama:IDc99f3d6d-d1d2-41c6-99c3-08b102f969d6 a aamas:Term ;
+	aamas:lang aama:Bilin ;
+	aamas:memberOf bil:bilin-VConj2MainNegPerfPngA2-kab ;
+	bil:aspect bil:Perfective ;
+	bil:clauseType bil:Main ;
+	bil:conjClass bil:Conjugation2 ;
+	aamas:lexeme aama:Bilin-kab ;
+	bil:pngSet bil:PngA2 ;
+	bil:polarity bil:Negative ;
+	bil:pos bil:Verb ;
+	bil:token "kabinni" ;
+	bil:person bil:Person3 ;
+	bil:number bil:Plural ;
+	bil:gender bil:Common ;
+	.
+
+aama:ID6c1d7bb1-a0cb-4944-a2f8-92864d5b13a5 a aamas:Term ;
+	aamas:lang aama:Bilin ;
+	aamas:memberOf bil:bilin-VConj2MainNegPerfPngA2-kab ;
+	bil:aspect bil:Perfective ;
+	bil:clauseType bil:Main ;
+	bil:conjClass bil:Conjugation2 ;
+	aamas:lexeme aama:Bilin-kab ;
+	bil:pngSet bil:PngA2 ;
+	bil:polarity bil:Negative ;
+	bil:pos bil:Verb ;
+	bil:token "kabilla" ;
+	bil:person bil:Person3 ;
+	bil:number bil:Singular ;
+	bil:gender bil:Fem ;
+	.
+
+aama:ID3aa8986b-e7e4-4e1f-8678-ef2fe8f97d66 a aamas:Term ;
+	aamas:lang aama:Bilin ;
+	aamas:memberOf bil:bilin-VConj2MainNegPerfPngA2-kab ;
+	bil:aspect bil:Perfective ;
+	bil:clauseType bil:Main ;
+	bil:conjClass bil:Conjugation2 ;
+	aamas:lexeme aama:Bilin-kab ;
+	bil:pngSet bil:PngA2 ;
+	bil:polarity bil:Negative ;
+	bil:pos bil:Verb ;
+	bil:token "kabila" ;
+	bil:person bil:Person3 ;
+	bil:number bil:Singular ;
+	bil:gender bil:Masc ;
+	.
+
+aama:IDb09f1ea3-485a-48a7-8713-7bb1d05cb8eb a aamas:Term ;
+	aamas:lang aama:Bilin ;
+	aamas:memberOf bil:bilin-VConj2MainNegPerfPngA2-kab ;
+	bil:aspect bil:Perfective ;
+	bil:clauseType bil:Main ;
+	bil:conjClass bil:Conjugation2 ;
+	aamas:lexeme aama:Bilin-kab ;
+	bil:pngSet bil:PngA2 ;
+	bil:polarity bil:Negative ;
+	bil:pos bil:Verb ;
+	bil:token "kabilla" ;
+	bil:person bil:Person2 ;
+	bil:number bil:Singular ;
+	bil:gender bil:Common ;
 	.
 
 #TERMCLUSTER:  bilin-VConj1AdvComplNegImperfPngA-gab
@@ -2825,198 +2650,192 @@ bil:bilin-VConj1AdvComplNegImperfPngA-gab a aamas:Termcluster ;
 	rdfs:comment "Appleyard2007b pp. 497-501" 
 	.
 
-aama:IDea72d4d8-f330-4482-9e9f-87ec941dbb9d a aamas:Term ;
+aama:ID931d78a0-31d4-4360-a0f7-0c4a6f87820b a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj1AdvComplNegImperfPngA-gab ;
 	bil:aspect bil:Imperfective ;
 	bil:person bil:Person3 ;
 	bil:clauseType bil:AdvCompl ;
 	bil:number bil:Singular ;
-	bil:numberGenderHead bil:U ;
 	bil:pos bil:Verb ;
 	aamas:lexeme aama:Bilin-gab ;
 	bil:conjClass bil:Conjugation1 ;
 	bil:pngSet bil:PngA ;
 	bil:polarity bil:Negative ;
-	bil:tam bil:U ;
 	bil:gender bil:Masc ;
 	bil:token "gäbägät" ;
 	.
 
-#TERMCLUSTER:  bilin-VConj1AdvFutCondAffPerfPngC-gab
+#TERMCLUSTER:  bilin-VConj1AdvUntilAffPerfPngC-gab
 
-bil:bilin-VConj1AdvFutCondAffPerfPngC-gab a aamas:Termcluster ;
-	rdfs:label "bilin-VConj1AdvFutCondAffPerfPngC-gab" ;
+bil:bilin-VConj1AdvUntilAffPerfPngC-gab a aamas:Termcluster ;
+	rdfs:label "bilin-VConj1AdvUntilAffPerfPngC-gab" ;
 	rdfs:comment "Appleyard2007b pp. 497-501" 
 	.
 
-aama:ID1c174b3f-0cc3-461f-ba8b-f8def443bc97 a aamas:Term ;
+aama:IDf1aca98d-36cf-4ba0-827a-b977826a6678 a aamas:Term ;
 	aamas:lang aama:Bilin ;
-	aamas:memberOf bil:bilin-VConj1AdvFutCondAffPerfPngC-gab ;
+	aamas:memberOf bil:bilin-VConj1AdvUntilAffPerfPngC-gab ;
 	bil:aspect bil:Perfective ;
 	bil:person bil:Person3 ;
-	bil:clauseType bil:AdvFutCond ;
+	bil:clauseType bil:AdvUntil ;
 	bil:number bil:Singular ;
-	bil:numberGenderHead bil:U ;
 	bil:pos bil:Verb ;
 	aamas:lexeme aama:Bilin-gab ;
 	bil:conjClass bil:Conjugation1 ;
 	bil:pngSet bil:PngC ;
 	bil:polarity bil:Affirmative ;
-	bil:tam bil:U ;
 	bil:gender bil:Masc ;
-	bil:token "gäbrəd" ;
+	bil:token "gäbrasik" ;
 	.
 
-#TERMCLUSTER:  bilin-VConj1AdvComplNegPerfPngA-gab
+#TERMCLUSTER:  bilin-VConj1RelObliqAffImperfPngAHeadSgm-gab
 
-bil:bilin-VConj1AdvComplNegPerfPngA-gab a aamas:Termcluster ;
-	rdfs:label "bilin-VConj1AdvComplNegPerfPngA-gab" ;
+bil:bilin-VConj1RelObliqAffImperfPngAHeadSgm-gab a aamas:Termcluster ;
+	rdfs:label "bilin-VConj1RelObliqAffImperfPngAHeadSgm-gab" ;
 	rdfs:comment "Appleyard2007b pp. 497-501" 
 	.
 
-aama:IDb909c381-f1ae-4de9-af30-884e03ad0a77 a aamas:Term ;
+aama:IDd21e0c02-8cf5-425d-af8e-ffd0a4dd3582 a aamas:Term ;
 	aamas:lang aama:Bilin ;
-	aamas:memberOf bil:bilin-VConj1AdvComplNegPerfPngA-gab ;
-	bil:aspect bil:Perfective ;
-	bil:person bil:Person3 ;
-	bil:clauseType bil:AdvCompl ;
-	bil:number bil:Singular ;
-	bil:numberGenderHead bil:U ;
-	bil:pos bil:Verb ;
-	aamas:lexeme aama:Bilin-gab ;
+	aamas:memberOf bil:bilin-VConj1RelObliqAffImperfPngAHeadSgm-gab ;
+	bil:aspect bil:Imperfective ;
+	bil:clauseType bil:RelObliq ;
 	bil:conjClass bil:Conjugation1 ;
+	aamas:lexeme aama:Bilin-gab ;
+	bil:numberGenderHead bil:HeadSingularMasc ;
 	bil:pngSet bil:PngA ;
-	bil:polarity bil:Negative ;
-	bil:tam bil:U ;
-	bil:gender bil:Masc ;
-	bil:token "gäbgät" ;
-	.
-
-#TERMCLUSTER:  bilin-VConj2MainNegImperfPngA2-kab
-
-bil:bilin-VConj2MainNegImperfPngA2-kab a aamas:Termcluster ;
-	rdfs:label "bilin-VConj2MainNegImperfPngA2-kab" ;
-	rdfs:comment "Appleyard2007b pp. 497-499" 
-	.
-
-aama:IDd62c5f00-3ae3-4588-86c6-caa6f5a954ef a aamas:Term ;
-	aamas:lang aama:Bilin ;
-	aamas:memberOf bil:bilin-VConj2MainNegImperfPngA2-kab ;
-	bil:aspect bil:Imperfective ;
-	bil:clauseType bil:Main ;
-	bil:conjClass bil:Conjugation2 ;
-	aamas:lexeme aama:Bilin-kab ;
-	bil:pngSet bil:PngA2 ;
-	bil:polarity bil:Negative ;
+	bil:polarity bil:Affirmative ;
 	bil:pos bil:Verb ;
-	bil:tam bil:U ;
-	bil:token "kabänni" ;
+	bil:token "gäbräxw" ;
+	bil:person bil:Person2 ;
+	bil:number bil:Singular ;
+	bil:gender bil:Common ;
+	.
+
+aama:ID16e40abe-5c95-4480-aec6-00e5f7b0a0cc a aamas:Term ;
+	aamas:lang aama:Bilin ;
+	aamas:memberOf bil:bilin-VConj1RelObliqAffImperfPngAHeadSgm-gab ;
+	bil:aspect bil:Imperfective ;
+	bil:clauseType bil:RelObliq ;
+	bil:conjClass bil:Conjugation1 ;
+	aamas:lexeme aama:Bilin-gab ;
+	bil:numberGenderHead bil:HeadSingularMasc ;
+	bil:pngSet bil:PngA ;
+	bil:polarity bil:Affirmative ;
+	bil:pos bil:Verb ;
+	bil:token "gäbänäxw" ;
 	bil:person bil:Person3 ;
 	bil:number bil:Plural ;
 	bil:gender bil:Common ;
 	.
 
-aama:ID6b079949-6f45-4b4d-ac45-2b0b89d84d79 a aamas:Term ;
+aama:IDacb1bc5e-9b6d-4cc3-b3be-2bb4b0fb8ea7 a aamas:Term ;
 	aamas:lang aama:Bilin ;
-	aamas:memberOf bil:bilin-VConj2MainNegImperfPngA2-kab ;
+	aamas:memberOf bil:bilin-VConj1RelObliqAffImperfPngAHeadSgm-gab ;
 	bil:aspect bil:Imperfective ;
-	bil:clauseType bil:Main ;
-	bil:conjClass bil:Conjugation2 ;
-	aamas:lexeme aama:Bilin-kab ;
-	bil:pngSet bil:PngA2 ;
-	bil:polarity bil:Negative ;
+	bil:clauseType bil:RelObliq ;
+	bil:conjClass bil:Conjugation1 ;
+	aamas:lexeme aama:Bilin-gab ;
+	bil:numberGenderHead bil:HeadSingularMasc ;
+	bil:pngSet bil:PngA ;
+	bil:polarity bil:Affirmative ;
 	bil:pos bil:Verb ;
-	bil:tam bil:U ;
-	bil:token "kabnäli" ;
-	bil:person bil:Person1 ;
-	bil:number bil:Plural ;
-	bil:gender bil:Common ;
-	.
-
-aama:ID2486dc88-5c81-47bf-b160-688a6e182425 a aamas:Term ;
-	aamas:lang aama:Bilin ;
-	aamas:memberOf bil:bilin-VConj2MainNegImperfPngA2-kab ;
-	bil:aspect bil:Imperfective ;
-	bil:clauseType bil:Main ;
-	bil:conjClass bil:Conjugation2 ;
-	aamas:lexeme aama:Bilin-kab ;
-	bil:pngSet bil:PngA2 ;
-	bil:polarity bil:Negative ;
-	bil:pos bil:Verb ;
-	bil:tam bil:U ;
-	bil:token "kabdänni" ;
-	bil:person bil:Person2 ;
-	bil:number bil:Plural ;
-	bil:gender bil:Common ;
-	.
-
-aama:IDcf9efcf3-4d30-43fa-8496-3dc2a112fefa a aamas:Term ;
-	aamas:lang aama:Bilin ;
-	aamas:memberOf bil:bilin-VConj2MainNegImperfPngA2-kab ;
-	bil:aspect bil:Imperfective ;
-	bil:clauseType bil:Main ;
-	bil:conjClass bil:Conjugation2 ;
-	aamas:lexeme aama:Bilin-kab ;
-	bil:pngSet bil:PngA2 ;
-	bil:polarity bil:Negative ;
-	bil:pos bil:Verb ;
-	bil:tam bil:U ;
-	bil:token "kabäla" ;
+	bil:token "gäbräxw" ;
 	bil:person bil:Person3 ;
 	bil:number bil:Singular ;
 	bil:gender bil:Fem ;
 	.
 
-aama:ID2dcc7c3e-b32c-4e52-b217-fb3f79f2c1a1 a aamas:Term ;
+aama:ID6f944e26-ba05-480d-9e5c-55b4797a7145 a aamas:Term ;
 	aamas:lang aama:Bilin ;
-	aamas:memberOf bil:bilin-VConj2MainNegImperfPngA2-kab ;
+	aamas:memberOf bil:bilin-VConj1RelObliqAffImperfPngAHeadSgm-gab ;
 	bil:aspect bil:Imperfective ;
-	bil:clauseType bil:Main ;
-	bil:conjClass bil:Conjugation2 ;
-	aamas:lexeme aama:Bilin-kab ;
-	bil:pngSet bil:PngA2 ;
-	bil:polarity bil:Negative ;
+	bil:clauseType bil:RelObliq ;
+	bil:conjClass bil:Conjugation1 ;
+	aamas:lexeme aama:Bilin-gab ;
+	bil:numberGenderHead bil:HeadSingularMasc ;
+	bil:pngSet bil:PngA ;
+	bil:polarity bil:Affirmative ;
 	bil:pos bil:Verb ;
-	bil:tam bil:U ;
-	bil:token "kabäla" ;
-	bil:person bil:Person3 ;
-	bil:number bil:Singular ;
-	bil:gender bil:Masc ;
+	bil:token "gäbdänäxw" ;
+	bil:person bil:Person2 ;
+	bil:number bil:Plural ;
+	bil:gender bil:Common ;
 	.
 
-aama:IDcecd0edb-795e-4a46-885a-b3c72facb969 a aamas:Term ;
+aama:IDaa6f179c-4201-49c6-ab5c-c6263f0904d5 a aamas:Term ;
 	aamas:lang aama:Bilin ;
-	aamas:memberOf bil:bilin-VConj2MainNegImperfPngA2-kab ;
+	aamas:memberOf bil:bilin-VConj1RelObliqAffImperfPngAHeadSgm-gab ;
 	bil:aspect bil:Imperfective ;
-	bil:clauseType bil:Main ;
-	bil:conjClass bil:Conjugation2 ;
-	aamas:lexeme aama:Bilin-kab ;
-	bil:pngSet bil:PngA2 ;
-	bil:polarity bil:Negative ;
+	bil:clauseType bil:RelObliq ;
+	bil:conjClass bil:Conjugation1 ;
+	aamas:lexeme aama:Bilin-gab ;
+	bil:numberGenderHead bil:HeadSingularMasc ;
+	bil:pngSet bil:PngA ;
+	bil:polarity bil:Affirmative ;
 	bil:pos bil:Verb ;
-	bil:tam bil:U ;
-	bil:token "kabäli" ;
+	bil:token "gäbäxw" ;
 	bil:person bil:Person1 ;
 	bil:number bil:Singular ;
 	bil:gender bil:Common ;
 	.
 
-aama:ID85b02fc5-304b-4ed4-8812-95437fdb035a a aamas:Term ;
+aama:ID40195bc7-bf96-4018-9707-a0acaad0d106 a aamas:Term ;
 	aamas:lang aama:Bilin ;
-	aamas:memberOf bil:bilin-VConj2MainNegImperfPngA2-kab ;
+	aamas:memberOf bil:bilin-VConj1RelObliqAffImperfPngAHeadSgm-gab ;
 	bil:aspect bil:Imperfective ;
-	bil:clauseType bil:Main ;
-	bil:conjClass bil:Conjugation2 ;
-	aamas:lexeme aama:Bilin-kab ;
-	bil:pngSet bil:PngA2 ;
-	bil:polarity bil:Negative ;
+	bil:clauseType bil:RelObliq ;
+	bil:conjClass bil:Conjugation1 ;
+	aamas:lexeme aama:Bilin-gab ;
+	bil:numberGenderHead bil:HeadSingularMasc ;
+	bil:pngSet bil:PngA ;
+	bil:polarity bil:Affirmative ;
 	bil:pos bil:Verb ;
-	bil:tam bil:U ;
-	bil:token "kabäla" ;
-	bil:person bil:Person2 ;
+	bil:token "gäbäxw" ;
+	bil:person bil:Person3 ;
 	bil:number bil:Singular ;
+	bil:gender bil:Masc ;
+	.
+
+aama:ID29d21970-dab3-4bd2-88e2-629001a1f1d2 a aamas:Term ;
+	aamas:lang aama:Bilin ;
+	aamas:memberOf bil:bilin-VConj1RelObliqAffImperfPngAHeadSgm-gab ;
+	bil:aspect bil:Imperfective ;
+	bil:clauseType bil:RelObliq ;
+	bil:conjClass bil:Conjugation1 ;
+	aamas:lexeme aama:Bilin-gab ;
+	bil:numberGenderHead bil:HeadSingularMasc ;
+	bil:pngSet bil:PngA ;
+	bil:polarity bil:Affirmative ;
+	bil:pos bil:Verb ;
+	bil:token "gäbnäxw" ;
+	bil:person bil:Person1 ;
+	bil:number bil:Plural ;
 	bil:gender bil:Common ;
+	.
+
+#TERMCLUSTER:  bilin-VConj1AdvFutCondNegPerfPngC-gab
+
+bil:bilin-VConj1AdvFutCondNegPerfPngC-gab a aamas:Termcluster ;
+	rdfs:label "bilin-VConj1AdvFutCondNegPerfPngC-gab" ;
+	rdfs:comment "Appleyard2007b pp. 497-501" 
+	.
+
+aama:IDb36004e4-225d-4299-87a3-8514c5023bfe a aamas:Term ;
+	aamas:lang aama:Bilin ;
+	aamas:memberOf bil:bilin-VConj1AdvFutCondNegPerfPngC-gab ;
+	bil:aspect bil:Perfective ;
+	bil:person bil:Person3 ;
+	bil:clauseType bil:AdvFutCond ;
+	bil:number bil:Singular ;
+	bil:pos bil:Verb ;
+	aamas:lexeme aama:Bilin-gab ;
+	bil:conjClass bil:Conjugation1 ;
+	bil:pngSet bil:PngC ;
+	bil:polarity bil:Negative ;
+	bil:gender bil:Masc ;
+	bil:token "gäbgid" ;
 	.
 
 #TERMCLUSTER:  bilin-VConj3MainAffImperfPresPngB-kw
@@ -3026,7 +2845,7 @@ bil:bilin-VConj3MainAffImperfPresPngB-kw a aamas:Termcluster ;
 	rdfs:comment "Appleyard2007b pp. 497-499. Third conjugation verbs:a handful of monosyllabic roots (cf. LEXEMES section)." 
 	.
 
-aama:IDfbd4d62c-f220-4199-9b81-372edbb6d625 a aamas:Term ;
+aama:ID24cfb2dd-be48-4f61-8296-e2dfd8928fa1 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj3MainAffImperfPresPngB-kw ;
 	bil:aspect bil:Imperfective ;
@@ -3043,7 +2862,7 @@ aama:IDfbd4d62c-f220-4199-9b81-372edbb6d625 a aamas:Term ;
 	bil:gender bil:Masc ;
 	.
 
-aama:IDaa7e9306-b3dd-4937-9305-574ce4bbb317 a aamas:Term ;
+aama:ID11d31619-7765-4ac0-b5bf-9e9d15425ff2 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj3MainAffImperfPresPngB-kw ;
 	bil:aspect bil:Imperfective ;
@@ -3060,7 +2879,7 @@ aama:IDaa7e9306-b3dd-4937-9305-574ce4bbb317 a aamas:Term ;
 	bil:gender bil:Common ;
 	.
 
-aama:IDafc1a2fd-efc2-48b4-b955-cabea442aa3e a aamas:Term ;
+aama:IDf46a4b5c-7445-462f-920a-03866d364d98 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj3MainAffImperfPresPngB-kw ;
 	bil:aspect bil:Imperfective ;
@@ -3077,597 +2896,284 @@ aama:IDafc1a2fd-efc2-48b4-b955-cabea442aa3e a aamas:Term ;
 	bil:gender bil:Common ;
 	.
 
-#TERMCLUSTER:  bilin-VConj1AdvWhenAffImperfPngA-gab
+#TERMCLUSTER:  bilin-VConj1RelSubjAffImperfPngA-gab
 
-bil:bilin-VConj1AdvWhenAffImperfPngA-gab a aamas:Termcluster ;
-	rdfs:label "bilin-VConj1AdvWhenAffImperfPngA-gab" ;
+bil:bilin-VConj1RelSubjAffImperfPngA-gab a aamas:Termcluster ;
+	rdfs:label "bilin-VConj1RelSubjAffImperfPngA-gab" ;
 	rdfs:comment "Appleyard2007b pp. 497-501" 
 	.
 
-aama:IDf242b860-d9ce-4a16-a723-4ab803bfdbe2 a aamas:Term ;
+aama:IDd51fea43-c2cb-4e5e-af47-74d6f88684f2 a aamas:Term ;
 	aamas:lang aama:Bilin ;
-	aamas:memberOf bil:bilin-VConj1AdvWhenAffImperfPngA-gab ;
+	aamas:memberOf bil:bilin-VConj1RelSubjAffImperfPngA-gab ;
 	bil:aspect bil:Imperfective ;
-	bil:person bil:Person3 ;
-	bil:clauseType bil:AdvWhen ;
-	bil:number bil:Singular ;
-	bil:numberGenderHead bil:U ;
-	bil:pos bil:Verb ;
-	aamas:lexeme aama:Bilin-gab ;
-	bil:conjClass bil:Conjugation1 ;
-	bil:pngSet bil:PngA ;
-	bil:polarity bil:Affirmative ;
-	bil:tam bil:U ;
-	bil:gender bil:Masc ;
-	bil:token "gäbaka" ;
-	.
-
-#TERMCLUSTER:  bilin-VConj1AdvComplAffPerfPngA-gab
-
-bil:bilin-VConj1AdvComplAffPerfPngA-gab a aamas:Termcluster ;
-	rdfs:label "bilin-VConj1AdvComplAffPerfPngA-gab" ;
-	rdfs:comment "Appleyard2007b pp. 497-501" 
-	.
-
-aama:ID70cd0706-9604-4005-826c-6a333290e593 a aamas:Term ;
-	aamas:lang aama:Bilin ;
-	aamas:memberOf bil:bilin-VConj1AdvComplAffPerfPngA-gab ;
-	bil:aspect bil:Perfective ;
-	bil:person bil:Person3 ;
-	bil:clauseType bil:AdvCompl ;
-	bil:number bil:Singular ;
-	bil:numberGenderHead bil:U ;
-	bil:pos bil:Verb ;
-	aamas:lexeme aama:Bilin-gab ;
-	bil:conjClass bil:Conjugation1 ;
-	bil:pngSet bil:PngA ;
-	bil:polarity bil:Affirmative ;
-	bil:tam bil:U ;
-	bil:gender bil:Masc ;
-	bil:token "gäbät" ;
-	.
-
-#TERMCLUSTER:  bilin-VConj1RelSubjAffPerfPngA-gab
-
-bil:bilin-VConj1RelSubjAffPerfPngA-gab a aamas:Termcluster ;
-	rdfs:label "bilin-VConj1RelSubjAffPerfPngA-gab" ;
-	rdfs:comment "Appleyard2007b pp. 497-501" 
-	.
-
-aama:ID0b74ceaa-65ff-4daa-b677-be584fdbc2f1 a aamas:Term ;
-	aamas:lang aama:Bilin ;
-	aamas:memberOf bil:bilin-VConj1RelSubjAffPerfPngA-gab ;
-	bil:aspect bil:Perfective ;
 	bil:clauseType bil:RelSubj ;
-	bil:numberGenderHead bil:U ;
-	bil:pos bil:Verb ;
-	aamas:lexeme aama:Bilin-gab ;
 	bil:conjClass bil:Conjugation1 ;
+	aamas:lexeme aama:Bilin-gab ;
 	bil:pngSet bil:PngA ;
 	bil:polarity bil:Affirmative ;
-	bil:tam bil:U ;
-	bil:token "gäbäxər" ;
-	bil:person bil:Person1 ;
-	bil:number bil:Singular ;
-	bil:gender bil:Common ;
-	.
-
-aama:ID593f6cee-5eba-417d-a566-24e5de69bc78 a aamas:Term ;
-	aamas:lang aama:Bilin ;
-	aamas:memberOf bil:bilin-VConj1RelSubjAffPerfPngA-gab ;
-	bil:aspect bil:Perfective ;
-	bil:clauseType bil:RelSubj ;
-	bil:numberGenderHead bil:U ;
 	bil:pos bil:Verb ;
-	aamas:lexeme aama:Bilin-gab ;
-	bil:conjClass bil:Conjugation1 ;
-	bil:pngSet bil:PngA ;
-	bil:polarity bil:Affirmative ;
-	bil:tam bil:U ;
 	bil:token "gäbäw" ;
 	bil:person bil:Person3 ;
 	bil:number bil:Plural ;
 	bil:gender bil:Common ;
 	.
 
-aama:ID8d61082c-de2c-4cc5-ba56-8f6b78cf313d a aamas:Term ;
+aama:ID2f3cd200-b961-44bb-87c7-7b5fb007355a a aamas:Term ;
 	aamas:lang aama:Bilin ;
-	aamas:memberOf bil:bilin-VConj1RelSubjAffPerfPngA-gab ;
-	bil:aspect bil:Perfective ;
+	aamas:memberOf bil:bilin-VConj1RelSubjAffImperfPngA-gab ;
+	bil:aspect bil:Imperfective ;
 	bil:clauseType bil:RelSubj ;
-	bil:numberGenderHead bil:U ;
-	bil:pos bil:Verb ;
-	aamas:lexeme aama:Bilin-gab ;
 	bil:conjClass bil:Conjugation1 ;
+	aamas:lexeme aama:Bilin-gab ;
 	bil:pngSet bil:PngA ;
 	bil:polarity bil:Affirmative ;
-	bil:tam bil:U ;
-	bil:token "gäbnäxər" ;
-	bil:person bil:Person1 ;
-	bil:number bil:Plural ;
-	bil:gender bil:Common ;
-	.
-
-aama:ID254316fd-82ac-4382-802c-437e1c5115ef a aamas:Term ;
-	aamas:lang aama:Bilin ;
-	aamas:memberOf bil:bilin-VConj1RelSubjAffPerfPngA-gab ;
-	bil:aspect bil:Perfective ;
-	bil:clauseType bil:RelSubj ;
-	bil:numberGenderHead bil:U ;
 	bil:pos bil:Verb ;
-	aamas:lexeme aama:Bilin-gab ;
-	bil:conjClass bil:Conjugation1 ;
-	bil:pngSet bil:PngA ;
-	bil:polarity bil:Affirmative ;
-	bil:tam bil:U ;
-	bil:token "gäbräri" ;
-	bil:person bil:Person3 ;
-	bil:number bil:Singular ;
-	bil:gender bil:Fem ;
-	.
-
-aama:ID581f5481-1268-4ccc-8049-ed49ddaf6edd a aamas:Term ;
-	aamas:lang aama:Bilin ;
-	aamas:memberOf bil:bilin-VConj1RelSubjAffPerfPngA-gab ;
-	bil:aspect bil:Perfective ;
-	bil:clauseType bil:RelSubj ;
-	bil:numberGenderHead bil:U ;
-	bil:pos bil:Verb ;
-	aamas:lexeme aama:Bilin-gab ;
-	bil:conjClass bil:Conjugation1 ;
-	bil:pngSet bil:PngA ;
-	bil:polarity bil:Affirmative ;
-	bil:tam bil:U ;
-	bil:token "gäbdənäxər" ;
-	bil:person bil:Person2 ;
-	bil:number bil:Plural ;
-	bil:gender bil:Common ;
-	.
-
-aama:ID64e3b8f9-aaf8-4aee-b34b-d906e83c354f a aamas:Term ;
-	aamas:lang aama:Bilin ;
-	aamas:memberOf bil:bilin-VConj1RelSubjAffPerfPngA-gab ;
-	bil:aspect bil:Perfective ;
-	bil:clauseType bil:RelSubj ;
-	bil:numberGenderHead bil:U ;
-	bil:pos bil:Verb ;
-	aamas:lexeme aama:Bilin-gab ;
-	bil:conjClass bil:Conjugation1 ;
-	bil:pngSet bil:PngA ;
-	bil:polarity bil:Affirmative ;
-	bil:tam bil:U ;
 	bil:token "gäbäxw" ;
 	bil:person bil:Person3 ;
 	bil:number bil:Singular ;
 	bil:gender bil:Masc ;
 	.
 
-aama:ID042c50f0-59c9-44f6-b080-0a2c60ae0b7b a aamas:Term ;
+aama:ID79bb3d72-c2f4-43c1-a894-fe4dd419e7be a aamas:Term ;
 	aamas:lang aama:Bilin ;
-	aamas:memberOf bil:bilin-VConj1RelSubjAffPerfPngA-gab ;
-	bil:aspect bil:Perfective ;
+	aamas:memberOf bil:bilin-VConj1RelSubjAffImperfPngA-gab ;
+	bil:aspect bil:Imperfective ;
 	bil:clauseType bil:RelSubj ;
-	bil:numberGenderHead bil:U ;
-	bil:pos bil:Verb ;
-	aamas:lexeme aama:Bilin-gab ;
 	bil:conjClass bil:Conjugation1 ;
+	aamas:lexeme aama:Bilin-gab ;
 	bil:pngSet bil:PngA ;
 	bil:polarity bil:Affirmative ;
-	bil:tam bil:U ;
+	bil:pos bil:Verb ;
+	bil:token "gäbräri" ;
+	bil:person bil:Person3 ;
+	bil:number bil:Singular ;
+	bil:gender bil:Fem ;
+	.
+
+aama:IDb1cc80b3-db5b-4828-a775-6c90f0d6f368 a aamas:Term ;
+	aamas:lang aama:Bilin ;
+	aamas:memberOf bil:bilin-VConj1RelSubjAffImperfPngA-gab ;
+	bil:aspect bil:Imperfective ;
+	bil:clauseType bil:RelSubj ;
+	bil:conjClass bil:Conjugation1 ;
+	aamas:lexeme aama:Bilin-gab ;
+	bil:pngSet bil:PngA ;
+	bil:polarity bil:Affirmative ;
+	bil:pos bil:Verb ;
+	bil:token "gäbnäxər" ;
+	bil:person bil:Person1 ;
+	bil:number bil:Plural ;
+	bil:gender bil:Common ;
+	.
+
+aama:ID593fd6d5-771d-4f43-a28c-8320208f4852 a aamas:Term ;
+	aamas:lang aama:Bilin ;
+	aamas:memberOf bil:bilin-VConj1RelSubjAffImperfPngA-gab ;
+	bil:aspect bil:Imperfective ;
+	bil:clauseType bil:RelSubj ;
+	bil:conjClass bil:Conjugation1 ;
+	aamas:lexeme aama:Bilin-gab ;
+	bil:pngSet bil:PngA ;
+	bil:polarity bil:Affirmative ;
+	bil:pos bil:Verb ;
+	bil:token "gäbdänäxər" ;
+	bil:person bil:Person2 ;
+	bil:number bil:Plural ;
+	bil:gender bil:Common ;
+	.
+
+aama:ID0fcf8c81-fb9e-4980-999d-89851bd9f32c a aamas:Term ;
+	aamas:lang aama:Bilin ;
+	aamas:memberOf bil:bilin-VConj1RelSubjAffImperfPngA-gab ;
+	bil:aspect bil:Imperfective ;
+	bil:clauseType bil:RelSubj ;
+	bil:conjClass bil:Conjugation1 ;
+	aamas:lexeme aama:Bilin-gab ;
+	bil:pngSet bil:PngA ;
+	bil:polarity bil:Affirmative ;
+	bil:pos bil:Verb ;
+	bil:token "gäbäxər" ;
+	bil:person bil:Person1 ;
+	bil:number bil:Singular ;
+	bil:gender bil:Common ;
+	.
+
+aama:ID1cb0ed5c-71f5-4648-b751-50faa65380f4 a aamas:Term ;
+	aamas:lang aama:Bilin ;
+	aamas:memberOf bil:bilin-VConj1RelSubjAffImperfPngA-gab ;
+	bil:aspect bil:Imperfective ;
+	bil:clauseType bil:RelSubj ;
+	bil:conjClass bil:Conjugation1 ;
+	aamas:lexeme aama:Bilin-gab ;
+	bil:pngSet bil:PngA ;
+	bil:polarity bil:Affirmative ;
+	bil:pos bil:Verb ;
 	bil:token "gäbräxər" ;
 	bil:person bil:Person2 ;
 	bil:number bil:Singular ;
 	bil:gender bil:Common ;
 	.
 
-#TERMCLUSTER:  bilin-VConj1AdvUntilAffPerfPngC-gab
+#TERMCLUSTER:  bilin-VConj1AdvFutCondAffPerfPngC-gab
 
-bil:bilin-VConj1AdvUntilAffPerfPngC-gab a aamas:Termcluster ;
-	rdfs:label "bilin-VConj1AdvUntilAffPerfPngC-gab" ;
+bil:bilin-VConj1AdvFutCondAffPerfPngC-gab a aamas:Termcluster ;
+	rdfs:label "bilin-VConj1AdvFutCondAffPerfPngC-gab" ;
 	rdfs:comment "Appleyard2007b pp. 497-501" 
 	.
 
-aama:ID8325ea66-b5cb-498e-a851-cd58a65af6be a aamas:Term ;
+aama:IDc2b64401-0cdd-452b-949a-bcb1974acc68 a aamas:Term ;
 	aamas:lang aama:Bilin ;
-	aamas:memberOf bil:bilin-VConj1AdvUntilAffPerfPngC-gab ;
+	aamas:memberOf bil:bilin-VConj1AdvFutCondAffPerfPngC-gab ;
 	bil:aspect bil:Perfective ;
 	bil:person bil:Person3 ;
-	bil:clauseType bil:AdvUntil ;
+	bil:clauseType bil:AdvFutCond ;
 	bil:number bil:Singular ;
-	bil:numberGenderHead bil:U ;
 	bil:pos bil:Verb ;
 	aamas:lexeme aama:Bilin-gab ;
 	bil:conjClass bil:Conjugation1 ;
 	bil:pngSet bil:PngC ;
 	bil:polarity bil:Affirmative ;
-	bil:tam bil:U ;
 	bil:gender bil:Masc ;
-	bil:token "gäbrasik" ;
+	bil:token "gäbrəd" ;
 	.
 
-#TERMCLUSTER:  bilin-VConj2RelSubjAffPerfPngA-kab
+#TERMCLUSTER:  bilin-VConj1AdvCauseNegPerfPngA-gab
 
-bil:bilin-VConj2RelSubjAffPerfPngA-kab a aamas:Termcluster ;
-	rdfs:label "bilin-VConj2RelSubjAffPerfPngA-kab" ;
-	rdfs:comment "Appleyard2007b pp. 497-499" 
-	.
-
-aama:IDd334e81e-786a-4120-a5db-421bdd235a96 a aamas:Term ;
-	aamas:lang aama:Bilin ;
-	aamas:memberOf bil:bilin-VConj2RelSubjAffPerfPngA-kab ;
-	bil:aspect bil:Perfective ;
-	bil:clauseType bil:RelSubj ;
-	bil:conjClass bil:Conjugation2 ;
-	aamas:lexeme aama:Bilin-kab ;
-	bil:pngSet bil:PngA ;
-	bil:polarity bil:Affirmative ;
-	bil:pos bil:Verb ;
-	bil:tam bil:U ;
-	bil:token "kabrexər" ;
-	bil:person bil:Person2 ;
-	bil:number bil:Singular ;
-	bil:gender bil:Common ;
-	.
-
-aama:ID4679092c-7f23-408b-9f70-9cac5d5676b5 a aamas:Term ;
-	aamas:lang aama:Bilin ;
-	aamas:memberOf bil:bilin-VConj2RelSubjAffPerfPngA-kab ;
-	bil:aspect bil:Perfective ;
-	bil:clauseType bil:RelSubj ;
-	bil:conjClass bil:Conjugation2 ;
-	aamas:lexeme aama:Bilin-kab ;
-	bil:pngSet bil:PngA ;
-	bil:polarity bil:Affirmative ;
-	bil:pos bil:Verb ;
-	bil:tam bil:U ;
-	bil:token "kabdinexər" ;
-	bil:person bil:Person2 ;
-	bil:number bil:Plural ;
-	bil:gender bil:Common ;
-	.
-
-aama:ID86dd0cbd-1730-43d4-9cd5-527e6fc0ed54 a aamas:Term ;
-	aamas:lang aama:Bilin ;
-	aamas:memberOf bil:bilin-VConj2RelSubjAffPerfPngA-kab ;
-	bil:aspect bil:Perfective ;
-	bil:clauseType bil:RelSubj ;
-	bil:conjClass bil:Conjugation2 ;
-	aamas:lexeme aama:Bilin-kab ;
-	bil:pngSet bil:PngA ;
-	bil:polarity bil:Affirmative ;
-	bil:pos bil:Verb ;
-	bil:tam bil:U ;
-	bil:token "kabexər" ;
-	bil:person bil:Person1 ;
-	bil:number bil:Singular ;
-	bil:gender bil:Common ;
-	.
-
-aama:ID0c1138f5-fe4b-498e-b291-ef2688b9c1f8 a aamas:Term ;
-	aamas:lang aama:Bilin ;
-	aamas:memberOf bil:bilin-VConj2RelSubjAffPerfPngA-kab ;
-	bil:aspect bil:Perfective ;
-	bil:clauseType bil:RelSubj ;
-	bil:conjClass bil:Conjugation2 ;
-	aamas:lexeme aama:Bilin-kab ;
-	bil:pngSet bil:PngA ;
-	bil:polarity bil:Affirmative ;
-	bil:pos bil:Verb ;
-	bil:tam bil:U ;
-	bil:token "kabreri" ;
-	bil:person bil:Person3 ;
-	bil:number bil:Singular ;
-	bil:gender bil:Fem ;
-	.
-
-aama:ID66c74663-b39b-4451-bf04-93df435258f4 a aamas:Term ;
-	aamas:lang aama:Bilin ;
-	aamas:memberOf bil:bilin-VConj2RelSubjAffPerfPngA-kab ;
-	bil:aspect bil:Perfective ;
-	bil:clauseType bil:RelSubj ;
-	bil:conjClass bil:Conjugation2 ;
-	aamas:lexeme aama:Bilin-kab ;
-	bil:pngSet bil:PngA ;
-	bil:polarity bil:Affirmative ;
-	bil:pos bil:Verb ;
-	bil:tam bil:U ;
-	bil:token "kabew" ;
-	bil:person bil:Person3 ;
-	bil:number bil:Plural ;
-	bil:gender bil:Common ;
-	.
-
-aama:ID019b0e38-c29e-4429-a86b-37283f6dd4ff a aamas:Term ;
-	aamas:lang aama:Bilin ;
-	aamas:memberOf bil:bilin-VConj2RelSubjAffPerfPngA-kab ;
-	bil:aspect bil:Perfective ;
-	bil:clauseType bil:RelSubj ;
-	bil:conjClass bil:Conjugation2 ;
-	aamas:lexeme aama:Bilin-kab ;
-	bil:pngSet bil:PngA ;
-	bil:polarity bil:Affirmative ;
-	bil:pos bil:Verb ;
-	bil:tam bil:U ;
-	bil:token "kabnexər" ;
-	bil:person bil:Person1 ;
-	bil:number bil:Plural ;
-	bil:gender bil:Common ;
-	.
-
-aama:ID5d3f14d0-8dd7-459f-8a18-1f224d3f123b a aamas:Term ;
-	aamas:lang aama:Bilin ;
-	aamas:memberOf bil:bilin-VConj2RelSubjAffPerfPngA-kab ;
-	bil:aspect bil:Perfective ;
-	bil:clauseType bil:RelSubj ;
-	bil:conjClass bil:Conjugation2 ;
-	aamas:lexeme aama:Bilin-kab ;
-	bil:pngSet bil:PngA ;
-	bil:polarity bil:Affirmative ;
-	bil:pos bil:Verb ;
-	bil:tam bil:U ;
-	bil:token "kabexw" ;
-	bil:person bil:Person3 ;
-	bil:number bil:Singular ;
-	bil:gender bil:Masc ;
-	.
-
-#TERMCLUSTER:  bilin-VConj1MainNegPerfPngA2-gab
-
-bil:bilin-VConj1MainNegPerfPngA2-gab a aamas:Termcluster ;
-	rdfs:label "bilin-VConj1MainNegPerfPngA2-gab" ;
+bil:bilin-VConj1AdvCauseNegPerfPngA-gab a aamas:Termcluster ;
+	rdfs:label "bilin-VConj1AdvCauseNegPerfPngA-gab" ;
 	rdfs:comment "Appleyard2007b pp. 497-501" 
 	.
 
-aama:IDfaea9fa3-a6e4-4815-aa44-d892521a8d1d a aamas:Term ;
+aama:IDf391f57e-2175-41cd-9667-0bcdde26a276 a aamas:Term ;
 	aamas:lang aama:Bilin ;
-	aamas:memberOf bil:bilin-VConj1MainNegPerfPngA2-gab ;
+	aamas:memberOf bil:bilin-VConj1AdvCauseNegPerfPngA-gab ;
 	bil:aspect bil:Perfective ;
-	bil:clauseType bil:Main ;
-	bil:numberGenderHead bil:U ;
+	bil:person bil:Person3 ;
+	bil:clauseType bil:AdvCause ;
+	bil:number bil:Singular ;
 	bil:pos bil:Verb ;
 	aamas:lexeme aama:Bilin-gab ;
 	bil:conjClass bil:Conjugation1 ;
-	bil:pngSet bil:PngA2 ;
+	bil:pngSet bil:PngA ;
 	bil:polarity bil:Negative ;
-	bil:tam bil:U ;
-	bil:token "gäbənni" ;
-	bil:person bil:Person3 ;
-	bil:number bil:Plural ;
-	bil:gender bil:Common ;
+	bil:gender bil:Masc ;
+	bil:token "gäbgənädin" ;
 	.
 
-aama:ID61df9993-7132-4d7e-9886-401dbeebe55f a aamas:Term ;
+#TERMCLUSTER:  bilin-VConj1MainAffImperfJussPngA-gab
+
+bil:bilin-VConj1MainAffImperfJussPngA-gab a aamas:Termcluster ;
+	rdfs:label "bilin-VConj1MainAffImperfJussPngA-gab" ;
+	rdfs:comment "Appleyard2007b pp. 497-501" 
+	.
+
+aama:ID7fa76fb4-5c7b-4ad3-8793-69977a00c686 a aamas:Term ;
 	aamas:lang aama:Bilin ;
-	aamas:memberOf bil:bilin-VConj1MainNegPerfPngA2-gab ;
-	bil:aspect bil:Perfective ;
+	aamas:memberOf bil:bilin-VConj1MainAffImperfJussPngA-gab ;
+	bil:aspect bil:Imperfective ;
 	bil:clauseType bil:Main ;
-	bil:numberGenderHead bil:U ;
-	bil:pos bil:Verb ;
-	aamas:lexeme aama:Bilin-gab ;
 	bil:conjClass bil:Conjugation1 ;
-	bil:pngSet bil:PngA2 ;
-	bil:polarity bil:Negative ;
-	bil:tam bil:U ;
-	bil:token "gäbəlla" ;
-	bil:person bil:Person2 ;
+	aamas:lexeme aama:Bilin-gab ;
+	bil:pngSet bil:PngA ;
+	bil:polarity bil:Affirmative ;
+	bil:pos bil:Verb ;
+	bil:tam bil:Jussive ;
+	bil:token "gäbən" ;
+	bil:person bil:Person1 ;
 	bil:number bil:Singular ;
 	bil:gender bil:Common ;
 	.
 
-aama:ID53f7ca45-a47e-429e-9a9b-b1ddc62943ce a aamas:Term ;
+aama:IDfc19ca93-c60c-4ed6-bef7-396ac0a819b8 a aamas:Term ;
 	aamas:lang aama:Bilin ;
-	aamas:memberOf bil:bilin-VConj1MainNegPerfPngA2-gab ;
-	bil:aspect bil:Perfective ;
+	aamas:memberOf bil:bilin-VConj1MainAffImperfJussPngA-gab ;
+	bil:aspect bil:Imperfective ;
 	bil:clauseType bil:Main ;
-	bil:numberGenderHead bil:U ;
-	bil:pos bil:Verb ;
-	aamas:lexeme aama:Bilin-gab ;
 	bil:conjClass bil:Conjugation1 ;
-	bil:pngSet bil:PngA2 ;
-	bil:polarity bil:Negative ;
-	bil:tam bil:U ;
-	bil:token "gäbənni" ;
+	aamas:lexeme aama:Bilin-gab ;
+	bil:pngSet bil:PngA ;
+	bil:polarity bil:Affirmative ;
+	bil:pos bil:Verb ;
+	bil:tam bil:Jussive ;
+	bil:token "gäbnən" ;
 	bil:person bil:Person1 ;
 	bil:number bil:Plural ;
 	bil:gender bil:Common ;
 	.
 
-aama:IDaee93540-5612-4a6e-afc7-3d7d44d0cad9 a aamas:Term ;
+aama:IDd1cd0826-7dbc-4760-8c44-cd94a715b85a a aamas:Term ;
 	aamas:lang aama:Bilin ;
-	aamas:memberOf bil:bilin-VConj1MainNegPerfPngA2-gab ;
-	bil:aspect bil:Perfective ;
+	aamas:memberOf bil:bilin-VConj1MainAffImperfJussPngA-gab ;
+	bil:aspect bil:Imperfective ;
 	bil:clauseType bil:Main ;
-	bil:numberGenderHead bil:U ;
-	bil:pos bil:Verb ;
-	aamas:lexeme aama:Bilin-gab ;
 	bil:conjClass bil:Conjugation1 ;
-	bil:pngSet bil:PngA2 ;
-	bil:polarity bil:Negative ;
-	bil:tam bil:U ;
-	bil:token "gäbəlla" ;
+	aamas:lexeme aama:Bilin-gab ;
+	bil:pngSet bil:PngA ;
+	bil:polarity bil:Affirmative ;
+	bil:pos bil:Verb ;
+	bil:tam bil:Jussive ;
+	bil:token "gäbinin" ;
 	bil:person bil:Person3 ;
-	bil:number bil:Singular ;
-	bil:gender bil:Fem ;
+	bil:number bil:Plural ;
+	bil:gender bil:Common ;
 	.
 
-aama:IDb9085ae3-3d06-4899-bb93-66de6a6d6e5e a aamas:Term ;
+aama:IDa5d238fc-6c3b-4d9a-8023-40b0a233b5c1 a aamas:Term ;
 	aamas:lang aama:Bilin ;
-	aamas:memberOf bil:bilin-VConj1MainNegPerfPngA2-gab ;
-	bil:aspect bil:Perfective ;
+	aamas:memberOf bil:bilin-VConj1MainAffImperfJussPngA-gab ;
+	bil:aspect bil:Imperfective ;
 	bil:clauseType bil:Main ;
-	bil:numberGenderHead bil:U ;
-	bil:pos bil:Verb ;
-	aamas:lexeme aama:Bilin-gab ;
 	bil:conjClass bil:Conjugation1 ;
-	bil:pngSet bil:PngA2 ;
-	bil:polarity bil:Negative ;
-	bil:tam bil:U ;
-	bil:token "gäbla" ;
+	aamas:lexeme aama:Bilin-gab ;
+	bil:pngSet bil:PngA ;
+	bil:polarity bil:Affirmative ;
+	bil:pos bil:Verb ;
+	bil:tam bil:Jussive ;
+	bil:token "gäbən" ;
 	bil:person bil:Person3 ;
 	bil:number bil:Singular ;
 	bil:gender bil:Masc ;
 	.
 
-aama:IDd5f44abf-ebce-4371-b0aa-af1e94e73fbd a aamas:Term ;
+aama:ID48704bf2-b4ce-40eb-992a-fd9f6da7ea3f a aamas:Term ;
 	aamas:lang aama:Bilin ;
-	aamas:memberOf bil:bilin-VConj1MainNegPerfPngA2-gab ;
-	bil:aspect bil:Perfective ;
+	aamas:memberOf bil:bilin-VConj1MainAffImperfJussPngA-gab ;
+	bil:aspect bil:Imperfective ;
 	bil:clauseType bil:Main ;
-	bil:numberGenderHead bil:U ;
-	bil:pos bil:Verb ;
-	aamas:lexeme aama:Bilin-gab ;
 	bil:conjClass bil:Conjugation1 ;
-	bil:pngSet bil:PngA2 ;
-	bil:polarity bil:Negative ;
-	bil:tam bil:U ;
-	bil:token "gäbdənni" ;
-	bil:person bil:Person2 ;
-	bil:number bil:Plural ;
-	bil:gender bil:Common ;
-	.
-
-aama:ID8997cd48-859d-4d1c-b205-0b1977056ea0 a aamas:Term ;
-	aamas:lang aama:Bilin ;
-	aamas:memberOf bil:bilin-VConj1MainNegPerfPngA2-gab ;
-	bil:aspect bil:Perfective ;
-	bil:clauseType bil:Main ;
-	bil:numberGenderHead bil:U ;
-	bil:pos bil:Verb ;
 	aamas:lexeme aama:Bilin-gab ;
-	bil:conjClass bil:Conjugation1 ;
-	bil:pngSet bil:PngA2 ;
-	bil:polarity bil:Negative ;
-	bil:tam bil:U ;
-	bil:token "gäbli" ;
-	bil:person bil:Person1 ;
-	bil:number bil:Singular ;
-	bil:gender bil:Common ;
-	.
-
-#TERMCLUSTER:  bilin-VConj2MainNegPerfPngA2-kab
-
-bil:bilin-VConj2MainNegPerfPngA2-kab a aamas:Termcluster ;
-	rdfs:label "bilin-VConj2MainNegPerfPngA2-kab" ;
-	rdfs:comment "Appleyard2007b pp. 497-499" 
-	.
-
-aama:ID7aa07f11-bd70-4f57-ae2c-44150a4e1ad2 a aamas:Term ;
-	aamas:lang aama:Bilin ;
-	aamas:memberOf bil:bilin-VConj2MainNegPerfPngA2-kab ;
-	bil:aspect bil:Perfective ;
-	bil:clauseType bil:Main ;
-	bil:conjClass bil:Conjugation2 ;
-	aamas:lexeme aama:Bilin-kab ;
-	bil:pngSet bil:PngA2 ;
-	bil:polarity bil:Negative ;
+	bil:pngSet bil:PngA ;
+	bil:polarity bil:Affirmative ;
 	bil:pos bil:Verb ;
-	bil:tam bil:U ;
-	bil:token "kabili" ;
-	bil:person bil:Person1 ;
-	bil:number bil:Singular ;
-	bil:gender bil:Common ;
-	.
-
-aama:ID6c33ad60-b8bc-4061-9cdf-3eec76cdae66 a aamas:Term ;
-	aamas:lang aama:Bilin ;
-	aamas:memberOf bil:bilin-VConj2MainNegPerfPngA2-kab ;
-	bil:aspect bil:Perfective ;
-	bil:clauseType bil:Main ;
-	bil:conjClass bil:Conjugation2 ;
-	aamas:lexeme aama:Bilin-kab ;
-	bil:pngSet bil:PngA2 ;
-	bil:polarity bil:Negative ;
-	bil:pos bil:Verb ;
-	bil:tam bil:U ;
-	bil:token "kabinni" ;
-	bil:person bil:Person1 ;
-	bil:number bil:Plural ;
-	bil:gender bil:Common ;
-	.
-
-aama:ID20a67b99-d4d0-459c-bab1-5c3193b1c7ba a aamas:Term ;
-	aamas:lang aama:Bilin ;
-	aamas:memberOf bil:bilin-VConj2MainNegPerfPngA2-kab ;
-	bil:aspect bil:Perfective ;
-	bil:clauseType bil:Main ;
-	bil:conjClass bil:Conjugation2 ;
-	aamas:lexeme aama:Bilin-kab ;
-	bil:pngSet bil:PngA2 ;
-	bil:polarity bil:Negative ;
-	bil:pos bil:Verb ;
-	bil:tam bil:U ;
-	bil:token "kabdinni" ;
-	bil:person bil:Person2 ;
-	bil:number bil:Plural ;
-	bil:gender bil:Common ;
-	.
-
-aama:ID124c343e-daf3-40ec-b0c9-c037e6939946 a aamas:Term ;
-	aamas:lang aama:Bilin ;
-	aamas:memberOf bil:bilin-VConj2MainNegPerfPngA2-kab ;
-	bil:aspect bil:Perfective ;
-	bil:clauseType bil:Main ;
-	bil:conjClass bil:Conjugation2 ;
-	aamas:lexeme aama:Bilin-kab ;
-	bil:pngSet bil:PngA2 ;
-	bil:polarity bil:Negative ;
-	bil:pos bil:Verb ;
-	bil:tam bil:U ;
-	bil:token "kabinni" ;
-	bil:person bil:Person3 ;
-	bil:number bil:Plural ;
-	bil:gender bil:Common ;
-	.
-
-aama:ID82825c05-c4df-43d5-9650-f65bac875ab8 a aamas:Term ;
-	aamas:lang aama:Bilin ;
-	aamas:memberOf bil:bilin-VConj2MainNegPerfPngA2-kab ;
-	bil:aspect bil:Perfective ;
-	bil:clauseType bil:Main ;
-	bil:conjClass bil:Conjugation2 ;
-	aamas:lexeme aama:Bilin-kab ;
-	bil:pngSet bil:PngA2 ;
-	bil:polarity bil:Negative ;
-	bil:pos bil:Verb ;
-	bil:tam bil:U ;
-	bil:token "kabilla" ;
+	bil:tam bil:Jussive ;
+	bil:token "gäbrən" ;
 	bil:person bil:Person3 ;
 	bil:number bil:Singular ;
 	bil:gender bil:Fem ;
 	.
 
-aama:IDc81bc126-0a35-483a-bb79-f96324ff5c1b a aamas:Term ;
-	aamas:lang aama:Bilin ;
-	aamas:memberOf bil:bilin-VConj2MainNegPerfPngA2-kab ;
-	bil:aspect bil:Perfective ;
-	bil:clauseType bil:Main ;
-	bil:conjClass bil:Conjugation2 ;
-	aamas:lexeme aama:Bilin-kab ;
-	bil:pngSet bil:PngA2 ;
-	bil:polarity bil:Negative ;
-	bil:pos bil:Verb ;
-	bil:tam bil:U ;
-	bil:token "kabila" ;
-	bil:person bil:Person3 ;
-	bil:number bil:Singular ;
-	bil:gender bil:Masc ;
+#TERMCLUSTER:  bilin-VConj1AdvCondAffPerfPngA-gab
+
+bil:bilin-VConj1AdvCondAffPerfPngA-gab a aamas:Termcluster ;
+	rdfs:label "bilin-VConj1AdvCondAffPerfPngA-gab" ;
+	rdfs:comment "Appleyard2007b pp. 497-501" 
 	.
 
-aama:ID6e4783d0-7f27-4f5a-bae6-2ca39d28a5fd a aamas:Term ;
+aama:ID8366e9d1-6d2e-4461-8c64-091b614ffac6 a aamas:Term ;
 	aamas:lang aama:Bilin ;
-	aamas:memberOf bil:bilin-VConj2MainNegPerfPngA2-kab ;
+	aamas:memberOf bil:bilin-VConj1AdvCondAffPerfPngA-gab ;
 	bil:aspect bil:Perfective ;
-	bil:clauseType bil:Main ;
-	bil:conjClass bil:Conjugation2 ;
-	aamas:lexeme aama:Bilin-kab ;
-	bil:pngSet bil:PngA2 ;
-	bil:polarity bil:Negative ;
-	bil:pos bil:Verb ;
-	bil:tam bil:U ;
-	bil:token "kabilla" ;
-	bil:person bil:Person2 ;
+	bil:person bil:Person3 ;
+	bil:clauseType bil:AdvCond ;
 	bil:number bil:Singular ;
-	bil:gender bil:Common ;
+	bil:pos bil:Verb ;
+	aamas:lexeme aama:Bilin-gab ;
+	bil:conjClass bil:Conjugation1 ;
+	bil:pngSet bil:PngA ;
+	bil:polarity bil:Affirmative ;
+	bil:gender bil:Masc ;
+	bil:token "gäbnädik" ;
 	.
 
 #TERMCLUSTER:  bilin-VConj3MainAffPerfPastPngB-kw
@@ -3677,7 +3183,7 @@ bil:bilin-VConj3MainAffPerfPastPngB-kw a aamas:Termcluster ;
 	rdfs:comment "Appleyard2007b pp. 497-499. Third conjugation verbs:a handful of monosyllabic roots (cf. LEXEMES section)." 
 	.
 
-aama:ID19bf7c87-c322-47bb-bf1b-7a970ec7bd50 a aamas:Term ;
+aama:ID5c92d32e-522c-446a-b832-ec26172d97fa a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj3MainAffPerfPastPngB-kw ;
 	bil:aspect bil:Perfective ;
@@ -3694,7 +3200,7 @@ aama:ID19bf7c87-c322-47bb-bf1b-7a970ec7bd50 a aamas:Term ;
 	bil:gender bil:Masc ;
 	.
 
-aama:IDf0631114-2f8f-4244-94b4-d4605cbaa4e3 a aamas:Term ;
+aama:IDcb7eeb5e-0af3-4b66-b438-6f9e825294d5 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj3MainAffPerfPastPngB-kw ;
 	bil:aspect bil:Perfective ;
@@ -3711,7 +3217,7 @@ aama:IDf0631114-2f8f-4244-94b4-d4605cbaa4e3 a aamas:Term ;
 	bil:gender bil:Common ;
 	.
 
-aama:ID1ecd6ee5-189c-4d6d-af99-210505434c57 a aamas:Term ;
+aama:ID12d9de29-4b9c-494c-8445-481e338d2265 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj3MainAffPerfPastPngB-kw ;
 	bil:aspect bil:Perfective ;
@@ -3728,29 +3234,185 @@ aama:ID1ecd6ee5-189c-4d6d-af99-210505434c57 a aamas:Term ;
 	bil:gender bil:Common ;
 	.
 
-#TERMCLUSTER:  bilin-VConj1AdvConsecAffPerfPngA-gab
+#TERMCLUSTER:  bilin-VConj2MainNegImperfPngA2-kab
 
-bil:bilin-VConj1AdvConsecAffPerfPngA-gab a aamas:Termcluster ;
-	rdfs:label "bilin-VConj1AdvConsecAffPerfPngA-gab" ;
+bil:bilin-VConj2MainNegImperfPngA2-kab a aamas:Termcluster ;
+	rdfs:label "bilin-VConj2MainNegImperfPngA2-kab" ;
+	rdfs:comment "Appleyard2007b pp. 497-499" 
+	.
+
+aama:ID8012023a-f012-4480-aa10-b043d401eb8d a aamas:Term ;
+	aamas:lang aama:Bilin ;
+	aamas:memberOf bil:bilin-VConj2MainNegImperfPngA2-kab ;
+	bil:aspect bil:Imperfective ;
+	bil:clauseType bil:Main ;
+	bil:conjClass bil:Conjugation2 ;
+	aamas:lexeme aama:Bilin-kab ;
+	bil:pngSet bil:PngA2 ;
+	bil:polarity bil:Negative ;
+	bil:pos bil:Verb ;
+	bil:token "kabänni" ;
+	bil:person bil:Person3 ;
+	bil:number bil:Plural ;
+	bil:gender bil:Common ;
+	.
+
+aama:ID81a5f8b8-9b50-4de1-a0d2-4e15d0c8baae a aamas:Term ;
+	aamas:lang aama:Bilin ;
+	aamas:memberOf bil:bilin-VConj2MainNegImperfPngA2-kab ;
+	bil:aspect bil:Imperfective ;
+	bil:clauseType bil:Main ;
+	bil:conjClass bil:Conjugation2 ;
+	aamas:lexeme aama:Bilin-kab ;
+	bil:pngSet bil:PngA2 ;
+	bil:polarity bil:Negative ;
+	bil:pos bil:Verb ;
+	bil:token "kabnäli" ;
+	bil:person bil:Person1 ;
+	bil:number bil:Plural ;
+	bil:gender bil:Common ;
+	.
+
+aama:IDec1247d5-9824-4245-9221-7745c85ec25f a aamas:Term ;
+	aamas:lang aama:Bilin ;
+	aamas:memberOf bil:bilin-VConj2MainNegImperfPngA2-kab ;
+	bil:aspect bil:Imperfective ;
+	bil:clauseType bil:Main ;
+	bil:conjClass bil:Conjugation2 ;
+	aamas:lexeme aama:Bilin-kab ;
+	bil:pngSet bil:PngA2 ;
+	bil:polarity bil:Negative ;
+	bil:pos bil:Verb ;
+	bil:token "kabdänni" ;
+	bil:person bil:Person2 ;
+	bil:number bil:Plural ;
+	bil:gender bil:Common ;
+	.
+
+aama:ID499d62fc-d5c9-4481-bfa2-b9bd0b7f73d1 a aamas:Term ;
+	aamas:lang aama:Bilin ;
+	aamas:memberOf bil:bilin-VConj2MainNegImperfPngA2-kab ;
+	bil:aspect bil:Imperfective ;
+	bil:clauseType bil:Main ;
+	bil:conjClass bil:Conjugation2 ;
+	aamas:lexeme aama:Bilin-kab ;
+	bil:pngSet bil:PngA2 ;
+	bil:polarity bil:Negative ;
+	bil:pos bil:Verb ;
+	bil:token "kabäla" ;
+	bil:person bil:Person3 ;
+	bil:number bil:Singular ;
+	bil:gender bil:Fem ;
+	.
+
+aama:ID7b9356c3-2646-463a-91ed-f69ca27a60a9 a aamas:Term ;
+	aamas:lang aama:Bilin ;
+	aamas:memberOf bil:bilin-VConj2MainNegImperfPngA2-kab ;
+	bil:aspect bil:Imperfective ;
+	bil:clauseType bil:Main ;
+	bil:conjClass bil:Conjugation2 ;
+	aamas:lexeme aama:Bilin-kab ;
+	bil:pngSet bil:PngA2 ;
+	bil:polarity bil:Negative ;
+	bil:pos bil:Verb ;
+	bil:token "kabäla" ;
+	bil:person bil:Person3 ;
+	bil:number bil:Singular ;
+	bil:gender bil:Masc ;
+	.
+
+aama:ID1d7bcebf-04fe-4db3-bcf9-d2cb448735b5 a aamas:Term ;
+	aamas:lang aama:Bilin ;
+	aamas:memberOf bil:bilin-VConj2MainNegImperfPngA2-kab ;
+	bil:aspect bil:Imperfective ;
+	bil:clauseType bil:Main ;
+	bil:conjClass bil:Conjugation2 ;
+	aamas:lexeme aama:Bilin-kab ;
+	bil:pngSet bil:PngA2 ;
+	bil:polarity bil:Negative ;
+	bil:pos bil:Verb ;
+	bil:token "kabäli" ;
+	bil:person bil:Person1 ;
+	bil:number bil:Singular ;
+	bil:gender bil:Common ;
+	.
+
+aama:IDe925a9ca-53d6-41c9-bd1c-378575ecebe9 a aamas:Term ;
+	aamas:lang aama:Bilin ;
+	aamas:memberOf bil:bilin-VConj2MainNegImperfPngA2-kab ;
+	bil:aspect bil:Imperfective ;
+	bil:clauseType bil:Main ;
+	bil:conjClass bil:Conjugation2 ;
+	aamas:lexeme aama:Bilin-kab ;
+	bil:pngSet bil:PngA2 ;
+	bil:polarity bil:Negative ;
+	bil:pos bil:Verb ;
+	bil:token "kabäla" ;
+	bil:person bil:Person2 ;
+	bil:number bil:Singular ;
+	bil:gender bil:Common ;
+	.
+
+#TERMCLUSTER:  bilin-VConj1AdvCauseAffPerfPngA-gab
+
+bil:bilin-VConj1AdvCauseAffPerfPngA-gab a aamas:Termcluster ;
+	rdfs:label "bilin-VConj1AdvCauseAffPerfPngA-gab" ;
 	rdfs:comment "Appleyard2007b pp. 497-501" 
 	.
 
-aama:ID17234495-f58c-432a-8ef2-d71b5a9f98c0 a aamas:Term ;
+aama:ID129c77e0-8402-4a88-b1c8-1d23ec35f0f9 a aamas:Term ;
 	aamas:lang aama:Bilin ;
-	aamas:memberOf bil:bilin-VConj1AdvConsecAffPerfPngA-gab ;
+	aamas:memberOf bil:bilin-VConj1AdvCauseAffPerfPngA-gab ;
 	bil:aspect bil:Perfective ;
 	bil:person bil:Person3 ;
-	bil:clauseType bil:AdvConsec ;
+	bil:clauseType bil:AdvCause ;
 	bil:number bil:Singular ;
-	bil:numberGenderHead bil:U ;
 	bil:pos bil:Verb ;
 	aamas:lexeme aama:Bilin-gab ;
 	bil:conjClass bil:Conjugation1 ;
 	bil:pngSet bil:PngA ;
 	bil:polarity bil:Affirmative ;
-	bil:tam bil:U ;
 	bil:gender bil:Masc ;
-	bil:token "gäbo" ;
+	bil:token "gäbnädin" ;
+	.
+
+#TERMCLUSTER:  bilin-VConj1MainAffPerfImprtv-gab
+
+bil:bilin-VConj1MainAffPerfImprtv-gab a aamas:Termcluster ;
+	rdfs:label "bilin-VConj1MainAffPerfImprtv-gab" ;
+	rdfs:comment "Appleyard2007b pp. 497-501" 
+	.
+
+aama:ID8bd29429-df65-498b-a2a4-a12aeb205fc3 a aamas:Term ;
+	aamas:lang aama:Bilin ;
+	aamas:memberOf bil:bilin-VConj1MainAffPerfImprtv-gab ;
+	bil:aspect bil:Perfective ;
+	bil:person bil:Person2 ;
+	bil:clauseType bil:Main ;
+	bil:pos bil:Verb ;
+	aamas:lexeme aama:Bilin-gab ;
+	bil:conjClass bil:Conjugation1 ;
+	bil:polarity bil:Affirmative ;
+	bil:tam bil:Imperative ;
+	bil:gender bil:Common ;
+	bil:token "gäbi" ;
+	bil:number bil:Singular ;
+	.
+
+aama:IDe28fafaa-8f7e-421e-b0e2-2ff6499a2003 a aamas:Term ;
+	aamas:lang aama:Bilin ;
+	aamas:memberOf bil:bilin-VConj1MainAffPerfImprtv-gab ;
+	bil:aspect bil:Perfective ;
+	bil:person bil:Person2 ;
+	bil:clauseType bil:Main ;
+	bil:pos bil:Verb ;
+	aamas:lexeme aama:Bilin-gab ;
+	bil:conjClass bil:Conjugation1 ;
+	bil:polarity bil:Affirmative ;
+	bil:tam bil:Imperative ;
+	bil:gender bil:Common ;
+	bil:token "gäba" ;
+	bil:number bil:Plural ;
 	.
 
 #TERMCLUSTER:  bilin-VConj2MainAffPerfFutPngC-kab
@@ -3760,7 +3422,7 @@ bil:bilin-VConj2MainAffPerfFutPngC-kab a aamas:Termcluster ;
 	rdfs:comment "Appleyard2007b pp. 497-499" 
 	.
 
-aama:ID4a73784b-7315-4361-9faf-fe480911110f a aamas:Term ;
+aama:IDaa1526e1-7d64-44df-beb1-75b57a9163fa a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj2MainAffPerfFutPngC-kab ;
 	bil:aspect bil:Perfective ;
@@ -3777,7 +3439,7 @@ aama:ID4a73784b-7315-4361-9faf-fe480911110f a aamas:Term ;
 	bil:gender bil:Common ;
 	.
 
-aama:ID8657af1f-5bae-4583-9e4f-0cfb2d3685f7 a aamas:Term ;
+aama:IDb742469c-5258-47bc-8580-2670ff7db2d1 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj2MainAffPerfFutPngC-kab ;
 	bil:aspect bil:Perfective ;
@@ -3794,7 +3456,7 @@ aama:ID8657af1f-5bae-4583-9e4f-0cfb2d3685f7 a aamas:Term ;
 	bil:gender bil:Common ;
 	.
 
-aama:ID8000b995-a7ca-44ef-9229-6b9b38e481c5 a aamas:Term ;
+aama:ID128bc65d-2614-411a-8069-27df9ba2ab99 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj2MainAffPerfFutPngC-kab ;
 	bil:aspect bil:Perfective ;
@@ -3811,7 +3473,7 @@ aama:ID8000b995-a7ca-44ef-9229-6b9b38e481c5 a aamas:Term ;
 	bil:gender bil:Common ;
 	.
 
-aama:IDd14720f3-f99a-40ff-a300-3220117bf971 a aamas:Term ;
+aama:IDdc70cd07-3f1e-41ae-9e02-967137ac2872 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj2MainAffPerfFutPngC-kab ;
 	bil:aspect bil:Perfective ;
@@ -3828,7 +3490,7 @@ aama:IDd14720f3-f99a-40ff-a300-3220117bf971 a aamas:Term ;
 	bil:gender bil:Masc ;
 	.
 
-aama:IDa74e430c-d07e-4708-ba86-6991cda67e4f a aamas:Term ;
+aama:ID288a5556-f865-4d0f-ace1-73a72dcecd79 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj2MainAffPerfFutPngC-kab ;
 	bil:aspect bil:Perfective ;
@@ -3845,7 +3507,7 @@ aama:IDa74e430c-d07e-4708-ba86-6991cda67e4f a aamas:Term ;
 	bil:gender bil:Common ;
 	.
 
-aama:ID8a7196df-e1f0-4dec-a9f8-35aef54dd012 a aamas:Term ;
+aama:ID65aee00c-32e9-4a0f-9ef8-c4466c1f8bab a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj2MainAffPerfFutPngC-kab ;
 	bil:aspect bil:Perfective ;
@@ -3862,7 +3524,7 @@ aama:ID8a7196df-e1f0-4dec-a9f8-35aef54dd012 a aamas:Term ;
 	bil:gender bil:Fem ;
 	.
 
-aama:ID2b762f41-0fb9-4767-96d8-88a600270f51 a aamas:Term ;
+aama:ID1dfc2ff0-fea0-459f-b14c-d7693df48cae a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj2MainAffPerfFutPngC-kab ;
 	bil:aspect bil:Perfective ;
@@ -3879,54 +3541,215 @@ aama:ID2b762f41-0fb9-4767-96d8-88a600270f51 a aamas:Term ;
 	bil:gender bil:Common ;
 	.
 
-#TERMCLUSTER:  bilin-VConj1AdvAt2AffImperfPngA-gab
+#TERMCLUSTER:  bilin-VConj2RelSubjAffPerfPngA-kab
 
-bil:bilin-VConj1AdvAt2AffImperfPngA-gab a aamas:Termcluster ;
-	rdfs:label "bilin-VConj1AdvAt2AffImperfPngA-gab" ;
-	rdfs:comment "Appleyard2007b pp. 497-501" 
+bil:bilin-VConj2RelSubjAffPerfPngA-kab a aamas:Termcluster ;
+	rdfs:label "bilin-VConj2RelSubjAffPerfPngA-kab" ;
+	rdfs:comment "Appleyard2007b pp. 497-499" 
 	.
 
-aama:IDc557527a-b75e-49a3-8908-c0f2de0eb14a a aamas:Term ;
+aama:ID4258bc3d-fcb9-4078-ac4a-d52113edca35 a aamas:Term ;
 	aamas:lang aama:Bilin ;
-	aamas:memberOf bil:bilin-VConj1AdvAt2AffImperfPngA-gab ;
-	bil:aspect bil:Imperfective ;
-	bil:person bil:Person3 ;
-	bil:clauseType bil:AdvAt2 ;
-	bil:number bil:Singular ;
-	bil:numberGenderHead bil:U ;
-	bil:pos bil:Verb ;
-	aamas:lexeme aama:Bilin-gab ;
-	bil:conjClass bil:Conjugation1 ;
+	aamas:memberOf bil:bilin-VConj2RelSubjAffPerfPngA-kab ;
+	bil:aspect bil:Perfective ;
+	bil:clauseType bil:RelSubj ;
+	bil:conjClass bil:Conjugation2 ;
+	aamas:lexeme aama:Bilin-kab ;
 	bil:pngSet bil:PngA ;
 	bil:polarity bil:Affirmative ;
-	bil:tam bil:U ;
-	bil:gender bil:Masc ;
-	bil:token "gäbek" ;
+	bil:pos bil:Verb ;
+	bil:token "kabrexər" ;
+	bil:person bil:Person2 ;
+	bil:number bil:Singular ;
+	bil:gender bil:Common ;
 	.
 
-#TERMCLUSTER:  bilin-VConj1AdvPurpAffPerfPngC-gab
+aama:ID327bfbf6-b6e7-447b-9c7f-1e0b213bcde6 a aamas:Term ;
+	aamas:lang aama:Bilin ;
+	aamas:memberOf bil:bilin-VConj2RelSubjAffPerfPngA-kab ;
+	bil:aspect bil:Perfective ;
+	bil:clauseType bil:RelSubj ;
+	bil:conjClass bil:Conjugation2 ;
+	aamas:lexeme aama:Bilin-kab ;
+	bil:pngSet bil:PngA ;
+	bil:polarity bil:Affirmative ;
+	bil:pos bil:Verb ;
+	bil:token "kabdinexər" ;
+	bil:person bil:Person2 ;
+	bil:number bil:Plural ;
+	bil:gender bil:Common ;
+	.
 
-bil:bilin-VConj1AdvPurpAffPerfPngC-gab a aamas:Termcluster ;
-	rdfs:label "bilin-VConj1AdvPurpAffPerfPngC-gab" ;
+aama:IDabe3ef84-383f-4979-8c75-6195115cda33 a aamas:Term ;
+	aamas:lang aama:Bilin ;
+	aamas:memberOf bil:bilin-VConj2RelSubjAffPerfPngA-kab ;
+	bil:aspect bil:Perfective ;
+	bil:clauseType bil:RelSubj ;
+	bil:conjClass bil:Conjugation2 ;
+	aamas:lexeme aama:Bilin-kab ;
+	bil:pngSet bil:PngA ;
+	bil:polarity bil:Affirmative ;
+	bil:pos bil:Verb ;
+	bil:token "kabexər" ;
+	bil:person bil:Person1 ;
+	bil:number bil:Singular ;
+	bil:gender bil:Common ;
+	.
+
+aama:ID6297f456-057c-4053-904f-114c7ee2a442 a aamas:Term ;
+	aamas:lang aama:Bilin ;
+	aamas:memberOf bil:bilin-VConj2RelSubjAffPerfPngA-kab ;
+	bil:aspect bil:Perfective ;
+	bil:clauseType bil:RelSubj ;
+	bil:conjClass bil:Conjugation2 ;
+	aamas:lexeme aama:Bilin-kab ;
+	bil:pngSet bil:PngA ;
+	bil:polarity bil:Affirmative ;
+	bil:pos bil:Verb ;
+	bil:token "kabreri" ;
+	bil:person bil:Person3 ;
+	bil:number bil:Singular ;
+	bil:gender bil:Fem ;
+	.
+
+aama:ID1a0fb23c-42ae-4459-a0a9-bfe76de66c07 a aamas:Term ;
+	aamas:lang aama:Bilin ;
+	aamas:memberOf bil:bilin-VConj2RelSubjAffPerfPngA-kab ;
+	bil:aspect bil:Perfective ;
+	bil:clauseType bil:RelSubj ;
+	bil:conjClass bil:Conjugation2 ;
+	aamas:lexeme aama:Bilin-kab ;
+	bil:pngSet bil:PngA ;
+	bil:polarity bil:Affirmative ;
+	bil:pos bil:Verb ;
+	bil:token "kabew" ;
+	bil:person bil:Person3 ;
+	bil:number bil:Plural ;
+	bil:gender bil:Common ;
+	.
+
+aama:ID07e7b27f-0a10-4970-8758-454c4385872f a aamas:Term ;
+	aamas:lang aama:Bilin ;
+	aamas:memberOf bil:bilin-VConj2RelSubjAffPerfPngA-kab ;
+	bil:aspect bil:Perfective ;
+	bil:clauseType bil:RelSubj ;
+	bil:conjClass bil:Conjugation2 ;
+	aamas:lexeme aama:Bilin-kab ;
+	bil:pngSet bil:PngA ;
+	bil:polarity bil:Affirmative ;
+	bil:pos bil:Verb ;
+	bil:token "kabnexər" ;
+	bil:person bil:Person1 ;
+	bil:number bil:Plural ;
+	bil:gender bil:Common ;
+	.
+
+aama:IDac93e9e8-140e-474f-99ee-88a37634d2f3 a aamas:Term ;
+	aamas:lang aama:Bilin ;
+	aamas:memberOf bil:bilin-VConj2RelSubjAffPerfPngA-kab ;
+	bil:aspect bil:Perfective ;
+	bil:clauseType bil:RelSubj ;
+	bil:conjClass bil:Conjugation2 ;
+	aamas:lexeme aama:Bilin-kab ;
+	bil:pngSet bil:PngA ;
+	bil:polarity bil:Affirmative ;
+	bil:pos bil:Verb ;
+	bil:token "kabexw" ;
+	bil:person bil:Person3 ;
+	bil:number bil:Singular ;
+	bil:gender bil:Masc ;
+	.
+
+#TERMCLUSTER:  bilin-VConj1MainNegImperfJussPngA-gab
+
+bil:bilin-VConj1MainNegImperfJussPngA-gab a aamas:Termcluster ;
+	rdfs:label "bilin-VConj1MainNegImperfJussPngA-gab" ;
 	rdfs:comment "Appleyard2007b pp. 497-501" 
 	.
 
-aama:IDd37f0c1d-0be6-45a6-9708-883bda9a23ef a aamas:Term ;
+aama:ID7b717a72-0bae-4557-9c62-9205e33c3a06 a aamas:Term ;
 	aamas:lang aama:Bilin ;
-	aamas:memberOf bil:bilin-VConj1AdvPurpAffPerfPngC-gab ;
-	bil:aspect bil:Perfective ;
-	bil:person bil:Person3 ;
-	bil:clauseType bil:AdvPurp ;
-	bil:number bil:Singular ;
-	bil:numberGenderHead bil:U ;
-	bil:pos bil:Verb ;
-	aamas:lexeme aama:Bilin-gab ;
+	aamas:memberOf bil:bilin-VConj1MainNegImperfJussPngA-gab ;
+	bil:aspect bil:Imperfective ;
+	bil:clauseType bil:Main ;
 	bil:conjClass bil:Conjugation1 ;
-	bil:pngSet bil:PngC ;
-	bil:polarity bil:Affirmative ;
-	bil:tam bil:U ;
+	aamas:lexeme aama:Bilin-gab ;
+	bil:pngSet bil:PngA ;
+	bil:polarity bil:Negative ;
+	bil:pos bil:Verb ;
+	bil:tam bil:Jussive ;
+	bil:token "gäbgin" ;
+	bil:person bil:Person1 ;
+	bil:number bil:Singular ;
+	bil:gender bil:Common ;
+	.
+
+aama:IDb109084f-2e07-4e59-a24e-64c01e135ebc a aamas:Term ;
+	aamas:lang aama:Bilin ;
+	aamas:memberOf bil:bilin-VConj1MainNegImperfJussPngA-gab ;
+	bil:aspect bil:Imperfective ;
+	bil:clauseType bil:Main ;
+	bil:conjClass bil:Conjugation1 ;
+	aamas:lexeme aama:Bilin-gab ;
+	bil:pngSet bil:PngA ;
+	bil:polarity bil:Negative ;
+	bil:pos bil:Verb ;
+	bil:tam bil:Jussive ;
+	bil:token "gäbgərin" ;
+	bil:person bil:Person3 ;
+	bil:number bil:Singular ;
+	bil:gender bil:Fem ;
+	.
+
+aama:ID0489c84b-8b61-4ac9-92b1-fad98bd4e11f a aamas:Term ;
+	aamas:lang aama:Bilin ;
+	aamas:memberOf bil:bilin-VConj1MainNegImperfJussPngA-gab ;
+	bil:aspect bil:Imperfective ;
+	bil:clauseType bil:Main ;
+	bil:conjClass bil:Conjugation1 ;
+	aamas:lexeme aama:Bilin-gab ;
+	bil:pngSet bil:PngA ;
+	bil:polarity bil:Negative ;
+	bil:pos bil:Verb ;
+	bil:tam bil:Jussive ;
+	bil:token "gäbgənin" ;
+	bil:person bil:Person1 ;
+	bil:number bil:Plural ;
+	bil:gender bil:Common ;
+	.
+
+aama:IDdfa7802c-8282-4d4f-b143-9e0f4c97cba6 a aamas:Term ;
+	aamas:lang aama:Bilin ;
+	aamas:memberOf bil:bilin-VConj1MainNegImperfJussPngA-gab ;
+	bil:aspect bil:Imperfective ;
+	bil:clauseType bil:Main ;
+	bil:conjClass bil:Conjugation1 ;
+	aamas:lexeme aama:Bilin-gab ;
+	bil:pngSet bil:PngA ;
+	bil:polarity bil:Negative ;
+	bil:pos bil:Verb ;
+	bil:tam bil:Jussive ;
+	bil:token "gäbgin" ;
+	bil:person bil:Person3 ;
+	bil:number bil:Singular ;
 	bil:gender bil:Masc ;
-	bil:token "gäbro" ;
+	.
+
+aama:ID137c8ecd-d602-4b87-81e5-c9bd331d09ab a aamas:Term ;
+	aamas:lang aama:Bilin ;
+	aamas:memberOf bil:bilin-VConj1MainNegImperfJussPngA-gab ;
+	bil:aspect bil:Imperfective ;
+	bil:clauseType bil:Main ;
+	bil:conjClass bil:Conjugation1 ;
+	aamas:lexeme aama:Bilin-gab ;
+	bil:pngSet bil:PngA ;
+	bil:polarity bil:Negative ;
+	bil:pos bil:Verb ;
+	bil:tam bil:Jussive ;
+	bil:token "gäbgənin" ;
+	bil:person bil:Person3 ;
+	bil:number bil:Plural ;
+	bil:gender bil:Common ;
 	.
 
 #TERMCLUSTER:  bilin-VConj1AdvComplAffImperfPngA-gab
@@ -3936,65 +3759,59 @@ bil:bilin-VConj1AdvComplAffImperfPngA-gab a aamas:Termcluster ;
 	rdfs:comment "Appleyard2007b pp. 497-501" 
 	.
 
-aama:IDfc987606-1762-4bf9-b904-0b97244546ef a aamas:Term ;
+aama:ID0576811f-8a35-427f-ad7a-0271d081c5c8 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj1AdvComplAffImperfPngA-gab ;
 	bil:aspect bil:Imperfective ;
 	bil:person bil:Person3 ;
 	bil:clauseType bil:AdvCompl ;
 	bil:number bil:Singular ;
-	bil:numberGenderHead bil:U ;
 	bil:pos bil:Verb ;
 	aamas:lexeme aama:Bilin-gab ;
 	bil:conjClass bil:Conjugation1 ;
 	bil:pngSet bil:PngA ;
 	bil:polarity bil:Affirmative ;
-	bil:tam bil:U ;
 	bil:gender bil:Masc ;
 	bil:token "gäbät" ;
 	.
 
-#TERMCLUSTER:  bilin-VConj1MainAffPerfImprtv-gab
+#TERMCLUSTER:  bilin-VConj1MainNegPerfImprtv-gab
 
-bil:bilin-VConj1MainAffPerfImprtv-gab a aamas:Termcluster ;
-	rdfs:label "bilin-VConj1MainAffPerfImprtv-gab" ;
+bil:bilin-VConj1MainNegPerfImprtv-gab a aamas:Termcluster ;
+	rdfs:label "bilin-VConj1MainNegPerfImprtv-gab" ;
 	rdfs:comment "Appleyard2007b pp. 497-501" 
 	.
 
-aama:IDd3bb7066-174a-4001-b55a-adf0ee4e3d53 a aamas:Term ;
+aama:ID2c9172be-1c8d-4a97-b06d-f169955e3cb5 a aamas:Term ;
 	aamas:lang aama:Bilin ;
-	aamas:memberOf bil:bilin-VConj1MainAffPerfImprtv-gab ;
+	aamas:memberOf bil:bilin-VConj1MainNegPerfImprtv-gab ;
 	bil:aspect bil:Perfective ;
 	bil:person bil:Person2 ;
 	bil:clauseType bil:Main ;
-	bil:numberGenderHead bil:_NULL ;
 	bil:pos bil:Verb ;
 	aamas:lexeme aama:Bilin-gab ;
 	bil:conjClass bil:Conjugation1 ;
-	bil:pngSet bil:U ;
-	bil:polarity bil:Affirmative ;
+	bil:polarity bil:Negative ;
 	bil:tam bil:Imperative ;
 	bil:gender bil:Common ;
-	bil:token "gäbi" ;
-	bil:number bil:Singular ;
+	bil:token "gäbga" ;
+	bil:number bil:Plural ;
 	.
 
-aama:ID2e9a6c6c-5066-4ff8-b769-6c5a655d7b53 a aamas:Term ;
+aama:IDc5182694-edb5-4df7-8451-a8dfe94abd60 a aamas:Term ;
 	aamas:lang aama:Bilin ;
-	aamas:memberOf bil:bilin-VConj1MainAffPerfImprtv-gab ;
+	aamas:memberOf bil:bilin-VConj1MainNegPerfImprtv-gab ;
 	bil:aspect bil:Perfective ;
 	bil:person bil:Person2 ;
 	bil:clauseType bil:Main ;
-	bil:numberGenderHead bil:_NULL ;
 	bil:pos bil:Verb ;
 	aamas:lexeme aama:Bilin-gab ;
 	bil:conjClass bil:Conjugation1 ;
-	bil:pngSet bil:U ;
-	bil:polarity bil:Affirmative ;
+	bil:polarity bil:Negative ;
 	bil:tam bil:Imperative ;
 	bil:gender bil:Common ;
-	bil:token "gäba" ;
-	bil:number bil:Plural ;
+	bil:token "gäbəg" ;
+	bil:number bil:Singular ;
 	.
 
 #MUTERMCLUSTER:  bilin-PInd
@@ -4004,7 +3821,7 @@ bil:bilin-PInd a aamas:MuTermcluster ;
 	rdfs:comment "Appleyard2007b p. 491. The oblique case is also used for the possessive prefix. The object suffix pronouns%%attached to verb%%are borrowed from Tigre. NOte sg 2 f form (unique in Agaw)." 
 	.
 
-aama:IDfcc47811-f1da-4776-9dd0-208bebf9b90c a aamas:Muterm ;
+aama:ID5b7f35d0-eb6d-4e00-9f2a-a4b8bdc8f8fe a aamas:Muterm ;
 	aamas:lang aama:Bilin ;	aamas:memberOf bil:bilin-PInd ;
 	aamas:morpheme aama:Bilin-PRO ;
 	bil:pos bil:Pronoun ;
@@ -4016,7 +3833,7 @@ aama:IDfcc47811-f1da-4776-9dd0-208bebf9b90c a aamas:Muterm ;
 	bil:case bil:Oblique ;
 	.
 
-aama:IDc5ccf3c0-4985-44af-b329-cd70f5f6006b a aamas:Muterm ;
+aama:ID4a26fe10-07b9-423a-b4e9-7229dde1a291 a aamas:Muterm ;
 	aamas:lang aama:Bilin ;	aamas:memberOf bil:bilin-PInd ;
 	aamas:morpheme aama:Bilin-PRO ;
 	bil:pos bil:Pronoun ;
@@ -4028,7 +3845,7 @@ aama:IDc5ccf3c0-4985-44af-b329-cd70f5f6006b a aamas:Muterm ;
 	bil:case bil:Object ;
 	.
 
-aama:IDc23320ed-c904-4ef5-b9f8-473cc128a4a0 a aamas:Muterm ;
+aama:IDd92bc1e7-7551-414f-95f9-90bbefb31baf a aamas:Muterm ;
 	aamas:lang aama:Bilin ;	aamas:memberOf bil:bilin-PInd ;
 	aamas:morpheme aama:Bilin-PRO ;
 	bil:pos bil:Pronoun ;
@@ -4040,7 +3857,7 @@ aama:IDc23320ed-c904-4ef5-b9f8-473cc128a4a0 a aamas:Muterm ;
 	bil:case bil:Absolutive ;
 	.
 
-aama:IDb0198b93-6f37-400f-b39a-701db18e510c a aamas:Muterm ;
+aama:IDcc28dd68-c01f-489a-ae8a-0c73e02ac6c5 a aamas:Muterm ;
 	aamas:lang aama:Bilin ;	aamas:memberOf bil:bilin-PInd ;
 	aamas:morpheme aama:Bilin-PRO ;
 	bil:pos bil:Pronoun ;
@@ -4052,7 +3869,7 @@ aama:IDb0198b93-6f37-400f-b39a-701db18e510c a aamas:Muterm ;
 	bil:case bil:Oblique ;
 	.
 
-aama:ID9e7ab900-5dea-49f2-875b-b7bf2be451f1 a aamas:Muterm ;
+aama:IDb791ddc5-cd4b-472a-b0f8-d710f949a4b6 a aamas:Muterm ;
 	aamas:lang aama:Bilin ;	aamas:memberOf bil:bilin-PInd ;
 	aamas:morpheme aama:Bilin-PRO ;
 	bil:pos bil:Pronoun ;
@@ -4064,7 +3881,7 @@ aama:ID9e7ab900-5dea-49f2-875b-b7bf2be451f1 a aamas:Muterm ;
 	bil:case bil:Object ;
 	.
 
-aama:ID3883f567-eb26-461d-8915-00d85ed6529d a aamas:Muterm ;
+aama:ID2a31c640-1235-42e6-83c8-7d667cc9dd84 a aamas:Muterm ;
 	aamas:lang aama:Bilin ;	aamas:memberOf bil:bilin-PInd ;
 	aamas:morpheme aama:Bilin-PRO ;
 	bil:pos bil:Pronoun ;
@@ -4076,7 +3893,7 @@ aama:ID3883f567-eb26-461d-8915-00d85ed6529d a aamas:Muterm ;
 	bil:case bil:ObjectSuff ;
 	.
 
-aama:ID8bf10855-0d58-4e41-898d-8cc202a8bf99 a aamas:Muterm ;
+aama:ID79934a87-3a62-4c9e-855d-6c183fe35686 a aamas:Muterm ;
 	aamas:lang aama:Bilin ;	aamas:memberOf bil:bilin-PInd ;
 	aamas:morpheme aama:Bilin-PRO ;
 	bil:pos bil:Pronoun ;
@@ -4088,7 +3905,7 @@ aama:ID8bf10855-0d58-4e41-898d-8cc202a8bf99 a aamas:Muterm ;
 	bil:case bil:Absolutive ;
 	.
 
-aama:ID9520f1e6-518e-4739-bd9b-569d43f51c15 a aamas:Muterm ;
+aama:IDd05bf04c-aaed-4304-9dcd-247e7b4cac3f a aamas:Muterm ;
 	aamas:lang aama:Bilin ;	aamas:memberOf bil:bilin-PInd ;
 	aamas:morpheme aama:Bilin-PRO ;
 	bil:pos bil:Pronoun ;
@@ -4100,7 +3917,7 @@ aama:ID9520f1e6-518e-4739-bd9b-569d43f51c15 a aamas:Muterm ;
 	bil:case bil:Absolutive ;
 	.
 
-aama:ID9b244015-6f05-4982-8b02-167fb10d2cd0 a aamas:Muterm ;
+aama:ID3dd560de-30dd-433d-9b28-7d3303da754d a aamas:Muterm ;
 	aamas:lang aama:Bilin ;	aamas:memberOf bil:bilin-PInd ;
 	aamas:morpheme aama:Bilin-PRO ;
 	bil:pos bil:Pronoun ;
@@ -4112,7 +3929,7 @@ aama:ID9b244015-6f05-4982-8b02-167fb10d2cd0 a aamas:Muterm ;
 	bil:case bil:Absolutive ;
 	.
 
-aama:ID51a57725-a6be-4fd0-b34c-da3241d9232c a aamas:Muterm ;
+aama:ID5df8a640-c089-4394-92c4-c4b74e304e75 a aamas:Muterm ;
 	aamas:lang aama:Bilin ;	aamas:memberOf bil:bilin-PInd ;
 	aamas:morpheme aama:Bilin-PRO ;
 	bil:pos bil:Pronoun ;
@@ -4124,7 +3941,7 @@ aama:ID51a57725-a6be-4fd0-b34c-da3241d9232c a aamas:Muterm ;
 	bil:case bil:Oblique ;
 	.
 
-aama:IDdfb7410c-dad7-4400-98c7-74b734c53354 a aamas:Muterm ;
+aama:IDf1975818-0ea0-4b67-a2ef-5f762cc06e62 a aamas:Muterm ;
 	aamas:lang aama:Bilin ;	aamas:memberOf bil:bilin-PInd ;
 	aamas:morpheme aama:Bilin-PRO ;
 	bil:pos bil:Pronoun ;
@@ -4136,7 +3953,7 @@ aama:IDdfb7410c-dad7-4400-98c7-74b734c53354 a aamas:Muterm ;
 	bil:case bil:Absolutive ;
 	.
 
-aama:ID85ffe450-85ea-4f4a-9807-964ad1bb6707 a aamas:Muterm ;
+aama:ID559594f0-ab2c-40b6-8d3f-9f15f07cfde8 a aamas:Muterm ;
 	aamas:lang aama:Bilin ;	aamas:memberOf bil:bilin-PInd ;
 	aamas:morpheme aama:Bilin-PRO ;
 	bil:pos bil:Pronoun ;
@@ -4148,7 +3965,7 @@ aama:ID85ffe450-85ea-4f4a-9807-964ad1bb6707 a aamas:Muterm ;
 	bil:case bil:ObjectSuff ;
 	.
 
-aama:IDccca56aa-2111-4201-b4b6-d2b8251af1de a aamas:Muterm ;
+aama:IDb0ee8e33-4b67-4fa0-b460-cb4a06d445cf a aamas:Muterm ;
 	aamas:lang aama:Bilin ;	aamas:memberOf bil:bilin-PInd ;
 	aamas:morpheme aama:Bilin-PRO ;
 	bil:pos bil:Pronoun ;
@@ -4160,7 +3977,7 @@ aama:IDccca56aa-2111-4201-b4b6-d2b8251af1de a aamas:Muterm ;
 	bil:case bil:ObjectSuff ;
 	.
 
-aama:IDd2cbd1a2-6c09-46db-94ce-9469211a1615 a aamas:Muterm ;
+aama:IDc6e4cde2-7bfb-4188-bb61-abdac8bfde90 a aamas:Muterm ;
 	aamas:lang aama:Bilin ;	aamas:memberOf bil:bilin-PInd ;
 	aamas:morpheme aama:Bilin-PRO ;
 	bil:pos bil:Pronoun ;
@@ -4172,7 +3989,7 @@ aama:IDd2cbd1a2-6c09-46db-94ce-9469211a1615 a aamas:Muterm ;
 	bil:case bil:Object ;
 	.
 
-aama:ID08cafdbf-a430-4836-b552-85611abfda8e a aamas:Muterm ;
+aama:ID972e0866-627b-4439-ab10-64517a6f8109 a aamas:Muterm ;
 	aamas:lang aama:Bilin ;	aamas:memberOf bil:bilin-PInd ;
 	aamas:morpheme aama:Bilin-PRO ;
 	bil:pos bil:Pronoun ;
@@ -4184,7 +4001,7 @@ aama:ID08cafdbf-a430-4836-b552-85611abfda8e a aamas:Muterm ;
 	bil:case bil:ObjectSuff ;
 	.
 
-aama:IDeb034781-bed2-4231-8762-54b5d70fedc3 a aamas:Muterm ;
+aama:ID6c895bd5-7e4d-4c74-b1fa-820c7d4cf0c2 a aamas:Muterm ;
 	aamas:lang aama:Bilin ;	aamas:memberOf bil:bilin-PInd ;
 	aamas:morpheme aama:Bilin-PRO ;
 	bil:pos bil:Pronoun ;
@@ -4196,7 +4013,7 @@ aama:IDeb034781-bed2-4231-8762-54b5d70fedc3 a aamas:Muterm ;
 	bil:case bil:Oblique ;
 	.
 
-aama:ID32d863d2-c0f4-46ff-9670-b8f918488bb2 a aamas:Muterm ;
+aama:ID2243c7b2-55c4-4d91-8039-54e88cf5b73e a aamas:Muterm ;
 	aamas:lang aama:Bilin ;	aamas:memberOf bil:bilin-PInd ;
 	aamas:morpheme aama:Bilin-PRO ;
 	bil:pos bil:Pronoun ;
@@ -4208,7 +4025,7 @@ aama:ID32d863d2-c0f4-46ff-9670-b8f918488bb2 a aamas:Muterm ;
 	bil:case bil:Object ;
 	.
 
-aama:ID3b82777b-6e22-4a2a-9825-394502aad417 a aamas:Muterm ;
+aama:IDf87a37f9-a11b-44da-9a7a-036b8e636b3e a aamas:Muterm ;
 	aamas:lang aama:Bilin ;	aamas:memberOf bil:bilin-PInd ;
 	aamas:morpheme aama:Bilin-PRO ;
 	bil:pos bil:Pronoun ;
@@ -4220,7 +4037,7 @@ aama:ID3b82777b-6e22-4a2a-9825-394502aad417 a aamas:Muterm ;
 	bil:case bil:Object ;
 	.
 
-aama:ID0a53e270-d1e8-44d2-b86d-69b18655e35e a aamas:Muterm ;
+aama:IDdd7df293-78e1-4760-9801-4a4479044110 a aamas:Muterm ;
 	aamas:lang aama:Bilin ;	aamas:memberOf bil:bilin-PInd ;
 	aamas:morpheme aama:Bilin-PRO ;
 	bil:pos bil:Pronoun ;
@@ -4232,7 +4049,7 @@ aama:ID0a53e270-d1e8-44d2-b86d-69b18655e35e a aamas:Muterm ;
 	bil:case bil:ObjectSuff ;
 	.
 
-aama:IDfdb5b6c8-83a6-4e55-8d5d-d42d0cb21dd4 a aamas:Muterm ;
+aama:IDf9ad1d30-e71a-42e7-87a5-158ad6673ce7 a aamas:Muterm ;
 	aamas:lang aama:Bilin ;	aamas:memberOf bil:bilin-PInd ;
 	aamas:morpheme aama:Bilin-PRO ;
 	bil:pos bil:Pronoun ;
@@ -4244,7 +4061,7 @@ aama:IDfdb5b6c8-83a6-4e55-8d5d-d42d0cb21dd4 a aamas:Muterm ;
 	bil:case bil:Absolutive ;
 	.
 
-aama:IDdf82c70d-38ee-4464-ade1-cd896d66ff9a a aamas:Muterm ;
+aama:ID5fc5c8f7-9412-4b5c-a39b-64e0b5d77cfb a aamas:Muterm ;
 	aamas:lang aama:Bilin ;	aamas:memberOf bil:bilin-PInd ;
 	aamas:morpheme aama:Bilin-PRO ;
 	bil:pos bil:Pronoun ;
@@ -4256,7 +4073,7 @@ aama:IDdf82c70d-38ee-4464-ade1-cd896d66ff9a a aamas:Muterm ;
 	bil:case bil:Absolutive ;
 	.
 
-aama:IDe3df95fc-fcb6-408d-b2ac-e7a03a8455e2 a aamas:Muterm ;
+aama:ID83899c04-119c-4c43-b177-889ac55f0367 a aamas:Muterm ;
 	aamas:lang aama:Bilin ;	aamas:memberOf bil:bilin-PInd ;
 	aamas:morpheme aama:Bilin-PRO ;
 	bil:pos bil:Pronoun ;
@@ -4268,7 +4085,7 @@ aama:IDe3df95fc-fcb6-408d-b2ac-e7a03a8455e2 a aamas:Muterm ;
 	bil:case bil:Object ;
 	.
 
-aama:ID4c00ab72-0a6e-452d-bbee-222f2d297aa8 a aamas:Muterm ;
+aama:ID89109260-ecfa-4458-b7bc-a339651e2df2 a aamas:Muterm ;
 	aamas:lang aama:Bilin ;	aamas:memberOf bil:bilin-PInd ;
 	aamas:morpheme aama:Bilin-PRO ;
 	bil:pos bil:Pronoun ;
@@ -4280,7 +4097,7 @@ aama:ID4c00ab72-0a6e-452d-bbee-222f2d297aa8 a aamas:Muterm ;
 	bil:case bil:ObjectSuff ;
 	.
 
-aama:ID9ee0663d-5e8d-473f-88b8-070950b2a0c5 a aamas:Muterm ;
+aama:ID53b27e23-5b91-4b26-8d39-faec99c5ae0a a aamas:Muterm ;
 	aamas:lang aama:Bilin ;	aamas:memberOf bil:bilin-PInd ;
 	aamas:morpheme aama:Bilin-PRO ;
 	bil:pos bil:Pronoun ;
@@ -4292,7 +4109,7 @@ aama:ID9ee0663d-5e8d-473f-88b8-070950b2a0c5 a aamas:Muterm ;
 	bil:case bil:Oblique ;
 	.
 
-aama:IDadf409c8-83b3-4b48-9ee4-2a322ccf75d0 a aamas:Muterm ;
+aama:ID92721dbc-d0ca-4c09-83c0-7da9b3089f48 a aamas:Muterm ;
 	aamas:lang aama:Bilin ;	aamas:memberOf bil:bilin-PInd ;
 	aamas:morpheme aama:Bilin-PRO ;
 	bil:pos bil:Pronoun ;
@@ -4304,7 +4121,7 @@ aama:IDadf409c8-83b3-4b48-9ee4-2a322ccf75d0 a aamas:Muterm ;
 	bil:case bil:Object ;
 	.
 
-aama:ID42aebdec-460c-4783-9795-6b4ebd562b22 a aamas:Muterm ;
+aama:ID6d5d319e-f553-42e0-ac93-1cf19c749c1b a aamas:Muterm ;
 	aamas:lang aama:Bilin ;	aamas:memberOf bil:bilin-PInd ;
 	aamas:morpheme aama:Bilin-PRO ;
 	bil:pos bil:Pronoun ;
@@ -4316,7 +4133,7 @@ aama:ID42aebdec-460c-4783-9795-6b4ebd562b22 a aamas:Muterm ;
 	bil:case bil:ObjectSuff ;
 	.
 
-aama:IDa46f218a-cc6f-497b-8203-168161460cc6 a aamas:Muterm ;
+aama:IDc1c91988-9248-485d-a4e6-4c0b3911fb07 a aamas:Muterm ;
 	aamas:lang aama:Bilin ;	aamas:memberOf bil:bilin-PInd ;
 	aamas:morpheme aama:Bilin-PRO ;
 	bil:pos bil:Pronoun ;
@@ -4328,7 +4145,7 @@ aama:IDa46f218a-cc6f-497b-8203-168161460cc6 a aamas:Muterm ;
 	bil:case bil:ObjectSuff ;
 	.
 
-aama:IDbea67b79-e443-4f67-80c7-4929b369c510 a aamas:Muterm ;
+aama:IDf7a622c4-bc53-4585-b383-e2cece195960 a aamas:Muterm ;
 	aamas:lang aama:Bilin ;	aamas:memberOf bil:bilin-PInd ;
 	aamas:morpheme aama:Bilin-PRO ;
 	bil:pos bil:Pronoun ;
@@ -4340,7 +4157,7 @@ aama:IDbea67b79-e443-4f67-80c7-4929b369c510 a aamas:Muterm ;
 	bil:case bil:Oblique ;
 	.
 
-aama:ID76d2cf2c-f0b0-4d7a-be86-8351f6f94d1a a aamas:Muterm ;
+aama:IDc31381fc-6b31-41c4-8cd0-4c75bb76e8ca a aamas:Muterm ;
 	aamas:lang aama:Bilin ;	aamas:memberOf bil:bilin-PInd ;
 	aamas:morpheme aama:Bilin-PRO ;
 	bil:pos bil:Pronoun ;
@@ -4352,83 +4169,102 @@ aama:ID76d2cf2c-f0b0-4d7a-be86-8351f6f94d1a a aamas:Muterm ;
 	bil:case bil:Oblique ;
 	.
 
-#MUTERMCLUSTER:  bilin-VCopula
+#MUTERMCLUSTER:  bilin-VPngAPngSuff
 
-bil:bilin-VCopula a aamas:MuTermcluster ;
-	rdfs:label "bilin-VCopula" ;
-	rdfs:comment "Appleyard2007b pp. 502f. “A peculiar feature of the verb ‘to be’ in Bilin%%shared with the other Agaw languages%%is the reversal of aspect%%whereby a perfective aspect (past tense) form is used in imprefective (present time) function%%and vice versa%%as for instance:ni gərwa kəxin sänäkw ‘he was a clever man’. “(p. 501) See LEXEMES section." 
+bil:bilin-VPngAPngSuff a aamas:MuTermcluster ;
+	rdfs:label "bilin-VPngAPngSuff" ;
+	rdfs:comment "Appleyard2007b p. 495f. A:subordinate tenses (and base for A2%%B%%C);A2:main neg imperf/perf;B:main aff imperf/perf;C:main aff fut" 
 	.
 
-aama:ID813351e9-6de4-4a6f-bd70-bd09e22829a3 a aamas:Muterm ;
-	aamas:lang aama:Bilin ;	aamas:memberOf bil:bilin-VCopula ;
-	aamas:morpheme aama:Bilin-COPULA ;
+aama:IDb9a8bb72-0091-4723-bd5a-491c9cd7914c a aamas:Muterm ;
+	aamas:lang aama:Bilin ;	aamas:memberOf bil:bilin-VPngAPngSuff ;
+	aamas:morpheme aama:Bilin-SUBJMARKA ;
+	bil:pngSet bil:PngA ;
 	bil:pos bil:Verb ;
-	bil:morphClass bil:Copula ;
-	bil:token-note "_NULL" ;
-	bil:token "ʔäx- (~ ʔak-)" ;
-	bil:tam bil:Perfect ;
-	bil:polarity bil:Negative ;
-	bil:copType bil:CopMain ;
+	bil:verbMorphClass bil:PersSuff ;
+	bil:token-note " " ;
+	bil:token "-Ø" ;
+	bil:person bil:Person1 ;
+	bil:number bil:Singular ;
+	bil:gender bil:Common ;
 	.
 
-aama:ID34620176-5659-49ca-9542-4fd091ce3aee a aamas:Muterm ;
-	aamas:lang aama:Bilin ;	aamas:memberOf bil:bilin-VCopula ;
-	aamas:morpheme aama:Bilin-COPULA ;
+aama:ID660cd045-73ac-4f8a-b8f7-122767c51c01 a aamas:Muterm ;
+	aamas:lang aama:Bilin ;	aamas:memberOf bil:bilin-VPngAPngSuff ;
+	aamas:morpheme aama:Bilin-SUBJMARKA ;
+	bil:pngSet bil:PngA ;
 	bil:pos bil:Verb ;
-	bil:morphClass bil:Copula ;
-	bil:token-note "_NULL" ;
-	bil:token "wan-" ;
-	bil:tam bil:Present ;
-	bil:polarity bil:Affirmative ;
-	bil:copType bil:CopLoc ;
+	bil:verbMorphClass bil:PersSuff ;
+	bil:token-note " " ;
+	bil:token "-Vn" ;
+	bil:person bil:Person3 ;
+	bil:number bil:Plural ;
+	bil:gender bil:Common ;
 	.
 
-aama:IDa3edac2c-af93-40f0-a2c8-7aba1dc3f245 a aamas:Muterm ;
-	aamas:lang aama:Bilin ;	aamas:memberOf bil:bilin-VCopula ;
-	aamas:morpheme aama:Bilin-COPULA ;
+aama:ID778f54f1-817a-44e9-ab27-a1d04d01343d a aamas:Muterm ;
+	aamas:lang aama:Bilin ;	aamas:memberOf bil:bilin-VPngAPngSuff ;
+	aamas:morpheme aama:Bilin-SUBJMARKA ;
+	bil:pngSet bil:PngA ;
 	bil:pos bil:Verb ;
-	bil:morphClass bil:Copula ;
-	bil:token-note "invariable" ;
-	bil:token "gən" ;
-	bil:tam bil:Present ;
-	bil:polarity bil:Affirmative ;
-	bil:copType bil:CopMain ;
+	bil:verbMorphClass bil:PersSuff ;
+	bil:token-note "d after r" ;
+	bil:token "-r ~ -d" ;
+	bil:person bil:Person2 ;
+	bil:number bil:Singular ;
+	bil:gender bil:Common ;
 	.
 
-aama:IDae458d18-e6d5-4d1b-8e60-cd054f4252e9 a aamas:Muterm ;
-	aamas:lang aama:Bilin ;	aamas:memberOf bil:bilin-VCopula ;
-	aamas:morpheme aama:Bilin-COPULA ;
+aama:ID0e9cf400-24c9-4d11-9318-104bf2cab227 a aamas:Muterm ;
+	aamas:lang aama:Bilin ;	aamas:memberOf bil:bilin-VPngAPngSuff ;
+	aamas:morpheme aama:Bilin-SUBJMARKA ;
+	bil:pngSet bil:PngA ;
 	bil:pos bil:Verb ;
-	bil:morphClass bil:Copula ;
-	bil:token-note "_NULL" ;
-	bil:token "sän-" ;
-	bil:tam bil:Past ;
-	bil:polarity bil:Affirmative ;
-	bil:copType bil:CopLoc ;
+	bil:verbMorphClass bil:PersSuff ;
+	bil:token-note " " ;
+	bil:token "-dVn" ;
+	bil:person bil:Person2 ;
+	bil:number bil:Plural ;
+	bil:gender bil:Common ;
 	.
 
-aama:ID47f29522-f6d0-431f-bfb4-48cb6e1fe02a a aamas:Muterm ;
-	aamas:lang aama:Bilin ;	aamas:memberOf bil:bilin-VCopula ;
-	aamas:morpheme aama:Bilin-COPULA ;
+aama:ID29a22d15-cda7-4829-8743-592f64c9bd22 a aamas:Muterm ;
+	aamas:lang aama:Bilin ;	aamas:memberOf bil:bilin-VPngAPngSuff ;
+	aamas:morpheme aama:Bilin-SUBJMARKA ;
+	bil:pngSet bil:PngA ;
 	bil:pos bil:Verb ;
-	bil:morphClass bil:Copula ;
-	bil:token-note "(like perf main neg)" ;
-	bil:token "ʔəl-" ;
-	bil:tam bil:Common ;
-	bil:polarity bil:Negative ;
-	bil:copType bil:CopLoc ;
+	bil:verbMorphClass bil:PersSuff ;
+	bil:token-note " " ;
+	bil:token "-Ø" ;
+	bil:person bil:Person3 ;
+	bil:number bil:Singular ;
+	bil:gender bil:Masc ;
 	.
 
-aama:IDb85ed090-9191-4cca-a20d-4300ef84a297 a aamas:Muterm ;
-	aamas:lang aama:Bilin ;	aamas:memberOf bil:bilin-VCopula ;
-	aamas:morpheme aama:Bilin-COPULA ;
+aama:ID00fe62f6-f8a7-4fdd-90c9-be3c753e011d a aamas:Muterm ;
+	aamas:lang aama:Bilin ;	aamas:memberOf bil:bilin-VPngAPngSuff ;
+	aamas:morpheme aama:Bilin-SUBJMARKA ;
+	bil:pngSet bil:PngA ;
 	bil:pos bil:Verb ;
-	bil:morphClass bil:Copula ;
-	bil:token-note "_NULL" ;
-	bil:token "həmb-" ;
-	bil:tam bil:Present ;
-	bil:polarity bil:Affirmative ;
-	bil:copType bil:CopLoc ;
+	bil:verbMorphClass bil:PersSuff ;
+	bil:token-note " " ;
+	bil:token "-n" ;
+	bil:person bil:Person1 ;
+	bil:number bil:Plural ;
+	bil:gender bil:Common ;
+	.
+
+aama:ID7e97931b-8933-410f-8499-9db4efef3352 a aamas:Muterm ;
+	aamas:lang aama:Bilin ;	aamas:memberOf bil:bilin-VPngAPngSuff ;
+	aamas:morpheme aama:Bilin-SUBJMARKA ;
+	bil:pngSet bil:PngA ;
+	bil:pos bil:Verb ;
+	bil:verbMorphClass bil:PersSuff ;
+	bil:token-note "d after r" ;
+	bil:token "-r ~ -d" ;
+	bil:person bil:Person3 ;
+	bil:number bil:Singular ;
+	bil:gender bil:Fem ;
 	.
 
 #MUTERMCLUSTER:  bilin-VPngCPngSuff
@@ -4438,20 +4274,20 @@ bil:bilin-VPngCPngSuff a aamas:MuTermcluster ;
 	rdfs:comment "Appleyard2007b p. 495f. A:subordinate tenses (and base for A2%%B%%C);A2:main neg imperf/perf;B:main aff imperf/perf;C:main aff fut" 
 	.
 
-aama:IDaf363c10-ee58-4be5-9eb3-3641c83901ce a aamas:Muterm ;
+aama:ID29c0af91-b2a2-421f-bf4f-d45968be77ef a aamas:Muterm ;
 	aamas:lang aama:Bilin ;	aamas:memberOf bil:bilin-VPngCPngSuff ;
 	aamas:morpheme aama:Bilin-SUBJMARKC ;
 	bil:pngSet bil:PngC ;
 	bil:pos bil:Verb ;
 	bil:verbMorphClass bil:PersSuff ;
-	bil:token-note "_NULL" ;
+	bil:token-note " " ;
 	bil:token "-t" ;
 	bil:person bil:Person2 ;
 	bil:number bil:Singular ;
 	bil:gender bil:Common ;
 	.
 
-aama:IDd6fdc3c3-08e9-435f-be80-c713bfcf2685 a aamas:Muterm ;
+aama:ID08fb6fa1-7e7c-4c9f-9854-db9f614ad737 a aamas:Muterm ;
 	aamas:lang aama:Bilin ;	aamas:memberOf bil:bilin-VPngCPngSuff ;
 	aamas:morpheme aama:Bilin-SUBJMARKC ;
 	bil:pngSet bil:PngC ;
@@ -4464,167 +4300,148 @@ aama:IDd6fdc3c3-08e9-435f-be80-c713bfcf2685 a aamas:Muterm ;
 	bil:gender bil:Common ;
 	.
 
-aama:ID2780e8f9-b5d1-4d11-9197-a076378eb9e5 a aamas:Muterm ;
+aama:ID886e61da-4967-4407-a5c9-a258062418d7 a aamas:Muterm ;
 	aamas:lang aama:Bilin ;	aamas:memberOf bil:bilin-VPngCPngSuff ;
 	aamas:morpheme aama:Bilin-SUBJMARKC ;
 	bil:pngSet bil:PngC ;
 	bil:pos bil:Verb ;
 	bil:verbMorphClass bil:PersSuff ;
-	bil:token-note "_NULL" ;
+	bil:token-note " " ;
 	bil:token "-tVn" ;
 	bil:person bil:Person2 ;
 	bil:number bil:Plural ;
 	bil:gender bil:Common ;
 	.
 
-aama:ID82d78c98-11e8-4719-90ea-a46495b83626 a aamas:Muterm ;
+aama:ID3ce58078-a964-495a-b8d9-4c76851a1cf3 a aamas:Muterm ;
 	aamas:lang aama:Bilin ;	aamas:memberOf bil:bilin-VPngCPngSuff ;
 	aamas:morpheme aama:Bilin-SUBJMARKC ;
 	bil:pngSet bil:PngC ;
 	bil:pos bil:Verb ;
 	bil:verbMorphClass bil:PersSuff ;
-	bil:token-note "_NULL" ;
+	bil:token-note " " ;
 	bil:token "-n" ;
 	bil:person bil:Person1 ;
 	bil:number bil:Plural ;
 	bil:gender bil:Common ;
 	.
 
-aama:IDc6fe9b00-13f4-4d43-afab-0d6c6d5bc5de a aamas:Muterm ;
+aama:IDfccf2e7f-0810-4963-9c62-e1bf46017950 a aamas:Muterm ;
 	aamas:lang aama:Bilin ;	aamas:memberOf bil:bilin-VPngCPngSuff ;
 	aamas:morpheme aama:Bilin-SUBJMARKC ;
 	bil:pngSet bil:PngC ;
 	bil:pos bil:Verb ;
 	bil:verbMorphClass bil:PersSuff ;
-	bil:token-note "_NULL" ;
+	bil:token-note " " ;
 	bil:token "-Vn" ;
 	bil:person bil:Person3 ;
 	bil:number bil:Plural ;
 	bil:gender bil:Common ;
 	.
 
-aama:IDfc082a62-6ca3-4e58-a30c-c77bed174021 a aamas:Muterm ;
+aama:IDe064e291-7b4a-40a4-82fc-8e8ceb8cf9d4 a aamas:Muterm ;
 	aamas:lang aama:Bilin ;	aamas:memberOf bil:bilin-VPngCPngSuff ;
 	aamas:morpheme aama:Bilin-SUBJMARKC ;
 	bil:pngSet bil:PngC ;
 	bil:pos bil:Verb ;
 	bil:verbMorphClass bil:PersSuff ;
-	bil:token-note "_NULL" ;
+	bil:token-note " " ;
 	bil:token "-t" ;
 	bil:person bil:Person3 ;
 	bil:number bil:Singular ;
 	bil:gender bil:Fem ;
 	.
 
-aama:ID8587646c-aa64-4169-a417-f4fade7bd4b8 a aamas:Muterm ;
+aama:ID6b41fd7d-e637-4a0e-9ec2-6efd78d7c623 a aamas:Muterm ;
 	aamas:lang aama:Bilin ;	aamas:memberOf bil:bilin-VPngCPngSuff ;
 	aamas:morpheme aama:Bilin-SUBJMARKC ;
 	bil:pngSet bil:PngC ;
 	bil:pos bil:Verb ;
 	bil:verbMorphClass bil:PersSuff ;
-	bil:token-note "_NULL" ;
+	bil:token-note " " ;
 	bil:token "-r" ;
 	bil:person bil:Person3 ;
 	bil:number bil:Singular ;
 	bil:gender bil:Masc ;
 	.
 
-#MUTERMCLUSTER:  bilin-VPngAPngSuff
+#MUTERMCLUSTER:  bilin-VCopula
 
-bil:bilin-VPngAPngSuff a aamas:MuTermcluster ;
-	rdfs:label "bilin-VPngAPngSuff" ;
-	rdfs:comment "Appleyard2007b p. 495f. A:subordinate tenses (and base for A2%%B%%C);A2:main neg imperf/perf;B:main aff imperf/perf;C:main aff fut" 
+bil:bilin-VCopula a aamas:MuTermcluster ;
+	rdfs:label "bilin-VCopula" ;
+	rdfs:comment "Appleyard2007b pp. 502f. “A peculiar feature of the verb ‘to be’ in Bilin%%shared with the other Agaw languages%%is the reversal of aspect%%whereby a perfective aspect (past tense) form is used in imprefective (present time) function%%and vice versa%%as for instance:ni gərwa kəxin sänäkw ‘he was a clever man’. “(p. 501) See LEXEMES section." 
 	.
 
-aama:ID513f99c0-507b-48b9-8f3a-17b570e80633 a aamas:Muterm ;
-	aamas:lang aama:Bilin ;	aamas:memberOf bil:bilin-VPngAPngSuff ;
-	aamas:morpheme aama:Bilin-SUBJMARKA ;
-	bil:pngSet bil:PngA ;
+aama:ID5ca533ca-f41b-4b65-8cd5-edd5579063b5 a aamas:Muterm ;
+	aamas:lang aama:Bilin ;	aamas:memberOf bil:bilin-VCopula ;
+	aamas:morpheme aama:Bilin-COPULA ;
 	bil:pos bil:Verb ;
-	bil:verbMorphClass bil:PersSuff ;
-	bil:token-note "_NULL" ;
-	bil:token "-Ø" ;
-	bil:person bil:Person1 ;
-	bil:number bil:Singular ;
-	bil:gender bil:Common ;
+	bil:morphClass bil:Copula ;
+	bil:token-note " " ;
+	bil:token "ʔäx- (~ ʔak-)" ;
+	bil:tam bil:Perfect ;
+	bil:polarity bil:Negative ;
+	bil:copType bil:CopMain ;
 	.
 
-aama:IDf74c8094-13bb-4eba-afc3-764c9ca6c154 a aamas:Muterm ;
-	aamas:lang aama:Bilin ;	aamas:memberOf bil:bilin-VPngAPngSuff ;
-	aamas:morpheme aama:Bilin-SUBJMARKA ;
-	bil:pngSet bil:PngA ;
+aama:ID89a711f2-b0cf-4a2a-ae94-b0e5fb85a038 a aamas:Muterm ;
+	aamas:lang aama:Bilin ;	aamas:memberOf bil:bilin-VCopula ;
+	aamas:morpheme aama:Bilin-COPULA ;
 	bil:pos bil:Verb ;
-	bil:verbMorphClass bil:PersSuff ;
-	bil:token-note "_NULL" ;
-	bil:token "-Vn" ;
-	bil:person bil:Person3 ;
-	bil:number bil:Plural ;
-	bil:gender bil:Common ;
+	bil:morphClass bil:Copula ;
+	bil:token-note " " ;
+	bil:token "wan-" ;
+	bil:tam bil:Present ;
+	bil:polarity bil:Affirmative ;
+	bil:copType bil:CopLoc ;
 	.
 
-aama:ID2d440c95-b409-4844-b155-6be21ae6c627 a aamas:Muterm ;
-	aamas:lang aama:Bilin ;	aamas:memberOf bil:bilin-VPngAPngSuff ;
-	aamas:morpheme aama:Bilin-SUBJMARKA ;
-	bil:pngSet bil:PngA ;
+aama:ID09609759-20d7-48b9-88d8-e670e40ab95f a aamas:Muterm ;
+	aamas:lang aama:Bilin ;	aamas:memberOf bil:bilin-VCopula ;
+	aamas:morpheme aama:Bilin-COPULA ;
 	bil:pos bil:Verb ;
-	bil:verbMorphClass bil:PersSuff ;
-	bil:token-note "d after r" ;
-	bil:token "-r ~ -d" ;
-	bil:person bil:Person2 ;
-	bil:number bil:Singular ;
-	bil:gender bil:Common ;
+	bil:morphClass bil:Copula ;
+	bil:token-note "invariable" ;
+	bil:token "gən" ;
+	bil:tam bil:Present ;
+	bil:polarity bil:Affirmative ;
+	bil:copType bil:CopMain ;
 	.
 
-aama:ID7e3cf853-542c-4652-ad62-786724b06b7b a aamas:Muterm ;
-	aamas:lang aama:Bilin ;	aamas:memberOf bil:bilin-VPngAPngSuff ;
-	aamas:morpheme aama:Bilin-SUBJMARKA ;
-	bil:pngSet bil:PngA ;
+aama:IDb7d88f8c-ffb9-48a7-b7f0-3ffe986ce709 a aamas:Muterm ;
+	aamas:lang aama:Bilin ;	aamas:memberOf bil:bilin-VCopula ;
+	aamas:morpheme aama:Bilin-COPULA ;
 	bil:pos bil:Verb ;
-	bil:verbMorphClass bil:PersSuff ;
-	bil:token-note "_NULL" ;
-	bil:token "-dVn" ;
-	bil:person bil:Person2 ;
-	bil:number bil:Plural ;
-	bil:gender bil:Common ;
+	bil:morphClass bil:Copula ;
+	bil:token-note " " ;
+	bil:token "sän-" ;
+	bil:tam bil:Past ;
+	bil:polarity bil:Affirmative ;
+	bil:copType bil:CopLoc ;
 	.
 
-aama:ID459e25f8-daea-4556-bbef-584d481bfc73 a aamas:Muterm ;
-	aamas:lang aama:Bilin ;	aamas:memberOf bil:bilin-VPngAPngSuff ;
-	aamas:morpheme aama:Bilin-SUBJMARKA ;
-	bil:pngSet bil:PngA ;
+aama:ID9313dfad-7de1-446c-a6d0-0bcf4b2f3e76 a aamas:Muterm ;
+	aamas:lang aama:Bilin ;	aamas:memberOf bil:bilin-VCopula ;
+	aamas:morpheme aama:Bilin-COPULA ;
 	bil:pos bil:Verb ;
-	bil:verbMorphClass bil:PersSuff ;
-	bil:token-note "_NULL" ;
-	bil:token "-Ø" ;
-	bil:person bil:Person3 ;
-	bil:number bil:Singular ;
-	bil:gender bil:Masc ;
+	bil:morphClass bil:Copula ;
+	bil:token-note "(like perf main neg)" ;
+	bil:token "ʔəl-" ;
+	bil:tam bil:Common ;
+	bil:polarity bil:Negative ;
+	bil:copType bil:CopLoc ;
 	.
 
-aama:ID72cd006e-2f2a-41a1-8dec-5888c271818b a aamas:Muterm ;
-	aamas:lang aama:Bilin ;	aamas:memberOf bil:bilin-VPngAPngSuff ;
-	aamas:morpheme aama:Bilin-SUBJMARKA ;
-	bil:pngSet bil:PngA ;
+aama:ID78bb90d4-0008-467a-972d-f79558646e3e a aamas:Muterm ;
+	aamas:lang aama:Bilin ;	aamas:memberOf bil:bilin-VCopula ;
+	aamas:morpheme aama:Bilin-COPULA ;
 	bil:pos bil:Verb ;
-	bil:verbMorphClass bil:PersSuff ;
-	bil:token-note "_NULL" ;
-	bil:token "-n" ;
-	bil:person bil:Person1 ;
-	bil:number bil:Plural ;
-	bil:gender bil:Common ;
-	.
-
-aama:ID3589e7b0-a32e-4591-af11-223c3411b374 a aamas:Muterm ;
-	aamas:lang aama:Bilin ;	aamas:memberOf bil:bilin-VPngAPngSuff ;
-	aamas:morpheme aama:Bilin-SUBJMARKA ;
-	bil:pngSet bil:PngA ;
-	bil:pos bil:Verb ;
-	bil:verbMorphClass bil:PersSuff ;
-	bil:token-note "d after r" ;
-	bil:token "-r ~ -d" ;
-	bil:person bil:Person3 ;
-	bil:number bil:Singular ;
-	bil:gender bil:Fem ;
+	bil:morphClass bil:Copula ;
+	bil:token-note " " ;
+	bil:token "həmb-" ;
+	bil:tam bil:Present ;
+	bil:polarity bil:Affirmative ;
+	bil:copType bil:CopLoc ;
 	.
 
 #MUTERMCLUSTER:  bilin-VPngBPngSuff
@@ -4634,7 +4451,7 @@ bil:bilin-VPngBPngSuff a aamas:MuTermcluster ;
 	rdfs:comment "Appleyard2007b p. 495f. A:subordinate tenses (and base for A2%%B%%C);A2:main neg imperf/perf;B:main aff imperf/perf;C:main aff fut" 
 	.
 
-aama:IDad60f6a8-4eb8-4494-8647-80b9ae9fe34c a aamas:Muterm ;
+aama:IDbdbfda16-329e-46c6-b49d-fff1de1b8684 a aamas:Muterm ;
 	aamas:lang aama:Bilin ;	aamas:memberOf bil:bilin-VPngBPngSuff ;
 	aamas:morpheme aama:Bilin-SUBJMARKB ;
 	bil:pngSet bil:PngB ;
@@ -4646,7 +4463,7 @@ aama:IDad60f6a8-4eb8-4494-8647-80b9ae9fe34c a aamas:Muterm ;
 	bil:gender bil:Fem ;
 	.
 
-aama:ID9e68feb3-ec47-4991-8a71-725a9ed0760f a aamas:Muterm ;
+aama:IDc20da717-302c-4311-8ec3-9d255873dfb3 a aamas:Muterm ;
 	aamas:lang aama:Bilin ;	aamas:memberOf bil:bilin-VPngBPngSuff ;
 	aamas:morpheme aama:Bilin-SUBJMARKB ;
 	bil:pngSet bil:PngB ;
@@ -4658,7 +4475,7 @@ aama:ID9e68feb3-ec47-4991-8a71-725a9ed0760f a aamas:Muterm ;
 	bil:gender bil:Common ;
 	.
 
-aama:ID32e56a88-8656-46ea-b564-98ceae217c35 a aamas:Muterm ;
+aama:ID4aebe397-efb8-4a98-803f-2ef86f9a79d6 a aamas:Muterm ;
 	aamas:lang aama:Bilin ;	aamas:memberOf bil:bilin-VPngBPngSuff ;
 	aamas:morpheme aama:Bilin-SUBJMARKB ;
 	bil:pngSet bil:PngB ;
@@ -4670,7 +4487,7 @@ aama:ID32e56a88-8656-46ea-b564-98ceae217c35 a aamas:Muterm ;
 	bil:gender bil:Common ;
 	.
 
-aama:ID6a91926e-83a3-4840-89f1-a5a95bf0366d a aamas:Muterm ;
+aama:ID5fb43a64-d65a-4ee4-92b3-8133fd7b27b4 a aamas:Muterm ;
 	aamas:lang aama:Bilin ;	aamas:memberOf bil:bilin-VPngBPngSuff ;
 	aamas:morpheme aama:Bilin-SUBJMARKB ;
 	bil:pngSet bil:PngB ;
@@ -4682,7 +4499,7 @@ aama:ID6a91926e-83a3-4840-89f1-a5a95bf0366d a aamas:Muterm ;
 	bil:gender bil:Common ;
 	.
 
-aama:IDfa6949a3-4698-4baa-bfc4-1266f1416489 a aamas:Muterm ;
+aama:ID5770160d-b2df-483a-bfd7-14cc5ed0ac9f a aamas:Muterm ;
 	aamas:lang aama:Bilin ;	aamas:memberOf bil:bilin-VPngBPngSuff ;
 	aamas:morpheme aama:Bilin-SUBJMARKB ;
 	bil:pngSet bil:PngB ;
@@ -4694,7 +4511,7 @@ aama:IDfa6949a3-4698-4baa-bfc4-1266f1416489 a aamas:Muterm ;
 	bil:gender bil:Common ;
 	.
 
-aama:IDd27cff13-8ad7-419e-a4f4-33c89499c2e1 a aamas:Muterm ;
+aama:ID62b9562b-a7c5-474f-9391-93246250840f a aamas:Muterm ;
 	aamas:lang aama:Bilin ;	aamas:memberOf bil:bilin-VPngBPngSuff ;
 	aamas:morpheme aama:Bilin-SUBJMARKB ;
 	bil:pngSet bil:PngB ;
@@ -4706,7 +4523,7 @@ aama:IDd27cff13-8ad7-419e-a4f4-33c89499c2e1 a aamas:Muterm ;
 	bil:gender bil:Common ;
 	.
 
-aama:ID7e2c2eb2-0ab6-4955-8b8b-ff41627ed887 a aamas:Muterm ;
+aama:ID79ec5e9e-bd3b-4c78-8a66-37df27e664bf a aamas:Muterm ;
 	aamas:lang aama:Bilin ;	aamas:memberOf bil:bilin-VPngBPngSuff ;
 	aamas:morpheme aama:Bilin-SUBJMARKB ;
 	bil:pngSet bil:PngB ;
@@ -4725,7 +4542,7 @@ bil:bilin-VPngA2PngSuff a aamas:MuTermcluster ;
 	rdfs:comment "Appleyard2007b p. 495f. A:subordinate tenses (and base for A2%%B%%C);A2:main neg imperf/perf;B:main aff imperf/perf;C:main aff fut" 
 	.
 
-aama:IDc696a6cd-b33a-46d3-afa6-0ee089b07a1f a aamas:Muterm ;
+aama:ID55a17984-3692-4e9d-b631-954c324de8c1 a aamas:Muterm ;
 	aamas:lang aama:Bilin ;	aamas:memberOf bil:bilin-VPngA2PngSuff ;
 	aamas:morpheme aama:Bilin-SUBJMARKA2 ;
 	bil:pngSet bil:PngA2 ;
@@ -4737,7 +4554,7 @@ aama:IDc696a6cd-b33a-46d3-afa6-0ee089b07a1f a aamas:Muterm ;
 	bil:gender bil:Common ;
 	.
 
-aama:ID2d63525c-3ed5-450d-99e9-6ce61e3789d5 a aamas:Muterm ;
+aama:ID5b9e5991-3b50-4f4e-926f-8ff7e8d7e497 a aamas:Muterm ;
 	aamas:lang aama:Bilin ;	aamas:memberOf bil:bilin-VPngA2PngSuff ;
 	aamas:morpheme aama:Bilin-SUBJMARKA2 ;
 	bil:pngSet bil:PngA2 ;
@@ -4749,7 +4566,7 @@ aama:ID2d63525c-3ed5-450d-99e9-6ce61e3789d5 a aamas:Muterm ;
 	bil:gender bil:Fem ;
 	.
 
-aama:IDff572621-4f25-4b6a-9e3d-ba423d91ef78 a aamas:Muterm ;
+aama:IDb0d74c39-0fd7-4b86-83ac-d7acb4958f8e a aamas:Muterm ;
 	aamas:lang aama:Bilin ;	aamas:memberOf bil:bilin-VPngA2PngSuff ;
 	aamas:morpheme aama:Bilin-SUBJMARKA2 ;
 	bil:pngSet bil:PngA2 ;
@@ -4761,7 +4578,7 @@ aama:IDff572621-4f25-4b6a-9e3d-ba423d91ef78 a aamas:Muterm ;
 	bil:gender bil:Common ;
 	.
 
-aama:IDb6a690a2-37ba-4819-bbdc-3eebe47c895e a aamas:Muterm ;
+aama:IDb481f567-e633-469f-8862-13e3466048b6 a aamas:Muterm ;
 	aamas:lang aama:Bilin ;	aamas:memberOf bil:bilin-VPngA2PngSuff ;
 	aamas:morpheme aama:Bilin-SUBJMARKA2 ;
 	bil:pngSet bil:PngA2 ;
@@ -4773,7 +4590,7 @@ aama:IDb6a690a2-37ba-4819-bbdc-3eebe47c895e a aamas:Muterm ;
 	bil:gender bil:Masc ;
 	.
 
-aama:ID2b2c5828-9464-4904-b601-fbf672eb80e3 a aamas:Muterm ;
+aama:ID99279ec2-946f-4baf-870e-793cfabc5729 a aamas:Muterm ;
 	aamas:lang aama:Bilin ;	aamas:memberOf bil:bilin-VPngA2PngSuff ;
 	aamas:morpheme aama:Bilin-SUBJMARKA2 ;
 	bil:pngSet bil:PngA2 ;
@@ -4785,7 +4602,7 @@ aama:ID2b2c5828-9464-4904-b601-fbf672eb80e3 a aamas:Muterm ;
 	bil:gender bil:Common ;
 	.
 
-aama:ID0568a301-db82-45e5-8c61-af25ed7129d3 a aamas:Muterm ;
+aama:ID826beccf-790d-4566-a510-5a8e54316e78 a aamas:Muterm ;
 	aamas:lang aama:Bilin ;	aamas:memberOf bil:bilin-VPngA2PngSuff ;
 	aamas:morpheme aama:Bilin-SUBJMARKA2 ;
 	bil:pngSet bil:PngA2 ;
@@ -4797,7 +4614,7 @@ aama:ID0568a301-db82-45e5-8c61-af25ed7129d3 a aamas:Muterm ;
 	bil:gender bil:Common ;
 	.
 
-aama:IDc8163c0c-c502-4636-a8ea-901829b95b75 a aamas:Muterm ;
+aama:ID18cb1340-933e-423f-b615-fc8a871c34d6 a aamas:Muterm ;
 	aamas:lang aama:Bilin ;	aamas:memberOf bil:bilin-VPngA2PngSuff ;
 	aamas:morpheme aama:Bilin-SUBJMARKA2 ;
 	bil:pngSet bil:PngA2 ;
@@ -4816,7 +4633,7 @@ bil:bilin-VDervSuff a aamas:MuTermcluster ;
 	rdfs:comment "Appleyard2007b pp. 493-495" 
 	.
 
-aama:ID39dcdff3-8c65-48b2-81ee-4c28fb08197f a aamas:Muterm ;
+aama:ID213c9109-c0ee-4d17-bb77-0efa28cb4558 a aamas:Muterm ;
 	aamas:lang aama:Bilin ;	aamas:memberOf bil:bilin-VDervSuff ;
 	aamas:morpheme aama:Bilin-DERVSTEMSUFF ;
 	bil:pos bil:Verb ;
@@ -4825,7 +4642,7 @@ aama:ID39dcdff3-8c65-48b2-81ee-4c28fb08197f a aamas:Muterm ;
 	bil:derivedStem bil:S2 ;
 	.
 
-aama:ID7a4f83b5-db47-4f96-9ea9-9ebf6ca3a190 a aamas:Muterm ;
+aama:ID8ec54e66-4000-4516-995f-f30bb8ea27de a aamas:Muterm ;
 	aamas:lang aama:Bilin ;	aamas:memberOf bil:bilin-VDervSuff ;
 	aamas:morpheme aama:Bilin-DERVSTEMSUFF ;
 	bil:pos bil:Verb ;
@@ -4834,16 +4651,16 @@ aama:ID7a4f83b5-db47-4f96-9ea9-9ebf6ca3a190 a aamas:Muterm ;
 	bil:derivedStem bil:Reciprocal ;
 	.
 
-aama:ID9f4ec8e9-46cf-426d-bd82-20f338525b3b a aamas:Muterm ;
+aama:ID7bba4d89-baa4-460d-8d04-f31496839669 a aamas:Muterm ;
 	aamas:lang aama:Bilin ;	aamas:memberOf bil:bilin-VDervSuff ;
 	aamas:morpheme aama:Bilin-DERVSTEMSUFF ;
 	bil:pos bil:Verb ;
 	bil:morphClass bil:DervSuff ;
 	bil:token "freq + -s-/-is-" ;
-	bil:derivedStem bil:M-Freq ;
+	bil:derivedStem bil:MFreq ;
 	.
 
-aama:ID6a589e0d-4a57-40e7-8261-a58bf5e5bcc4 a aamas:Muterm ;
+aama:IDe6f07715-629b-49a3-ae60-bff8c75ded22 a aamas:Muterm ;
 	aamas:lang aama:Bilin ;	aamas:memberOf bil:bilin-VDervSuff ;
 	aamas:morpheme aama:Bilin-DERVSTEMSUFF ;
 	bil:pos bil:Verb ;
@@ -4852,16 +4669,16 @@ aama:ID6a589e0d-4a57-40e7-8261-a58bf5e5bcc4 a aamas:Muterm ;
 	bil:derivedStem bil:S ;
 	.
 
-aama:ID40191d06-2b30-4d60-8967-691bec133d4e a aamas:Muterm ;
+aama:ID2fb51e56-1ed6-44b9-a816-db5188accf98 a aamas:Muterm ;
 	aamas:lang aama:Bilin ;	aamas:memberOf bil:bilin-VDervSuff ;
 	aamas:morpheme aama:Bilin-DERVSTEMSUFF ;
 	bil:pos bil:Verb ;
 	bil:morphClass bil:DervSuff ;
 	bil:token "freq + -əst-" ;
-	bil:derivedStem bil:M-Freq ;
+	bil:derivedStem bil:MFreq ;
 	.
 
-aama:ID4ee4437b-6472-45dc-b6bf-9fba2922bcb8 a aamas:Muterm ;
+aama:ID69011933-c4b8-446e-b838-cba418ad5a98 a aamas:Muterm ;
 	aamas:lang aama:Bilin ;	aamas:memberOf bil:bilin-VDervSuff ;
 	aamas:morpheme aama:Bilin-DERVSTEMSUFF ;
 	bil:pos bil:Verb ;
@@ -4870,7 +4687,7 @@ aama:ID4ee4437b-6472-45dc-b6bf-9fba2922bcb8 a aamas:Muterm ;
 	bil:derivedStem bil:M ;
 	.
 
-aama:ID59d4d72d-8c34-42be-a24b-06cd8ffadcd2 a aamas:Muterm ;
+aama:ID16d82e7f-e41a-4989-9070-08d52a7d81d0 a aamas:Muterm ;
 	aamas:lang aama:Bilin ;	aamas:memberOf bil:bilin-VDervSuff ;
 	aamas:morpheme aama:Bilin-DERVSTEMSUFF ;
 	bil:pos bil:Verb ;
@@ -4879,11 +4696,11 @@ aama:ID59d4d72d-8c34-42be-a24b-06cd8ffadcd2 a aamas:Muterm ;
 	bil:derivedStem bil:Frequentative ;
 	.
 
-aama:ID849c028a-cc88-455c-9d99-1e587f006d65 a aamas:Muterm ;
+aama:IDa599f0aa-f82a-461d-8d49-7b08c1a9ea8d a aamas:Muterm ;
 	aamas:lang aama:Bilin ;	aamas:memberOf bil:bilin-VDervSuff ;
 	aamas:morpheme aama:Bilin-DERVSTEMSUFF ;
 	bil:pos bil:Verb ;
 	bil:morphClass bil:DervSuff ;
 	bil:token "-əŋis-" ;
-	bil:derivedStem bil:S-Recip ;
+	bil:derivedStem bil:SRecip ;
 	.
