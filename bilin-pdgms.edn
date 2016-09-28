@@ -1,5 +1,6 @@
 {
 :lang :bilin
+:subfamily "Agaw"
 :sgpref "bil"
 :datasource "Appleyard2007b"
 :geodemoURL "http://www.ethnologue.com/language/byn"
@@ -44,7 +45,7 @@
   :kw {:conjClass :Conjugation3, :gloss "eat", :lemma "k’w-", :pos :Verb}
   :was {:gloss "[x]", :lemma "[y]", }
 }
-:lxterms #{
+:lxterms [
     {:label "bilin-PInd"
     :note "Appleyard2007b p. 491. The oblique case is also used for the possessive prefix. The object suffix pronouns,attached to verb,are borrowed from Tigre. NOte sg 2 f form (unique in Agaw)."
     :common {:lexeme :PRO,
@@ -917,5 +918,5 @@
             [:Plural :Person2 :Common "-tVn" " "]
             [:Plural :Person3 :Common "-Vn" " "]]
     }
-}
+]
 }
