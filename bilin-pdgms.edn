@@ -5,7 +5,8 @@
 :datasource "Appleyard2007b"
 :geodemoURL "http://www.ethnologue.com/language/byn"
 :geodemoTXT "Varieties and subdialects of theAgaw (or Central) Cushitic language: Bilin is spoken mainly in the vicinity of the town Keren. The variety represented here is that described in Appleyard2007b."
- :schemata {:aspect [:Imperfective  :Perfective],
+ :schemata {:vmorphClass [:DervSuff  :AgentNom :CopulaForm :InfinitiveNom :PersSuffA :PersSuffA2 :PersSuffB :PersSuffC],
+            :aspect [:Imperfective :Perfective],
             :case [:Absolutive :Object :ObjectSuff :Oblique],
             :clauseType [:AdvAt1 :AdvAt2 :AdvCause :AdvCompl :AdvCond :AdvConsec :AdvFutCond :AdvPurp :AdvUntil :AdvWhen :AdvWhile :Main :RelObliq :RelSubj],
             :conjClass [:Conjugation1 :Conjugation2 :Conjugation3],
@@ -21,7 +22,7 @@
             :pos [:Pronoun :Verb],
             :proClass [:Independent],
             :tam [:Common :Future :Imperative :Jussive :Past :Perfect :Present]
-            :pdgmType [:Agent :Copula :DervSuff :Finite :Infinitive :PRO :PersSuff]} 
+            :pdgmType [:Finite :PRO :VOther]}
 :pclass {:pngClass [:person :number :gender :pngSet],
           :synsemClass [:aspect :case :clauseType :copType :nonFiniteForm :derivedStem :polarity :pos :proClass :tam],
           :inflClass [:conjClass],
@@ -413,8 +414,9 @@
     }
     {:label "bilin-VConj1Agent-gab"
     :note "Appleyard2007b pp. 497-501"
-    :pdgmType :Agent
-    :common {:conjClass :Conjugation1,
+    :pdgmType :VOther
+    :common {:vmorphClass :AgentNom
+             :conjClass :Conjugation1,
              :nonFiniteForm :Agent,
              :gender :Common,
              :lexeme :gab,
@@ -425,8 +427,9 @@
     }
     {:label "bilin-VConj1Infinitive-gab"
     :note "Appleyard2007b pp. 497-501"
-    :pdgmType :Infinitive
-    :common {:conjClass :Conjugation1,
+    :pdgmType :VOther
+    :common {:vmorphClass :InfinitiveNom
+             :conjClass :Conjugation1,
              :nonFiniteForm :Infinitive,
              :lexeme :gab,
              :pos :Verb}
@@ -869,8 +872,9 @@
     }
     {:label "bilin-VCopula"
     :note "Appleyard2007b pp. 502f. “A peculiar feature of the verb ‘to be’ in Bilin,shared with the other Agaw languages,is the reversal of aspect,whereby a perfective aspect (past tense) form is used in imprefective (present time) function,and vice versa,as for instance:ni gərwa kəxin sänäkw ‘he was a clever man’. “(p. 501) See LEXEMES section."
-    :pdgmType :Copula
-    :common {:lexeme :COPULA,
+    :pdgmType :VOther
+    :common {:vmorphClass :CopulaForm
+             :lexeme :COPULA,
              :pos :Verb}
     :terms [[:copType :polarity :tam :token :token-note],
             [:CopLoc :Affirmative :Past "sän-" " "],
@@ -882,8 +886,9 @@
     }
     {:label "bilin-VDervSuff"
     :note "Appleyard2007b pp. 493-495"
-    :pdgmType :DervSuff
-    :common {:lexeme :DERVSTEMSUFF,
+    :pdgmType :VOther
+    :common {:vmorphClass :DervSuff
+             :lexeme :DERVSTEMSUFF,
              :pos :Verb}
     :terms [[:derivedStem :token],
             [:Frequentative "redup ~ redup+-əŋ-"],
@@ -897,8 +902,9 @@
     }
     {:label "bilin-VPngA2PngSuff"
     :note "Appleyard2007b p. 495f. A:subordinate tenses (and base for A2,B,C);A2:main neg imperf/perf;B:main aff imperf/perf;C:main aff fut"
-    :pdgmType :PersSuff
-    :common {:lexeme :SUBJMARKA2,
+    :pdgmType :VOther
+    :common {:vmorphClass :PersSuffA2
+             :lexeme :SUBJMARKA2,
              :pngSet :PngA2,
              :pos :Verb}
     :terms [[:number :person :gender :token],
@@ -912,8 +918,9 @@
     }
     {:label "bilin-VPngAPngSuff"
     :note "Appleyard2007b p. 495f. A:subordinate tenses (and base for A2,B,C);A2:main neg imperf/perf;B:main aff imperf/perf;C:main aff fut"
-    :pdgmType :PersSuff
-    :common {:lexeme :SUBJMARKA,
+    :pdgmType :VOther
+    :common {:vmorphClass :PersSuffA
+             :lexeme :SUBJMARKA,
              :pngSet :PngA,
              :pos :Verb}
     :terms [[:number :person :gender :token :token-note],
@@ -927,8 +934,9 @@
     }
     {:label "bilin-VPngBPngSuff"
     :note "Appleyard2007b p. 495f. A:subordinate tenses (and base for A2,B,C);A2:main neg imperf/perf;B:main aff imperf/perf;C:main aff fut"
-    :pdgmType :PersSuff
-    :common {:lexeme :SUBJMARKB,
+    :pdgmType :VOther
+    :common {:vmorphClass :PersSuffB
+             :lexeme :SUBJMARKB,
              :pngSet :PngB,
              :pos :Verb}
     :terms [[:number :person :gender :token],
@@ -942,8 +950,9 @@
     }
     {:label "bilin-VPngCPngSuff"
     :note "Appleyard2007b p. 495f. A:subordinate tenses (and base for A2,B,C);A2:main neg imperf/perf;B:main aff imperf/perf;C:main aff fut"
-    :pdgmType :PersSuff
-    :common {:lexeme :SUBJMARKC,
+    :pdgmType :VOther
+    :common {:vmorphClass :PersSuffC
+             :lexeme :SUBJMARKC,
              :pngSet :PngC,
              :pos :Verb}
     :terms [[:number :person :gender :token :token-note],
