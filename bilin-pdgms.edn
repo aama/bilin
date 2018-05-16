@@ -70,7 +70,7 @@
                  }
                 {:label "bilin-VConj1AdvAt1AffImperfPngA-gab"
                  :note "Appleyard2007b pp. 497-501"
-                 :common {:vmorphclass :Finite
+                 :common {:vmorphClass :Finite
                           :gender :Masc,
                           :pngSet :PngA,
                           :polarity :Affirmative,
@@ -86,7 +86,7 @@
                  }
                 {:label "bilin-VConj1AdvAt2AffImperfPngA-gab"
                  :note "Appleyard2007b pp. 497-501"
-                 :common {:vmorphclass :Finite
+                 :common {:vmorphClass :Finite
                           :gender :Masc,
                           :pngSet :PngA,
                           :polarity :Affirmative,
@@ -102,7 +102,7 @@
                  }
                 {:label "bilin-VConj1AdvCauseAffPerfPngA-gab"
                  :note "Appleyard2007b pp. 497-501"
-                 :common {:vmorphclass :Finite
+                 :common {:vmorphClass :Finite
                           :gender :Masc,
                           :pngSet :PngA,
                           :polarity :Affirmative,
@@ -118,7 +118,7 @@
                  }
                 {:label "bilin-VConj1AdvCauseNegPerfPngA-gab"
                  :note "Appleyard2007b pp. 497-501"
-                 :common {:vmorphclass :Finite
+                 :common {:vmorphClass :Finite
                           :gender :Masc,
                           :pngSet :PngA,
                           :polarity :Negative,
@@ -134,7 +134,7 @@
                  }
                 {:label "bilin-VConj1AdvComplAffImperfPngA-gab"
                  :note "Appleyard2007b pp. 497-501"
-                 :common {:vmorphclass :Finite
+                 :common {:vmorphClass :Finite
                           :gender :Masc,
                           :pngSet :PngA,
                           :polarity :Affirmative,
@@ -150,7 +150,7 @@
                  }
                 {:label "bilin-VConj1AdvComplAffPerfPngA-gab"
                  :note "Appleyard2007b pp. 497-501"
-                 :common {:vmorphclass :Finite
+                 :common {:vmorphClass :Finite
                           :gender :Masc,
                           :pngSet :PngA,
                           :polarity :Affirmative,
@@ -166,7 +166,7 @@
                  }
                 {:label "bilin-VConj1AdvComplNegImperfPngA-gab"
                  :note "Appleyard2007b pp. 497-501"
-                 :common {:vmorphclass :Finite
+                 :common {:vmorphClass :Finite
                           :gender :Masc,
                           :pngSet :PngA,
                           :polarity :Negative,
@@ -182,7 +182,7 @@
                  }
                 {:label "bilin-VConj1AdvComplNegPerfPngA-gab"
                  :note "Appleyard2007b pp. 497-501"
-                 :common {:vmorphclass :Finite
+                 :common {:vmorphClass :Finite
                           :gender :Masc,
                           :pngSet :PngA,
                           :polarity :Negative,
@@ -198,7 +198,7 @@
                  }
                 {:label "bilin-VConj1AdvCondAffImperfPngA-gab"
                  :note "Appleyard2007b pp. 497-501"
-                 :common {:vmorphclass :Finite
+                 :common {:vmorphClass :Finite
                           :gender :Masc,
                           :pngSet :PngA,
                           :polarity :Affirmative,
@@ -214,7 +214,7 @@
                  }
                 {:label "bilin-VConj1AdvCondAffPerfPngA-gab"
                  :note "Appleyard2007b pp. 497-501"
-                 :common {:vmorphclass :Finite
+                 :common {:vmorphClass :Finite
                           :gender :Masc,
                           :pngSet :PngA,
                           :polarity :Affirmative,
@@ -230,7 +230,7 @@
                  }
                 {:label "bilin-VConj1AdvCondNegImperfPngA-gab"
                  :note "Appleyard2007b pp. 497-501"
-                 :common {:vmorphclass :Finite
+                 :common {:vmorphClass :Finite
                           :gender :Masc,
                           :pngSet :PngA,
                           :polarity :Negative,
@@ -246,7 +246,7 @@
                  }
                 {:label "bilin-VConj1AdvCondNegPerfPngA-gab"
                  :note "Appleyard2007b pp. 497-501"
-                 :common {:vmorphclass :Finite
+                 :common {:vmorphClass :Finite
                           :gender :Masc,
                           :pngSet :PngA,
                           :polarity :Negative,
@@ -262,7 +262,7 @@
                  }
                 {:label "bilin-VConj1AdvConsecAffPerfPngA-gab"
                  :note "Appleyard2007b pp. 497-501"
-                 :common {:vmorphclass :Finite
+                 :common {:vmorphClass :Finite
                           :gender :Masc,
                           :pngSet :PngA,
                           :polarity :Affirmative,
@@ -278,7 +278,7 @@
                  }
                 {:label "bilin-VConj1AdvConsecNegPerfPngA-gab"
                  :note "Appleyard2007b pp. 497-501"
-                 :common {:vmorphclass :Finite
+                 :common {:vmorphClass :Finite
                           :gender :Masc,
                           :pngSet :PngA,
                           :polarity :Negative,
@@ -294,7 +294,7 @@
                  }
                 {:label "bilin-VConj1AdvFutCondAffPerfPngC-gab"
                  :note "Appleyard2007b pp. 497-501"
-                 :common {:vmorphclass :Finite
+                 :common {:vmorphClass :Finite
                           :gender :Masc,
                           :pngSet :PngC,
                           :polarity :Affirmative,
@@ -310,7 +310,7 @@
                  }
                 {:label "bilin-VConj1AdvFutCondNegPerfPngC-gab"
                  :note "Appleyard2007b pp. 497-501"
-                 :common {:vmorphclass :Finite
+                 :common {:vmorphClass :Finite
                           :gender :Masc,
                           :pngSet :PngC,
                           :polarity :Negative,
@@ -326,7 +326,7 @@
                  }
                 {:label "bilin-VConj1AdvPurpAffPerfPngC-gab"
                  :note "Appleyard2007b pp. 497-501"
-                 :common {:vmorphclass :Finite
+                 :common {:vmorphClass :Finite
                           :gender :Masc,
                           :pngSet :PngC,
                           :polarity :Affirmative,
@@ -342,7 +342,7 @@
                  }
                 {:label "bilin-VConj1AdvPurpNegPerfPngC-gab"
                  :note "Appleyard2007b pp. 497-501"
-                 :common {:vmorphclass :Finite
+                 :common {:vmorphClass :Finite
                           :gender :Masc,
                           :pngSet :PngC,
                           :polarity :Negative,
@@ -358,7 +358,7 @@
                  }
                 {:label "bilin-VConj1AdvUntilAffPerfPngC-gab"
                  :note "Appleyard2007b pp. 497-501"
-                 :common {:vmorphclass :Finite
+                 :common {:vmorphClass :Finite
                           :gender :Masc,
                           :pngSet :PngC,
                           :polarity :Affirmative,
@@ -374,7 +374,7 @@
                  }
                 {:label "bilin-VConj1AdvWhenAffImperfPngA-gab"
                  :note "Appleyard2007b pp. 497-501"
-                 :common {:vmorphclass :Finite
+                 :common {:vmorphClass :Finite
                           :gender :Masc,
                           :pngSet :PngA,
                           :polarity :Affirmative,
@@ -390,7 +390,7 @@
                  }
                 {:label "bilin-VConj1AdvWhileAffImperfPngA-gab"
                  :note "Appleyard2007b pp. 497-501"
-                 :common {:vmorphclass :Finite
+                 :common {:vmorphClass :Finite
                           :gender :Masc,
                           :pngSet :PngA,
                           :polarity :Affirmative,
@@ -428,7 +428,7 @@
                  }
                 {:label "bilin-VConj1MainAffImperfJussPngA-gab"
                  :note "Appleyard2007b pp. 497-501"
-                 :common {:vmorphclass :Finite
+                 :common {:vmorphClass :Finite
                           :aspect :Imperfective,
                           :clauseType :Main,
                           :conjClass :Conjugation1,
@@ -446,7 +446,7 @@
                  }
                 {:label "bilin-VConj1MainAffImperfPresPngB-gab"
                  :note "Appleyard2007b pp. 497-501"
-                 :common {:vmorphclass :Finite
+                 :common {:vmorphClass :Finite
                           :aspect :Imperfective,
                           :clauseType :Main,
                           :conjClass :Conjugation1,
@@ -466,7 +466,7 @@
                  }
                 {:label "bilin-VConj1MainAffPerfFutPngC-gab"
                  :note "Appleyard2007b pp. 497-501"
-                 :common {:vmorphclass :Finite
+                 :common {:vmorphClass :Finite
                           :aspect :Perfective,
                           :clauseType :Main,
                           :conjClass :Conjugation1,
@@ -486,7 +486,7 @@
                  }
                 {:label "bilin-VConj1MainAffPerfImprtv-gab"
                  :note "Appleyard2007b pp. 497-501"
-                 :common {:vmorphclass :Finite
+                 :common {:vmorphClass :Finite
                           :gender :Common,
                           :polarity :Affirmative,
                           :conjClass :Conjugation1,
@@ -502,7 +502,7 @@
                  }
                 {:label "bilin-VConj1MainAffPerfPastPngB-gab"
                  :note "Appleyard2007b pp. 497-501"
-                 :common {:vmorphclass :Finite
+                 :common {:vmorphClass :Finite
                           :aspect :Perfective,
                           :clauseType :Main,
                           :conjClass :Conjugation1,
@@ -522,7 +522,7 @@
                  }
                 {:label "bilin-VConj1MainNegImperfJussPngA-gab"
                  :note "Appleyard2007b pp. 497-501"
-                 :common {:vmorphclass :Finite
+                 :common {:vmorphClass :Finite
                           :aspect :Imperfective,
                           :clauseType :Main,
                           :conjClass :Conjugation1,
@@ -540,7 +540,7 @@
                  }
                 {:label "bilin-VConj1MainNegImperfPngA2-gab"
                  :note "Appleyard2007b pp. 497-501"
-                 :common {:vmorphclass :Finite
+                 :common {:vmorphClass :Finite
                           :aspect :Imperfective,
                           :clauseType :Main,
                           :conjClass :Conjugation1,
@@ -559,7 +559,7 @@
                  }
                 {:label "bilin-VConj1MainNegPerfImprtv-gab"
                  :note "Appleyard2007b pp. 497-501"
-                 :common {:vmorphclass :Finite
+                 :common {:vmorphClass :Finite
                           :gender :Common,
                           :polarity :Negative,
                           :conjClass :Conjugation1,
@@ -575,7 +575,7 @@
                  }
                 {:label "bilin-VConj1MainNegPerfPngA2-gab"
                  :note "Appleyard2007b pp. 497-501"
-                 :common {:vmorphclass :Finite
+                 :common {:vmorphClass :Finite
                           :aspect :Perfective,
                           :clauseType :Main,
                           :conjClass :Conjugation1,
@@ -594,7 +594,7 @@
                  }
                 {:label "bilin-VConj1RelObliqAffImperfPngAHeadPl-gab"
                  :note "Appleyard2007b pp. 497-501"
-                 :common {:vmorphclass :Finite
+                 :common {:vmorphClass :Finite
                           :aspect :Imperfective,
                           :clauseType :RelObliq,
                           :conjClass :Conjugation1,
@@ -614,7 +614,7 @@
                  }
                 {:label "bilin-VConj1RelObliqAffImperfPngAHeadSgf-gab"
                  :note "Appleyard2007b pp. 497-501"
-                 :common {:vmorphclass :Finite
+                 :common {:vmorphClass :Finite
                           :aspect :Imperfective,
                           :clauseType :RelObliq,
                           :conjClass :Conjugation1,
@@ -634,7 +634,7 @@
                  }
                 {:label "bilin-VConj1RelObliqAffImperfPngAHeadSgm-gab"
                  :note "Appleyard2007b pp. 497-501"
-                 :common {:vmorphclass :Finite
+                 :common {:vmorphClass :Finite
                           :aspect :Imperfective,
                           :clauseType :RelObliq,
                           :conjClass :Conjugation1,
@@ -654,7 +654,7 @@
                  }
                 {:label "bilin-VConj1RelSubjAffImperfPngA-gab"
                  :note "Appleyard2007b pp. 497-501; Palmer's version cited in Appleyard1975 pp. 338-339."
-                 :common {:vmorphclass :Finite
+                 :common {:vmorphClass :Finite
                           :aspect :Imperfective,
                           :clauseType :RelSubj,
                           :conjClass :Conjugation1,
@@ -673,7 +673,7 @@
                  }
                 {:label "bilin-VConj1RelSubjAffPerfPngA-gab"
                  :note "Appleyard2007b pp. 497-501; Palmer's version cited in Appleyard1975 pp. 338-339."
-                 :common {:vmorphclass :Finite
+                 :common {:vmorphClass :Finite
                           :aspect :Perfective,
                           :clauseType :RelSubj,
                           :conjClass :Conjugation1,
@@ -692,7 +692,7 @@
                  }
                 {:label "bilin-VConj2MainAffImperfPresPngB-kab"
                  :note "Appleyard2007b pp. 497-499"
-                 :common {:vmorphclass :Finite
+                 :common {:vmorphClass :Finite
                           :aspect :Imperfective,
                           :clauseType :Main,
                           :conjClass :Conjugation2,
@@ -712,7 +712,7 @@
                  }
                 {:label "bilin-VConj2MainAffPerfFutPngC-kab"
                  :note "Appleyard2007b pp. 497-499"
-                 :common {:vmorphclass :Finite
+                 :common {:vmorphClass :Finite
                           :aspect :Perfective,
                           :clauseType :Main,
                           :conjClass :Conjugation2,
@@ -732,7 +732,7 @@
                  }
                 {:label "bilin-VConj2MainAffPerfPastPngB-kab"
                  :note "Appleyard2007b pp. 497-499"
-                 :common {:vmorphclass :Finite
+                 :common {:vmorphClass :Finite
                           :aspect :Perfective,
                           :clauseType :Main,
                           :conjClass :Conjugation2,
@@ -752,7 +752,7 @@
                  }
                 {:label "bilin-VConj2MainNegImperfPngA2-kab"
                  :note "Appleyard2007b pp. 497-499"
-                 :common {:vmorphclass :Finite
+                 :common {:vmorphClass :Finite
                           :aspect :Imperfective,
                           :clauseType :Main,
                           :conjClass :Conjugation2,
@@ -771,7 +771,7 @@
                  }
                 {:label "bilin-VConj2MainNegPerfPngA2-kab"
                  :note "Appleyard2007b pp. 497-499"
-                 :common {:vmorphclass :Finite
+                 :common {:vmorphClass :Finite
                           :aspect :Perfective,
                           :clauseType :Main,
                           :conjClass :Conjugation2,
@@ -790,7 +790,7 @@
                  }
                 {:label "bilin-VConj2RelSubjAffImperfPngA-kab"
                  :note "Appleyard2007b pp. 497-499"
-                 :common {:vmorphclass :Finite
+                 :common {:vmorphClass :Finite
                           :aspect :Imperfective,
                           :clauseType :RelSubj,
                           :conjClass :Conjugation2,
@@ -809,7 +809,7 @@
                  }
                 {:label "bilin-VConj2RelSubjAffPerfPngA-kab"
                  :note "Appleyard2007b pp. 497-499"
-                 :common {:vmorphclass :Finite
+                 :common {:vmorphClass :Finite
                           :aspect :Perfective,
                           :clauseType :RelSubj,
                           :conjClass :Conjugation2,
@@ -828,7 +828,7 @@
                  }
                 {:label "bilin-VConj3MainAffImperfPresPngB-kw"
                  :note "Appleyard2007b pp. 497-499. Third conjugation verbs:a handful of monosyllabic roots (cf. LEXEMES section)."
-                 :common {:vmorphclass :Finite
+                 :common {:vmorphClass :Finite
                           :pngSet :PngB,
                           :polarity :Affirmative,
                           :conjClass :Conjugation3,
@@ -845,7 +845,7 @@
                  }
                 {:label "bilin-VConj3MainAffPerfPastPngB-kw"
                  :note "Appleyard2007b pp. 497-499. Third conjugation verbs:a handful of monosyllabic roots (cf. LEXEMES section)."
-                 :common {:vmorphclass :Finite
+                 :common {:vmorphClass :Finite
                           :pngSet :PngB,
                           :polarity :Affirmative,
                           :conjClass :Conjugation3,
