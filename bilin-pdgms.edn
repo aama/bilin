@@ -5,24 +5,26 @@
  :datasource "Appleyard2007b"
  :geodemoURL "http://www.ethnologue.com/language/byn"
  :geodemoTXT "Varieties and subdialects of theAgaw (or Central) Cushitic language: Bilin is spoken mainly in the vicinity of the town Keren. The variety represented here is that described in Appleyard2007b."
-:schemata {:aspect [:Imperfective :Perfective],
-           :case [:Absolutive :Object :ObjectSuff :Oblique],
-           :clauseType [:AdvAt1 :AdvAt2 :AdvCause :AdvCompl :AdvCond :AdvConsec :AdvFutCond :AdvPurp :AdvUntil :AdvWhen :AdvWhile :Main :RelObliq :RelSubj],
-           :conjClass [:Conjugation1 :Conjugation2 :Conjugation3],
-           :copType [:CopLoc :CopMain],
-           :derivedStem [:Frequentative :M :MFreq :Reciprocal :S :S2 :SRecip],
-           :gender [:Common :Fem :Masc],
-           :nonFiniteForm [:Agent :Infinitive],
-           :number [:Common :Plural :Singular],
-           :numberGenderHead [:HeadPlural :HeadSingularFem :HeadSingularMasc],
-           :person [:Person1 :Person2 :Person3],
-           :pngSet [:PngA :PngA2 :PngB :PngC],
-           :polarity [:Affirmative :Negative],
-           :pos [:Pronoun :Verb],
-           :proClass [:Independent],
-           :tam [:Common :Future :Imperative :Jussive :Past :Perfect :Present],
-           :vmorphClass [:Finite :AgentNom :CopulaForm :DervSuff :InfinitiveNom :PersSuffA :PersSuffA2 :PersSuffB :PersSuffC]
-           }
+:schemata {:lexeme [:COPULA  :gab :kab :kw],
+ :aspect [:Imperfective :Perfective],
+ :case [:Absolutive :Object :ObjectSuff :Oblique],
+ :clauseType [:AdvAt1 :AdvAt2 :AdvCause :AdvCompl :AdvCond :AdvConsec :AdvFutCond :AdvPurp :AdvUntil :AdvWhen :AdvWhile :Main :RelObliq :RelSubj],
+ :conjClass [:Conjugation1 :Conjugation2 :Conjugation3],
+ :copType [:CopLoc :CopMain],
+ :derivedStem [:Frequentative :M :MFreq :Reciprocal :S :S2 :SRecip],
+ :gender [:Common :Fem :Masc],
+ :nonFiniteForm [:Agent :Infinitive],
+ :number [:Common :Plural :Singular],
+ :numberGenderHead [:HeadPlural :HeadSingularFem :HeadSingularMasc],
+ :person [:Person1 :Person2 :Person3],
+ :pmorphClass [:ProMorph],
+ :pngSet [:PngA :PngA2 :PngB :PngC],
+ :polarity [:Affirmative :Negative],
+ :pos [:Pronoun :Verb],
+ :proClass [:Independent],
+ :tam [:Common :Future :Imperative :Jussive :Past :Perfect :Present],
+ :vmorphClass [:AgentNom :CopulaForm :DervSuff :Finite :InfinitiveNom :PersSuffA :PersSuffA2 :PersSuffB :PersSuffC]
+ }
  :pclass {:pngClass [:person :number :gender :pngSet],
           :synsemClass [:aspect :case :clauseType :copType :nonFiniteForm :derivedStem :polarity :pos :proClass :tam],
           :inflClass [:conjClass],
@@ -30,12 +32,12 @@
  :lexemes{:gab {:conjClass :Conjugation1, :gloss "refuse", :lemma "gäb-", :pos :Verb},
           :kab {:conjClass :Conjugation2, :gloss "help", :lemma "kab-", :pos :Verb},
           :kw {:conjClass :Conjugation3, :gloss "eat", :lemma "k’w-", :pos :Verb},
-          :was {:gloss "[x]", :lemma "[y]"}}
+          :was {:gloss "[x]", :lemma "[y]"}
+          :COPULA {:gloss "[x]", :lemma "[y]"}}
  :termclusters [
                 {:label "bilin-PInd"
                  :note "Appleyard2007b p. 491. The oblique case is also used for the possessive prefix. The object suffix pronouns,attached to verb,are borrowed from Tigre. NOte sg 2 f form (unique in Agaw)."
-                 :common {:lexeme :PRO,
-                          :pos :Pronoun,
+                 :common {:pos :Pronoun, :pmorphClass :ProMorph,
                           :proClass :Independent}
                  :terms [[:case :number :person :gender :token],
                          [:Absolutive :Singular :Person1 :Common "ʔan"],
@@ -876,7 +878,6 @@
                 {:label "bilin-VDervSuff"
                  :note "Appleyard2007b pp. 493-495"
                  :common {:vmorphClass :DervSuff
-                          :lexeme :DERVSTEMSUFF,
                           :pos :Verb}
                  :terms [[:derivedStem :token],
                          [:Frequentative "redup ~ redup+-əŋ-"],
@@ -891,7 +892,6 @@
                 {:label "bilin-VPngA2PngSuff"
                  :note "Appleyard2007b p. 495f. A:subordinate tenses (and base for A2,B,C);A2:main neg imperf/perf;B:main aff imperf/perf;C:main aff fut"
                  :common {:vmorphClass :PersSuffA2
-                          :lexeme :SUBJMARKA2,
                           :pngSet :PngA2,
                           :pos :Verb}
                  :terms [[:number :person :gender :token],
@@ -906,7 +906,6 @@
                 {:label "bilin-VPngAPngSuff"
                  :note "Appleyard2007b p. 495f. A:subordinate tenses (and base for A2,B,C);A2:main neg imperf/perf;B:main aff imperf/perf;C:main aff fut"
                  :common {:vmorphClass :PersSuffA
-                          :lexeme :SUBJMARKA,
                           :pngSet :PngA,
                           :pos :Verb}
                  :terms [[:number :person :gender :token :token-note],
@@ -921,7 +920,6 @@
                 {:label "bilin-VPngBPngSuff"
                  :note "Appleyard2007b p. 495f. A:subordinate tenses (and base for A2,B,C);A2:main neg imperf/perf;B:main aff imperf/perf;C:main aff fut"
                  :common {:vmorphClass :PersSuffB
-                          :lexeme :SUBJMARKB,
                           :pngSet :PngB,
                           :pos :Verb}
                  :terms [[:number :person :gender :token],
@@ -936,7 +934,6 @@
                 {:label "bilin-VPngCPngSuff"
                  :note "Appleyard2007b p. 495f. A:subordinate tenses (and base for A2,B,C);A2:main neg imperf/perf;B:main aff imperf/perf;C:main aff fut"
                  :common {:vmorphClass :PersSuffC
-                          :lexeme :SUBJMARKC,
                           :pngSet :PngC,
                           :pos :Verb}
                  :terms [[:number :person :gender :token :token-note],
