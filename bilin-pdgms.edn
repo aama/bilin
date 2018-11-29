@@ -5,8 +5,7 @@
  :datasource "Appleyard2007b"
  :geodemoURL "http://www.ethnologue.com/language/byn"
  :geodemoTXT "Varieties and subdialects of theAgaw (or Central) Cushitic language: Bilin is spoken mainly in the vicinity of the town Keren. The variety represented here is that described in Appleyard2007b."
-:schemata {:lexeme [:COPULA  :gab :kab :kw],
- :aspect [:Imperfective :Perfective],
+:schemata { :aspect [:Imperfective :Perfective],
  :case [:Absolutive :Object :ObjectSuff :Oblique],
  :clauseType [:AdvAt1 :AdvAt2 :AdvCause :AdvCompl :AdvCond :AdvConsec :AdvFutCond :AdvPurp :AdvUntil :AdvWhen :AdvWhile :Main :RelObliq :RelSubj],
  :conjClass [:Conjugation1 :Conjugation2 :Conjugation3],
@@ -29,11 +28,13 @@
           :synsemClass [:aspect :case :clauseType :copType :nonFiniteForm :derivedStem :polarity :pos :proClass :tam],
           :inflClass [:conjClass],
           :otherClass []}
- :lexemes{:gab {:conjClass :Conjugation1, :gloss "refuse", :lemma "gäb-", :pos :Verb},
-          :kab {:conjClass :Conjugation2, :gloss "help", :lemma "kab-", :pos :Verb},
-          :kw {:conjClass :Conjugation3, :gloss "eat", :lemma "k’w-", :pos :Verb},
-          :was {:gloss "[x]", :lemma "[y]"}
-          :COPULA {:gloss "[x]", :lemma "[y]"}}
+ :lexemes {
+:COPULA   {:pos :Verb, :lemma "[y]", :gloss "[x]", },
+:gab   {:pos :Verb, :lemma "gäb-", :gloss "refuse", :conjClass :Conjugation1},
+:kab   {:pos :Verb, :lemma "kab-", :gloss "help", :conjClass :Conjugation2},
+:kw   {:pos :Verb, :lemma "k’w-", :gloss "eat", :conjClass :Conjugation3},
+:was   {:pos :Verb, :lemma "[y]", :gloss "[x]", },
+}
  :termclusters [
                 {:label "bilin-PInd"
                  :note "Appleyard2007b p. 491. The oblique case is also used for the possessive prefix. The object suffix pronouns,attached to verb,are borrowed from Tigre. NOte sg 2 f form (unique in Agaw)."

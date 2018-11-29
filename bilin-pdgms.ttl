@@ -1,5 +1,5 @@
 #TTL FROM INPUT FILE:
-#../aama-data/data//bilin/bilin-pdgms.edn
+#../aama-data/data/bilin//bilin-pdgms.edn
 
 @prefix rdf:	 <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:	 <http://www.w3.org/2000/01/rdf-schema#> .
@@ -259,28 +259,6 @@ bil:Independent aamas:lang aama:Bilin .
 bil:Independent rdf:type bil:Proclass .
 bil:Independent rdfs:label "Independent" .
 
-#SCHEMATA: lexeme
-bil:lexeme aamas:lang aama:Bilin .
-bil:Lexeme aamas:lang aama:Bilin .
-bil:lexeme rdfs:domain aamas:Term .
-bil:Lexeme rdfs:label "lexeme exponents" .
-bil:lexeme rdfs:label "lexeme" .
-bil:lexeme rdfs:range bil:Lexeme .
-bil:Lexeme rdfs:subClassOf bil:MuExponent .
-bil:lexeme rdfs:subPropertyOf bil:muProperty .
-bil:COPULA aamas:lang aama:Bilin .
-bil:COPULA rdf:type bil:Lexeme .
-bil:COPULA rdfs:label "COPULA" .
-bil:gab aamas:lang aama:Bilin .
-bil:gab rdf:type bil:Lexeme .
-bil:gab rdfs:label "gab" .
-bil:kab aamas:lang aama:Bilin .
-bil:kab rdf:type bil:Lexeme .
-bil:kab rdfs:label "kab" .
-bil:kw aamas:lang aama:Bilin .
-bil:kw rdf:type bil:Lexeme .
-bil:kw rdfs:label "kw" .
-
 #SCHEMATA: conjClass
 bil:conjClass aamas:lang aama:Bilin .
 bil:Conjclass aamas:lang aama:Bilin .
@@ -473,41 +451,45 @@ bil:conjClass aamas:pclass aamas:inflClass .
 aamas:inflClass rdfs:label "inflClass" .
 
 #LEXEMES:
+
+##LexItems
+aama:Bilin-COPULA a aamas:Lexeme ;
+	aamas:lang aama:Bilin ;
+	rdfs:label "COPULA" ;
+	bil:pos bil:Verb ;
+	aamas:lemma "[y]" ;
+	aamas:gloss "[x]" ;
+	.
 aama:Bilin-gab a aamas:Lexeme ;
 	aamas:lang aama:Bilin ;
 	rdfs:label "gab" ;
-	bil:conjClass bil:Conjugation1 ;
-	aamas:gloss "refuse" ;
-	aamas:lemma "gäb-" ;
 	bil:pos bil:Verb ;
+	aamas:lemma "gäb-" ;
+	aamas:gloss "refuse" ;
+	bil:conjClass bil:Conjugation1 ;
 	.
 aama:Bilin-kab a aamas:Lexeme ;
 	aamas:lang aama:Bilin ;
 	rdfs:label "kab" ;
-	bil:conjClass bil:Conjugation2 ;
-	aamas:gloss "help" ;
-	aamas:lemma "kab-" ;
 	bil:pos bil:Verb ;
+	aamas:lemma "kab-" ;
+	aamas:gloss "help" ;
+	bil:conjClass bil:Conjugation2 ;
 	.
 aama:Bilin-kw a aamas:Lexeme ;
 	aamas:lang aama:Bilin ;
 	rdfs:label "kw" ;
-	bil:conjClass bil:Conjugation3 ;
-	aamas:gloss "eat" ;
-	aamas:lemma "k’w-" ;
 	bil:pos bil:Verb ;
+	aamas:lemma "k’w-" ;
+	aamas:gloss "eat" ;
+	bil:conjClass bil:Conjugation3 ;
 	.
 aama:Bilin-was a aamas:Lexeme ;
 	aamas:lang aama:Bilin ;
 	rdfs:label "was" ;
-	aamas:gloss "[x]" ;
+	bil:pos bil:Verb ;
 	aamas:lemma "[y]" ;
-	.
-aama:Bilin-COPULA a aamas:Lexeme ;
-	aamas:lang aama:Bilin ;
-	rdfs:label "COPULA" ;
 	aamas:gloss "[x]" ;
-	aamas:lemma "[y]" ;
 	.
 
 #TERMCLUSTER:  bilin-PInd
@@ -518,7 +500,7 @@ bil:bilin-PInd a aamas:Termcluster ;
 	rdfs:comment "Appleyard2007b p. 491. The oblique case is also used for the possessive prefix. The object suffix pronouns%%attached to verb%%are borrowed from Tigre. NOte sg 2 f form (unique in Agaw)." 
 	.
 
-aama:IDbdc07c26-240f-432d-b79e-5890049b5187 a aamas:Term ;
+aama:ID53ec7072-a4ff-4812-9341-a1eac28413e3 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-PInd ;
 	bil:pos bil:Pronoun ;
@@ -531,7 +513,7 @@ aama:IDbdc07c26-240f-432d-b79e-5890049b5187 a aamas:Term ;
 	bil:case bil:Absolutive ;
 	.
 
-aama:ID01d96b51-158a-4284-80d8-e9e746c7e6b7 a aamas:Term ;
+aama:IDd2a91f1b-1eb4-4e34-8be1-1b0c7596209f a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-PInd ;
 	bil:pos bil:Pronoun ;
@@ -544,7 +526,7 @@ aama:ID01d96b51-158a-4284-80d8-e9e746c7e6b7 a aamas:Term ;
 	bil:case bil:Absolutive ;
 	.
 
-aama:ID34dc693b-a510-46b9-9acf-0c876e7d4971 a aamas:Term ;
+aama:ID2addf5a4-acc4-43c9-a378-7770027ec06e a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-PInd ;
 	bil:pos bil:Pronoun ;
@@ -557,7 +539,7 @@ aama:ID34dc693b-a510-46b9-9acf-0c876e7d4971 a aamas:Term ;
 	bil:case bil:Absolutive ;
 	.
 
-aama:ID79fce89e-5359-4267-b618-3608aaa399a4 a aamas:Term ;
+aama:ID871969a2-6416-4ecc-a7e4-9f0407f4e68e a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-PInd ;
 	bil:pos bil:Pronoun ;
@@ -570,7 +552,7 @@ aama:ID79fce89e-5359-4267-b618-3608aaa399a4 a aamas:Term ;
 	bil:case bil:Absolutive ;
 	.
 
-aama:ID1d3095fe-ec47-4dd2-8050-81a033b633e7 a aamas:Term ;
+aama:ID9f4c7ac4-e737-46ad-8511-e2f399eb38f4 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-PInd ;
 	bil:pos bil:Pronoun ;
@@ -583,7 +565,7 @@ aama:ID1d3095fe-ec47-4dd2-8050-81a033b633e7 a aamas:Term ;
 	bil:case bil:Absolutive ;
 	.
 
-aama:ID38c5d3e6-3cc3-49b6-80e2-2bf64a09b825 a aamas:Term ;
+aama:ID7f7139d3-a85e-44ac-bc7c-01c5be90e786 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-PInd ;
 	bil:pos bil:Pronoun ;
@@ -596,7 +578,7 @@ aama:ID38c5d3e6-3cc3-49b6-80e2-2bf64a09b825 a aamas:Term ;
 	bil:case bil:Absolutive ;
 	.
 
-aama:IDc6e48002-0d2b-49a7-9684-7d091b801993 a aamas:Term ;
+aama:ID900b1205-758b-4858-9b40-ec03aea34305 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-PInd ;
 	bil:pos bil:Pronoun ;
@@ -609,7 +591,7 @@ aama:IDc6e48002-0d2b-49a7-9684-7d091b801993 a aamas:Term ;
 	bil:case bil:Absolutive ;
 	.
 
-aama:ID09b83415-8a1f-4748-8287-357e406e065d a aamas:Term ;
+aama:IDbab6ec7e-79f9-4c11-ba53-b9ff00c7cb9d a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-PInd ;
 	bil:pos bil:Pronoun ;
@@ -622,7 +604,7 @@ aama:ID09b83415-8a1f-4748-8287-357e406e065d a aamas:Term ;
 	bil:case bil:Object ;
 	.
 
-aama:ID1b93c143-c1d2-4871-925a-8b7b0eea9839 a aamas:Term ;
+aama:ID639ca075-5198-47bc-9d67-af94a8df8d7e a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-PInd ;
 	bil:pos bil:Pronoun ;
@@ -635,7 +617,7 @@ aama:ID1b93c143-c1d2-4871-925a-8b7b0eea9839 a aamas:Term ;
 	bil:case bil:Object ;
 	.
 
-aama:ID0ca3368e-28cf-449d-82b7-0ef20aa3dff3 a aamas:Term ;
+aama:ID983a8faa-c27d-4584-97ae-fbabdbf99438 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-PInd ;
 	bil:pos bil:Pronoun ;
@@ -648,7 +630,7 @@ aama:ID0ca3368e-28cf-449d-82b7-0ef20aa3dff3 a aamas:Term ;
 	bil:case bil:Object ;
 	.
 
-aama:IDfbaaad9d-97da-4706-a6d1-93c8d4e71cb8 a aamas:Term ;
+aama:IDefe081a7-c9f0-42f2-8621-86d37cb4f70d a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-PInd ;
 	bil:pos bil:Pronoun ;
@@ -661,7 +643,7 @@ aama:IDfbaaad9d-97da-4706-a6d1-93c8d4e71cb8 a aamas:Term ;
 	bil:case bil:Object ;
 	.
 
-aama:ID69ad940a-5d71-4f82-95aa-f1ee343943b1 a aamas:Term ;
+aama:IDebaa6d94-5636-42e7-9d3d-cf7f4d9270fd a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-PInd ;
 	bil:pos bil:Pronoun ;
@@ -674,7 +656,7 @@ aama:ID69ad940a-5d71-4f82-95aa-f1ee343943b1 a aamas:Term ;
 	bil:case bil:Object ;
 	.
 
-aama:ID7794a59e-5b99-4344-9bab-d6e803faabbf a aamas:Term ;
+aama:IDfd9e27dd-097a-4dc7-9a17-166b1cac7707 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-PInd ;
 	bil:pos bil:Pronoun ;
@@ -687,7 +669,7 @@ aama:ID7794a59e-5b99-4344-9bab-d6e803faabbf a aamas:Term ;
 	bil:case bil:Object ;
 	.
 
-aama:IDcbe45925-0ddb-49f3-8fb7-cb8e03f0373e a aamas:Term ;
+aama:ID946f00c6-8237-42a5-afe6-1ad21472f8b3 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-PInd ;
 	bil:pos bil:Pronoun ;
@@ -700,7 +682,7 @@ aama:IDcbe45925-0ddb-49f3-8fb7-cb8e03f0373e a aamas:Term ;
 	bil:case bil:Object ;
 	.
 
-aama:ID859292a4-3351-414b-be18-5916f79a6e04 a aamas:Term ;
+aama:ID7709af97-4796-4501-92e5-a884af92e42a a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-PInd ;
 	bil:pos bil:Pronoun ;
@@ -713,7 +695,7 @@ aama:ID859292a4-3351-414b-be18-5916f79a6e04 a aamas:Term ;
 	bil:case bil:ObjectSuff ;
 	.
 
-aama:IDcf5afdb7-0a0f-46c7-8ad4-ea46ebd1c9d4 a aamas:Term ;
+aama:ID073e5ea0-efd2-4c20-9373-ca36755ece17 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-PInd ;
 	bil:pos bil:Pronoun ;
@@ -726,7 +708,7 @@ aama:IDcf5afdb7-0a0f-46c7-8ad4-ea46ebd1c9d4 a aamas:Term ;
 	bil:case bil:ObjectSuff ;
 	.
 
-aama:IDb9954884-d443-4b43-88e4-0fdeee4e5188 a aamas:Term ;
+aama:ID38731b9f-efe6-43a8-9d23-29847dd4ce3b a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-PInd ;
 	bil:pos bil:Pronoun ;
@@ -739,7 +721,7 @@ aama:IDb9954884-d443-4b43-88e4-0fdeee4e5188 a aamas:Term ;
 	bil:case bil:ObjectSuff ;
 	.
 
-aama:IDb894c2af-da54-4ef2-82b6-ff7570b644d1 a aamas:Term ;
+aama:IDea16c517-f020-4e19-b6b1-9e89830e891a a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-PInd ;
 	bil:pos bil:Pronoun ;
@@ -752,7 +734,7 @@ aama:IDb894c2af-da54-4ef2-82b6-ff7570b644d1 a aamas:Term ;
 	bil:case bil:ObjectSuff ;
 	.
 
-aama:ID7950164e-d38a-490c-8fd2-869d6a52a08d a aamas:Term ;
+aama:ID30ef0bb3-be1b-4e83-9b5d-f7ae58b3dcf4 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-PInd ;
 	bil:pos bil:Pronoun ;
@@ -765,7 +747,7 @@ aama:ID7950164e-d38a-490c-8fd2-869d6a52a08d a aamas:Term ;
 	bil:case bil:ObjectSuff ;
 	.
 
-aama:IDab3948cf-9c9d-4f22-9f87-24d0d6915458 a aamas:Term ;
+aama:ID9639319e-6ce7-444d-9b0e-fa6774a7d692 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-PInd ;
 	bil:pos bil:Pronoun ;
@@ -778,7 +760,7 @@ aama:IDab3948cf-9c9d-4f22-9f87-24d0d6915458 a aamas:Term ;
 	bil:case bil:ObjectSuff ;
 	.
 
-aama:ID196fce63-903c-4db8-995e-d41ebdcef96a a aamas:Term ;
+aama:IDaaf09b49-d724-49e1-a550-65804b76759d a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-PInd ;
 	bil:pos bil:Pronoun ;
@@ -791,7 +773,7 @@ aama:ID196fce63-903c-4db8-995e-d41ebdcef96a a aamas:Term ;
 	bil:case bil:ObjectSuff ;
 	.
 
-aama:ID007c059f-ad5e-47f6-81bf-deef81e1d59f a aamas:Term ;
+aama:IDb460d126-7b94-4fd7-bfe2-41e016105e30 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-PInd ;
 	bil:pos bil:Pronoun ;
@@ -804,7 +786,7 @@ aama:ID007c059f-ad5e-47f6-81bf-deef81e1d59f a aamas:Term ;
 	bil:case bil:ObjectSuff ;
 	.
 
-aama:ID26894b7a-a9c2-43e2-9dd9-1a071d98b7e6 a aamas:Term ;
+aama:IDea313574-7cb9-4800-bbf3-4e702b6c1748 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-PInd ;
 	bil:pos bil:Pronoun ;
@@ -817,7 +799,7 @@ aama:ID26894b7a-a9c2-43e2-9dd9-1a071d98b7e6 a aamas:Term ;
 	bil:case bil:Oblique ;
 	.
 
-aama:ID35d2e81d-52f2-4e6b-a11d-140790736806 a aamas:Term ;
+aama:IDebee5030-2a4f-4d4b-ba58-4d01a60e7c2b a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-PInd ;
 	bil:pos bil:Pronoun ;
@@ -830,7 +812,7 @@ aama:ID35d2e81d-52f2-4e6b-a11d-140790736806 a aamas:Term ;
 	bil:case bil:Oblique ;
 	.
 
-aama:ID5226b61f-2a7a-4992-8448-6f59b363589a a aamas:Term ;
+aama:ID40f3124c-820c-4147-829e-0cadb269c590 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-PInd ;
 	bil:pos bil:Pronoun ;
@@ -843,7 +825,7 @@ aama:ID5226b61f-2a7a-4992-8448-6f59b363589a a aamas:Term ;
 	bil:case bil:Oblique ;
 	.
 
-aama:ID8c9426c4-dc1a-491d-8463-4c7f266eda09 a aamas:Term ;
+aama:ID958d0c71-c51f-4c22-b9f9-662f74ad88e7 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-PInd ;
 	bil:pos bil:Pronoun ;
@@ -856,7 +838,7 @@ aama:ID8c9426c4-dc1a-491d-8463-4c7f266eda09 a aamas:Term ;
 	bil:case bil:Oblique ;
 	.
 
-aama:ID381a5dee-0c6b-431d-90f0-b6ed5059ca6e a aamas:Term ;
+aama:ID6c166749-bd77-4cdf-8205-b32547551742 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-PInd ;
 	bil:pos bil:Pronoun ;
@@ -869,7 +851,7 @@ aama:ID381a5dee-0c6b-431d-90f0-b6ed5059ca6e a aamas:Term ;
 	bil:case bil:Oblique ;
 	.
 
-aama:ID074b7edc-c146-4507-8b04-9a32b3897c72 a aamas:Term ;
+aama:ID6dfda1da-9309-4e19-b4b6-27b51bd37a64 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-PInd ;
 	bil:pos bil:Pronoun ;
@@ -882,7 +864,7 @@ aama:ID074b7edc-c146-4507-8b04-9a32b3897c72 a aamas:Term ;
 	bil:case bil:Oblique ;
 	.
 
-aama:ID600875a8-2991-474b-88b9-d57208cd79e7 a aamas:Term ;
+aama:ID1a936fab-d461-4665-aa61-407afed8985a a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-PInd ;
 	bil:pos bil:Pronoun ;
@@ -903,7 +885,7 @@ bil:bilin-VConj1AdvAt1AffImperfPngA-gab a aamas:Termcluster ;
 	rdfs:comment "Appleyard2007b pp. 497-501" 
 	.
 
-aama:ID10cdbf1d-ca63-4178-972e-63e38be02a6b a aamas:Term ;
+aama:IDa63f3c67-c579-4200-8ff0-c806449f06c2 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj1AdvAt1AffImperfPngA-gab ;
 	bil:aspect bil:Imperfective ;
@@ -928,7 +910,7 @@ bil:bilin-VConj1AdvAt2AffImperfPngA-gab a aamas:Termcluster ;
 	rdfs:comment "Appleyard2007b pp. 497-501" 
 	.
 
-aama:IDe9dc532a-52b9-4987-be78-bf0c75520fe4 a aamas:Term ;
+aama:ID972ef797-1aed-41f0-b671-f6732dd5e91c a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj1AdvAt2AffImperfPngA-gab ;
 	bil:aspect bil:Imperfective ;
@@ -953,7 +935,7 @@ bil:bilin-VConj1AdvCauseAffPerfPngA-gab a aamas:Termcluster ;
 	rdfs:comment "Appleyard2007b pp. 497-501" 
 	.
 
-aama:IDcdebc486-0174-465d-a85b-b291f889fc45 a aamas:Term ;
+aama:IDa802a448-3f47-49d3-8177-0a66dbd9c8ed a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj1AdvCauseAffPerfPngA-gab ;
 	bil:aspect bil:Perfective ;
@@ -978,7 +960,7 @@ bil:bilin-VConj1AdvCauseNegPerfPngA-gab a aamas:Termcluster ;
 	rdfs:comment "Appleyard2007b pp. 497-501" 
 	.
 
-aama:ID659f685e-0290-468c-b664-c5b3abc73aa1 a aamas:Term ;
+aama:ID84b3969e-14e8-42b8-b851-3a143cc4d8bb a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj1AdvCauseNegPerfPngA-gab ;
 	bil:aspect bil:Perfective ;
@@ -1003,7 +985,7 @@ bil:bilin-VConj1AdvComplAffImperfPngA-gab a aamas:Termcluster ;
 	rdfs:comment "Appleyard2007b pp. 497-501" 
 	.
 
-aama:IDa914b47a-2e89-4f21-8721-1a38aa874d55 a aamas:Term ;
+aama:ID23674bca-60ca-49e9-a9de-0009b0adca7a a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj1AdvComplAffImperfPngA-gab ;
 	bil:aspect bil:Imperfective ;
@@ -1028,7 +1010,7 @@ bil:bilin-VConj1AdvComplAffPerfPngA-gab a aamas:Termcluster ;
 	rdfs:comment "Appleyard2007b pp. 497-501" 
 	.
 
-aama:ID6744ec33-e0fa-4f0a-a4a6-e7b45ddeaf68 a aamas:Term ;
+aama:ID14aa5b7e-9bd8-4a7b-9b4e-9622c22f712e a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj1AdvComplAffPerfPngA-gab ;
 	bil:aspect bil:Perfective ;
@@ -1053,7 +1035,7 @@ bil:bilin-VConj1AdvComplNegImperfPngA-gab a aamas:Termcluster ;
 	rdfs:comment "Appleyard2007b pp. 497-501" 
 	.
 
-aama:ID3d9eac9f-2116-4458-b520-a00af3cd851c a aamas:Term ;
+aama:ID19dacd3e-8a43-42ae-a607-edae7081eab8 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj1AdvComplNegImperfPngA-gab ;
 	bil:aspect bil:Imperfective ;
@@ -1078,7 +1060,7 @@ bil:bilin-VConj1AdvComplNegPerfPngA-gab a aamas:Termcluster ;
 	rdfs:comment "Appleyard2007b pp. 497-501" 
 	.
 
-aama:ID151fb509-cd21-4314-b33d-15e6deba7571 a aamas:Term ;
+aama:ID16330146-4990-43ec-ae7f-af0457edd9f6 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj1AdvComplNegPerfPngA-gab ;
 	bil:aspect bil:Perfective ;
@@ -1103,7 +1085,7 @@ bil:bilin-VConj1AdvCondAffImperfPngA-gab a aamas:Termcluster ;
 	rdfs:comment "Appleyard2007b pp. 497-501" 
 	.
 
-aama:ID2b74c105-e008-4836-b37b-4f41a5bb4d0e a aamas:Term ;
+aama:ID16b3a90d-79f4-471c-8995-09b4a622c63e a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj1AdvCondAffImperfPngA-gab ;
 	bil:aspect bil:Imperfective ;
@@ -1128,7 +1110,7 @@ bil:bilin-VConj1AdvCondAffPerfPngA-gab a aamas:Termcluster ;
 	rdfs:comment "Appleyard2007b pp. 497-501" 
 	.
 
-aama:ID0a07f4d9-5643-4c63-81b7-9058144d86a9 a aamas:Term ;
+aama:IDb1665773-81fe-40cd-9869-816f50afe1e7 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj1AdvCondAffPerfPngA-gab ;
 	bil:aspect bil:Perfective ;
@@ -1153,7 +1135,7 @@ bil:bilin-VConj1AdvCondNegImperfPngA-gab a aamas:Termcluster ;
 	rdfs:comment "Appleyard2007b pp. 497-501" 
 	.
 
-aama:IDf02583dd-1ef3-4201-a7cb-eabf4c551e95 a aamas:Term ;
+aama:ID9b8c18ef-3961-405b-83f7-f21dd4420de4 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj1AdvCondNegImperfPngA-gab ;
 	bil:aspect bil:Imperfective ;
@@ -1178,7 +1160,7 @@ bil:bilin-VConj1AdvCondNegPerfPngA-gab a aamas:Termcluster ;
 	rdfs:comment "Appleyard2007b pp. 497-501" 
 	.
 
-aama:ID6339d922-9e7b-42ae-9e7e-d267433e5c6f a aamas:Term ;
+aama:IDdeebe263-5f84-44e6-ad7c-fbc61bdf5c6b a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj1AdvCondNegPerfPngA-gab ;
 	bil:aspect bil:Perfective ;
@@ -1203,7 +1185,7 @@ bil:bilin-VConj1AdvConsecAffPerfPngA-gab a aamas:Termcluster ;
 	rdfs:comment "Appleyard2007b pp. 497-501" 
 	.
 
-aama:IDa442a8a0-209a-4c52-a527-6ba2f4821bbe a aamas:Term ;
+aama:IDa944b8ad-6e52-411b-8b58-9ac827791abe a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj1AdvConsecAffPerfPngA-gab ;
 	bil:aspect bil:Perfective ;
@@ -1228,7 +1210,7 @@ bil:bilin-VConj1AdvConsecNegPerfPngA-gab a aamas:Termcluster ;
 	rdfs:comment "Appleyard2007b pp. 497-501" 
 	.
 
-aama:IDedbabf13-086d-40fe-a969-a0b9a7eb6e94 a aamas:Term ;
+aama:ID4043d23d-ebdc-4604-91c1-d8f0ed3cf9e1 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj1AdvConsecNegPerfPngA-gab ;
 	bil:aspect bil:Perfective ;
@@ -1253,7 +1235,7 @@ bil:bilin-VConj1AdvFutCondAffPerfPngC-gab a aamas:Termcluster ;
 	rdfs:comment "Appleyard2007b pp. 497-501" 
 	.
 
-aama:IDd603a289-7c22-411a-be6e-51736857bdb4 a aamas:Term ;
+aama:ID706febdc-a0d7-4191-a845-87e10d0e5f11 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj1AdvFutCondAffPerfPngC-gab ;
 	bil:aspect bil:Perfective ;
@@ -1278,7 +1260,7 @@ bil:bilin-VConj1AdvFutCondNegPerfPngC-gab a aamas:Termcluster ;
 	rdfs:comment "Appleyard2007b pp. 497-501" 
 	.
 
-aama:IDf4f20d98-49e3-42ef-a3dd-03ce4097dce6 a aamas:Term ;
+aama:IDaa8f89e4-f963-45ae-969b-bc0981af60f1 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj1AdvFutCondNegPerfPngC-gab ;
 	bil:aspect bil:Perfective ;
@@ -1303,7 +1285,7 @@ bil:bilin-VConj1AdvPurpAffPerfPngC-gab a aamas:Termcluster ;
 	rdfs:comment "Appleyard2007b pp. 497-501" 
 	.
 
-aama:IDe45b9f58-c236-40af-aacc-95c7cc17f231 a aamas:Term ;
+aama:IDf9f760b8-ddd7-48ed-b4a8-c71c839e9555 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj1AdvPurpAffPerfPngC-gab ;
 	bil:aspect bil:Perfective ;
@@ -1328,7 +1310,7 @@ bil:bilin-VConj1AdvPurpNegPerfPngC-gab a aamas:Termcluster ;
 	rdfs:comment "Appleyard2007b pp. 497-501" 
 	.
 
-aama:ID908058d2-5d04-4351-969f-804721af2522 a aamas:Term ;
+aama:IDe1bfdf41-b677-443d-a8d6-14af4f1e7c75 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj1AdvPurpNegPerfPngC-gab ;
 	bil:aspect bil:Perfective ;
@@ -1353,7 +1335,7 @@ bil:bilin-VConj1AdvUntilAffPerfPngC-gab a aamas:Termcluster ;
 	rdfs:comment "Appleyard2007b pp. 497-501" 
 	.
 
-aama:ID0170e7a9-cfe4-4d35-acd5-bfe09e5a3c4c a aamas:Term ;
+aama:ID44102f26-281b-4cb2-b91f-4269f3503d31 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj1AdvUntilAffPerfPngC-gab ;
 	bil:aspect bil:Perfective ;
@@ -1378,7 +1360,7 @@ bil:bilin-VConj1AdvWhenAffImperfPngA-gab a aamas:Termcluster ;
 	rdfs:comment "Appleyard2007b pp. 497-501" 
 	.
 
-aama:ID4f3a46e9-d67e-4998-a0c9-1e37a94c4139 a aamas:Term ;
+aama:ID77718ed2-b04c-41f5-9713-34894813229a a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj1AdvWhenAffImperfPngA-gab ;
 	bil:aspect bil:Imperfective ;
@@ -1403,7 +1385,7 @@ bil:bilin-VConj1AdvWhileAffImperfPngA-gab a aamas:Termcluster ;
 	rdfs:comment "Appleyard2007b pp. 497-501" 
 	.
 
-aama:ID97029a0f-9ca6-43e1-ba20-2441c339aa3d a aamas:Term ;
+aama:ID6643f2b1-8fed-4172-9c61-d4aab71ea09f a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj1AdvWhileAffImperfPngA-gab ;
 	bil:aspect bil:Imperfective ;
@@ -1428,7 +1410,7 @@ bil:bilin-VConj1Agent-gab a aamas:Termcluster ;
 	rdfs:comment "Appleyard2007b pp. 497-501" 
 	.
 
-aama:IDb1c5ca3b-8d51-4f10-9c35-8931c5008d97 a aamas:Term ;
+aama:ID396f3502-34b7-4e2f-9443-2515989456ce a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj1Agent-gab ;
 	bil:vmorphClass bil:AgentNom ;
@@ -1449,7 +1431,7 @@ bil:bilin-VConj1Infinitive-gab a aamas:Termcluster ;
 	rdfs:comment "Appleyard2007b pp. 497-501" 
 	.
 
-aama:ID740e8815-ad45-4aab-ad88-332ca4493ac9 a aamas:Term ;
+aama:ID17f0a047-7550-4b42-818d-719aca4aea5f a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj1Infinitive-gab ;
 	bil:vmorphClass bil:InfinitiveNom ;
@@ -1468,7 +1450,7 @@ bil:bilin-VConj1MainAffImperfJussPngA-gab a aamas:Termcluster ;
 	rdfs:comment "Appleyard2007b pp. 497-501" 
 	.
 
-aama:IDbd36d554-3899-4c43-b192-d77bc397e7b9 a aamas:Term ;
+aama:ID8220abbe-1503-49dd-87d9-7ec550f10b53 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj1MainAffImperfJussPngA-gab ;
 	bil:aspect bil:Imperfective ;
@@ -1486,7 +1468,7 @@ aama:IDbd36d554-3899-4c43-b192-d77bc397e7b9 a aamas:Term ;
 	bil:number bil:Singular ;
 	.
 
-aama:ID1f721cd3-a20e-4423-bc43-c0384c6a0739 a aamas:Term ;
+aama:ID54130110-77dc-438c-a9eb-7162ea144a26 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj1MainAffImperfJussPngA-gab ;
 	bil:aspect bil:Imperfective ;
@@ -1504,7 +1486,7 @@ aama:ID1f721cd3-a20e-4423-bc43-c0384c6a0739 a aamas:Term ;
 	bil:number bil:Singular ;
 	.
 
-aama:ID45e91156-7d4e-4e48-836a-67a046222e8f a aamas:Term ;
+aama:ID8e3a7716-a402-445f-8999-3260debde2d1 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj1MainAffImperfJussPngA-gab ;
 	bil:aspect bil:Imperfective ;
@@ -1522,7 +1504,7 @@ aama:ID45e91156-7d4e-4e48-836a-67a046222e8f a aamas:Term ;
 	bil:number bil:Singular ;
 	.
 
-aama:ID5ae3ec5b-e9bc-4fd3-bd7d-0333043cb898 a aamas:Term ;
+aama:ID0fc8dabe-c090-4a0a-9410-58bd59aa785f a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj1MainAffImperfJussPngA-gab ;
 	bil:aspect bil:Imperfective ;
@@ -1540,7 +1522,7 @@ aama:ID5ae3ec5b-e9bc-4fd3-bd7d-0333043cb898 a aamas:Term ;
 	bil:number bil:Plural ;
 	.
 
-aama:ID0bd0a47b-1a55-4d59-80d0-da35e9569363 a aamas:Term ;
+aama:ID7e0c1928-a136-4abf-81ae-9719abf0989f a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj1MainAffImperfJussPngA-gab ;
 	bil:aspect bil:Imperfective ;
@@ -1566,7 +1548,7 @@ bil:bilin-VConj1MainAffImperfPresPngB-gab a aamas:Termcluster ;
 	rdfs:comment "Appleyard2007b pp. 497-501" 
 	.
 
-aama:IDb18d1e98-2ee4-4744-802e-af31c85d13b6 a aamas:Term ;
+aama:ID72494682-3f39-4a5f-9683-95b0373b12e3 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj1MainAffImperfPresPngB-gab ;
 	bil:aspect bil:Imperfective ;
@@ -1584,7 +1566,7 @@ aama:IDb18d1e98-2ee4-4744-802e-af31c85d13b6 a aamas:Term ;
 	bil:number bil:Singular ;
 	.
 
-aama:ID79c78f9c-31bd-46b8-be52-7af1f0c9da0b a aamas:Term ;
+aama:ID37241506-27b3-46d3-b442-52f7e20b9c38 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj1MainAffImperfPresPngB-gab ;
 	bil:aspect bil:Imperfective ;
@@ -1602,7 +1584,7 @@ aama:ID79c78f9c-31bd-46b8-be52-7af1f0c9da0b a aamas:Term ;
 	bil:number bil:Singular ;
 	.
 
-aama:IDd20f6fb1-47bf-4e60-b667-e5ce8a754b17 a aamas:Term ;
+aama:ID0d95fa3c-cbaa-411d-8a2c-85acda1e0ff2 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj1MainAffImperfPresPngB-gab ;
 	bil:aspect bil:Imperfective ;
@@ -1620,7 +1602,7 @@ aama:IDd20f6fb1-47bf-4e60-b667-e5ce8a754b17 a aamas:Term ;
 	bil:number bil:Singular ;
 	.
 
-aama:ID6aa06257-2902-4970-a9bb-ecf268cc2bf5 a aamas:Term ;
+aama:IDf6a4f3c1-a227-45fa-9532-deb65fdea000 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj1MainAffImperfPresPngB-gab ;
 	bil:aspect bil:Imperfective ;
@@ -1638,7 +1620,7 @@ aama:ID6aa06257-2902-4970-a9bb-ecf268cc2bf5 a aamas:Term ;
 	bil:number bil:Singular ;
 	.
 
-aama:ID07099892-f45c-4ed2-b2a3-7725e737b25d a aamas:Term ;
+aama:ID84ebe30d-3071-4b15-ba4d-8b59001022e9 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj1MainAffImperfPresPngB-gab ;
 	bil:aspect bil:Imperfective ;
@@ -1656,7 +1638,7 @@ aama:ID07099892-f45c-4ed2-b2a3-7725e737b25d a aamas:Term ;
 	bil:number bil:Plural ;
 	.
 
-aama:IDc95b8bed-7c85-4f29-8a61-d051357a62ce a aamas:Term ;
+aama:IDe83524f4-8df5-402a-8128-dffdadc80a3d a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj1MainAffImperfPresPngB-gab ;
 	bil:aspect bil:Imperfective ;
@@ -1674,7 +1656,7 @@ aama:IDc95b8bed-7c85-4f29-8a61-d051357a62ce a aamas:Term ;
 	bil:number bil:Plural ;
 	.
 
-aama:IDf760b267-020e-49e1-a631-b6b95ce78caf a aamas:Term ;
+aama:ID7c281312-fe71-4044-9e64-ff1c9aca8ba1 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj1MainAffImperfPresPngB-gab ;
 	bil:aspect bil:Imperfective ;
@@ -1700,7 +1682,7 @@ bil:bilin-VConj1MainAffPerfFutPngC-gab a aamas:Termcluster ;
 	rdfs:comment "Appleyard2007b pp. 497-501" 
 	.
 
-aama:ID8173a204-655a-4582-8a80-a1099b639b46 a aamas:Term ;
+aama:IDaf222fcd-31b3-4958-b5fe-423cdb831a42 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj1MainAffPerfFutPngC-gab ;
 	bil:aspect bil:Perfective ;
@@ -1718,7 +1700,7 @@ aama:ID8173a204-655a-4582-8a80-a1099b639b46 a aamas:Term ;
 	bil:number bil:Singular ;
 	.
 
-aama:IDfa246123-0a9e-4032-895e-03e9665607e2 a aamas:Term ;
+aama:IDfdb01055-1763-4f09-97ba-7f2229fac63d a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj1MainAffPerfFutPngC-gab ;
 	bil:aspect bil:Perfective ;
@@ -1736,7 +1718,7 @@ aama:IDfa246123-0a9e-4032-895e-03e9665607e2 a aamas:Term ;
 	bil:number bil:Singular ;
 	.
 
-aama:IDebf77ebb-4254-41ef-b015-01750466208b a aamas:Term ;
+aama:ID6dbe93a8-4091-4eb3-b43e-17345b9f64ef a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj1MainAffPerfFutPngC-gab ;
 	bil:aspect bil:Perfective ;
@@ -1754,7 +1736,7 @@ aama:IDebf77ebb-4254-41ef-b015-01750466208b a aamas:Term ;
 	bil:number bil:Singular ;
 	.
 
-aama:IDf9156bbe-e73c-4f9c-b801-49c29cc25208 a aamas:Term ;
+aama:IDafc9770c-94bf-46ae-a9ef-7d7c3e396649 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj1MainAffPerfFutPngC-gab ;
 	bil:aspect bil:Perfective ;
@@ -1772,7 +1754,7 @@ aama:IDf9156bbe-e73c-4f9c-b801-49c29cc25208 a aamas:Term ;
 	bil:number bil:Singular ;
 	.
 
-aama:ID6cb0819c-ac25-416e-a916-820bcbcf7285 a aamas:Term ;
+aama:ID928cf5da-89c7-43a1-968a-c3e4c2d6b8e5 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj1MainAffPerfFutPngC-gab ;
 	bil:aspect bil:Perfective ;
@@ -1790,7 +1772,7 @@ aama:ID6cb0819c-ac25-416e-a916-820bcbcf7285 a aamas:Term ;
 	bil:number bil:Plural ;
 	.
 
-aama:IDe401b17d-f853-4d98-bc1e-482d72103577 a aamas:Term ;
+aama:ID4acd6c82-d379-4fc5-a897-7964469b2111 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj1MainAffPerfFutPngC-gab ;
 	bil:aspect bil:Perfective ;
@@ -1808,7 +1790,7 @@ aama:IDe401b17d-f853-4d98-bc1e-482d72103577 a aamas:Term ;
 	bil:number bil:Plural ;
 	.
 
-aama:ID986cf7c8-ef33-4d9c-a477-2f782661a72e a aamas:Term ;
+aama:ID038c6806-a99c-4d10-88ce-2f233ca13f84 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj1MainAffPerfFutPngC-gab ;
 	bil:aspect bil:Perfective ;
@@ -1834,7 +1816,7 @@ bil:bilin-VConj1MainAffPerfImprtv-gab a aamas:Termcluster ;
 	rdfs:comment "Appleyard2007b pp. 497-501" 
 	.
 
-aama:ID9a68550b-3f50-45a5-a659-75f1bd5487a6 a aamas:Term ;
+aama:IDbb1a7cd9-9e1a-4791-89a8-5bc2fa4476fe a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj1MainAffPerfImprtv-gab ;
 	bil:aspect bil:Perfective ;
@@ -1851,7 +1833,7 @@ aama:ID9a68550b-3f50-45a5-a659-75f1bd5487a6 a aamas:Term ;
 	bil:number bil:Singular ;
 	.
 
-aama:ID0fe8b7e3-40b2-4459-8f13-e620e5fe5434 a aamas:Term ;
+aama:ID5ba01013-aa70-49da-9b4e-a5ae27bbbcfb a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj1MainAffPerfImprtv-gab ;
 	bil:aspect bil:Perfective ;
@@ -1876,7 +1858,7 @@ bil:bilin-VConj1MainAffPerfPastPngB-gab a aamas:Termcluster ;
 	rdfs:comment "Appleyard2007b pp. 497-501" 
 	.
 
-aama:IDe147dc95-8d5e-4e7c-b498-341ca8634228 a aamas:Term ;
+aama:ID7e8f29ce-075c-49d4-a584-c6f1ca795e46 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj1MainAffPerfPastPngB-gab ;
 	bil:aspect bil:Perfective ;
@@ -1894,7 +1876,7 @@ aama:IDe147dc95-8d5e-4e7c-b498-341ca8634228 a aamas:Term ;
 	bil:number bil:Singular ;
 	.
 
-aama:ID710ff0bb-8729-412d-b84e-1f9db05bee1f a aamas:Term ;
+aama:IDce45ea27-8ffd-4197-b959-b1afa4763ba2 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj1MainAffPerfPastPngB-gab ;
 	bil:aspect bil:Perfective ;
@@ -1912,7 +1894,7 @@ aama:ID710ff0bb-8729-412d-b84e-1f9db05bee1f a aamas:Term ;
 	bil:number bil:Singular ;
 	.
 
-aama:IDb132b683-8ab5-4a53-ac7a-edc37dc6bfa9 a aamas:Term ;
+aama:ID1b3ac4bc-281b-4bdf-9f78-96964a6421c8 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj1MainAffPerfPastPngB-gab ;
 	bil:aspect bil:Perfective ;
@@ -1930,7 +1912,7 @@ aama:IDb132b683-8ab5-4a53-ac7a-edc37dc6bfa9 a aamas:Term ;
 	bil:number bil:Singular ;
 	.
 
-aama:ID397db273-f93a-4c57-9df3-b53ddb8d6d0a a aamas:Term ;
+aama:ID94c152d0-a2ab-40f4-a00d-f94edd4581f3 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj1MainAffPerfPastPngB-gab ;
 	bil:aspect bil:Perfective ;
@@ -1948,7 +1930,7 @@ aama:ID397db273-f93a-4c57-9df3-b53ddb8d6d0a a aamas:Term ;
 	bil:number bil:Singular ;
 	.
 
-aama:IDb3663db1-6adc-4051-9933-5d4b534cc486 a aamas:Term ;
+aama:IDfae807d3-38e1-4f51-9236-83a21cce2a0c a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj1MainAffPerfPastPngB-gab ;
 	bil:aspect bil:Perfective ;
@@ -1966,7 +1948,7 @@ aama:IDb3663db1-6adc-4051-9933-5d4b534cc486 a aamas:Term ;
 	bil:number bil:Plural ;
 	.
 
-aama:ID6559ae2f-6265-4eac-a60d-fdc1ffe03841 a aamas:Term ;
+aama:ID9d58b25c-e127-4f82-ab34-1350f35bfeea a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj1MainAffPerfPastPngB-gab ;
 	bil:aspect bil:Perfective ;
@@ -1984,7 +1966,7 @@ aama:ID6559ae2f-6265-4eac-a60d-fdc1ffe03841 a aamas:Term ;
 	bil:number bil:Plural ;
 	.
 
-aama:IDa53c4eeb-adba-4223-9dac-c8fbc056f27e a aamas:Term ;
+aama:ID2aa4a333-ea66-4819-ba0c-b37fbc3781a4 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj1MainAffPerfPastPngB-gab ;
 	bil:aspect bil:Perfective ;
@@ -2010,7 +1992,7 @@ bil:bilin-VConj1MainNegImperfJussPngA-gab a aamas:Termcluster ;
 	rdfs:comment "Appleyard2007b pp. 497-501" 
 	.
 
-aama:ID3b69e48e-b10a-4071-8b02-afa0397c559f a aamas:Term ;
+aama:ID7a9fea58-4490-4100-b46a-b8ee366d891e a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj1MainNegImperfJussPngA-gab ;
 	bil:aspect bil:Imperfective ;
@@ -2028,7 +2010,7 @@ aama:ID3b69e48e-b10a-4071-8b02-afa0397c559f a aamas:Term ;
 	bil:number bil:Singular ;
 	.
 
-aama:IDe98a4166-32b2-46c1-bafb-61e97d5d5621 a aamas:Term ;
+aama:ID41b3990f-e98c-4653-95e3-8aa2764ea26e a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj1MainNegImperfJussPngA-gab ;
 	bil:aspect bil:Imperfective ;
@@ -2046,7 +2028,7 @@ aama:IDe98a4166-32b2-46c1-bafb-61e97d5d5621 a aamas:Term ;
 	bil:number bil:Singular ;
 	.
 
-aama:ID7050654a-6573-411a-ad41-14db69a5b939 a aamas:Term ;
+aama:ID8e5978be-b579-40da-934a-d859efa430b9 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj1MainNegImperfJussPngA-gab ;
 	bil:aspect bil:Imperfective ;
@@ -2064,7 +2046,7 @@ aama:ID7050654a-6573-411a-ad41-14db69a5b939 a aamas:Term ;
 	bil:number bil:Singular ;
 	.
 
-aama:ID9ebd126b-6510-4b01-bec9-96b3b3e10293 a aamas:Term ;
+aama:ID65b3ee72-d0f6-4f2f-95b0-f39fe6be08fb a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj1MainNegImperfJussPngA-gab ;
 	bil:aspect bil:Imperfective ;
@@ -2082,7 +2064,7 @@ aama:ID9ebd126b-6510-4b01-bec9-96b3b3e10293 a aamas:Term ;
 	bil:number bil:Plural ;
 	.
 
-aama:ID5923eda4-a522-4a7f-8d01-5ea5b0cbbf00 a aamas:Term ;
+aama:IDb39612b1-e79d-45a5-b087-fe3dabca89c7 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj1MainNegImperfJussPngA-gab ;
 	bil:aspect bil:Imperfective ;
@@ -2108,7 +2090,7 @@ bil:bilin-VConj1MainNegImperfPngA2-gab a aamas:Termcluster ;
 	rdfs:comment "Appleyard2007b pp. 497-501" 
 	.
 
-aama:ID65577546-c653-44cd-999c-dc3028608bc0 a aamas:Term ;
+aama:ID711dd3d7-3e29-4712-ad71-326afec586e5 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj1MainNegImperfPngA2-gab ;
 	bil:vmorphClass bil:Finite ;
@@ -2125,7 +2107,7 @@ aama:ID65577546-c653-44cd-999c-dc3028608bc0 a aamas:Term ;
 	bil:number bil:Singular ;
 	.
 
-aama:IDeafe4452-ca91-49fa-9823-4be0bedd7103 a aamas:Term ;
+aama:IDeacd7905-c80e-4ea4-8237-d1e02e0689c7 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj1MainNegImperfPngA2-gab ;
 	bil:vmorphClass bil:Finite ;
@@ -2142,7 +2124,7 @@ aama:IDeafe4452-ca91-49fa-9823-4be0bedd7103 a aamas:Term ;
 	bil:number bil:Singular ;
 	.
 
-aama:IDe28fcdc1-128f-4767-9ceb-560a9db97604 a aamas:Term ;
+aama:ID73ff6d27-6e51-4fac-adb8-ec1d97ac97b3 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj1MainNegImperfPngA2-gab ;
 	bil:vmorphClass bil:Finite ;
@@ -2159,7 +2141,7 @@ aama:IDe28fcdc1-128f-4767-9ceb-560a9db97604 a aamas:Term ;
 	bil:number bil:Singular ;
 	.
 
-aama:ID436d7795-d0e6-40b8-9199-da61158fed64 a aamas:Term ;
+aama:ID76e8c898-014c-4508-a870-922c37d4adf4 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj1MainNegImperfPngA2-gab ;
 	bil:vmorphClass bil:Finite ;
@@ -2176,7 +2158,7 @@ aama:ID436d7795-d0e6-40b8-9199-da61158fed64 a aamas:Term ;
 	bil:number bil:Singular ;
 	.
 
-aama:IDabb382c5-0417-4be2-8e6a-3669b50a3249 a aamas:Term ;
+aama:IDf7fc5b44-4459-4164-8c8f-bd8ca6467004 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj1MainNegImperfPngA2-gab ;
 	bil:vmorphClass bil:Finite ;
@@ -2193,7 +2175,7 @@ aama:IDabb382c5-0417-4be2-8e6a-3669b50a3249 a aamas:Term ;
 	bil:number bil:Plural ;
 	.
 
-aama:ID44af69c1-1ba2-4c84-914d-b47d75c4704b a aamas:Term ;
+aama:IDfc8c34e4-6723-4c0b-b0ee-27e897916312 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj1MainNegImperfPngA2-gab ;
 	bil:vmorphClass bil:Finite ;
@@ -2210,7 +2192,7 @@ aama:ID44af69c1-1ba2-4c84-914d-b47d75c4704b a aamas:Term ;
 	bil:number bil:Plural ;
 	.
 
-aama:ID4b51525a-1260-4cce-b583-7a47a8997dd8 a aamas:Term ;
+aama:ID935e3497-7f05-4242-af66-42c49d692f82 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj1MainNegImperfPngA2-gab ;
 	bil:vmorphClass bil:Finite ;
@@ -2235,7 +2217,7 @@ bil:bilin-VConj1MainNegPerfImprtv-gab a aamas:Termcluster ;
 	rdfs:comment "Appleyard2007b pp. 497-501" 
 	.
 
-aama:ID1ecab625-e338-404b-836d-130c7e47f1cb a aamas:Term ;
+aama:ID7734ac5b-ca6d-44aa-a74e-8d323420d92d a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj1MainNegPerfImprtv-gab ;
 	bil:aspect bil:Perfective ;
@@ -2252,7 +2234,7 @@ aama:ID1ecab625-e338-404b-836d-130c7e47f1cb a aamas:Term ;
 	bil:number bil:Singular ;
 	.
 
-aama:IDc2f24321-8a80-4fae-a3ea-1388beb71dbd a aamas:Term ;
+aama:IDbb1c889c-45bc-45bb-8b02-9e6fd4b9594c a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj1MainNegPerfImprtv-gab ;
 	bil:aspect bil:Perfective ;
@@ -2277,7 +2259,7 @@ bil:bilin-VConj1MainNegPerfPngA2-gab a aamas:Termcluster ;
 	rdfs:comment "Appleyard2007b pp. 497-501" 
 	.
 
-aama:IDb1e4b09a-5b40-4600-992a-67aa436f371c a aamas:Term ;
+aama:ID9146df67-b7ef-4dc3-960c-5c255e720fa3 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj1MainNegPerfPngA2-gab ;
 	bil:vmorphClass bil:Finite ;
@@ -2294,7 +2276,7 @@ aama:IDb1e4b09a-5b40-4600-992a-67aa436f371c a aamas:Term ;
 	bil:number bil:Singular ;
 	.
 
-aama:IDfc8d3fa7-5086-45d3-baa0-f31ff2ae8c6b a aamas:Term ;
+aama:IDdc3b52da-6ae2-45e4-91fd-2c15fa5092b0 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj1MainNegPerfPngA2-gab ;
 	bil:vmorphClass bil:Finite ;
@@ -2311,7 +2293,7 @@ aama:IDfc8d3fa7-5086-45d3-baa0-f31ff2ae8c6b a aamas:Term ;
 	bil:number bil:Singular ;
 	.
 
-aama:ID17696026-f0f2-45d5-af3d-b4a0dcf4f62d a aamas:Term ;
+aama:IDbe2c2fcd-e561-41d9-992f-11172c1726e5 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj1MainNegPerfPngA2-gab ;
 	bil:vmorphClass bil:Finite ;
@@ -2328,7 +2310,7 @@ aama:ID17696026-f0f2-45d5-af3d-b4a0dcf4f62d a aamas:Term ;
 	bil:number bil:Singular ;
 	.
 
-aama:ID42450545-d39e-41ef-938d-9325ce409587 a aamas:Term ;
+aama:ID1900c535-6f07-4121-9218-2fb61808dee8 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj1MainNegPerfPngA2-gab ;
 	bil:vmorphClass bil:Finite ;
@@ -2345,7 +2327,7 @@ aama:ID42450545-d39e-41ef-938d-9325ce409587 a aamas:Term ;
 	bil:number bil:Singular ;
 	.
 
-aama:ID6c61fcea-5134-4b6e-951c-7733d121a85a a aamas:Term ;
+aama:IDe88864e0-7720-4689-97d1-f47f6509278d a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj1MainNegPerfPngA2-gab ;
 	bil:vmorphClass bil:Finite ;
@@ -2362,7 +2344,7 @@ aama:ID6c61fcea-5134-4b6e-951c-7733d121a85a a aamas:Term ;
 	bil:number bil:Plural ;
 	.
 
-aama:ID32870af8-93d4-4544-8cd4-58e373ca906a a aamas:Term ;
+aama:ID42df841b-b001-46b1-a68c-d4a61b6d623a a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj1MainNegPerfPngA2-gab ;
 	bil:vmorphClass bil:Finite ;
@@ -2379,7 +2361,7 @@ aama:ID32870af8-93d4-4544-8cd4-58e373ca906a a aamas:Term ;
 	bil:number bil:Plural ;
 	.
 
-aama:ID4b4c7e7e-e48d-462e-838c-061cc626c0e6 a aamas:Term ;
+aama:IDfad39287-efd6-44c2-a280-fb80ed636fc5 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj1MainNegPerfPngA2-gab ;
 	bil:vmorphClass bil:Finite ;
@@ -2404,7 +2386,7 @@ bil:bilin-VConj1RelObliqAffImperfPngAHeadPl-gab a aamas:Termcluster ;
 	rdfs:comment "Appleyard2007b pp. 497-501" 
 	.
 
-aama:ID9b21245b-0003-44b6-bf62-23c6360f1449 a aamas:Term ;
+aama:ID2902c3f1-800a-4907-898e-7272cb1c09dc a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj1RelObliqAffImperfPngAHeadPl-gab ;
 	bil:aspect bil:Imperfective ;
@@ -2422,7 +2404,7 @@ aama:ID9b21245b-0003-44b6-bf62-23c6360f1449 a aamas:Term ;
 	bil:number bil:Singular ;
 	.
 
-aama:ID78f76acb-42f2-44ca-9ed5-6bb89877acf3 a aamas:Term ;
+aama:IDa188f9bb-e3cf-442d-96e6-347a09d071bd a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj1RelObliqAffImperfPngAHeadPl-gab ;
 	bil:aspect bil:Imperfective ;
@@ -2440,7 +2422,7 @@ aama:ID78f76acb-42f2-44ca-9ed5-6bb89877acf3 a aamas:Term ;
 	bil:number bil:Singular ;
 	.
 
-aama:IDbd3c5aeb-6856-4aca-b3b4-0e6250e2bc5f a aamas:Term ;
+aama:ID818886c6-84e1-45a9-b01a-7e748a9b868d a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj1RelObliqAffImperfPngAHeadPl-gab ;
 	bil:aspect bil:Imperfective ;
@@ -2458,7 +2440,7 @@ aama:IDbd3c5aeb-6856-4aca-b3b4-0e6250e2bc5f a aamas:Term ;
 	bil:number bil:Singular ;
 	.
 
-aama:ID12432997-4bdb-4dda-ba2e-39c9c541cac3 a aamas:Term ;
+aama:ID06aa310d-216a-429d-90f9-a344fbf2a666 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj1RelObliqAffImperfPngAHeadPl-gab ;
 	bil:aspect bil:Imperfective ;
@@ -2476,7 +2458,7 @@ aama:ID12432997-4bdb-4dda-ba2e-39c9c541cac3 a aamas:Term ;
 	bil:number bil:Singular ;
 	.
 
-aama:ID640bf121-c700-4bd9-adad-77545f629bf2 a aamas:Term ;
+aama:ID9ac61c19-3da5-4bae-aca9-2c3a89c18289 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj1RelObliqAffImperfPngAHeadPl-gab ;
 	bil:aspect bil:Imperfective ;
@@ -2494,7 +2476,7 @@ aama:ID640bf121-c700-4bd9-adad-77545f629bf2 a aamas:Term ;
 	bil:number bil:Plural ;
 	.
 
-aama:ID80eea8cb-8f93-4301-8dac-56f8c8ffc5ba a aamas:Term ;
+aama:ID0d3dbc31-9e92-4d38-8688-bf8e867eead2 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj1RelObliqAffImperfPngAHeadPl-gab ;
 	bil:aspect bil:Imperfective ;
@@ -2512,7 +2494,7 @@ aama:ID80eea8cb-8f93-4301-8dac-56f8c8ffc5ba a aamas:Term ;
 	bil:number bil:Plural ;
 	.
 
-aama:ID23bc60d3-8fef-411c-97af-1c2419c549f9 a aamas:Term ;
+aama:ID53d05366-45d7-4cb1-ba00-e03f99d19a16 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj1RelObliqAffImperfPngAHeadPl-gab ;
 	bil:aspect bil:Imperfective ;
@@ -2538,7 +2520,7 @@ bil:bilin-VConj1RelObliqAffImperfPngAHeadSgf-gab a aamas:Termcluster ;
 	rdfs:comment "Appleyard2007b pp. 497-501" 
 	.
 
-aama:ID3d6d859c-fc22-4237-a4f0-b1946dd2168f a aamas:Term ;
+aama:ID9f8cc45e-7349-4bd4-9566-b1a03378290d a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj1RelObliqAffImperfPngAHeadSgf-gab ;
 	bil:aspect bil:Imperfective ;
@@ -2556,7 +2538,7 @@ aama:ID3d6d859c-fc22-4237-a4f0-b1946dd2168f a aamas:Term ;
 	bil:number bil:Singular ;
 	.
 
-aama:IDf0daaaa4-df8f-4ed7-b4e2-ef02b829e9fd a aamas:Term ;
+aama:ID641dcbad-ba77-4876-be4b-0e4028d6f756 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj1RelObliqAffImperfPngAHeadSgf-gab ;
 	bil:aspect bil:Imperfective ;
@@ -2574,7 +2556,7 @@ aama:IDf0daaaa4-df8f-4ed7-b4e2-ef02b829e9fd a aamas:Term ;
 	bil:number bil:Singular ;
 	.
 
-aama:IDd0e5974e-7373-4c52-b5a5-2e486dd4710d a aamas:Term ;
+aama:ID70dce157-2ad1-4e88-8cde-c07ae20ccc45 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj1RelObliqAffImperfPngAHeadSgf-gab ;
 	bil:aspect bil:Imperfective ;
@@ -2592,7 +2574,7 @@ aama:IDd0e5974e-7373-4c52-b5a5-2e486dd4710d a aamas:Term ;
 	bil:number bil:Singular ;
 	.
 
-aama:IDa6156136-25d1-4b84-8cc3-07f606c17e9d a aamas:Term ;
+aama:ID85c6bd58-0c86-4f6a-90c1-baed11dee1b6 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj1RelObliqAffImperfPngAHeadSgf-gab ;
 	bil:aspect bil:Imperfective ;
@@ -2610,7 +2592,7 @@ aama:IDa6156136-25d1-4b84-8cc3-07f606c17e9d a aamas:Term ;
 	bil:number bil:Singular ;
 	.
 
-aama:IDbbb4cd0d-ae79-44f7-8764-61e18439d3f9 a aamas:Term ;
+aama:ID7a073f10-951e-441c-b981-fc23e7d3c96e a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj1RelObliqAffImperfPngAHeadSgf-gab ;
 	bil:aspect bil:Imperfective ;
@@ -2628,7 +2610,7 @@ aama:IDbbb4cd0d-ae79-44f7-8764-61e18439d3f9 a aamas:Term ;
 	bil:number bil:Plural ;
 	.
 
-aama:ID7920e80d-90ef-4a1c-8ec7-4b1f1675f772 a aamas:Term ;
+aama:ID34e1b80f-f34a-4599-9e2c-026e57209917 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj1RelObliqAffImperfPngAHeadSgf-gab ;
 	bil:aspect bil:Imperfective ;
@@ -2646,7 +2628,7 @@ aama:ID7920e80d-90ef-4a1c-8ec7-4b1f1675f772 a aamas:Term ;
 	bil:number bil:Plural ;
 	.
 
-aama:IDe9157c93-5d9a-46e2-8bf5-d57bb719546f a aamas:Term ;
+aama:ID4afb9df9-948d-4375-acfc-256930d6802f a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj1RelObliqAffImperfPngAHeadSgf-gab ;
 	bil:aspect bil:Imperfective ;
@@ -2672,7 +2654,7 @@ bil:bilin-VConj1RelObliqAffImperfPngAHeadSgm-gab a aamas:Termcluster ;
 	rdfs:comment "Appleyard2007b pp. 497-501" 
 	.
 
-aama:ID65986c28-65b0-4a84-bbed-0e7e2cebc903 a aamas:Term ;
+aama:IDd763a90b-c051-40f5-981b-7eed980b07a2 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj1RelObliqAffImperfPngAHeadSgm-gab ;
 	bil:aspect bil:Imperfective ;
@@ -2690,7 +2672,7 @@ aama:ID65986c28-65b0-4a84-bbed-0e7e2cebc903 a aamas:Term ;
 	bil:number bil:Singular ;
 	.
 
-aama:ID5d067721-60a3-4fe1-ab1d-cc17a719b434 a aamas:Term ;
+aama:ID5382c34d-f5ce-40fd-9423-1fcba599c746 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj1RelObliqAffImperfPngAHeadSgm-gab ;
 	bil:aspect bil:Imperfective ;
@@ -2708,7 +2690,7 @@ aama:ID5d067721-60a3-4fe1-ab1d-cc17a719b434 a aamas:Term ;
 	bil:number bil:Singular ;
 	.
 
-aama:ID292b4461-8a37-4f64-8ccb-490232c5c185 a aamas:Term ;
+aama:ID62cfccc2-12f0-46e4-81bd-c9a6d2d6a3b7 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj1RelObliqAffImperfPngAHeadSgm-gab ;
 	bil:aspect bil:Imperfective ;
@@ -2726,7 +2708,7 @@ aama:ID292b4461-8a37-4f64-8ccb-490232c5c185 a aamas:Term ;
 	bil:number bil:Singular ;
 	.
 
-aama:IDc0465ce7-d117-49b5-bb66-6c1984efbe8f a aamas:Term ;
+aama:ID3b172242-6cb2-4f04-9978-1baf5c91c9fd a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj1RelObliqAffImperfPngAHeadSgm-gab ;
 	bil:aspect bil:Imperfective ;
@@ -2744,7 +2726,7 @@ aama:IDc0465ce7-d117-49b5-bb66-6c1984efbe8f a aamas:Term ;
 	bil:number bil:Singular ;
 	.
 
-aama:ID08143d00-47a4-43f3-8d36-650e9cb30d09 a aamas:Term ;
+aama:IDc9c1efc1-342a-4773-936b-95bdff3c8c51 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj1RelObliqAffImperfPngAHeadSgm-gab ;
 	bil:aspect bil:Imperfective ;
@@ -2762,7 +2744,7 @@ aama:ID08143d00-47a4-43f3-8d36-650e9cb30d09 a aamas:Term ;
 	bil:number bil:Plural ;
 	.
 
-aama:ID53795bde-581a-413b-8651-b29f3548d88f a aamas:Term ;
+aama:IDb30d3c05-a99d-40b8-9a6c-fe3a829b0f26 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj1RelObliqAffImperfPngAHeadSgm-gab ;
 	bil:aspect bil:Imperfective ;
@@ -2780,7 +2762,7 @@ aama:ID53795bde-581a-413b-8651-b29f3548d88f a aamas:Term ;
 	bil:number bil:Plural ;
 	.
 
-aama:IDd5bef04c-7113-41ee-82cd-4ec73147128f a aamas:Term ;
+aama:ID6a88fc73-5ff8-4356-9185-d16d01f13905 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj1RelObliqAffImperfPngAHeadSgm-gab ;
 	bil:aspect bil:Imperfective ;
@@ -2806,7 +2788,7 @@ bil:bilin-VConj1RelSubjAffImperfPngA-gab a aamas:Termcluster ;
 	rdfs:comment "Appleyard2007b pp. 497-501; Palmer's version cited in Appleyard1975 pp. 338-339." 
 	.
 
-aama:ID23bf9baa-88fb-4d9f-bc57-9ac7955611e6 a aamas:Term ;
+aama:ID459dea79-1f9c-4917-ad07-22aa1eb4a79b a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj1RelSubjAffImperfPngA-gab ;
 	bil:vmorphClass bil:Finite ;
@@ -2823,7 +2805,7 @@ aama:ID23bf9baa-88fb-4d9f-bc57-9ac7955611e6 a aamas:Term ;
 	bil:number bil:Singular ;
 	.
 
-aama:IDf1343488-e142-4f12-ae1f-a2da3e3c0298 a aamas:Term ;
+aama:IDd346d72c-ab4c-45c1-b4a3-0e81e3ae8c62 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj1RelSubjAffImperfPngA-gab ;
 	bil:vmorphClass bil:Finite ;
@@ -2840,7 +2822,7 @@ aama:IDf1343488-e142-4f12-ae1f-a2da3e3c0298 a aamas:Term ;
 	bil:number bil:Singular ;
 	.
 
-aama:IDcc8cc4a7-2409-448f-91d9-d155b04cd661 a aamas:Term ;
+aama:IDf7dc38bd-f75e-434e-a204-0b1a64db4446 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj1RelSubjAffImperfPngA-gab ;
 	bil:vmorphClass bil:Finite ;
@@ -2857,7 +2839,7 @@ aama:IDcc8cc4a7-2409-448f-91d9-d155b04cd661 a aamas:Term ;
 	bil:number bil:Singular ;
 	.
 
-aama:ID2b648fe2-4abc-4bea-b957-311d4c1d6ec8 a aamas:Term ;
+aama:ID415ab507-2da9-440d-91c8-b9551dba58ed a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj1RelSubjAffImperfPngA-gab ;
 	bil:vmorphClass bil:Finite ;
@@ -2874,7 +2856,7 @@ aama:ID2b648fe2-4abc-4bea-b957-311d4c1d6ec8 a aamas:Term ;
 	bil:number bil:Singular ;
 	.
 
-aama:ID584853a2-ed9f-43be-9282-302803f3c7cf a aamas:Term ;
+aama:IDfa4fc1ca-7943-446c-a214-4e59380faa76 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj1RelSubjAffImperfPngA-gab ;
 	bil:vmorphClass bil:Finite ;
@@ -2891,7 +2873,7 @@ aama:ID584853a2-ed9f-43be-9282-302803f3c7cf a aamas:Term ;
 	bil:number bil:Plural ;
 	.
 
-aama:IDe4b52349-e05c-4572-ac50-fb07c465534b a aamas:Term ;
+aama:IDa066e607-220f-4735-be79-506c5bd08588 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj1RelSubjAffImperfPngA-gab ;
 	bil:vmorphClass bil:Finite ;
@@ -2908,7 +2890,7 @@ aama:IDe4b52349-e05c-4572-ac50-fb07c465534b a aamas:Term ;
 	bil:number bil:Plural ;
 	.
 
-aama:IDb6b04344-d44c-42ff-a2bb-9b65afc6f775 a aamas:Term ;
+aama:IDc760d384-b5f8-4de4-aa1d-4e9d021b7c46 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj1RelSubjAffImperfPngA-gab ;
 	bil:vmorphClass bil:Finite ;
@@ -2933,7 +2915,7 @@ bil:bilin-VConj1RelSubjAffPerfPngA-gab a aamas:Termcluster ;
 	rdfs:comment "Appleyard2007b pp. 497-501; Palmer's version cited in Appleyard1975 pp. 338-339." 
 	.
 
-aama:ID50fc5a58-1b0f-4049-8491-205f6d2063fb a aamas:Term ;
+aama:IDf0eec25e-6711-4ad5-b5fb-1ac6d3619b15 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj1RelSubjAffPerfPngA-gab ;
 	bil:vmorphClass bil:Finite ;
@@ -2950,7 +2932,7 @@ aama:ID50fc5a58-1b0f-4049-8491-205f6d2063fb a aamas:Term ;
 	bil:number bil:Singular ;
 	.
 
-aama:IDd802cf91-670e-418a-8de3-72263a8bacd4 a aamas:Term ;
+aama:IDbea6ce4b-eff7-4778-9acb-10bb7db5f288 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj1RelSubjAffPerfPngA-gab ;
 	bil:vmorphClass bil:Finite ;
@@ -2967,7 +2949,7 @@ aama:IDd802cf91-670e-418a-8de3-72263a8bacd4 a aamas:Term ;
 	bil:number bil:Singular ;
 	.
 
-aama:ID675806c8-6ec2-4890-a5a8-e8b7122e198a a aamas:Term ;
+aama:ID54825de8-7f5c-42b7-a071-eee7d14d0533 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj1RelSubjAffPerfPngA-gab ;
 	bil:vmorphClass bil:Finite ;
@@ -2984,7 +2966,7 @@ aama:ID675806c8-6ec2-4890-a5a8-e8b7122e198a a aamas:Term ;
 	bil:number bil:Singular ;
 	.
 
-aama:IDd14ebc97-6919-4af0-8afa-b2f9b42a6c18 a aamas:Term ;
+aama:IDa806fd23-b007-4515-aef8-ef59959aa44d a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj1RelSubjAffPerfPngA-gab ;
 	bil:vmorphClass bil:Finite ;
@@ -3001,7 +2983,7 @@ aama:IDd14ebc97-6919-4af0-8afa-b2f9b42a6c18 a aamas:Term ;
 	bil:number bil:Singular ;
 	.
 
-aama:ID5142d0e0-ec96-4cd5-8910-c916c1af05fa a aamas:Term ;
+aama:IDfe0b6c3e-29ec-4839-8155-47018aaa06c9 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj1RelSubjAffPerfPngA-gab ;
 	bil:vmorphClass bil:Finite ;
@@ -3018,7 +3000,7 @@ aama:ID5142d0e0-ec96-4cd5-8910-c916c1af05fa a aamas:Term ;
 	bil:number bil:Plural ;
 	.
 
-aama:ID2c04b7a2-5eaf-4bab-8710-de115a3a1f2d a aamas:Term ;
+aama:ID9339a2e2-e573-4df3-8144-980539dc07c5 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj1RelSubjAffPerfPngA-gab ;
 	bil:vmorphClass bil:Finite ;
@@ -3035,7 +3017,7 @@ aama:ID2c04b7a2-5eaf-4bab-8710-de115a3a1f2d a aamas:Term ;
 	bil:number bil:Plural ;
 	.
 
-aama:ID4c648822-9d41-4d94-981c-e39f1d428990 a aamas:Term ;
+aama:ID108c64a9-52fc-4d6a-b9c2-5092c3d4c294 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj1RelSubjAffPerfPngA-gab ;
 	bil:vmorphClass bil:Finite ;
@@ -3060,7 +3042,7 @@ bil:bilin-VConj2MainAffImperfPresPngB-kab a aamas:Termcluster ;
 	rdfs:comment "Appleyard2007b pp. 497-499" 
 	.
 
-aama:ID5d40a0a2-0065-47d3-9836-6ba7ef7f3f75 a aamas:Term ;
+aama:ID802013b9-5407-44b2-b6f1-de14413dc662 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj2MainAffImperfPresPngB-kab ;
 	bil:aspect bil:Imperfective ;
@@ -3078,7 +3060,7 @@ aama:ID5d40a0a2-0065-47d3-9836-6ba7ef7f3f75 a aamas:Term ;
 	bil:number bil:Singular ;
 	.
 
-aama:IDd2c5cfb3-1537-4ce4-8043-04c16e698872 a aamas:Term ;
+aama:ID8bf2fc90-78aa-47cf-9158-12f7488d649f a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj2MainAffImperfPresPngB-kab ;
 	bil:aspect bil:Imperfective ;
@@ -3096,7 +3078,7 @@ aama:IDd2c5cfb3-1537-4ce4-8043-04c16e698872 a aamas:Term ;
 	bil:number bil:Singular ;
 	.
 
-aama:ID07250bbd-5f95-4f3b-82b2-3f183dbaa6b1 a aamas:Term ;
+aama:IDafc4d2cf-318d-4ded-bfb4-190305eb5df1 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj2MainAffImperfPresPngB-kab ;
 	bil:aspect bil:Imperfective ;
@@ -3114,7 +3096,7 @@ aama:ID07250bbd-5f95-4f3b-82b2-3f183dbaa6b1 a aamas:Term ;
 	bil:number bil:Singular ;
 	.
 
-aama:ID8411d7f2-b03e-4519-8aa1-ef6f9120d468 a aamas:Term ;
+aama:IDb3f6cc06-b806-439d-910b-3fb7d8730283 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj2MainAffImperfPresPngB-kab ;
 	bil:aspect bil:Imperfective ;
@@ -3132,7 +3114,7 @@ aama:ID8411d7f2-b03e-4519-8aa1-ef6f9120d468 a aamas:Term ;
 	bil:number bil:Singular ;
 	.
 
-aama:ID419071d1-df39-46b5-bc65-e696ef6f3fe9 a aamas:Term ;
+aama:ID57387399-0122-4452-a9ea-a3cffcba4859 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj2MainAffImperfPresPngB-kab ;
 	bil:aspect bil:Imperfective ;
@@ -3150,7 +3132,7 @@ aama:ID419071d1-df39-46b5-bc65-e696ef6f3fe9 a aamas:Term ;
 	bil:number bil:Plural ;
 	.
 
-aama:ID82c8f92e-7ea4-4a59-acfe-91385653eb2a a aamas:Term ;
+aama:ID42a84b13-4a72-4f5e-98a6-267f776d7170 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj2MainAffImperfPresPngB-kab ;
 	bil:aspect bil:Imperfective ;
@@ -3168,7 +3150,7 @@ aama:ID82c8f92e-7ea4-4a59-acfe-91385653eb2a a aamas:Term ;
 	bil:number bil:Plural ;
 	.
 
-aama:ID9e68aa2e-1c7b-454b-8584-995117339008 a aamas:Term ;
+aama:ID23f03312-a86a-4e51-b63d-38309ac85851 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj2MainAffImperfPresPngB-kab ;
 	bil:aspect bil:Imperfective ;
@@ -3194,7 +3176,7 @@ bil:bilin-VConj2MainAffPerfFutPngC-kab a aamas:Termcluster ;
 	rdfs:comment "Appleyard2007b pp. 497-499" 
 	.
 
-aama:IDfa5e642f-e064-4422-89be-72b6c30a128e a aamas:Term ;
+aama:ID4cc5c5f9-590c-48ae-9971-89fcad3e677a a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj2MainAffPerfFutPngC-kab ;
 	bil:aspect bil:Perfective ;
@@ -3212,7 +3194,7 @@ aama:IDfa5e642f-e064-4422-89be-72b6c30a128e a aamas:Term ;
 	bil:number bil:Singular ;
 	.
 
-aama:ID3d35218d-d0f0-4ee6-aa50-68183df555c0 a aamas:Term ;
+aama:IDc3e6131c-0deb-4d84-8e2c-d727676c3d72 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj2MainAffPerfFutPngC-kab ;
 	bil:aspect bil:Perfective ;
@@ -3230,7 +3212,7 @@ aama:ID3d35218d-d0f0-4ee6-aa50-68183df555c0 a aamas:Term ;
 	bil:number bil:Singular ;
 	.
 
-aama:ID59d55591-0453-4ea1-a554-d86435c5f544 a aamas:Term ;
+aama:ID7ceb38fe-2bdc-43b9-8f83-deb9ab79a871 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj2MainAffPerfFutPngC-kab ;
 	bil:aspect bil:Perfective ;
@@ -3248,7 +3230,7 @@ aama:ID59d55591-0453-4ea1-a554-d86435c5f544 a aamas:Term ;
 	bil:number bil:Singular ;
 	.
 
-aama:ID72a436d1-def2-4615-a16b-a3f55c2b3cd4 a aamas:Term ;
+aama:ID0ef691c1-7c8e-4530-87a4-d0389627a97f a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj2MainAffPerfFutPngC-kab ;
 	bil:aspect bil:Perfective ;
@@ -3266,7 +3248,7 @@ aama:ID72a436d1-def2-4615-a16b-a3f55c2b3cd4 a aamas:Term ;
 	bil:number bil:Singular ;
 	.
 
-aama:ID3cf1f872-0af7-448d-bf66-22ac16cda5e0 a aamas:Term ;
+aama:IDb4c47172-003f-4d7a-b2c1-dcdbc5fc2859 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj2MainAffPerfFutPngC-kab ;
 	bil:aspect bil:Perfective ;
@@ -3284,7 +3266,7 @@ aama:ID3cf1f872-0af7-448d-bf66-22ac16cda5e0 a aamas:Term ;
 	bil:number bil:Plural ;
 	.
 
-aama:ID59b6f0bb-5fb8-4e23-a0a3-44bde60add14 a aamas:Term ;
+aama:ID7cb19850-8b5e-42f1-80c9-a59775cf5c2e a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj2MainAffPerfFutPngC-kab ;
 	bil:aspect bil:Perfective ;
@@ -3302,7 +3284,7 @@ aama:ID59b6f0bb-5fb8-4e23-a0a3-44bde60add14 a aamas:Term ;
 	bil:number bil:Plural ;
 	.
 
-aama:IDbea97b41-5dbc-43dc-b0f0-63b1a6ea5e2d a aamas:Term ;
+aama:ID1249ce8e-0d9c-4a5f-a817-d8ba0efc7828 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj2MainAffPerfFutPngC-kab ;
 	bil:aspect bil:Perfective ;
@@ -3328,7 +3310,7 @@ bil:bilin-VConj2MainAffPerfPastPngB-kab a aamas:Termcluster ;
 	rdfs:comment "Appleyard2007b pp. 497-499" 
 	.
 
-aama:ID4dd81aa0-65ab-4440-97c5-4b6cd3eb983d a aamas:Term ;
+aama:ID7fd57933-7585-44e1-ad29-57aaf67caa81 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj2MainAffPerfPastPngB-kab ;
 	bil:aspect bil:Perfective ;
@@ -3346,7 +3328,7 @@ aama:ID4dd81aa0-65ab-4440-97c5-4b6cd3eb983d a aamas:Term ;
 	bil:number bil:Singular ;
 	.
 
-aama:IDd231ec48-84fc-4a68-b8b4-12475c48c238 a aamas:Term ;
+aama:ID957dae55-4f0e-456d-9da8-6e65428ee0c8 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj2MainAffPerfPastPngB-kab ;
 	bil:aspect bil:Perfective ;
@@ -3364,7 +3346,7 @@ aama:IDd231ec48-84fc-4a68-b8b4-12475c48c238 a aamas:Term ;
 	bil:number bil:Singular ;
 	.
 
-aama:ID9980532b-4dbc-4dd5-bbe0-ceb028c8f320 a aamas:Term ;
+aama:ID0bd4d685-41fe-4f21-8f00-8cbee84e1a77 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj2MainAffPerfPastPngB-kab ;
 	bil:aspect bil:Perfective ;
@@ -3382,7 +3364,7 @@ aama:ID9980532b-4dbc-4dd5-bbe0-ceb028c8f320 a aamas:Term ;
 	bil:number bil:Singular ;
 	.
 
-aama:ID5787519f-9d42-47f0-b870-311873740f59 a aamas:Term ;
+aama:IDe142d596-6e4e-412d-af83-bbaa55d0b96e a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj2MainAffPerfPastPngB-kab ;
 	bil:aspect bil:Perfective ;
@@ -3400,7 +3382,7 @@ aama:ID5787519f-9d42-47f0-b870-311873740f59 a aamas:Term ;
 	bil:number bil:Singular ;
 	.
 
-aama:IDfc28c662-ddb9-4bb6-bb1f-34c9708ece4e a aamas:Term ;
+aama:ID530ce9e2-dde9-406f-a8ab-b65be2288fe2 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj2MainAffPerfPastPngB-kab ;
 	bil:aspect bil:Perfective ;
@@ -3418,7 +3400,7 @@ aama:IDfc28c662-ddb9-4bb6-bb1f-34c9708ece4e a aamas:Term ;
 	bil:number bil:Plural ;
 	.
 
-aama:ID00a6b611-f211-4a41-b34e-b5541a9791c8 a aamas:Term ;
+aama:ID1a2b5808-95d0-44fa-aaf0-ddf8bfda018d a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj2MainAffPerfPastPngB-kab ;
 	bil:aspect bil:Perfective ;
@@ -3436,7 +3418,7 @@ aama:ID00a6b611-f211-4a41-b34e-b5541a9791c8 a aamas:Term ;
 	bil:number bil:Plural ;
 	.
 
-aama:ID77bdf588-515a-4563-9bb9-a00f5a51e262 a aamas:Term ;
+aama:IDbffae3d5-a51e-47bd-8587-848d767cf6e6 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj2MainAffPerfPastPngB-kab ;
 	bil:aspect bil:Perfective ;
@@ -3462,7 +3444,7 @@ bil:bilin-VConj2MainNegImperfPngA2-kab a aamas:Termcluster ;
 	rdfs:comment "Appleyard2007b pp. 497-499" 
 	.
 
-aama:ID29fbc463-7e13-4700-8d01-02365ac107a2 a aamas:Term ;
+aama:IDfe7d09bb-d52f-4740-8df5-de38c7f6b687 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj2MainNegImperfPngA2-kab ;
 	bil:vmorphClass bil:Finite ;
@@ -3479,7 +3461,7 @@ aama:ID29fbc463-7e13-4700-8d01-02365ac107a2 a aamas:Term ;
 	bil:number bil:Singular ;
 	.
 
-aama:ID728b7be2-030b-4629-aac7-d2b1d73fbf9c a aamas:Term ;
+aama:ID07e8abb8-c1be-46fa-a0de-c3fe5bbc7fe4 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj2MainNegImperfPngA2-kab ;
 	bil:vmorphClass bil:Finite ;
@@ -3496,7 +3478,7 @@ aama:ID728b7be2-030b-4629-aac7-d2b1d73fbf9c a aamas:Term ;
 	bil:number bil:Singular ;
 	.
 
-aama:IDa2bbf88d-488a-4a57-995c-d4c41d4e84fa a aamas:Term ;
+aama:ID248b3488-e247-41e8-a3f1-95e068d2731d a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj2MainNegImperfPngA2-kab ;
 	bil:vmorphClass bil:Finite ;
@@ -3513,7 +3495,7 @@ aama:IDa2bbf88d-488a-4a57-995c-d4c41d4e84fa a aamas:Term ;
 	bil:number bil:Singular ;
 	.
 
-aama:ID1fd53582-b80a-4890-a1c1-3bd21c78bc3f a aamas:Term ;
+aama:ID5fab3061-a96d-4a37-ac41-f01256315a25 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj2MainNegImperfPngA2-kab ;
 	bil:vmorphClass bil:Finite ;
@@ -3530,7 +3512,7 @@ aama:ID1fd53582-b80a-4890-a1c1-3bd21c78bc3f a aamas:Term ;
 	bil:number bil:Singular ;
 	.
 
-aama:ID906c8796-ebbe-4c13-a410-1488f7ee6e72 a aamas:Term ;
+aama:IDff018e0a-732a-4f09-b08b-38872952ae76 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj2MainNegImperfPngA2-kab ;
 	bil:vmorphClass bil:Finite ;
@@ -3547,7 +3529,7 @@ aama:ID906c8796-ebbe-4c13-a410-1488f7ee6e72 a aamas:Term ;
 	bil:number bil:Plural ;
 	.
 
-aama:ID60435396-1ff2-4625-8ffa-74a03f54ee3d a aamas:Term ;
+aama:ID2178c8a9-622b-4f1d-a88a-471ad2da3dba a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj2MainNegImperfPngA2-kab ;
 	bil:vmorphClass bil:Finite ;
@@ -3564,7 +3546,7 @@ aama:ID60435396-1ff2-4625-8ffa-74a03f54ee3d a aamas:Term ;
 	bil:number bil:Plural ;
 	.
 
-aama:IDc36c02dc-0352-47a0-89c7-63b61bfb8876 a aamas:Term ;
+aama:ID3ae028a3-f84e-4f1b-9fae-6018658e5096 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj2MainNegImperfPngA2-kab ;
 	bil:vmorphClass bil:Finite ;
@@ -3589,7 +3571,7 @@ bil:bilin-VConj2MainNegPerfPngA2-kab a aamas:Termcluster ;
 	rdfs:comment "Appleyard2007b pp. 497-499" 
 	.
 
-aama:ID9d93d254-f0c6-4636-87de-019910c34bbb a aamas:Term ;
+aama:IDb7dcba33-fd37-4aea-83b9-a758a6e963e5 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj2MainNegPerfPngA2-kab ;
 	bil:vmorphClass bil:Finite ;
@@ -3606,7 +3588,7 @@ aama:ID9d93d254-f0c6-4636-87de-019910c34bbb a aamas:Term ;
 	bil:number bil:Singular ;
 	.
 
-aama:ID96e85007-8049-43f1-8026-ce6c74a8d230 a aamas:Term ;
+aama:ID77dfc9c3-8c86-47f7-9d56-0b590a503332 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj2MainNegPerfPngA2-kab ;
 	bil:vmorphClass bil:Finite ;
@@ -3623,7 +3605,7 @@ aama:ID96e85007-8049-43f1-8026-ce6c74a8d230 a aamas:Term ;
 	bil:number bil:Singular ;
 	.
 
-aama:ID3b4b8950-69e6-4719-97f0-c7c502be13e6 a aamas:Term ;
+aama:ID4046c376-34bd-4f93-abc9-1533227113f3 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj2MainNegPerfPngA2-kab ;
 	bil:vmorphClass bil:Finite ;
@@ -3640,7 +3622,7 @@ aama:ID3b4b8950-69e6-4719-97f0-c7c502be13e6 a aamas:Term ;
 	bil:number bil:Singular ;
 	.
 
-aama:ID7428b320-4aeb-4d65-ac2b-c46117638634 a aamas:Term ;
+aama:ID51fd57d6-a3f9-466f-ba43-c9425d7b8136 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj2MainNegPerfPngA2-kab ;
 	bil:vmorphClass bil:Finite ;
@@ -3657,7 +3639,7 @@ aama:ID7428b320-4aeb-4d65-ac2b-c46117638634 a aamas:Term ;
 	bil:number bil:Singular ;
 	.
 
-aama:ID6b3572ce-8eba-40d3-9e02-1f62855d1e4b a aamas:Term ;
+aama:IDfab8368a-1d17-419a-b431-839a7daf6d1b a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj2MainNegPerfPngA2-kab ;
 	bil:vmorphClass bil:Finite ;
@@ -3674,7 +3656,7 @@ aama:ID6b3572ce-8eba-40d3-9e02-1f62855d1e4b a aamas:Term ;
 	bil:number bil:Plural ;
 	.
 
-aama:ID6d1bd648-d4cd-4c24-b940-c1c197e1f883 a aamas:Term ;
+aama:IDd8e07e05-799f-437b-9d5d-a81a81c68049 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj2MainNegPerfPngA2-kab ;
 	bil:vmorphClass bil:Finite ;
@@ -3691,7 +3673,7 @@ aama:ID6d1bd648-d4cd-4c24-b940-c1c197e1f883 a aamas:Term ;
 	bil:number bil:Plural ;
 	.
 
-aama:IDaae8c5b8-b58c-460c-98fb-419629dd585c a aamas:Term ;
+aama:ID2126e18f-0315-4db4-9ac5-26c4a0690c92 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj2MainNegPerfPngA2-kab ;
 	bil:vmorphClass bil:Finite ;
@@ -3716,7 +3698,7 @@ bil:bilin-VConj2RelSubjAffImperfPngA-kab a aamas:Termcluster ;
 	rdfs:comment "Appleyard2007b pp. 497-499" 
 	.
 
-aama:ID8c71d759-b734-4aa7-816b-58678971d990 a aamas:Term ;
+aama:ID2077ea66-6e79-42fb-b1dd-c40cf9264b81 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj2RelSubjAffImperfPngA-kab ;
 	bil:vmorphClass bil:Finite ;
@@ -3733,7 +3715,7 @@ aama:ID8c71d759-b734-4aa7-816b-58678971d990 a aamas:Term ;
 	bil:number bil:Singular ;
 	.
 
-aama:ID6e569c9e-9eb7-4e1f-a4d2-0bc57613df62 a aamas:Term ;
+aama:ID012622df-2c10-4725-b957-7e05eab8ed57 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj2RelSubjAffImperfPngA-kab ;
 	bil:vmorphClass bil:Finite ;
@@ -3750,7 +3732,7 @@ aama:ID6e569c9e-9eb7-4e1f-a4d2-0bc57613df62 a aamas:Term ;
 	bil:number bil:Singular ;
 	.
 
-aama:IDc43cbc83-f096-4600-8947-7b627d86a215 a aamas:Term ;
+aama:ID9e8b2554-ea4d-4c02-97b8-143af67a53aa a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj2RelSubjAffImperfPngA-kab ;
 	bil:vmorphClass bil:Finite ;
@@ -3767,7 +3749,7 @@ aama:IDc43cbc83-f096-4600-8947-7b627d86a215 a aamas:Term ;
 	bil:number bil:Singular ;
 	.
 
-aama:IDc89ec9d8-d07e-4721-ae3b-a1f248560278 a aamas:Term ;
+aama:ID8fdc4893-a51a-4dbe-92cc-23056e37e778 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj2RelSubjAffImperfPngA-kab ;
 	bil:vmorphClass bil:Finite ;
@@ -3784,7 +3766,7 @@ aama:IDc89ec9d8-d07e-4721-ae3b-a1f248560278 a aamas:Term ;
 	bil:number bil:Singular ;
 	.
 
-aama:IDa2874d92-7842-4459-adbc-275a8e59121b a aamas:Term ;
+aama:ID63cf5219-1344-495b-9070-b7fb121980ca a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj2RelSubjAffImperfPngA-kab ;
 	bil:vmorphClass bil:Finite ;
@@ -3801,7 +3783,7 @@ aama:IDa2874d92-7842-4459-adbc-275a8e59121b a aamas:Term ;
 	bil:number bil:Plural ;
 	.
 
-aama:IDdf203270-bd7a-41ff-b843-04e2616b9922 a aamas:Term ;
+aama:ID5f9cda7d-6126-42f0-a0b9-02a1fa9472a8 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj2RelSubjAffImperfPngA-kab ;
 	bil:vmorphClass bil:Finite ;
@@ -3818,7 +3800,7 @@ aama:IDdf203270-bd7a-41ff-b843-04e2616b9922 a aamas:Term ;
 	bil:number bil:Plural ;
 	.
 
-aama:ID3ce35ee6-fa3b-4a96-a7de-a9469de817c0 a aamas:Term ;
+aama:IDc6496494-1a52-4c79-8432-0c4b50c7350c a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj2RelSubjAffImperfPngA-kab ;
 	bil:vmorphClass bil:Finite ;
@@ -3843,7 +3825,7 @@ bil:bilin-VConj2RelSubjAffPerfPngA-kab a aamas:Termcluster ;
 	rdfs:comment "Appleyard2007b pp. 497-499" 
 	.
 
-aama:ID7274b37f-20f0-4dc1-8db0-79b73954893c a aamas:Term ;
+aama:ID5a566f98-2eab-4aca-87f2-fc04b9e2d050 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj2RelSubjAffPerfPngA-kab ;
 	bil:vmorphClass bil:Finite ;
@@ -3860,7 +3842,7 @@ aama:ID7274b37f-20f0-4dc1-8db0-79b73954893c a aamas:Term ;
 	bil:number bil:Singular ;
 	.
 
-aama:ID7159b2ef-7681-4ccd-9bc6-066115eac479 a aamas:Term ;
+aama:ID4880af80-6516-4e6c-87ed-ab02fbfc8b7c a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj2RelSubjAffPerfPngA-kab ;
 	bil:vmorphClass bil:Finite ;
@@ -3877,7 +3859,7 @@ aama:ID7159b2ef-7681-4ccd-9bc6-066115eac479 a aamas:Term ;
 	bil:number bil:Singular ;
 	.
 
-aama:IDab108085-8e71-45c1-a05a-a6ebee48b80d a aamas:Term ;
+aama:ID126cae7f-f333-4b14-a593-30934b58226d a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj2RelSubjAffPerfPngA-kab ;
 	bil:vmorphClass bil:Finite ;
@@ -3894,7 +3876,7 @@ aama:IDab108085-8e71-45c1-a05a-a6ebee48b80d a aamas:Term ;
 	bil:number bil:Singular ;
 	.
 
-aama:ID6c458e21-a159-479b-a42f-859b6dfbbb4f a aamas:Term ;
+aama:ID57e9bf13-88d1-4e79-afc7-5d96b629f1d5 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj2RelSubjAffPerfPngA-kab ;
 	bil:vmorphClass bil:Finite ;
@@ -3911,7 +3893,7 @@ aama:ID6c458e21-a159-479b-a42f-859b6dfbbb4f a aamas:Term ;
 	bil:number bil:Singular ;
 	.
 
-aama:ID44e15b81-88cf-4ab0-a566-666eca30a2bf a aamas:Term ;
+aama:ID7e5f7127-923f-4e5c-b751-88c2c7f9102f a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj2RelSubjAffPerfPngA-kab ;
 	bil:vmorphClass bil:Finite ;
@@ -3928,7 +3910,7 @@ aama:ID44e15b81-88cf-4ab0-a566-666eca30a2bf a aamas:Term ;
 	bil:number bil:Plural ;
 	.
 
-aama:ID21532662-fdd4-4d39-8725-bc113b18af89 a aamas:Term ;
+aama:IDdd22d359-2381-45ca-b45f-b350e9b18bfb a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj2RelSubjAffPerfPngA-kab ;
 	bil:vmorphClass bil:Finite ;
@@ -3945,7 +3927,7 @@ aama:ID21532662-fdd4-4d39-8725-bc113b18af89 a aamas:Term ;
 	bil:number bil:Plural ;
 	.
 
-aama:IDd34fa5d5-007d-418c-84d6-e4cec3618b67 a aamas:Term ;
+aama:ID2365ae06-5670-4231-a231-56fa7f74a132 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj2RelSubjAffPerfPngA-kab ;
 	bil:vmorphClass bil:Finite ;
@@ -3970,7 +3952,7 @@ bil:bilin-VConj3MainAffImperfPresPngB-kw a aamas:Termcluster ;
 	rdfs:comment "Appleyard2007b pp. 497-499. Third conjugation verbs:a handful of monosyllabic roots (cf. LEXEMES section)." 
 	.
 
-aama:ID9f99b307-8e81-4ac1-8ee4-ed855e603186 a aamas:Term ;
+aama:ID7e949ca7-5448-49e0-a51a-2336fb062d1e a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj3MainAffImperfPresPngB-kw ;
 	bil:aspect bil:Imperfective ;
@@ -3988,7 +3970,7 @@ aama:ID9f99b307-8e81-4ac1-8ee4-ed855e603186 a aamas:Term ;
 	bil:person bil:Person1 ;
 	.
 
-aama:IDb6473de7-a76a-483e-b26c-81afb370f097 a aamas:Term ;
+aama:ID1537d7fb-95ea-4e19-a9a9-c76ef99ae820 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj3MainAffImperfPresPngB-kw ;
 	bil:aspect bil:Imperfective ;
@@ -4006,7 +3988,7 @@ aama:IDb6473de7-a76a-483e-b26c-81afb370f097 a aamas:Term ;
 	bil:person bil:Person2 ;
 	.
 
-aama:ID07717a0e-8466-4d7b-a197-321c4603b48a a aamas:Term ;
+aama:IDcb0e20cd-ead5-4e64-bd1a-7b39e62ddbfd a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj3MainAffImperfPresPngB-kw ;
 	bil:aspect bil:Imperfective ;
@@ -4032,7 +4014,7 @@ bil:bilin-VConj3MainAffPerfPastPngB-kw a aamas:Termcluster ;
 	rdfs:comment "Appleyard2007b pp. 497-499. Third conjugation verbs:a handful of monosyllabic roots (cf. LEXEMES section)." 
 	.
 
-aama:ID8578b740-1db4-4d08-87c1-fe07ef5fc9bf a aamas:Term ;
+aama:IDab88aebe-ed18-4cb0-bb59-865c848a0d6a a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj3MainAffPerfPastPngB-kw ;
 	bil:aspect bil:Perfective ;
@@ -4050,7 +4032,7 @@ aama:ID8578b740-1db4-4d08-87c1-fe07ef5fc9bf a aamas:Term ;
 	bil:person bil:Person1 ;
 	.
 
-aama:ID825387d2-9cbe-4181-85fe-65bc55f037fb a aamas:Term ;
+aama:ID36bcd8ab-610d-4ef4-8f95-17aaa439aa5b a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj3MainAffPerfPastPngB-kw ;
 	bil:aspect bil:Perfective ;
@@ -4068,7 +4050,7 @@ aama:ID825387d2-9cbe-4181-85fe-65bc55f037fb a aamas:Term ;
 	bil:person bil:Person2 ;
 	.
 
-aama:ID6af8eae3-acbc-4fa2-890b-0b8494ff0826 a aamas:Term ;
+aama:ID7003f957-91e0-418e-a37a-ee62e7bd161c a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VConj3MainAffPerfPastPngB-kw ;
 	bil:aspect bil:Perfective ;
@@ -4094,7 +4076,7 @@ bil:bilin-VCopula a aamas:Termcluster ;
 	rdfs:comment "Appleyard2007b pp. 502f. “A peculiar feature of the verb ‘to be’ in Bilin%%shared with the other Agaw languages%%is the reversal of aspect%%whereby a perfective aspect (past tense) form is used in imprefective (present time) function%%and vice versa%%as for instance:ni gərwa kəxin sänäkw ‘he was a clever man’. “(p. 501) See LEXEMES section." 
 	.
 
-aama:IDf12b6c84-6569-4f01-98c3-2178a474a4e8 a aamas:Term ;
+aama:ID5feeb07d-c473-47d8-868d-8dcb1e1eb369 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VCopula ;
 	bil:vmorphClass bil:CopulaForm ;
@@ -4107,7 +4089,7 @@ aama:IDf12b6c84-6569-4f01-98c3-2178a474a4e8 a aamas:Term ;
 	bil:copType bil:CopLoc ;
 	.
 
-aama:IDd316d226-47da-45fe-9f0c-d3c9b82b99db a aamas:Term ;
+aama:ID9af617c0-b424-4e50-8578-16e005386888 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VCopula ;
 	bil:vmorphClass bil:CopulaForm ;
@@ -4120,7 +4102,7 @@ aama:IDd316d226-47da-45fe-9f0c-d3c9b82b99db a aamas:Term ;
 	bil:copType bil:CopLoc ;
 	.
 
-aama:ID7c227efe-6758-4c28-91ac-61fe75086a7c a aamas:Term ;
+aama:ID2588e2f2-38ce-4726-8a87-7e750ac94aae a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VCopula ;
 	bil:vmorphClass bil:CopulaForm ;
@@ -4133,7 +4115,7 @@ aama:ID7c227efe-6758-4c28-91ac-61fe75086a7c a aamas:Term ;
 	bil:copType bil:CopLoc ;
 	.
 
-aama:IDcc3f433a-868a-4162-a2e6-b6c688a4daaf a aamas:Term ;
+aama:ID7005109e-4789-4467-9ee2-eea7d8c3822e a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VCopula ;
 	bil:vmorphClass bil:CopulaForm ;
@@ -4146,7 +4128,7 @@ aama:IDcc3f433a-868a-4162-a2e6-b6c688a4daaf a aamas:Term ;
 	bil:copType bil:CopLoc ;
 	.
 
-aama:IDf096c8bd-edaf-41d2-8a65-db87e7d0d75d a aamas:Term ;
+aama:ID8e1d2e6a-85c5-46c3-92e2-7733efc4c47c a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VCopula ;
 	bil:vmorphClass bil:CopulaForm ;
@@ -4159,7 +4141,7 @@ aama:IDf096c8bd-edaf-41d2-8a65-db87e7d0d75d a aamas:Term ;
 	bil:copType bil:CopMain ;
 	.
 
-aama:IDba347ff7-9c6a-4167-8078-301091c4acef a aamas:Term ;
+aama:ID60742be1-86a7-4dde-82ac-299348dded83 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VCopula ;
 	bil:vmorphClass bil:CopulaForm ;
@@ -4180,7 +4162,7 @@ bil:bilin-VDervSuff a aamas:Termcluster ;
 	rdfs:comment "Appleyard2007b pp. 493-495" 
 	.
 
-aama:ID602b135a-1669-485b-a3ec-977d8c4ff356 a aamas:Term ;
+aama:ID69ce7d80-7132-4355-a38f-d15efa3dbc23 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VDervSuff ;
 	bil:vmorphClass bil:DervSuff ;
@@ -4189,7 +4171,7 @@ aama:ID602b135a-1669-485b-a3ec-977d8c4ff356 a aamas:Term ;
 	bil:derivedStem bil:Frequentative ;
 	.
 
-aama:ID75d1cfdd-1283-405f-86ce-fd7f669b2942 a aamas:Term ;
+aama:ID7204d0a2-6af4-4200-9e42-e2044eaa1d89 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VDervSuff ;
 	bil:vmorphClass bil:DervSuff ;
@@ -4198,7 +4180,7 @@ aama:ID75d1cfdd-1283-405f-86ce-fd7f669b2942 a aamas:Term ;
 	bil:derivedStem bil:M ;
 	.
 
-aama:ID0212db71-5a60-400c-a752-085201cb3f25 a aamas:Term ;
+aama:ID10c1f061-c390-470a-9ab2-b2563905e63e a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VDervSuff ;
 	bil:vmorphClass bil:DervSuff ;
@@ -4207,7 +4189,7 @@ aama:ID0212db71-5a60-400c-a752-085201cb3f25 a aamas:Term ;
 	bil:derivedStem bil:MFreq ;
 	.
 
-aama:IDa2e2c89b-875c-4ccc-a7cf-90935f6c7c36 a aamas:Term ;
+aama:IDa90a643f-2aee-4b39-bc14-ecacb9c07e1d a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VDervSuff ;
 	bil:vmorphClass bil:DervSuff ;
@@ -4216,7 +4198,7 @@ aama:IDa2e2c89b-875c-4ccc-a7cf-90935f6c7c36 a aamas:Term ;
 	bil:derivedStem bil:MFreq ;
 	.
 
-aama:IDc83afd24-8de5-44cc-9d00-d64d01f0cc15 a aamas:Term ;
+aama:IDb6409c58-d096-49c5-bdc1-bd6ffcf97be8 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VDervSuff ;
 	bil:vmorphClass bil:DervSuff ;
@@ -4225,7 +4207,7 @@ aama:IDc83afd24-8de5-44cc-9d00-d64d01f0cc15 a aamas:Term ;
 	bil:derivedStem bil:Reciprocal ;
 	.
 
-aama:IDc1b74fe8-0aff-48ec-927c-8ef40c540f8f a aamas:Term ;
+aama:IDd0030989-636b-4f43-b021-13748905fbd2 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VDervSuff ;
 	bil:vmorphClass bil:DervSuff ;
@@ -4234,7 +4216,7 @@ aama:IDc1b74fe8-0aff-48ec-927c-8ef40c540f8f a aamas:Term ;
 	bil:derivedStem bil:S ;
 	.
 
-aama:ID7d520aaa-5f55-42bc-86bf-26dee6f38a9d a aamas:Term ;
+aama:ID82f93781-ae9c-41e9-a8f9-6c0cfd8e8a65 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VDervSuff ;
 	bil:vmorphClass bil:DervSuff ;
@@ -4243,7 +4225,7 @@ aama:ID7d520aaa-5f55-42bc-86bf-26dee6f38a9d a aamas:Term ;
 	bil:derivedStem bil:S2 ;
 	.
 
-aama:ID538c6aae-06bc-4bba-9706-27b8a9186f56 a aamas:Term ;
+aama:ID963e0b1f-d390-43ef-872b-bc762fc9c1f7 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VDervSuff ;
 	bil:vmorphClass bil:DervSuff ;
@@ -4260,7 +4242,7 @@ bil:bilin-VPngA2PngSuff a aamas:Termcluster ;
 	rdfs:comment "Appleyard2007b p. 495f. A:subordinate tenses (and base for A2%%B%%C);A2:main neg imperf/perf;B:main aff imperf/perf;C:main aff fut" 
 	.
 
-aama:IDee1f9828-1bc9-43f8-a415-fb1688446dab a aamas:Term ;
+aama:IDbe93b8d4-ea37-44c6-a7c3-dfc581e9fb54 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VPngA2PngSuff ;
 	bil:vmorphClass bil:PersSuffA2 ;
@@ -4272,7 +4254,7 @@ aama:IDee1f9828-1bc9-43f8-a415-fb1688446dab a aamas:Term ;
 	bil:number bil:Singular ;
 	.
 
-aama:IDf084ff2f-0077-4c00-b6a0-70f596741a63 a aamas:Term ;
+aama:ID3eda558a-a7b9-4fc6-a794-acdd1b369871 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VPngA2PngSuff ;
 	bil:vmorphClass bil:PersSuffA2 ;
@@ -4284,7 +4266,7 @@ aama:IDf084ff2f-0077-4c00-b6a0-70f596741a63 a aamas:Term ;
 	bil:number bil:Singular ;
 	.
 
-aama:ID53c5d32d-0307-4e40-90b7-a6948c95823a a aamas:Term ;
+aama:IDd4065232-9016-483e-a0ab-46d3664668cf a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VPngA2PngSuff ;
 	bil:vmorphClass bil:PersSuffA2 ;
@@ -4296,7 +4278,7 @@ aama:ID53c5d32d-0307-4e40-90b7-a6948c95823a a aamas:Term ;
 	bil:number bil:Singular ;
 	.
 
-aama:IDffc590dc-bc31-466f-a04a-5dff2d75f550 a aamas:Term ;
+aama:IDe97d22fd-ced3-4f7f-bae9-185714c9e67a a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VPngA2PngSuff ;
 	bil:vmorphClass bil:PersSuffA2 ;
@@ -4308,7 +4290,7 @@ aama:IDffc590dc-bc31-466f-a04a-5dff2d75f550 a aamas:Term ;
 	bil:number bil:Singular ;
 	.
 
-aama:ID42791fa1-eab4-4352-8f76-af9228949ac8 a aamas:Term ;
+aama:ID1680e7cc-7370-4201-bd5b-1d4e8390ce97 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VPngA2PngSuff ;
 	bil:vmorphClass bil:PersSuffA2 ;
@@ -4320,7 +4302,7 @@ aama:ID42791fa1-eab4-4352-8f76-af9228949ac8 a aamas:Term ;
 	bil:number bil:Plural ;
 	.
 
-aama:ID10e8feb2-78d1-4e57-91e4-4539ae19c8c9 a aamas:Term ;
+aama:IDde559b82-e450-43d8-b997-30704a2eb71d a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VPngA2PngSuff ;
 	bil:vmorphClass bil:PersSuffA2 ;
@@ -4332,7 +4314,7 @@ aama:ID10e8feb2-78d1-4e57-91e4-4539ae19c8c9 a aamas:Term ;
 	bil:number bil:Plural ;
 	.
 
-aama:IDeb85be90-7d6a-4351-a305-c12a684fa1d3 a aamas:Term ;
+aama:IDe63516f5-c817-4253-a6ce-2c9aca9f7b82 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VPngA2PngSuff ;
 	bil:vmorphClass bil:PersSuffA2 ;
@@ -4352,7 +4334,7 @@ bil:bilin-VPngAPngSuff a aamas:Termcluster ;
 	rdfs:comment "Appleyard2007b p. 495f. A:subordinate tenses (and base for A2%%B%%C);A2:main neg imperf/perf;B:main aff imperf/perf;C:main aff fut" 
 	.
 
-aama:ID3e51a285-b586-48e4-9a88-6351934f0dd9 a aamas:Term ;
+aama:ID2c299785-f587-4820-a45f-812b17ff9e73 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VPngAPngSuff ;
 	bil:vmorphClass bil:PersSuffA ;
@@ -4365,7 +4347,7 @@ aama:ID3e51a285-b586-48e4-9a88-6351934f0dd9 a aamas:Term ;
 	bil:number bil:Singular ;
 	.
 
-aama:IDb103c706-d0a6-427e-8586-cc0145b5c0cd a aamas:Term ;
+aama:IDfc87c477-61ab-4b34-a055-7380284e452b a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VPngAPngSuff ;
 	bil:vmorphClass bil:PersSuffA ;
@@ -4378,7 +4360,7 @@ aama:IDb103c706-d0a6-427e-8586-cc0145b5c0cd a aamas:Term ;
 	bil:number bil:Singular ;
 	.
 
-aama:IDd50f0fac-97c4-4b18-8acf-203b8e78e120 a aamas:Term ;
+aama:ID54eb343b-ad5e-4e67-b078-a111765a5a96 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VPngAPngSuff ;
 	bil:vmorphClass bil:PersSuffA ;
@@ -4391,7 +4373,7 @@ aama:IDd50f0fac-97c4-4b18-8acf-203b8e78e120 a aamas:Term ;
 	bil:number bil:Singular ;
 	.
 
-aama:ID8c2c896b-6517-44e8-8554-abe79e041f90 a aamas:Term ;
+aama:ID8ba4e3ec-6436-484a-9db6-4aa5feac550d a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VPngAPngSuff ;
 	bil:vmorphClass bil:PersSuffA ;
@@ -4404,7 +4386,7 @@ aama:ID8c2c896b-6517-44e8-8554-abe79e041f90 a aamas:Term ;
 	bil:number bil:Singular ;
 	.
 
-aama:IDf4438d6f-66e7-4712-9dd6-bf5b89a1734e a aamas:Term ;
+aama:ID399e4dd0-d0ca-4250-b378-429fb5c293ef a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VPngAPngSuff ;
 	bil:vmorphClass bil:PersSuffA ;
@@ -4417,7 +4399,7 @@ aama:IDf4438d6f-66e7-4712-9dd6-bf5b89a1734e a aamas:Term ;
 	bil:number bil:Plural ;
 	.
 
-aama:IDe67ff254-888e-4baf-87b4-01b4ba94e6eb a aamas:Term ;
+aama:ID85883ffa-6fc9-4a36-9760-af8565012bc2 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VPngAPngSuff ;
 	bil:vmorphClass bil:PersSuffA ;
@@ -4430,7 +4412,7 @@ aama:IDe67ff254-888e-4baf-87b4-01b4ba94e6eb a aamas:Term ;
 	bil:number bil:Plural ;
 	.
 
-aama:ID5d32dba2-a0fa-4b2a-b81a-edb1a8159550 a aamas:Term ;
+aama:IDd9f63356-70a6-4585-9e23-3b8a0c7d9e49 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VPngAPngSuff ;
 	bil:vmorphClass bil:PersSuffA ;
@@ -4451,7 +4433,7 @@ bil:bilin-VPngBPngSuff a aamas:Termcluster ;
 	rdfs:comment "Appleyard2007b p. 495f. A:subordinate tenses (and base for A2%%B%%C);A2:main neg imperf/perf;B:main aff imperf/perf;C:main aff fut" 
 	.
 
-aama:IDb60df3fd-c896-4ebc-b0a5-b63236321447 a aamas:Term ;
+aama:ID32d3a499-6c90-4e6e-8083-f390995eb8cf a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VPngBPngSuff ;
 	bil:vmorphClass bil:PersSuffB ;
@@ -4463,7 +4445,7 @@ aama:IDb60df3fd-c896-4ebc-b0a5-b63236321447 a aamas:Term ;
 	bil:number bil:Singular ;
 	.
 
-aama:ID73a3802f-eab4-4ade-a57a-88998e1c8705 a aamas:Term ;
+aama:IDfdb667de-e108-4f62-8c24-6c272f1b6c2e a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VPngBPngSuff ;
 	bil:vmorphClass bil:PersSuffB ;
@@ -4475,7 +4457,7 @@ aama:ID73a3802f-eab4-4ade-a57a-88998e1c8705 a aamas:Term ;
 	bil:number bil:Singular ;
 	.
 
-aama:IDc983ad90-de1a-4824-a882-d9885f50d546 a aamas:Term ;
+aama:ID5e8f3c2d-f1a5-4821-9344-2044c3af4300 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VPngBPngSuff ;
 	bil:vmorphClass bil:PersSuffB ;
@@ -4487,7 +4469,7 @@ aama:IDc983ad90-de1a-4824-a882-d9885f50d546 a aamas:Term ;
 	bil:number bil:Singular ;
 	.
 
-aama:ID210ebf3e-c2ae-49a3-8a19-49cd438002f6 a aamas:Term ;
+aama:ID0f9ab468-01c8-4900-b4a8-4f1d7a1e5a6b a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VPngBPngSuff ;
 	bil:vmorphClass bil:PersSuffB ;
@@ -4499,7 +4481,7 @@ aama:ID210ebf3e-c2ae-49a3-8a19-49cd438002f6 a aamas:Term ;
 	bil:number bil:Singular ;
 	.
 
-aama:ID0513e46e-0f72-4697-8ef9-b3be93b2767b a aamas:Term ;
+aama:ID5565f2d5-468e-47f2-bb90-e2558f1f0573 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VPngBPngSuff ;
 	bil:vmorphClass bil:PersSuffB ;
@@ -4511,7 +4493,7 @@ aama:ID0513e46e-0f72-4697-8ef9-b3be93b2767b a aamas:Term ;
 	bil:number bil:Plural ;
 	.
 
-aama:IDa92c7ab1-5b1f-4102-bd6f-ebe8f0f6c1a9 a aamas:Term ;
+aama:ID4e166311-91d9-40dd-8ae9-2849722e581b a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VPngBPngSuff ;
 	bil:vmorphClass bil:PersSuffB ;
@@ -4523,7 +4505,7 @@ aama:IDa92c7ab1-5b1f-4102-bd6f-ebe8f0f6c1a9 a aamas:Term ;
 	bil:number bil:Plural ;
 	.
 
-aama:ID95fbae59-e315-4c52-840a-0d83e2fe8316 a aamas:Term ;
+aama:ID411d22a9-a2c8-40ca-aab3-936a3a809b3d a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VPngBPngSuff ;
 	bil:vmorphClass bil:PersSuffB ;
@@ -4543,7 +4525,7 @@ bil:bilin-VPngCPngSuff a aamas:Termcluster ;
 	rdfs:comment "Appleyard2007b p. 495f. A:subordinate tenses (and base for A2%%B%%C);A2:main neg imperf/perf;B:main aff imperf/perf;C:main aff fut" 
 	.
 
-aama:ID995b6ecc-6192-47cf-b215-a0d653ffd1a8 a aamas:Term ;
+aama:ID0e8479c6-8bea-4604-b085-85e72d9d787e a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VPngCPngSuff ;
 	bil:vmorphClass bil:PersSuffC ;
@@ -4556,7 +4538,7 @@ aama:ID995b6ecc-6192-47cf-b215-a0d653ffd1a8 a aamas:Term ;
 	bil:number bil:Singular ;
 	.
 
-aama:ID8f72776c-440e-451f-bafe-5e1e7827413a a aamas:Term ;
+aama:ID88202711-3ea7-456f-93b7-4aced17de86c a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VPngCPngSuff ;
 	bil:vmorphClass bil:PersSuffC ;
@@ -4569,7 +4551,7 @@ aama:ID8f72776c-440e-451f-bafe-5e1e7827413a a aamas:Term ;
 	bil:number bil:Singular ;
 	.
 
-aama:IDb49f5fc3-9a59-42b2-9fca-500dd960022b a aamas:Term ;
+aama:ID99202408-8b53-40c6-a76e-2971fba2c0f9 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VPngCPngSuff ;
 	bil:vmorphClass bil:PersSuffC ;
@@ -4582,7 +4564,7 @@ aama:IDb49f5fc3-9a59-42b2-9fca-500dd960022b a aamas:Term ;
 	bil:number bil:Singular ;
 	.
 
-aama:ID975a2661-c1ff-43bf-9c1e-42793e3d736c a aamas:Term ;
+aama:IDa1364e10-a255-4226-9a56-84f15affb748 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VPngCPngSuff ;
 	bil:vmorphClass bil:PersSuffC ;
@@ -4595,7 +4577,7 @@ aama:ID975a2661-c1ff-43bf-9c1e-42793e3d736c a aamas:Term ;
 	bil:number bil:Singular ;
 	.
 
-aama:ID57ea4669-dbbb-4fda-a95d-05bd4cd5184b a aamas:Term ;
+aama:ID67818c81-8332-4d9c-8de6-acd3ffaf46c9 a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VPngCPngSuff ;
 	bil:vmorphClass bil:PersSuffC ;
@@ -4608,7 +4590,7 @@ aama:ID57ea4669-dbbb-4fda-a95d-05bd4cd5184b a aamas:Term ;
 	bil:number bil:Plural ;
 	.
 
-aama:ID02df103a-01c6-4386-9967-1699ef03a6ef a aamas:Term ;
+aama:ID54cf9bad-44d1-41c7-b468-657472bbdd9e a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VPngCPngSuff ;
 	bil:vmorphClass bil:PersSuffC ;
@@ -4621,7 +4603,7 @@ aama:ID02df103a-01c6-4386-9967-1699ef03a6ef a aamas:Term ;
 	bil:number bil:Plural ;
 	.
 
-aama:ID54071b04-ae88-4673-923a-a55044d064af a aamas:Term ;
+aama:ID0071f295-f139-440b-b391-8b6a0d59b9ef a aamas:Term ;
 	aamas:lang aama:Bilin ;
 	aamas:memberOf bil:bilin-VPngCPngSuff ;
 	bil:vmorphClass bil:PersSuffC ;
