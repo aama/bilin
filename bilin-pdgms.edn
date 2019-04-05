@@ -2,42 +2,42 @@
  :lang :bilin
  :subfamily "Agaw"
  :sgpref "bil"
- :datasource "Appleyard2007b"
+ :datasource "Appleyard2007b; abbrev.A07"
  :geodemoURL "http://www.ethnologue.com/language/byn"
  :geodemoTXT "Varieties and subdialects of theAgaw (or Central) Cushitic language: Bilin is spoken mainly in the vicinity of the town Keren. The variety represented here is that described in Appleyard2007b."
-:schemata { :aspect [:Imperfective :Perfective],
- :case [:Absolutive :Object :ObjectSuff :Oblique],
- :clauseType [:AdvAt1 :AdvAt2 :AdvCause :AdvCompl :AdvCond :AdvConsec :AdvFutCond :AdvPurp :AdvUntil :AdvWhen :AdvWhile :Main :RelObliq :RelSubj],
- :conjClass [:Conjugation1 :Conjugation2 :Conjugation3],
- :copType [:CopLoc :CopMain],
- :derivedStem [:Frequentative :M :MFreq :Reciprocal :S :S2 :SRecip],
- :gender [:Common :Fem :Masc],
- :nonFiniteForm [:Agent :Infinitive],
- :number [:Common :Plural :Singular],
- :numberGenderHead [:HeadPlural :HeadSingularFem :HeadSingularMasc],
- :person [:Person1 :Person2 :Person3],
- :pmorphClass [:ProMorph],
- :pngSet [:PngA :PngA2 :PngB :PngC],
- :polarity [:Affirmative :Negative],
- :pos [:Pronoun :Verb],
- :proClass [:Independent],
- :tam [:Common :Future :Imperative :Jussive :Past :Perfect :Present],
- :vmorphClass [:AgentNom :CopulaForm :DervSuff :Finite :InfinitiveNom :PersSuffA :PersSuffA2 :PersSuffB :PersSuffC]
- }
+ :schemata { :aspect [:Imperfective :Perfective],
+            :case [:Absolutive :Object :ObjectSuff :Oblique],
+            :clauseType [:AdvAt1 :AdvAt2 :AdvCause :AdvCompl :AdvCond :AdvConsec :AdvFutCond :AdvPurp :AdvUntil :AdvWhen :AdvWhile :Main :RelObliq :RelSubj],
+            :conjClass [:Conjugation1 :Conjugation2 :Conjugation3],
+            :copType [:CopLoc :CopMain],
+            :derivedStem [:Frequentative :M :MFreq :Reciprocal :S :S2 :SRecip],
+            :gender [:Common :Fem :Masc],
+            :nonFiniteForm [:Agent :Infinitive],
+            :number [:Common :Plural :Singular],
+            :numberGenderHead [:HeadPlural :HeadSingularFem :HeadSingularMasc],
+            :person [:Person1 :Person2 :Person3],
+            :pmorphClass [:ProMorph],
+            :pngSet [:PngA :PngA2 :PngB :PngC],
+            :polarity [:Affirmative :Negative],
+            :pos [:Pronoun :Verb],
+            :proClass [:Independent],
+            :tam [:Common :Future :Imperative :Jussive :Past :Perfect :Present],
+            :vmorphClass [:AgentNom :CopulaForm :DervSuff :Finite :InfinitiveNom :PersSuffA :PersSuffA2 :PersSuffB :PersSuffC]
+            }
  :pclass {:pngClass [:person :number :gender :pngSet],
           :synsemClass [:aspect :case :clauseType :copType :nonFiniteForm :derivedStem :polarity :pos :proClass :tam],
           :inflClass [:conjClass],
           :otherClass []}
  :lexemes {
-:COPULA   {:pos :Verb, :lemma "[y]", :gloss "[x]", },
-:gab   {:pos :Verb, :lemma "gäb-", :gloss "refuse", :conjClass :Conjugation1},
-:kab   {:pos :Verb, :lemma "kab-", :gloss "help", :conjClass :Conjugation2},
-:kw   {:pos :Verb, :lemma "k’w-", :gloss "eat", :conjClass :Conjugation3},
-:was   {:pos :Verb, :lemma "[y]", :gloss "[x]", },
-}
+           :COPULA   {:pos :Verb, :lemma "[y]", :gloss "[x]", },
+           :gab   {:pos :Verb, :lemma "gäb-", :gloss "refuse", :conjClass :Conjugation1},
+           :kab   {:pos :Verb, :lemma "kab-", :gloss "help", :conjClass :Conjugation2},
+           :kw   {:pos :Verb, :lemma "k’w-", :gloss "eat", :conjClass :Conjugation3},
+           :was   {:pos :Verb, :lemma "[y]", :gloss "[x]", },
+           }
  :termclusters [
                 {:label "bilin-PInd"
-                 :note "Appleyard2007b p. 491. The oblique case is also used for the possessive prefix. The object suffix pronouns,attached to verb,are borrowed from Tigre. NOte sg 2 f form (unique in Agaw)."
+                 :note "A07pp.491 ::  The oblique case is also used for the possessive prefix. The object suffix pronouns,attached to verb,are borrowed from Tigre. NOte sg 2 f form (unique in Agaw)."
                  :common {:pos :Pronoun, :pmorphClass :ProMorph,
                           :proClass :Independent}
                  :terms [[:case :number :person :gender :token],
@@ -72,7 +72,7 @@
                          [:Oblique :Plural :Person3 :Common "na"]]
                  }
                 {:label "bilin-VConj1AdvAt1AffImperfPngA-gab"
-                 :note "Appleyard2007b pp. 497-501"
+                 :note "A07pp.497-501"
                  :common {:vmorphClass :Finite
                           :gender :Masc,
                           :pngSet :PngA,
@@ -88,7 +88,7 @@
                          ["gäbäsäna"]]
                  }
                 {:label "bilin-VConj1AdvAt2AffImperfPngA-gab"
-                 :note "Appleyard2007b pp. 497-501"
+                 :note "A07pp.497-501"
                  :common {:vmorphClass :Finite
                           :gender :Masc,
                           :pngSet :PngA,
@@ -104,7 +104,7 @@
                          ["gäbek"]]
                  }
                 {:label "bilin-VConj1AdvCauseAffPerfPngA-gab"
-                 :note "Appleyard2007b pp. 497-501"
+                 :note "A07pp.497-501"
                  :common {:vmorphClass :Finite
                           :gender :Masc,
                           :pngSet :PngA,
@@ -120,7 +120,7 @@
                          ["gäbnädin"]]
                  }
                 {:label "bilin-VConj1AdvCauseNegPerfPngA-gab"
-                 :note "Appleyard2007b pp. 497-501"
+                 :note "A07pp.497-501"
                  :common {:vmorphClass :Finite
                           :gender :Masc,
                           :pngSet :PngA,
@@ -136,7 +136,7 @@
                          ["gäbgənädin"]]
                  }
                 {:label "bilin-VConj1AdvComplAffImperfPngA-gab"
-                 :note "Appleyard2007b pp. 497-501"
+                 :note "A07pp.497-501"
                  :common {:vmorphClass :Finite
                           :gender :Masc,
                           :pngSet :PngA,
@@ -152,7 +152,7 @@
                          ["gäbät"]]
                  }
                 {:label "bilin-VConj1AdvComplAffPerfPngA-gab"
-                 :note "Appleyard2007b pp. 497-501"
+                 :note "A07pp.497-501"
                  :common {:vmorphClass :Finite
                           :gender :Masc,
                           :pngSet :PngA,
@@ -168,7 +168,7 @@
                          ["gäbät"]]
                  }
                 {:label "bilin-VConj1AdvComplNegImperfPngA-gab"
-                 :note "Appleyard2007b pp. 497-501"
+                 :note "A07pp.497-501"
                  :common {:vmorphClass :Finite
                           :gender :Masc,
                           :pngSet :PngA,
@@ -184,7 +184,7 @@
                          ["gäbägät"]]
                  }
                 {:label "bilin-VConj1AdvComplNegPerfPngA-gab"
-                 :note "Appleyard2007b pp. 497-501"
+                 :note "A07pp.497-501"
                  :common {:vmorphClass :Finite
                           :gender :Masc,
                           :pngSet :PngA,
@@ -200,7 +200,7 @@
                          ["gäbgät"]]
                  }
                 {:label "bilin-VConj1AdvCondAffImperfPngA-gab"
-                 :note "Appleyard2007b pp. 497-501"
+                 :note "A07pp.497-501"
                  :common {:vmorphClass :Finite
                           :gender :Masc,
                           :pngSet :PngA,
@@ -216,7 +216,7 @@
                          ["gäbän"]]
                  }
                 {:label "bilin-VConj1AdvCondAffPerfPngA-gab"
-                 :note "Appleyard2007b pp. 497-501"
+                 :note "A07pp.497-501"
                  :common {:vmorphClass :Finite
                           :gender :Masc,
                           :pngSet :PngA,
@@ -232,7 +232,7 @@
                          ["gäbnädik"]]
                  }
                 {:label "bilin-VConj1AdvCondNegImperfPngA-gab"
-                 :note "Appleyard2007b pp. 497-501"
+                 :note "A07pp.497-501"
                  :common {:vmorphClass :Finite
                           :gender :Masc,
                           :pngSet :PngA,
@@ -248,7 +248,7 @@
                          ["gäbägän"]]
                  }
                 {:label "bilin-VConj1AdvCondNegPerfPngA-gab"
-                 :note "Appleyard2007b pp. 497-501"
+                 :note "A07pp.497-501"
                  :common {:vmorphClass :Finite
                           :gender :Masc,
                           :pngSet :PngA,
@@ -264,7 +264,7 @@
                          ["gäbgənädik"]]
                  }
                 {:label "bilin-VConj1AdvConsecAffPerfPngA-gab"
-                 :note "Appleyard2007b pp. 497-501"
+                 :note "A07pp.497-501"
                  :common {:vmorphClass :Finite
                           :gender :Masc,
                           :pngSet :PngA,
@@ -280,7 +280,7 @@
                          ["gäbo"]]
                  }
                 {:label "bilin-VConj1AdvConsecNegPerfPngA-gab"
-                 :note "Appleyard2007b pp. 497-501"
+                 :note "A07pp.497-501"
                  :common {:vmorphClass :Finite
                           :gender :Masc,
                           :pngSet :PngA,
@@ -296,7 +296,7 @@
                          ["gäbgi"]]
                  }
                 {:label "bilin-VConj1AdvFutCondAffPerfPngC-gab"
-                 :note "Appleyard2007b pp. 497-501"
+                 :note "A07pp.497-501"
                  :common {:vmorphClass :Finite
                           :gender :Masc,
                           :pngSet :PngC,
@@ -312,7 +312,7 @@
                          ["gäbrəd"]]
                  }
                 {:label "bilin-VConj1AdvFutCondNegPerfPngC-gab"
-                 :note "Appleyard2007b pp. 497-501"
+                 :note "A07pp.497-501"
                  :common {:vmorphClass :Finite
                           :gender :Masc,
                           :pngSet :PngC,
@@ -328,7 +328,7 @@
                          ["gäbgid"]]
                  }
                 {:label "bilin-VConj1AdvPurpAffPerfPngC-gab"
-                 :note "Appleyard2007b pp. 497-501"
+                 :note "A07pp.497-501"
                  :common {:vmorphClass :Finite
                           :gender :Masc,
                           :pngSet :PngC,
@@ -344,7 +344,7 @@
                          ["gäbro"]]
                  }
                 {:label "bilin-VConj1AdvPurpNegPerfPngC-gab"
-                 :note "Appleyard2007b pp. 497-501"
+                 :note "A07pp.497-501"
                  :common {:vmorphClass :Finite
                           :gender :Masc,
                           :pngSet :PngC,
@@ -360,7 +360,7 @@
                          ["gäbgin"]]
                  }
                 {:label "bilin-VConj1AdvUntilAffPerfPngC-gab"
-                 :note "Appleyard2007b pp. 497-501"
+                 :note "A07pp.497-501"
                  :common {:vmorphClass :Finite
                           :gender :Masc,
                           :pngSet :PngC,
@@ -376,7 +376,7 @@
                          ["gäbrasik"]]
                  }
                 {:label "bilin-VConj1AdvWhenAffImperfPngA-gab"
-                 :note "Appleyard2007b pp. 497-501"
+                 :note "A07pp.497-501"
                  :common {:vmorphClass :Finite
                           :gender :Masc,
                           :pngSet :PngA,
@@ -392,7 +392,7 @@
                          ["gäbaka"]]
                  }
                 {:label "bilin-VConj1AdvWhileAffImperfPngA-gab"
-                 :note "Appleyard2007b pp. 497-501"
+                 :note "A07pp.497-501"
                  :common {:vmorphClass :Finite
                           :gender :Masc,
                           :pngSet :PngA,
@@ -408,7 +408,7 @@
                          ["gäbu"]]
                  }
                 {:label "bilin-VConj1Agent-gab"
-                 :note "Appleyard2007b pp. 497-501"
+                 :note "A07pp.497-501"
                  :common {:vmorphClass :AgentNom
                           :conjClass :Conjugation1,
                           :nonFiniteForm :Agent,
@@ -420,7 +420,7 @@
                          ["gäbänta (pl. gäbänti)"]]
                  }
                 {:label "bilin-VConj1Infinitive-gab"
-                 :note "Appleyard2007b pp. 497-501"
+                 :note "A07pp.497-501"
                  :common {:vmorphClass :InfinitiveNom
                           :conjClass :Conjugation1,
                           :nonFiniteForm :Infinitive,
@@ -430,7 +430,7 @@
                          ["gäbna"]]
                  }
                 {:label "bilin-VConj1MainAffImperfJussPngA-gab"
-                 :note "Appleyard2007b pp. 497-501"
+                 :note "A07pp.497-501"
                  :common {:vmorphClass :Finite
                           :aspect :Imperfective,
                           :clauseType :Main,
@@ -448,7 +448,7 @@
                          [:Plural :Person3 :Common "gäbinin"]]
                  }
                 {:label "bilin-VConj1MainAffImperfPresPngB-gab"
-                 :note "Appleyard2007b pp. 497-501"
+                 :note "A07pp.497-501"
                  :common {:vmorphClass :Finite
                           :aspect :Imperfective,
                           :clauseType :Main,
@@ -468,7 +468,7 @@
                          [:Plural :Person3 :Common "gäbänäkw"]]
                  }
                 {:label "bilin-VConj1MainAffPerfFutPngC-gab"
-                 :note "Appleyard2007b pp. 497-501"
+                 :note "A07pp.497-501"
                  :common {:vmorphClass :Finite
                           :aspect :Perfective,
                           :clauseType :Main,
@@ -488,7 +488,7 @@
                          [:Plural :Person3 :Common "gäbdəna"]]
                  }
                 {:label "bilin-VConj1MainAffPerfImprtv-gab"
-                 :note "Appleyard2007b pp. 497-501"
+                 :note "A07pp.497-501"
                  :common {:vmorphClass :Finite
                           :gender :Common,
                           :polarity :Affirmative,
@@ -504,7 +504,7 @@
                          [:Plural "gäba"]]
                  }
                 {:label "bilin-VConj1MainAffPerfPastPngB-gab"
-                 :note "Appleyard2007b pp. 497-501"
+                 :note "A07pp.497-501"
                  :common {:vmorphClass :Finite
                           :aspect :Perfective,
                           :clauseType :Main,
@@ -524,7 +524,7 @@
                          [:Plural :Person3 :Common "gäbnəxw"]]
                  }
                 {:label "bilin-VConj1MainNegImperfJussPngA-gab"
-                 :note "Appleyard2007b pp. 497-501"
+                 :note "A07pp.497-501"
                  :common {:vmorphClass :Finite
                           :aspect :Imperfective,
                           :clauseType :Main,
@@ -542,7 +542,7 @@
                          [:Plural :Person3 :Common "gäbgənin"]]
                  }
                 {:label "bilin-VConj1MainNegImperfPngA2-gab"
-                 :note "Appleyard2007b pp. 497-501"
+                 :note "A07pp.497-501"
                  :common {:vmorphClass :Finite
                           :aspect :Imperfective,
                           :clauseType :Main,
@@ -561,7 +561,7 @@
                          [:Plural :Person3 :Common "gäbänni"]]
                  }
                 {:label "bilin-VConj1MainNegPerfImprtv-gab"
-                 :note "Appleyard2007b pp. 497-501"
+                 :note "A07pp.497-501"
                  :common {:vmorphClass :Finite
                           :gender :Common,
                           :polarity :Negative,
@@ -577,7 +577,7 @@
                          [:Plural "gäbga"]]
                  }
                 {:label "bilin-VConj1MainNegPerfPngA2-gab"
-                 :note "Appleyard2007b pp. 497-501"
+                 :note "A07pp.497-501"
                  :common {:vmorphClass :Finite
                           :aspect :Perfective,
                           :clauseType :Main,
@@ -596,7 +596,7 @@
                          [:Plural :Person3 :Common "gäbənni"]]
                  }
                 {:label "bilin-VConj1RelObliqAffImperfPngAHeadPl-gab"
-                 :note "Appleyard2007b pp. 497-501"
+                 :note "A07pp.497-501"
                  :common {:vmorphClass :Finite
                           :aspect :Imperfective,
                           :clauseType :RelObliq,
@@ -616,7 +616,7 @@
                          [:Plural :Person3 :Common "gäbänäw"]]
                  }
                 {:label "bilin-VConj1RelObliqAffImperfPngAHeadSgf-gab"
-                 :note "Appleyard2007b pp. 497-501"
+                 :note "A07pp.497-501"
                  :common {:vmorphClass :Finite
                           :aspect :Imperfective,
                           :clauseType :RelObliq,
@@ -636,7 +636,7 @@
                          [:Plural :Person3 :Common "gäbänäri"]]
                  }
                 {:label "bilin-VConj1RelObliqAffImperfPngAHeadSgm-gab"
-                 :note "Appleyard2007b pp. 497-501"
+                 :note "A07pp.497-501"
                  :common {:vmorphClass :Finite
                           :aspect :Imperfective,
                           :clauseType :RelObliq,
@@ -656,7 +656,7 @@
                          [:Plural :Person3 :Common "gäbänäxw"]]
                  }
                 {:label "bilin-VConj1RelSubjAffImperfPngA-gab"
-                 :note "Appleyard2007b pp. 497-501; Palmer's version cited in Appleyard1975 pp. 338-339."
+                 :note "A07pp.497-501 :: Palmer's version cited in Appleyard1975 pp. 338-339."
                  :common {:vmorphClass :Finite
                           :aspect :Imperfective,
                           :clauseType :RelSubj,
@@ -675,7 +675,7 @@
                          [:Plural :Person3 :Common "gäbäw"]]
                  }
                 {:label "bilin-VConj1RelSubjAffPerfPngA-gab"
-                 :note "Appleyard2007b pp. 497-501; Palmer's version cited in Appleyard1975 pp. 338-339."
+                 :note "A07pp.497-501 ::  Palmer's version cited in Appleyard1975 pp. 338-339."
                  :common {:vmorphClass :Finite
                           :aspect :Perfective,
                           :clauseType :RelSubj,
@@ -694,7 +694,7 @@
                          [:Plural :Person3 :Common "gäbäw"]]
                  }
                 {:label "bilin-VConj2MainAffImperfPresPngB-kab"
-                 :note "Appleyard2007b pp. 497-499"
+                 :note "A07pp.497-499"
                  :common {:vmorphClass :Finite
                           :aspect :Imperfective,
                           :clauseType :Main,
@@ -714,7 +714,7 @@
                          [:Plural :Person3 :Common "kabänäkw"]]
                  }
                 {:label "bilin-VConj2MainAffPerfFutPngC-kab"
-                 :note "Appleyard2007b pp. 497-499"
+                 :note "A07pp.497-499"
                  :common {:vmorphClass :Finite
                           :aspect :Perfective,
                           :clauseType :Main,
@@ -734,7 +734,7 @@
                          [:Plural :Person3 :Common "kabidəna"]]
                  }
                 {:label "bilin-VConj2MainAffPerfPastPngB-kab"
-                 :note "Appleyard2007b pp. 497-499"
+                 :note "A07pp.497-499"
                  :common {:vmorphClass :Finite
                           :aspect :Perfective,
                           :clauseType :Main,
@@ -754,7 +754,7 @@
                          [:Plural :Person3 :Common "kabinixw"]]
                  }
                 {:label "bilin-VConj2MainNegImperfPngA2-kab"
-                 :note "Appleyard2007b pp. 497-499"
+                 :note "A07pp.497-499"
                  :common {:vmorphClass :Finite
                           :aspect :Imperfective,
                           :clauseType :Main,
@@ -773,7 +773,7 @@
                          [:Plural :Person3 :Common "kabänni"]]
                  }
                 {:label "bilin-VConj2MainNegPerfPngA2-kab"
-                 :note "Appleyard2007b pp. 497-499"
+                 :note "A07pp.497-499"
                  :common {:vmorphClass :Finite
                           :aspect :Perfective,
                           :clauseType :Main,
@@ -792,7 +792,7 @@
                          [:Plural :Person3 :Common "kabinni"]]
                  }
                 {:label "bilin-VConj2RelSubjAffImperfPngA-kab"
-                 :note "Appleyard2007b pp. 497-499"
+                 :note "A07pp.497-499"
                  :common {:vmorphClass :Finite
                           :aspect :Imperfective,
                           :clauseType :RelSubj,
@@ -811,7 +811,7 @@
                          [:Plural :Person3 :Common "kabäw"]]
                  }
                 {:label "bilin-VConj2RelSubjAffPerfPngA-kab"
-                 :note "Appleyard2007b pp. 497-499"
+                 :note "A07pp.497-499"
                  :common {:vmorphClass :Finite
                           :aspect :Perfective,
                           :clauseType :RelSubj,
@@ -830,7 +830,7 @@
                          [:Plural :Person3 :Common "kabew"]]
                  }
                 {:label "bilin-VConj3MainAffImperfPresPngB-kw"
-                 :note "Appleyard2007b pp. 497-499. Third conjugation verbs:a handful of monosyllabic roots (cf. LEXEMES section)."
+                 :note "A07pp.497-499 :: Third conjugation verbs:a handful of monosyllabic roots (cf. LEXEMES section)."
                  :common {:vmorphClass :Finite
                           :pngSet :PngB,
                           :polarity :Affirmative,
@@ -847,7 +847,7 @@
                          [:Person3 :Masc "k’wakw"]]
                  }
                 {:label "bilin-VConj3MainAffPerfPastPngB-kw"
-                 :note "Appleyard2007b pp. 497-499. Third conjugation verbs:a handful of monosyllabic roots (cf. LEXEMES section)."
+                 :note "A07pp.497-499 :: Third conjugation verbs:a handful of monosyllabic roots (cf. LEXEMES section)."
                  :common {:vmorphClass :Finite
                           :pngSet :PngB,
                           :polarity :Affirmative,
@@ -864,7 +864,7 @@
                          [:Person3 :Masc "k’wixw"]]
                  }
                 {:label "bilin-VCopula"
-                 :note "Appleyard2007b pp. 502f. “A peculiar feature of the verb ‘to be’ in Bilin,shared with the other Agaw languages,is the reversal of aspect,whereby a perfective aspect (past tense) form is used in imprefective (present time) function,and vice versa,as for instance:ni gərwa kəxin sänäkw ‘he was a clever man’. “(p. 501) See LEXEMES section."
+                 :note "A07pp.502f ::  “A peculiar feature of the verb ‘to be’ in Bilin,shared with the other Agaw languages,is the reversal of aspect,whereby a perfective aspect (past tense) form is used in imprefective (present time) function,and vice versa,as for instance:ni gərwa kəxin sänäkw ‘he was a clever man’. “(p. 501) See LEXEMES section."
                  :common {:vmorphClass :CopulaForm
                           :lexeme :COPULA,
                           :pos :Verb}
@@ -877,7 +877,7 @@
                          [:CopMain :Negative :Perfect "ʔäx- (~ ʔak-)" " "]]
                  }
                 {:label "bilin-VDervSuff"
-                 :note "Appleyard2007b pp. 493-495"
+                 :note "A07pp.493-495"
                  :common {:vmorphClass :DervSuff
                           :pos :Verb}
                  :terms [[:derivedStem :token],
@@ -891,7 +891,7 @@
                          [:SRecip "-əŋis-"]]
                  }
                 {:label "bilin-VPngA2PngSuff"
-                 :note "Appleyard2007b p. 495f. A:subordinate tenses (and base for A2,B,C);A2:main neg imperf/perf;B:main aff imperf/perf;C:main aff fut"
+                 :note "A07pp.495f ::  A:subordinate tenses (and base for A2,B,C);A2:main neg imperf/perf;B:main aff imperf/perf;C:main aff fut"
                  :common {:vmorphClass :PersSuffA2
                           :pngSet :PngA2,
                           :pos :Verb}
@@ -905,7 +905,7 @@
                          [:Plural :Person3 :Common "-Vn+ -i"]]
                  }
                 {:label "bilin-VPngAPngSuff"
-                 :note "Appleyard2007b p. 495f. A:subordinate tenses (and base for A2,B,C);A2:main neg imperf/perf;B:main aff imperf/perf;C:main aff fut"
+                 :note "A07pp.495f :: A:subordinate tenses (and base for A2,B,C);A2:main neg imperf/perf;B:main aff imperf/perf;C:main aff fut"
                  :common {:vmorphClass :PersSuffA
                           :pngSet :PngA,
                           :pos :Verb}
@@ -919,7 +919,7 @@
                          [:Plural :Person3 :Common "-Vn" " "]]
                  }
                 {:label "bilin-VPngBPngSuff"
-                 :note "Appleyard2007b p. 495f. A:subordinate tenses (and base for A2,B,C);A2:main neg imperf/perf;B:main aff imperf/perf;C:main aff fut"
+                 :note "A07pp.495f :: A:subordinate tenses (and base for A2,B,C);A2:main neg imperf/perf;B:main aff imperf/perf;C:main aff fut"
                  :common {:vmorphClass :PersSuffB
                           :pngSet :PngB,
                           :pos :Verb}
@@ -933,7 +933,7 @@
                          [:Plural :Person3 :Common "-Vn"]]
                  }
                 {:label "bilin-VPngCPngSuff"
-                 :note "Appleyard2007b p. 495f. A:subordinate tenses (and base for A2,B,C);A2:main neg imperf/perf;B:main aff imperf/perf;C:main aff fut"
+                 :note "A07pp.495f :: A:subordinate tenses (and base for A2,B,C);A2:main neg imperf/perf;B:main aff imperf/perf;C:main aff fut"
                  :common {:vmorphClass :PersSuffC
                           :pngSet :PngC,
                           :pos :Verb}
