@@ -35,7 +35,7 @@
            :kw   {:pos :Verb, :lemma "k’w-", :gloss "eat", :conjClass :Conjugation3},
            :was   {:pos :Verb, :lemma "[y]", :gloss "[x]", },
            }
- :termclusters [
+:termclusters [
                 {:label "bilin-PInd"
                  :note "A07pp.491 ::  The oblique case is also used for the possessive prefix. The object suffix pronouns,attached to verb,are borrowed from Tigre. NOte sg 2 f form (unique in Agaw)."
                  :common {:pos :Pronoun, :pmorphClass :ProMorph,
