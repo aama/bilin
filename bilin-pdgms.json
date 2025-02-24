@@ -1,11 +1,23 @@
 {
   "lang": "bilin",
-  "subfamily": "Agaw",
+  "subfamily": "cushitic agaw",
   "lgpref": "bil",
-  "datasource": "Appleyard, David. 2007. 'Bilin Morphology', in Alan Kaye (ed.), Morphologies of Asian and Africa (2 vols). Eisenbrauns. Winona Lake IN. Eisenbrauns. vol. 1, pp. 481-504.; abbrev.A07",
+  "datasource": "Appleyard, David. 2007. 'Bilin Morphology', in Alan Kaye (ed.), Morphologies of Asian and Africa (2 vols). Eisenbrauns. Winona Lake IN. Eisenbrauns. vol. 1, pp. 481-504.; abbrev.DA2007; Palmer, F. R.. 1957. 'The Verb in Bilin'. Bulletin of the School of Oriental and African Studies 19/1, pp. 131-159",
   "datasourceNotes": "",
+  "transcription": { 
+    "Consonants": {
+      "general": "cf. transcription table",
+      "note": [
+        "'' = ''",
+        "'' = '' "
+        ]},
+    "Vowels": {
+      "inventory": "i e ǝ ä a o u"},
+    "Prosody": {
+      "Type": "Appleyard, citing lack of agreement between his own observations and those of Palmer and Reinisch, declines to mark prosody DA2007p482&fn4; cf. also Palmer's remarks in FP1957p.131"}},
+
   "geodemoURL": "http://www.ethnologue.com/language/byn",
-  "geodemoTXT": "Varieties and subdialects of theAgaw (or Central) Cushitic language: Bilin is spoken mainly in the vicinity of the town Keren. The variety represented here is that described in Appleyard2007b.",
+  "geodemoTXT": "Varieties and subdialects of thecushitic agaw (or Central) Cushitic language: Bilin is spoken mainly in the vicinity of the town Keren. The variety represented here is that described in Appleyard2007b.",
   "schemata": {
   "aspect": [
     "Imperfective",
@@ -142,7 +154,7 @@
   "termclusters": [
   {
     "label": "bil-PronounIndependent",
-    "note": "A07pp.491 ::  The oblique case is also used for the possessive prefix. The object suffix pronouns,attached to verb,are borrowed from Tigre. NOte sg 2 f form (unique in Agaw).",
+    "note": "DA2997p491 ::  The oblique case is also used for the possessive prefix. The object suffix pronouns,attached to verb,are borrowed from Tigre. NOte sg 2 f form (unique in cushitic agaw).",
     "common": {
       "pos": "Pronoun",
       "proClass": "Independent"
@@ -182,7 +194,7 @@
   },
   {
     "label": "bil-VerbConjugation1-gab-ImperfectiveAffirmativePngA",
-    "note": "A07pp.497-501",
+    "note": "DA2997p497-501",
     "common": {
       "aspect": "Imperfective",
       "clauseType": "AdvAt1",
@@ -199,7 +211,7 @@
   },
   {
     "label": "bil-VerbConjugation1-gab-ImperfectiveAffirmativePngA",
-    "note": "A07pp.497-501",
+    "note": "DA2997p497-501",
     "common": {
       "aspect": "Imperfective",
       "clauseType": "AdvAt2",
@@ -216,7 +228,7 @@
   },
   {
     "label": "bil-VerbConjugation1-gab-ImperfectiveAffirmativePngA",
-    "note": "A07pp.497-501",
+    "note": "DA2997p497-501",
     "common": {
       "aspect": "Imperfective",
       "clauseType": "AdvCompl",
@@ -233,7 +245,7 @@
   },
   {
     "label": "bil-VerbConjugation1-gab-ImperfectiveAffirmativePngA",
-    "note": "A07pp.497-501",
+    "note": "DA2997p497-501",
     "common": {
       "aspect": "Imperfective",
       "clauseType": "AdvCond",
@@ -250,7 +262,7 @@
   },
   {
     "label": "bil-VerbConjugation1-gab-ImperfectiveAffirmativePngA",
-    "note": "A07pp.497-501",
+    "note": "DA2997p497-501",
     "common": {
       "aspect": "Imperfective",
       "clauseType": "AdvWhen",
@@ -267,7 +279,7 @@
   },
   {
     "label": "bil-VerbConjugation1-gab-ImperfectiveAffirmativePngA",
-    "note": "A07pp.497-501",
+    "note": "DA2997p497-501",
     "common": {
       "aspect": "Imperfective",
       "clauseType": "AdvWhile",
@@ -284,7 +296,7 @@
   },
   {
     "label": "bil-VerbConjugation1-gab-ImperfectiveAffirmativePngA",
-    "note": "A07pp.497-501 :: Palmer's version cited in Appleyard1975 pp. 338-339.",
+    "note": "DA2997p497-501 :: Palmer's version cited in Appleyard1975 pp. 338-339.",
     "common": {
       "aspect": "Imperfective",
       "clauseType": "RelSubj",
@@ -307,7 +319,7 @@
   },
   {
     "label": "bil-VerbConjugation1-gab-ImperfectiveHeadPluralAffirmativePngA",
-    "note": "A07pp.497-501",
+    "note": "DA2997p497-501",
     "common": {
       "aspect": "Imperfective",
       "clauseType": "RelObliq",
@@ -331,7 +343,7 @@
   },
   {
     "label": "bil-VerbConjugation1-gab-ImperfectiveHeadSingularFemAffirmativePngA",
-    "note": "A07pp.497-501",
+    "note": "DA2997p497-501",
     "common": {
       "aspect": "Imperfective",
       "clauseType": "RelObliq",
@@ -355,7 +367,7 @@
   },
   {
     "label": "bil-VerbConjugation1-gab-ImperfectiveHeadSingularMascAffirmativePngA",
-    "note": "A07pp.497-501",
+    "note": "DA2997p497-501",
     "common": {
       "aspect": "Imperfective",
       "clauseType": "RelObliq",
@@ -379,7 +391,7 @@
   },
   {
     "label": "bil-VerbConjugation1-gab-ImperfectiveJussiveAffirmativePngA",
-    "note": "A07pp.497-501",
+    "note": "DA2997p497-501",
     "common": {
       "aspect": "Imperfective",
       "clauseType": "Main",
@@ -401,7 +413,7 @@
   },
   {
     "label": "bil-VerbConjugation1-gab-ImperfectiveJussiveNegativePngA",
-    "note": "A07pp.497-501",
+    "note": "DA2997p497-501",
     "common": {
       "aspect": "Imperfective",
       "clauseType": "Main",
@@ -423,7 +435,7 @@
   },
   {
     "label": "bil-VerbConjugation1-gab-ImperfectiveNegativePngA",
-    "note": "A07pp.497-501",
+    "note": "DA2997p497-501",
     "common": {
       "aspect": "Imperfective",
       "clauseType": "AdvCompl",
@@ -440,7 +452,7 @@
   },
   {
     "label": "bil-VerbConjugation1-gab-ImperfectiveNegativePngA",
-    "note": "A07pp.497-501",
+    "note": "DA2997p497-501",
     "common": {
       "aspect": "Imperfective",
       "clauseType": "AdvCond",
@@ -457,7 +469,7 @@
   },
   {
     "label": "bil-VerbConjugation1-gab-ImperfectiveNegativePngA2",
-    "note": "A07pp.497-501",
+    "note": "DA2997p497-501",
     "common": {
       "aspect": "Imperfective",
       "clauseType": "Main",
@@ -480,7 +492,7 @@
   },
   {
     "label": "bil-VerbConjugation1-gab-ImperfectivePresentAffirmativePngB",
-    "note": "A07pp.497-501",
+    "note": "DA2997p497-501",
     "common": {
       "aspect": "Imperfective",
       "clauseType": "Main",
@@ -504,7 +516,7 @@
   },
   {
     "label": "bil-VerbConjugation1-gab-PerfectiveAffirmativePngA",
-    "note": "A07pp.497-501",
+    "note": "DA2997p497-501",
     "common": {
       "aspect": "Perfective",
       "clauseType": "AdvCause",
@@ -521,7 +533,7 @@
   },
   {
     "label": "bil-VerbConjugation1-gab-PerfectiveAffirmativePngA",
-    "note": "A07pp.497-501",
+    "note": "DA2997p497-501",
     "common": {
       "aspect": "Perfective",
       "clauseType": "AdvCompl",
@@ -538,7 +550,7 @@
   },
   {
     "label": "bil-VerbConjugation1-gab-PerfectiveAffirmativePngA",
-    "note": "A07pp.497-501",
+    "note": "DA2997p497-501",
     "common": {
       "aspect": "Perfective",
       "clauseType": "AdvCond",
@@ -555,7 +567,7 @@
   },
   {
     "label": "bil-VerbConjugation1-gab-PerfectiveAffirmativePngA",
-    "note": "A07pp.497-501",
+    "note": "DA2997p497-501",
     "common": {
       "aspect": "Perfective",
       "clauseType": "AdvConsec",
@@ -572,7 +584,7 @@
   },
   {
     "label": "bil-VerbConjugation1-gab-PerfectiveAffirmativePngA",
-    "note": "A07pp.497-501 ::  Palmer's version cited in Appleyard1975 pp. 338-339.",
+    "note": "DA2997p497-501 ::  Palmer's version cited in Appleyard1975 pp. 338-339.",
     "common": {
       "aspect": "Perfective",
       "clauseType": "RelSubj",
@@ -595,7 +607,7 @@
   },
   {
     "label": "bil-VerbConjugation1-gab-PerfectiveAffirmativePngC",
-    "note": "A07pp.497-501",
+    "note": "DA2997p497-501",
     "common": {
       "aspect": "Perfective",
       "clauseType": "AdvFutCond",
@@ -612,7 +624,7 @@
   },
   {
     "label": "bil-VerbConjugation1-gab-PerfectiveAffirmativePngC",
-    "note": "A07pp.497-501",
+    "note": "DA2997p497-501",
     "common": {
       "aspect": "Perfective",
       "clauseType": "AdvPurp",
@@ -629,7 +641,7 @@
   },
   {
     "label": "bil-VerbConjugation1-gab-PerfectiveAffirmativePngC",
-    "note": "A07pp.497-501",
+    "note": "DA2997p497-501",
     "common": {
       "aspect": "Perfective",
       "clauseType": "AdvUntil",
@@ -646,7 +658,7 @@
   },
   {
     "label": "bil-VerbConjugation1-gab-PerfectiveFutureAffirmativePngC",
-    "note": "A07pp.497-501",
+    "note": "DA2997p497-501",
     "common": {
       "aspect": "Perfective",
       "clauseType": "Main",
@@ -670,7 +682,7 @@
   },
   {
     "label": "bil-VerbConjugation1-gab-PerfectiveImperativeAffirmative",
-    "note": "A07pp.497-501",
+    "note": "DA2997p497-501",
     "common": {
       "aspect": "Perfective",
       "clauseType": "Main",
@@ -688,7 +700,7 @@
   },
   {
     "label": "bil-VerbConjugation1-gab-PerfectiveImperativeNegative",
-    "note": "A07pp.497-501",
+    "note": "DA2997p497-501",
     "common": {
       "aspect": "Perfective",
       "clauseType": "Main",
@@ -706,7 +718,7 @@
   },
   {
     "label": "bil-VerbConjugation1-gab-PerfectiveNegativePngA",
-    "note": "A07pp.497-501",
+    "note": "DA2997p497-501",
     "common": {
       "aspect": "Perfective",
       "clauseType": "AdvCause",
@@ -723,7 +735,7 @@
   },
   {
     "label": "bil-VerbConjugation1-gab-PerfectiveNegativePngA",
-    "note": "A07pp.497-501",
+    "note": "DA2997p497-501",
     "common": {
       "aspect": "Perfective",
       "clauseType": "AdvCompl",
@@ -740,7 +752,7 @@
   },
   {
     "label": "bil-VerbConjugation1-gab-PerfectiveNegativePngA",
-    "note": "A07pp.497-501",
+    "note": "DA2997p497-501",
     "common": {
       "aspect": "Perfective",
       "clauseType": "AdvCond",
@@ -757,7 +769,7 @@
   },
   {
     "label": "bil-VerbConjugation1-gab-PerfectiveNegativePngA",
-    "note": "A07pp.497-501",
+    "note": "DA2997p497-501",
     "common": {
       "aspect": "Perfective",
       "clauseType": "AdvConsec",
@@ -774,7 +786,7 @@
   },
   {
     "label": "bil-VerbConjugation1-gab-PerfectiveNegativePngA2",
-    "note": "A07pp.497-501",
+    "note": "DA2997p497-501",
     "common": {
       "aspect": "Perfective",
       "clauseType": "Main",
@@ -797,7 +809,7 @@
   },
   {
     "label": "bil-VerbConjugation1-gab-PerfectiveNegativePngC",
-    "note": "A07pp.497-501",
+    "note": "DA2997p497-501",
     "common": {
       "aspect": "Perfective",
       "clauseType": "AdvFutCond",
@@ -814,7 +826,7 @@
   },
   {
     "label": "bil-VerbConjugation1-gab-PerfectiveNegativePngC",
-    "note": "A07pp.497-501",
+    "note": "DA2997p497-501",
     "common": {
       "aspect": "Perfective",
       "clauseType": "AdvPurp",
@@ -831,7 +843,7 @@
   },
   {
     "label": "bil-VerbConjugation1-gab-PerfectivePastAffirmativePngB",
-    "note": "A07pp.497-501",
+    "note": "DA2997p497-501",
     "common": {
       "aspect": "Perfective",
       "clauseType": "Main",
@@ -855,7 +867,7 @@
   },
   {
     "label": "bil-VerbConjugation2-kab-ImperfectiveAffirmativePngA",
-    "note": "A07pp.497-499",
+    "note": "DA2997p497-499",
     "common": {
       "aspect": "Imperfective",
       "clauseType": "RelSubj",
@@ -878,7 +890,7 @@
   },
   {
     "label": "bil-VerbConjugation2-kab-ImperfectiveNegativePngA2",
-    "note": "A07pp.497-499",
+    "note": "DA2997p497-499",
     "common": {
       "aspect": "Imperfective",
       "clauseType": "Main",
@@ -901,7 +913,7 @@
   },
   {
     "label": "bil-VerbConjugation2-kab-ImperfectivePresentAffirmativePngB",
-    "note": "A07pp.497-499",
+    "note": "DA2997p497-499",
     "common": {
       "aspect": "Imperfective",
       "clauseType": "Main",
@@ -925,7 +937,7 @@
   },
   {
     "label": "bil-VerbConjugation2-kab-PerfectiveAffirmativePngA",
-    "note": "A07pp.497-499",
+    "note": "DA2997p497-499",
     "common": {
       "aspect": "Perfective",
       "clauseType": "RelSubj",
@@ -948,7 +960,7 @@
   },
   {
     "label": "bil-VerbConjugation2-kab-PerfectiveFutureAffirmativePngC",
-    "note": "A07pp.497-499",
+    "note": "DA2997p497-499",
     "common": {
       "aspect": "Perfective",
       "clauseType": "Main",
@@ -972,7 +984,7 @@
   },
   {
     "label": "bil-VerbConjugation2-kab-PerfectiveNegativePngA2",
-    "note": "A07pp.497-499",
+    "note": "DA2997p497-499",
     "common": {
       "aspect": "Perfective",
       "clauseType": "Main",
@@ -995,7 +1007,7 @@
   },
   {
     "label": "bil-VerbConjugation2-kab-PerfectivePastAffirmativePngB",
-    "note": "A07pp.497-499",
+    "note": "DA2997p497-499",
     "common": {
       "aspect": "Perfective",
       "clauseType": "Main",
@@ -1019,7 +1031,7 @@
   },
   {
     "label": "bil-VerbConjugation3-kw-ImperfectivePresentAffirmativePngB",
-    "note": "A07pp.497-499 :: Third conjugation verbs:a handful of monosyllabic roots (cf. LEXEMES section).",
+    "note": "DA2997p497-499 :: Third conjugation verbs:a handful of monosyllabic roots (cf. LEXEMES section).",
     "common": {
       "aspect": "Imperfective",
       "clauseType": "Main",
@@ -1039,7 +1051,7 @@
   },
   {
     "label": "bil-VerbConjugation3-kw-PerfectivePastAffirmativePngB",
-    "note": "A07pp.497-499 :: Third conjugation verbs:a handful of monosyllabic roots (cf. LEXEMES section).",
+    "note": "DA2997p497-499 :: Third conjugation verbs:a handful of monosyllabic roots (cf. LEXEMES section).",
     "common": {
       "aspect": "Perfective",
       "clauseType": "Main",
@@ -1058,8 +1070,8 @@
     ]
   },
   {
-    "label": "bil-Verbmorph-AgentNom-Conjugation1-gab-",
-    "note": "A07pp.497-501",
+    "label": "bil-morphVerb-AgentNomConjugation1-gab-",
+    "note": "DA2997p497-501",
     "common": {
       "conjClass": "Conjugation1",
       "lexeme": "gab",
@@ -1073,8 +1085,8 @@
     ]
   },
   {
-    "label": "bil-Verbmorph-CopulaForm--COPULA-",
-    "note": "A07pp.502f ::  “A peculiar feature of the verb ‘to be’ in Bilin,shared with the other Agaw languages,is the reversal of aspect,whereby a perfective aspect (past tense) form is used in imprefective (present time) function,and vice versa,as for instance:ni gərwa kəxin sänäkw ‘he was a clever man’. “(p. 501) See LEXEMES section.",
+    "label": "bil-morphVerb-CopulaForm-COPULA-",
+    "note": "DA2997p502f ::  “A peculiar feature of the verb ‘to be’ in Bilin,shared with the other cushitic agaw languages,is the reversal of aspect,whereby a perfective aspect (past tense) form is used in imprefective (present time) function,and vice versa,as for instance:ni gərwa kəxin sänäkw ‘he was a clever man’. “(p. 501) See LEXEMES section.",
     "common": {
       "lexeme": "COPULA",
       "pos": "Verb",
@@ -1091,8 +1103,8 @@
     ]
   },
   {
-    "label": "bil-Verbmorph-DervSuff-",
-    "note": "A07pp.493-495",
+    "label": "bil-morphVerb-DervSuff",
+    "note": "DA2997p493-495",
     "common": {
       "pos": "Verb",
       "morphClass": "DervSuff"
@@ -1110,8 +1122,8 @@
     ]
   },
   {
-    "label": "bil-Verbmorph-InfinitiveNom-Conjugation1-gab-",
-    "note": "A07pp.497-501",
+    "label": "bil-morphVerb-InfinitiveNomConjugation1-gab-",
+    "note": "DA2997p497-501",
     "common": {
       "conjClass": "Conjugation1",
       "lexeme": "gab",
@@ -1124,27 +1136,8 @@
     ]
   },
   {
-    "label": "bil-Verbmorph-PersSuffA-PngA",
-    "note": "A07pp.495f :: A:subordinate tenses (and base for A2,B,C);A2:main neg imperf/perf;B:main aff imperf/perf;C:main aff fut",
-    "common": {
-      "pngSet": "PngA",
-      "pos": "Verb",
-      "morphClass": "PersSuffA"
-    },
-    "terms": [
-      ["number" ,"person" ,"gender" ,"token" ,"token-note"],
-      ["Singular" ,"Person1" ,"Common" ,"-Ø" ," "],
-      ["Singular" ,"Person2" ,"Common" ,"-r ~ -d" ,"d after r"],
-      ["Singular" ,"Person3" ,"Masc" ,"-Ø" ," "],
-      ["Singular" ,"Person3" ,"Fem" ,"-r ~ -d" ,"d after r"],
-      ["Plural" ,"Person1" ,"Common" ,"-n" ," "],
-      ["Plural" ,"Person2" ,"Common" ,"-dVn" ," "],
-      ["Plural" ,"Person3" ,"Common" ,"-Vn" ," "]
-    ]
-  },
-  {
-    "label": "bil-Verbmorph-PersSuffA2-PngA2",
-    "note": "A07pp.495f ::  A:subordinate tenses (and base for A2,B,C);A2:main neg imperf/perf;B:main aff imperf/perf;C:main aff fut",
+    "label": "bil-morphVerb-PersSuffA2PngA2",
+    "note": "DA2997p495f ::  A:subordinate tenses (and base for A2,B,C);A2:main neg imperf/perf;B:main aff imperf/perf;C:main aff fut",
     "common": {
       "pngSet": "PngA2",
       "pos": "Verb",
@@ -1162,8 +1155,27 @@
     ]
   },
   {
-    "label": "bil-Verbmorph-PersSuffB-PngB",
-    "note": "A07pp.495f :: A:subordinate tenses (and base for A2,B,C);A2:main neg imperf/perf;B:main aff imperf/perf;C:main aff fut",
+    "label": "bil-morphVerb-PersSuffAPngA",
+    "note": "DA2997p495f :: A:subordinate tenses (and base for A2,B,C);A2:main neg imperf/perf;B:main aff imperf/perf;C:main aff fut",
+    "common": {
+      "pngSet": "PngA",
+      "pos": "Verb",
+      "morphClass": "PersSuffA"
+    },
+    "terms": [
+      ["number" ,"person" ,"gender" ,"token" ,"token-note"],
+      ["Singular" ,"Person1" ,"Common" ,"-Ø" ," "],
+      ["Singular" ,"Person2" ,"Common" ,"-r ~ -d" ,"d after r"],
+      ["Singular" ,"Person3" ,"Masc" ,"-Ø" ," "],
+      ["Singular" ,"Person3" ,"Fem" ,"-r ~ -d" ,"d after r"],
+      ["Plural" ,"Person1" ,"Common" ,"-n" ," "],
+      ["Plural" ,"Person2" ,"Common" ,"-dVn" ," "],
+      ["Plural" ,"Person3" ,"Common" ,"-Vn" ," "]
+    ]
+  },
+  {
+    "label": "bil-morphVerb-PersSuffBPngB",
+    "note": "DA2997p495f :: A:subordinate tenses (and base for A2,B,C);A2:main neg imperf/perf;B:main aff imperf/perf;C:main aff fut",
     "common": {
       "pngSet": "PngB",
       "pos": "Verb",
@@ -1181,8 +1193,8 @@
     ]
   },
   {
-    "label": "bil-Verbmorph-PersSuffC-PngC",
-    "note": "A07pp.495f :: A:subordinate tenses (and base for A2,B,C);A2:main neg imperf/perf;B:main aff imperf/perf;C:main aff fut",
+    "label": "bil-morphVerb-PersSuffCPngC",
+    "note": "DA2997p495f :: A:subordinate tenses (and base for A2,B,C);A2:main neg imperf/perf;B:main aff imperf/perf;C:main aff fut",
     "common": {
       "pngSet": "PngC",
       "pos": "Verb",
